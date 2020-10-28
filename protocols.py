@@ -1,7 +1,7 @@
 import sys
 import os
 sys.path.extend(['graphical_model/'])
-from generate_model import generate_grid, generate_complete, generate_uai
+from generate_model import generate_grid_gmi, generate_complete_gmi, generate_complete
 sys.path.extend(['inference/'])
 from bucket_elimination import BucketElimination
 from mean_field import MeanField
@@ -11,6 +11,7 @@ from weighted_mini_bucket_elimination import WeightedMiniBucketElimination
 from bucket_renormalization import BucketRenormalization
 from uai_inference import UAIInference
 
+# Inference protocols
 MF_PROTOCOL = {
     'name': 'MF',
     'use_ibound': False,
@@ -58,15 +59,25 @@ GBR_PROTOCOL = {
         model, ibound=ibound),
     'run_args': {'max_iter': 1}}
 
-
+# Model protocols
 COMPLETE_PROTOCOL = {
     'generator': lambda size, delta: generate_complete(
+        nb_vars=size, delta=delta),
+    'true_inference': lambda model: BucketElimination(model).run()
+    }
+GMI_COMPLETE_PROTOCOL = {
+    'generator': lambda size, delta: generate_complete_gmi(
         nb_vars=size, delta=delta),
     'true_inference': lambda model: BucketElimination(model).run()
     }
 GRID_PROTOCOL = {
     'generator': lambda size, delta: generate_grid(
         nb_vars=size**2, delta=delta),
+    'true_inference': lambda model: BucketElimination(
+        model).run(elimination_order_method='not_random')}
+GMI_GRID_PROTOCOL = {
+    'generator': lambda m, n, delta: generate_grid_gmi(
+        m, n, delta=delta),
     'true_inference': lambda model: BucketElimination(
         model).run(elimination_order_method='not_random')}
 UAI_PROTOCOL = {
@@ -84,5 +95,7 @@ inference_protocol_dict = {
 
 model_protocol_dict = {
     'complete': COMPLETE_PROTOCOL,
+    'complete_gmi': GMI_COMPLETE_PROTOCOL,
     'grid': GRID_PROTOCOL,
+    'grid_gmi': GMI_GRID_PROTOCOL,
     'uai': UAI_PROTOCOL}

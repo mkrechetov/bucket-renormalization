@@ -53,7 +53,7 @@ class GraphicalModel():
 
         self.remove_variable(variable)
         self.add_factor(new_factor)
-        
+
         return new_factor
 
     def contract_variables_from(self, variable):
@@ -67,6 +67,7 @@ class GraphicalModel():
                 factor_list.append(factor)
 
         return factor_list
+
     def degree(self, variable):
         return len(self.get_adj_factors(variable))
 
@@ -108,9 +109,14 @@ class GraphicalModel():
     def copy(self):
         return GraphicalModel(copy(self.variables), [factor.copy() for factor in self.factors])
     def summary(self):
-        print(np.max([self.get_cardinality_for_(var) for var in self.variables]))
-        print(np.max([len(fac.variables) for fac in self.factors]))
-        print(len([fac for fac in self.factors if len(fac.variables)>1]))
+        print('Number of variables: {}'.format(len(self.variables)))
+        print('Max degree of variables: {}'.format(np.max([self.degree(var) for var in self.variables]) - 1))
+        print('Max number of variables associated to each variable: {}'.format(
+        np.max([self.get_cardinality_for_(var) for var in self.variables])))
+        print('Max number of variables associated to each factor: {}'.format(
+        np.max([len(fac.variables) for fac in self.factors])))
+        print('Total number of factors: {}'.format(
+        len([fac for fac in self.factors if len(fac.variables)>1])))
 
     def display_factors(self):
         for fac in self.factors:

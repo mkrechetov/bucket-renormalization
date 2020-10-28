@@ -6,6 +6,8 @@ from graphical_model import GraphicalModel
 import numpy as np
 from functools import reduce
 sys.path.extend(['inference/'])
+import networkx as nx
+import matplotlib.pyplot as plt
 
 file_dir_path = os.path.dirname(os.path.realpath(__file__))
 
@@ -84,6 +86,147 @@ def generate_grid(nb_vars, delta):
                                  variables = [ijth_object_name('V', i,j)],
                                  log_values = log_values))
 
+    return model
+
+def generate_grid_gmi(m, n, delta):
+    '''
+        m is number of rows
+        n is number of columns
+        delta is max strength of interaction
+    '''
+    model = GraphicalModel()
+    G = nx.Graph()
+    pos = {}
+    nb_vars = m*n
+    # grid_size = int(nb_vars**0.5)
+    number_of_edges = 2*m*n-m-n
+    interaction = delta * np.random.uniform(-1.0, 1.0, number_of_edges)
+    bias = np.random.uniform(-0.1, 0.1, [m,n])
+    node_colors = ['b']*nb_vars
+
+    # beta = 1 # inverse temperature beta for simulated annealing
+    inv_temp = 1 # inverse temperature beta for simulated annealing
+    # Z = 1 # partition function
+
+    # inf = int(grid_size/2)+1 # the initially infected node.
+    # adding all variables for each node in grid
+    # indexed by two coordinates (i,j)
+    for i in range(m):
+        for j in range(n):
+            model.add_variable(ijth_object_name('V', i,j))
+            # define the intially infected variables here too
+            # if i == inf and j == inf: ...
+
+    # creating all edges
+    edge_set = []
+    for x in range(nb_vars):
+        G.add_node(x)
+        # (q,r) are (row,col) coordinates for node x
+        q, r = divmod(x, n)
+
+        G.node[x]['x'] = float(q)/m
+        G.node[x]['y'] = float(r)/n
+        pos[x] = [float(q)/m,float(r)/n]
+
+        if r != n-1:
+            edge_set.append([x,x+1])
+            G.add_edge(x, x+1)
+        if q != m-1:
+            edge_set.append([x,x+n])
+            G.add_edge(x,x+n)
+
+    # adding all factors
+    g = [] # edge weights
+    for i, e in enumerate(edge_set):
+
+        g.append(np.random.uniform(0,1))
+        # create variable names for edges
+        # coordinates for nodes in the grid
+        q1, r1 = divmod(e[0], n)
+        V1 = ijth_object_name('V', q1,r1)
+
+        q2, r2 = divmod(e[1], n)
+        V2 = ijth_object_name('V', q2,r2)
+
+        beta = np.log(1+np.exp(g[i]))/2
+        log_values = np.array([beta, -beta, -beta, beta]).reshape([2,2])
+        factor = Factor(name = ith_object_name('F', i),
+                        variables = [V1, V2],
+                        log_values = log_values)
+        model.add_factor(factor)
+
+
+    # randomly select initially infected nodes
+    # sigma_in = np.round(np.random.uniform([grid_size,grid_size]))
+    sigma_in = np.zeros([m,n])
+
+    # assigning buckets to variables
+
+    for i in range(m):
+        for j in range(n):
+            # beta = -(np.log(1-sigma_in[i,j]) - inv_temp)/2
+            # assigning
+            if i == np.floor(m/2) and j == np.floor(n/2):
+                node_colors[i*n+j] = 'r'
+                beta = -inv_temp
+            else:
+                beta = 0
+            log_values = np.array([-beta, beta])
+            # log_values = np.array([bias[i,j], -bias[i,j]])
+            model.add_factor(Factor(name = ith_object_name('B', i*n + j),
+                                 variables = [ijth_object_name('V', i,j)],
+                                 log_values = log_values))
+
+    # print(enumerate(edge_set))
+    # print(nb_vars, model.summary())
+    # print(model.factors)
+    nx.draw(G,pos, node_color=node_colors)
+    print('max degree = {}'.format(np.max([G.degree(node) for node in G.nodes])))
+    plt.title('grid size = {}, initially infected node is {}'.format([m,n], [np.floor(i/m), np.floor(j/n)]))
+    plt.show()
+    return model
+
+def generate_complete_gmi(nb_vars, delta):
+    model = GraphicalModel()
+    G = nx.Graph()
+    inv_temp = 1
+    node_colors = ['b']*nb_vars
+    interaction = delta * np.random.uniform(
+        0, 1.0, nb_vars*(nb_vars-1))
+    bias = np.random.uniform(-0.1, 0.1, [nb_vars])
+
+    for i in range(nb_vars):
+        model.add_variable(ith_object_name('V', i))
+        G.add_node(i)
+
+    for i in range(nb_vars):
+        for j in range(i+1, nb_vars):
+            beta = interaction[i * nb_vars + j ]
+            log_values = np.array([beta, -beta, -beta, beta]).reshape([2,2])
+            factor = Factor(
+                name = ijth_object_name('F', i, j),
+                variables = [ith_object_name('V', i), ith_object_name('V', j)],
+                log_values = log_values)
+            model.add_factor(factor)
+            G.add_edge(i,j)
+
+    for i in range(nb_vars):
+        if i == 0:
+            node_colors[i] = 'r'
+            beta = -inv_temp
+        else:
+            beta = 0
+        log_values = np.array([-beta, beta])
+        factor = Factor(
+            name = ith_object_name('B', i),
+            variables = [ith_object_name('V', i)],
+            log_values = log_values)
+        model.add_factor(factor)
+
+    nx.draw(G, node_color=node_colors)
+    print('max degree = {}'.format(np.max([G.degree(node) for node in G.nodes])))
+    plt.title('complete graph size = {}, initially infected node is {}'.format(nb_vars, 0))
+    plt.show()
     return model
 
 UAI_PATH='./graphical_model/UAI/'

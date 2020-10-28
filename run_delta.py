@@ -32,10 +32,11 @@ inference_protocols = [
     protocols.inference_protocol_dict[name]
     for name in args.algorithms]
 
-size = 15
+size = 15 # number of nodes in the network
+# delta is strength of pair-wise interaction for the Ising model
 min_delta, max_delta, nb_delta = 0.0, 2.0, 9
 deltas = np.linspace(min_delta, max_delta, nb_delta)
-ibound = 10
+ibound = 10 # max number of nodes per mini-bucket
 nb_experiments = 10
 file_name = ('delta[model={}_ibound={:d}_delta[min={:.1f}_max={:.1f}_num={:d}]].csv'.format(
     args.model_type, ibound, min_delta, max_delta, nb_delta))
