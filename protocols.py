@@ -1,7 +1,7 @@
 import sys
 import os
 sys.path.extend(['graphical_model/'])
-from generate_model import generate_grid_gmi, generate_complete_gmi, generate_complete
+from generate_model import *
 sys.path.extend(['inference/'])
 from bucket_elimination import BucketElimination
 from mean_field import MeanField
@@ -66,8 +66,8 @@ COMPLETE_PROTOCOL = {
     'true_inference': lambda model: BucketElimination(model).run()
     }
 GMI_COMPLETE_PROTOCOL = {
-    'generator': lambda size, delta: generate_complete_gmi(
-        nb_vars=size, delta=delta),
+    'generator': lambda size, delta, init_inf: generate_complete_gmi(
+        nb_vars=size, delta=delta, init_inf=init_inf),
     'true_inference': lambda model: BucketElimination(model).run()
     }
 GRID_PROTOCOL = {
@@ -80,6 +80,12 @@ GMI_GRID_PROTOCOL = {
         m, n, delta=delta),
     'true_inference': lambda model: BucketElimination(
         model).run(elimination_order_method='not_random')}
+SEATTLE_PROTOCOL = {
+    'generator': lambda G, init_inf: generate_seattle(
+        G=G, init_inf=init_inf),
+    'true_inference': lambda model: BucketElimination(
+        model).run()
+    }
 UAI_PROTOCOL = {
     'generator': lambda model_name: generate_uai(model_name=model_name),
     'true_inference': lambda model: UAIInference(model).run()}
@@ -98,4 +104,5 @@ model_protocol_dict = {
     'complete_gmi': GMI_COMPLETE_PROTOCOL,
     'grid': GRID_PROTOCOL,
     'grid_gmi': GMI_GRID_PROTOCOL,
+    'seattle': SEATTLE_PROTOCOL,
     'uai': UAI_PROTOCOL}

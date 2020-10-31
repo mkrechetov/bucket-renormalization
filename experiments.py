@@ -11,6 +11,8 @@ import utils
 import networkx as nx
 import matplotlib.pyplot as plt
 from gmi import GMI
+import pandas as pd
+
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
@@ -119,6 +121,30 @@ def complete_graph_experiment(n, ibound = 10):
             utils.append_to_csv(file_name, [n, ip['name'], true_logZ, true_logZ_time, logZ, toc-tic, err])
             print('experiment for {} nodes complete'.format(n))
 
+def marginalize_complete_graph(n, ibound = 10, init_inf=[]):
+    global model_protocol, inference_protocols
+    delta = 1
+    file_name = ('marginalize[model={}_ibound={:d}_delta={:d}_complete[n={:d}]].csv'.format(
+        args.model_type, ibound, delta, n))
+    utils.append_to_csv(file_name, ['size', 'alg', 'approx Z', 'alg time'])
+
+    model = model_protocol['generator'](n, delta, init_inf)
+    for ip in inference_protocols:
+        if ip['name'] in ['MBR','GBR']:
+            # edit the model to account for the initially infected node.
+            alg = ip['algorithm'](model, ibound)
+
+            tic = time.time()
+            logZ = alg.run(**ip['run_args'])
+            # err = np.abs(true_logZ - logZ)
+            toc = time.time()
+
+            print('Alg: {:15}, Value: {:15.4f}, Time: {:15.2f}'.format(
+                ip['name'], logZ, toc-tic))
+
+            utils.append_to_csv(file_name, [n, ip['name'], logZ, toc-tic])
+            print('experiment for {} nodes complete'.format(n))
+
 def illustration_of_inference():
     G = nx.Graph()
 
@@ -138,24 +164,94 @@ def illustration_of_inference():
 
 def marginalization(variable_name):
     global model_protocol, inference_protocols
-    n = 5
+    n = 10
     delta = 1
-    model = model_protocol['generator'](n, delta)
+    init_inf = [0]
+    model = model_protocol['generator'](n, delta, init_inf)
+    init_inf.append(2)
+    marg_model = model_protocol['generator'](n, delta, init_inf)
     true_logZ = model_protocol['true_inference'](model) # computed using BE
+    true_logZ = model_protocol['true_inference'](marg_model) # computed using BE
+    print(model.variables)
     print(true_logZ)
     # marginalize over a given variable
-    for factor in model.factors:
-        if variable_name in factor.variables:
-            print(factor, variable_name in factor.variables)
-            fac = factor.marginalize([variable_name], inplace=True)
-            print(fac)
-            continue
-    true_logZ = model_protocol['true_inference'](model) # computed using BE
+    # for factor in marg_model.factors:
+    #     if variable_name in factor.variables:
+    #         print(factor, variable_name in factor.variables)
+    #         fac = factor.marginalize([variable_name], inplace=True)
+    #         print(fac)
+    #         continue
+    fac = marg_model.contract_variable(variable_name)
+    print(fac)
+    true_logZ = model_protocol['true_inference'](marg_model) # computed using BE
     print(true_logZ)
 
+def generate_seattle_graph():
+    TractData = []
+    print(os.listdir('./seattle'))
+    for file_name in os.listdir('./seattle'):
+        if 'Tract' in file_name:
+            TractData.append(file_name)
+    probabilities = pd.read_csv('./seattle/'+TractData[2], header=None)
+    summary = pd.read_csv('./seattle/'+TractData[3])
+    G = nx.Graph()
+    pos = {}
+    # add nodes
+    for row in summary.iterrows():
+        G.add_node(row[0],
+                   Tract=row[1]['Tract'],
+                   Sus=row[1]['Sus'],
+                   Inf=row[1]['Inf'],
+                   Symp=row[1]['Symp'],
+                   RecoveredCalc=row[1]['RecoveredCalc'],
+                   Lat=row[1]['Lat'],
+                   Lon=row[1]['Lon']
+                  )
+        pos[row[0]] = [row[1]['Lat'], row[1]['Lon']]
+
+    N = len(G.nodes)
+    # add edges
+    for i in range(N):
+        for j in range(N):
+            if probabilities[j][i] != 0:
+                G.add_edge(i,j, weight=probabilities[j][i])
+    return G
 
 
-marginalization('V0')
+def run_seattle(init_inf, ibound=10):
+    global model_protocol, inference_protocols
+    G = generate_seattle_graph()
+    model = model_protocol['generator'](G, init_inf)
+
+    file_name = ('seattle[model={}_ibound={:d}].csv'.format(
+        args.model_type, ibound))
+    utils.append_to_csv(file_name, ['alg', 'approx Z', 'alg time'])
+
+    for ip in inference_protocols:
+        if ip['name'] in ['MBR','GBR']:
+            alg = ip['algorithm'](model, ibound)
+
+            tic = time.time()
+            logZ = alg.run(**ip['run_args'])
+            # err = np.abs(true_logZ - logZ)
+            toc = time.time()
+
+            print('Alg: {:15}, Value: {:15.4f}, Time: {:15.2f}'.format(
+                ip['name'], logZ, toc-tic))
+
+            utils.append_to_csv(file_name, [ip['name'], logZ, toc-tic])
+    print('experiment for {} complete'.format(args.model_type))
+
+
+# run_seattle([0])
+# need to find optimal ibound for varying n and same graph
+# marginalize_complete_graph(30, ibound=15, init_inf=[0,12,19])
+# marginalize_complete_graph(50, ibound=20)
+# marginalize_complete_graph(100, ibound=5)
+# marginalize_complete_graph(100)
+
+
+marginalization('V9')
 
 # illustration_of_inference()
 # grid_experiment(4,5)

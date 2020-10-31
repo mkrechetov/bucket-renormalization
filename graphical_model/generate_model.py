@@ -186,7 +186,7 @@ def generate_grid_gmi(m, n, delta):
     plt.show()
     return model
 
-def generate_complete_gmi(nb_vars, delta):
+def generate_complete_gmi(nb_vars, delta, init_inf):
     model = GraphicalModel()
     G = nx.Graph()
     inv_temp = 1
@@ -211,7 +211,8 @@ def generate_complete_gmi(nb_vars, delta):
             G.add_edge(i,j)
 
     for i in range(nb_vars):
-        if i == 0:
+        # define factor definitions
+        if i in init_inf:
             node_colors[i] = 'r'
             beta = -inv_temp
         else:
@@ -228,6 +229,44 @@ def generate_complete_gmi(nb_vars, delta):
     plt.title('complete graph size = {}, initially infected node is {}'.format(nb_vars, 0))
     plt.show()
     return model
+
+def generate_seattle(G, init_inf):
+    model = GraphicalModel()
+    # G = nx.Graph()
+    N = len(G.nodes)
+    inv_temp = 1
+    node_colors = ['b']*N
+
+    for node in G.nodes:
+        model.add_variable(ith_object_name('V', node))
+
+    for a,b in G.edges:
+        beta = G[a][b]['weight']
+        log_values = np.array([beta, -beta, -beta, beta]).reshape([2,2])
+        factor = Factor(
+            name = ijth_object_name('F', a, b),
+            variables = [ith_object_name('V', a), ith_object_name('V', b)],
+            log_values = log_values)
+        model.add_factor(factor)
+
+    for node in G.nodes:
+        # define factor definitions
+        if node in init_inf:
+            node_colors[node] = 'r'
+            beta = -inv_temp
+        else:
+            beta = 0
+        log_values = np.array([-beta, beta])
+        factor = Factor(
+            name = ith_object_name('B', node),
+            variables = [ith_object_name('V', node)],
+            log_values = log_values)
+        model.add_factor(factor)
+    # print(model.summary())
+    return model
+
+
+
 
 UAI_PATH='./graphical_model/UAI/'
 
