@@ -5,6 +5,9 @@ import time
 import os.path
 import random
 import sys
+from py4j.java_gateway import JavaGateway
+import sched, time
+import traceback
 
 class GMI(object):
     """docstring for SquareLattice."""
@@ -142,6 +145,53 @@ class GMI(object):
         # plt.savefig('IC current state')
         plt.show()
 
+    
+    def setup_view_current_state_from_java(self):
+        os.popen('java -jar COVIDGeoVisualization.jar')
+        s = sched.scheduler(time.time, time.sleep)
+        numAttepmpts = 0
+        def establishConnection(sc, numAttepmpts):
+            try:
+                gateway = JavaGateway()  # connect to the JVM
+                gateway.entry_point.connectToRPC()
+            except:
+                numAttepmpts = numAttepmpts + 1
+                if numAttepmpts < 5:
+                    sc.enter(2, 2, establishConnection, (sc,numAttepmpts))
+                else:
+                    traceback.print_exc()
+                    print("COULD NOT CONNECT TO JAVA!")
+
+        s.enter(2, 2, establishConnection, (s,numAttepmpts))
+        s.run()
+
+
+    def view_current_state_from_java(self, isSync):
+        gateway = JavaGateway()  # connect to the JVM
+        refreshStack = gateway.entry_point.getRefreshStack()
+        isBusy = gateway.entry_point.isBusyRefreshing()
+        #print(isBusy)
+        #print(self.node_color)
+        if isBusy == "0":
+            colorStack = gateway.entry_point.getGraphColorStack()
+            for i in range(len(self.node_color)):
+                colorStack.push(self.node_color[i])
+
+            if isSync == 1:
+                refreshStack.push("1")
+                refreshStack.push("1")
+                s = sched.scheduler(time.time, time.sleep)
+                def waitForNextStep(sc):
+                    isBusy = gateway.entry_point.isBusyRefreshing()
+                    if isBusy == "1":
+                        sc.enter(1, 1, waitForNextStep, (sc,))
+
+                s.enter(1, 1, waitForNextStep, (s,))
+                s.run()
+            else:
+                refreshStack.push("1")
+
+
     def plot_demo(self, n):
         fig, axs = plt.subplots(n,n)
 
@@ -165,7 +215,6 @@ class GMI(object):
         plt.show()
 
 
-
     def infect(self, infected=None):
         '''
             choose one person to be infected and assign states to each node
@@ -179,6 +228,31 @@ class GMI(object):
                 self.G.nodes[node]['state'] = 1
             else:
                 self.G.nodes[node]['state'] = 0
+
+
+    def externalInfect(self):
+        gateway = JavaGateway()  # connect to the JVM
+        s = sched.scheduler(time.time, time.sleep)
+
+        def waitForEndSelection(sc):
+            isBusy = gateway.entry_point.isBusyRefreshing()
+            if isBusy == "1":
+                sc.enter(1, 1, waitForEndSelection, (sc,))
+            else:
+                selectionStack = gateway.entry_point.getSelectionStack()
+                for node in self.G.nodes:
+                    value = selectionStack.pop()
+                    if value == "0":
+                        self.G.nodes[node]['state'] = 0
+                    else:
+                        self.node_color[node] = 'r'
+                        self.G.nodes[node]['state'] = 1
+
+        s.enter(1, 1, waitForEndSelection, (s,))
+        s.run()
+    
+    
+    
 
     def build_state_vector(self):
         '''This outputs a vector of states defining whether each
@@ -353,13 +427,18 @@ class GMI(object):
                 g[b,a] = g[a,b]
         return g, thetas
 
-    def dynamic_process(self, shuffle=0, view=0):
-        self.infect()
+    def dynamic_process(self, shuffle=0, view=0, externalView=0, isSync=0):
+        if externalView == 1:
+            self.setup_view_current_state_from_java()
+            self.externalInfect()
+        else:
+            self.infect()
         sigma_in = self.build_state_vector()/2
-        if view == 1: self.view_current_state()
+        if view == 1 and externalView == 0: self.view_current_state()
         while not self.is_totally_infected():
             self.IC_step(shuffle=shuffle)
-            if view == 1: self.view_current_state()
+            if view == 1 and externalView == 0: self.view_current_state()
+            if view == 1 and externalView == 1: self.view_current_state_from_java(isSync=isSync)
         sigma = self.build_state_vector()/2
         self.reset()
         # return sigma_in, sigma
