@@ -7,7 +7,7 @@ import random
 import sys
 
 class GMI(object):
-    """docstring for SquareLattice."""
+    """docstring for GMI."""
 
     def __init__(self, G=None):
         super(GMI, self).__init__()
@@ -25,7 +25,7 @@ class GMI(object):
 
 
         self.G = G
-        self.pos = self.get_positions_from(G)
+        # self.pos = self.get_positions_from(G)
         self.N = len(self.G.nodes)
         self.initialize_edge_weights()
         # self.save_graph()
@@ -139,7 +139,6 @@ class GMI(object):
         )
 
         plt.title('IC current state')
-        # plt.savefig('IC current state')
         plt.show()
 
     def plot_demo(self, n):

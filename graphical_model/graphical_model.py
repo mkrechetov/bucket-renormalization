@@ -56,8 +56,9 @@ class GraphicalModel():
 
         return new_factor
 
-    def contract_variables_from(self, variable):
+    def contract_variables_from(self, variables):
         for variable in variables:
+            print(variable)
             self.contract_variable(variable)
 
     def get_adj_factors(self, variable):
@@ -70,6 +71,9 @@ class GraphicalModel():
 
     def degree(self, variable):
         return len(self.get_adj_factors(variable))
+
+    def set_variable(self, variable, value):
+        print(self.variables)
 
     '''
     Factor related operations

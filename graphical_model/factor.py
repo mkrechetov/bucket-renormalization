@@ -382,6 +382,15 @@ def product_over_(*args):
     else:
         return factor_list[0].copy()
 
+def sum_over_(*args):
+    factor_list = [tensor for tensor in args if tensor]
+    if len(factor_list) > 1:
+        return reduce(lambda phi1, phi2: phi1+phi2, factor_list)
+    elif isinstance(factor_list[0], (int, float)):
+        return factor_list[0]
+    else:
+        return factor_list[0].copy()
+
 def entropy(p, q = None):
     p_values = np.copy(p.values)
     p_values.ravel()

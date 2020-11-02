@@ -6,8 +6,8 @@ from graphical_model import GraphicalModel
 import numpy as np
 from functools import reduce
 sys.path.extend(['inference/'])
-import networkx as nx
-import matplotlib.pyplot as plt
+# import networkx as nx
+# import matplotlib.pyplot as plt
 
 file_dir_path = os.path.dirname(os.path.realpath(__file__))
 
@@ -158,14 +158,14 @@ def generate_grid_gmi(m, n, delta):
 
     # randomly select initially infected nodes
     # sigma_in = np.round(np.random.uniform([grid_size,grid_size]))
-    sigma_in = np.zeros([m,n])
+    # sigma_in = np.zeros([m,n])
+    # beta = -(np.log(1-sigma_in[i,j]) - inv_temp)/2
+    # assigning
 
     # assigning buckets to variables
 
     for i in range(m):
         for j in range(n):
-            # beta = -(np.log(1-sigma_in[i,j]) - inv_temp)/2
-            # assigning
             if i == np.floor(m/2) and j == np.floor(n/2):
                 node_colors[i*n+j] = 'r'
                 beta = -inv_temp
@@ -186,19 +186,15 @@ def generate_grid_gmi(m, n, delta):
     plt.show()
     return model
 
-def generate_complete_gmi(nb_vars, delta, init_inf):
+def generate_complete_gmi(nb_vars, delta, init_inf, inv_temp):
     model = GraphicalModel()
-    G = nx.Graph()
-    inv_temp = 1
     node_colors = ['b']*nb_vars
-    interaction = delta * np.random.uniform(
-        0, 1.0, nb_vars*(nb_vars-1))
-    bias = np.random.uniform(-0.1, 0.1, [nb_vars])
+    interaction = delta * np.random.uniform(0, 1.0, nb_vars*(nb_vars-1))
 
     for i in range(nb_vars):
         model.add_variable(ith_object_name('V', i))
-        G.add_node(i)
 
+    active = [] # active edges
     for i in range(nb_vars):
         for j in range(i+1, nb_vars):
             beta = interaction[i * nb_vars + j ]
@@ -208,7 +204,12 @@ def generate_complete_gmi(nb_vars, delta, init_inf):
                 variables = [ith_object_name('V', i), ith_object_name('V', j)],
                 log_values = log_values)
             model.add_factor(factor)
-            G.add_edge(i,j)
+
+            # IC model
+            rand = np.random.uniform(0,1)
+            if rand > beta:
+                active.append( [i,j] )
+
 
     for i in range(nb_vars):
         # define factor definitions
@@ -224,10 +225,12 @@ def generate_complete_gmi(nb_vars, delta, init_inf):
             log_values = log_values)
         model.add_factor(factor)
 
-    nx.draw(G, node_color=node_colors)
-    print('max degree = {}'.format(np.max([G.degree(node) for node in G.nodes])))
-    plt.title('complete graph size = {}, initially infected node is {}'.format(nb_vars, 0))
-    plt.show()
+    model.active = active
+
+    # nx.draw(G, node_color=node_colors)
+    # print('max degree = {}'.format(np.max([G.degree(node) for node in G.nodes])))
+    # plt.title('complete graph size = {}, initially infected node is {}'.format(nb_vars, 0))
+    # plt.show()
     return model
 
 def generate_seattle(G, init_inf):

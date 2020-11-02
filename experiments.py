@@ -169,8 +169,9 @@ def marginalization(variable_name):
     init_inf = [0]
     model = model_protocol['generator'](n, delta, init_inf)
     init_inf.append(2)
-    marg_model = model_protocol['generator'](n, delta, init_inf)
-    true_logZ = model_protocol['true_inference'](model) # computed using BE
+    marg_model = model.copy()
+    # true_logZ = model_protocol['true_inference'](model) # computed using BE
+    # print(true_logZ)
     true_logZ = model_protocol['true_inference'](marg_model) # computed using BE
     print(model.variables)
     print(true_logZ)
@@ -181,10 +182,23 @@ def marginalization(variable_name):
     #         fac = factor.marginalize([variable_name], inplace=True)
     #         print(fac)
     #         continue
-    fac = marg_model.contract_variable(variable_name)
-    print(fac)
+    variables_to_contract = list(set(marg_model.variables)-set(['V0']))
+    factor_list = []
+    for factor in marg_model.factors:
+        for variable in factor.variables:
+            if variable in variables_to_contract:
+                print(factor.name, factor.log_values[1][1])
+
+    # print([(factor.name, factor.log_values[1]) for factor in marg_model.factors ])
+    # print()
+    # print([factor.name for factor in marg_model.factors])
+    print(variables_to_contract)
+    fac = marg_model.contract_variables_from(variables_to_contract)
+    print(marg_model.variables)
+
     true_logZ = model_protocol['true_inference'](marg_model) # computed using BE
     print(true_logZ)
+    marg_model.set_variable('V0', +1)
 
 def generate_seattle_graph():
     TractData = []
@@ -243,6 +257,7 @@ def run_seattle(init_inf, ibound=10):
     print('experiment for {} complete'.format(args.model_type))
 
 
+
 # run_seattle([0])
 # need to find optimal ibound for varying n and same graph
 # marginalize_complete_graph(30, ibound=15, init_inf=[0,12,19])
@@ -251,7 +266,7 @@ def run_seattle(init_inf, ibound=10):
 # marginalize_complete_graph(100)
 
 
-marginalization('V9')
+# marginalization('V9')
 
 # illustration_of_inference()
 # grid_experiment(4,5)
