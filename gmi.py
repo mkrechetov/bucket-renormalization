@@ -145,7 +145,7 @@ class GMI(object):
         # plt.savefig('IC current state')
         plt.show()
 
-    
+
     def setup_view_current_state_from_java(self):
         os.popen('java -jar COVIDGeoVisualization.jar')
         s = sched.scheduler(time.time, time.sleep)
@@ -250,9 +250,9 @@ class GMI(object):
 
         s.enter(1, 1, waitForEndSelection, (s,))
         s.run()
-    
-    
-    
+
+
+
 
     def build_state_vector(self):
         '''This outputs a vector of states defining whether each
@@ -431,6 +431,7 @@ class GMI(object):
         if externalView == 1:
             self.setup_view_current_state_from_java()
             self.externalInfect()
+            if view == 1 and externalView == 1: self.view_current_state_from_java(isSync=isSync)
         else:
             self.infect()
         sigma_in = self.build_state_vector()/2
