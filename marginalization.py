@@ -87,18 +87,31 @@ filename = "seattle_marginal_Z_init_inf={}.csv".format(init_inf)
 utils.append_to_csv(filename, ['Tract', 'Z_i'])
 # print(seattle.factors[:4])
 # quit()
+num_factors = []
 for var in seattle.variables:
     if count == 81:
         copy = seattle.copy()
         print('copy #{} made.'.format(count))
+        # print('factor list length:')
+        num_factors.append(len([fac for fac in copy.factors if var in fac.variables]))
+        factors81 = [fac for fac in copy.factors if var in fac.variables]
+        # print(factors81)
+        # print(factors81[:3])
+        # quit()
         copy.contract_variable(var)
         print('variable {} contracted'.format(var))
-        Z_copy = BucketRenormalization(copy, ibound=10).run(max_iter=1)
+        Z_copy = BucketRenormalization(copy, ibound=10).run(max_iter=0)
         Zi.append(Z_copy)
         print('partition function computation {} complete: {}'.format(count, Z_copy))
         utils.append_to_csv(filename, [var, Z_copy])
     count +=1
 # print(Zi)
+# plt.plot(range(len(num_factors)),num_factors)
+# plt.title('Number of factors associated to each tract')
+# plt.xlabel('Tract number')
+# plt.ylabel('number of factors')
+#
+# plt.show()
 
 filename = "seattle_marginal_probabilities_init_inf={}.csv".format(init_inf)
 utils.append_to_csv(filename, ['Tract', 'probability'])
