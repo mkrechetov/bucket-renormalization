@@ -45,9 +45,10 @@ class MiniBucketElimination():
         upper_candidate_for_ = {var: set() for var in self.renormalized_model.variables}
 
         for fac in self.renormalized_model.factors:
-            lower_var = min(fac.variables, key = self.renormalized_elimination_order.index)
-            factor_upper_to_[lower_var] = fac
-            upper_candidate_for_[lower_var] = upper_candidate_for_[lower_var].union(set(fac.variables))
+            if fac.variables:
+                lower_var = min(fac.variables, key = self.renormalized_elimination_order.index)
+                factor_upper_to_[lower_var] = fac
+                upper_candidate_for_[lower_var] = upper_candidate_for_[lower_var].union(set(fac.variables))
 
         for var in self.renormalized_elimination_order:
             m_vars = sorted(upper_candidate_for_[var], key = self.renormalized_elimination_order.index)
@@ -151,8 +152,9 @@ class MiniBucketElimination():
 
         factors_upper_to_ = {var: [] for var in renormalized_model.variables}
         for fac in renormalized_model.factors:
-            lower_var = min(fac.variables, key = renormalized_elimination_order.index)
-            factors_upper_to_[lower_var].append(fac)
+            if fac.variables:
+                lower_var = min(fac.variables, key = renormalized_elimination_order.index)
+                factors_upper_to_[lower_var].append(fac)
 
         for var, facs in factors_upper_to_.items():
             if facs:
