@@ -376,11 +376,7 @@ default_variable_name.cnt = 0
 def product_over_(*args):
     factor_list = [tensor for tensor in args if tensor]
     if len(factor_list) > 1:
-        fac_product = factor_list[0]
-        for fac in factor_list[1:]:
-            fac_product *= fac
-        return fac_product
-        # return reduce(lambda phi1, phi2: phi1*phi2, factor_list)
+        return reduce(lambda phi1, phi2: phi1*phi2, factor_list)
     elif isinstance(factor_list[0], (int, float)):
         return factor_list[0]
     else:

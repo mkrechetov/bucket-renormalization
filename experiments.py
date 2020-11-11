@@ -256,6 +256,26 @@ def run_seattle(init_inf, ibound=10):
             utils.append_to_csv(file_name, [ip['name'], logZ, toc-tic])
     print('experiment for {} complete'.format(args.model_type))
 
+def error_distribution():
+    # create a model once
+    N = 15
+    delta = 1
+    init_inf = [0]
+    inv_temp = 10
+    model = generate_complete_gmi(N, delta, init_inf, inv_temp)
+    Z = BucketElimination(model).run()
+    print(Z)
+    Z = BucketElimination(model).run()
+    print(Z)
+    approxs = []
+    err = 0
+    for i in range(10):
+        Za = BucketRenormalization(model).run()
+        approx.append(Za)
+        err+= np.abs(Z - Za)
+
+    print("average error from BR = {}".format(err/10))
+
 
 
 # run_seattle([0])

@@ -233,12 +233,10 @@ def generate_complete_gmi(nb_vars, delta, init_inf, inv_temp):
     # plt.show()
     return model
 
-def generate_seattle(G, init_inf, inv_temp):
+'''def generate_seattle(G, init_inf, inv_temp):
     model = GraphicalModel()
-    # G = nx.Graph()
     N = len(G.nodes)
-    # inv_temp = 1
-    node_colors = ['b']*N
+    # node_colors = ['b']*N
 
     for node in G.nodes:
         model.add_variable(ith_object_name('V', node))
@@ -254,19 +252,14 @@ def generate_seattle(G, init_inf, inv_temp):
 
     for node in G.nodes:
         # define factor definitions
-        if node in init_inf:
-            node_colors[node] = 'r'
-            beta = -inv_temp
-        else:
-            beta = 0
+        beta = -inv_temp if node in init_inf else 0
         log_values = np.array([-beta, beta])
         factor = Factor(
             name = ith_object_name('B', node),
             variables = [ith_object_name('V', node)],
             log_values = log_values)
         model.add_factor(factor)
-    # print(model.summary())
-    return model
+    return model'''
 
 
 

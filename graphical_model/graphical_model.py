@@ -72,8 +72,8 @@ class GraphicalModel():
     def degree(self, variable):
         return len(self.get_adj_factors(variable))
 
-    def set_variable(self, variable, value):
-        print(self.variables)
+    # def set_variable(self, variable, value):
+    #     print(self.variables)
 
     '''
     Factor related operations
@@ -115,8 +115,8 @@ class GraphicalModel():
     def summary(self):
         print('Number of variables: {}'.format(len(self.variables)))
         print('Max degree of variables: {}'.format(np.max([self.degree(var) for var in self.variables]) - 1))
-        print('Max number of variables associated to each variable: {}'.format(
-        np.max([self.get_cardinality_for_(var) for var in self.variables])))
+        # print('Max number of variables associated to each variable: {}'.format(
+        # np.max([self.get_cardinality_for_(var) for var in self.variables])))
         print('Max number of variables associated to each factor: {}'.format(
         np.max([len(fac.variables) for fac in self.factors])))
         print('Total number of factors: {}'.format(
