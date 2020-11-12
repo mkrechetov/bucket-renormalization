@@ -29,7 +29,7 @@ def extract_seattle_data(eps=1e-1, MU=300):
     J_raw = np.log(1+np.exp(g_raw))/2
 
     # j_0 =
-    # print(np.max(J_raw), np.min(J_raw))
+    print(np.max(J_raw), np.min(J_raw))
     summary = pd.read_csv('./seattle/TractSummary159.csv')
     # Create Graph
     G = nx.Graph()
@@ -80,7 +80,7 @@ def generate_seattle(G, init_inf, inv_temp):
 
     for node in G.nodes:
         # define factor definitions
-        beta = -inv_temp #if node in init_inf else 0
+        beta = -inv_temp if node in init_inf else 0
         log_values = np.array([-beta, beta])
         factor = Factor(
             name = ith_object_name('B', node),
@@ -194,7 +194,7 @@ def compute_partition_functions():
     node_buckets = [fac for fac in seattle.factors if 'B' in fac.name]
     # collect partition functions of modified GMs
     for index in range(N):
-        # if index <= 61: continue
+        if index != 26: continue
         var = seattle.variables[index]
         model_copy = seattle.copy()
         print('var {} has {} neighbors'.format(var, seattle.degree(var)))
@@ -255,8 +255,8 @@ def compute_marginal_probabilities(seattle):
 # init_inf = [0, 81, 93]
 init_inf = [0]
 BETA = 3
-MU = 300
-eps = 1e-1
+MU = 100
+eps = 4e-1
 # for inf in init_inf:
 #     for MU in MUS:
 print('init_inf={} MU={} BETA={} eps={}'.format(init_inf, MU, BETA, eps))
@@ -280,7 +280,7 @@ def test0():
 
         print(Z)
         print(t2-t1)
-    quit()
+    # quit()
 
 def degree_distribution(seattle):
     '''degree distribution'''
