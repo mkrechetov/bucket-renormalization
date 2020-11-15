@@ -28,7 +28,7 @@ class GMI(object):
 
 
         self.G = G
-        # self.pos = self.get_positions_from(G)
+        self.pos = self.get_positions_from(G)
         self.N = len(self.G.nodes)
         self.initialize_edge_weights()
         # self.save_graph()

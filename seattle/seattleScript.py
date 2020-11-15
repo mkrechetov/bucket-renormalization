@@ -48,4 +48,4 @@ from gmi import GMI
 
 simulation = GMI(G)
 
-simulation.dynamic_process(view=1,externalView=0,isSync=0)
+simulation.dynamic_process(view=1,externalView=1,isSync=1)
