@@ -205,6 +205,7 @@ def compute_partition_functions():
     results.append([])
     # collect partition functions of modified GMs
     for index in range(N):
+        # I USED TRY/EXCEPT BECAUSE THE CODE FAILS BECAUSE A NUMBER GOES TO INFINITY WHILE CALCULATING
         try:
             #if index != 26: continue
             var = seattle.variables[index]
@@ -250,23 +251,24 @@ def compute_partition_functions():
     '''
     # COMMENT THE ABOVE ''' TO RUN CODE SERIALLY
     for index in range(N):
-        try:
+        try:# I USED TRY/EXCEPT BECAUSE THE CODE FAILS BECAUSE A NUMBER GOES TO INFINITY WHILE CALCULATING
             Zi.append(results[0][index][1])
-        except:
+        except:# IF PREVIOUS CODES FAIL FILL Zi WITH 0
             print("Zi ", index, " not calculated!")
             Zi.append(0)
 
     print(Zi)
     for index in range(N):
-        try:
+        try:# I USED TRY/EXCEPT BECAUSE THE CODE FAILS BECAUSE A NUMBER GOES TO INFINITY WHILE CALCULATING
             utils.append_to_csv(filename, [results[0][index][0],results[0][index][1],results[0][index][2]])
-        except:
+        except:# IF PREVIOUS CODES FAIL WRITE ZERO FOR THE V VALUES
             utils.append_to_csv(filename, ["V"+str(index), 0, 0])
             print("Row ",index," written by 0!")
 
 
 
 def compute_partition_functionsParallel(index):
+    # I USED TRY/EXCEPT BECAUSE THE CODE FAILS BECAUSE A NUMBER GOES TO INFINITY WHILE CALCULATING
     try:
         var = seattle.variables[index]
         model_copy = seattle.copy()
