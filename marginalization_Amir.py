@@ -20,6 +20,7 @@ from bucket_renormalization import BucketRenormalization
 import itertools
 
 from joblib import Parallel, delayed
+import multiprocessing as mp
 
 
 NUM_STATES = 0
@@ -197,8 +198,9 @@ def compute_partition_functions():
 
     results=[]
 
+    # UNCOMMENT THE NEXT LINE AND COMMENT THE THIRD ''' APPROXIMATLY 50 LINES BELOW TO RUN CODE SERIALLY
     #'''
-    results.append(Parallel(n_jobs=13)(delayed(compute_partition_functionsParallel)(index) for index in range(N)))
+    results.append(Parallel(n_jobs=mp.cpu_count())(delayed(compute_partition_functionsParallel)(index) for index in range(N)))
     '''
     results.append([])
     # collect partition functions of modified GMs
@@ -246,6 +248,7 @@ def compute_partition_functions():
             print("Failed on var: ", var)
             results[0].append([])
     '''
+    # COMMENT THE ABOVE ''' TO RUN CODE SERIALLY
     for index in range(N):
         try:
             Zi.append(results[0][index][1])
