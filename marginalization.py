@@ -19,9 +19,11 @@ from bucket_elimination import BucketElimination
 from bucket_renormalization import BucketRenormalization
 import itertools
 
+from joblib import Parallel, delayed
+import multiprocessing as mp
+
 
 NUM_STATES = 0
-J_raw = 0
 
 def extract_seattle_data(eps=1e-1, MU=300):
     # Read Data
@@ -193,9 +195,81 @@ def compute_partition_functions():
     # N=len(seattle.variables)
     # H = extract_var_weights(seattle)
     node_buckets = [fac for fac in seattle.factors if 'B' in fac.name]
+
+    results=[]
+
+    # UNCOMMENT THE NEXT LINE AND COMMENT THE THIRD ''' APPROXIMATLY 50 LINES BELOW TO RUN CODE SERIALLY
+    #'''
+    results.append(Parallel(n_jobs=mp.cpu_count())(delayed(compute_partition_functionsParallel)(index) for index in range(N)))
+    '''
+    results.append([])
     # collect partition functions of modified GMs
     for index in range(N):
-        # if index <=117: continue
+        # I USED TRY/EXCEPT BECAUSE THE CODE FAILS BECAUSE A NUMBER GOES TO INFINITY WHILE CALCULATING
+        try:
+            #if index != 26: continue
+            var = seattle.variables[index]
+            model_copy = seattle.copy()
+            print('var {} has {} neighbors'.format(var, seattle.degree(var)))
+
+            adj_factors = seattle.get_adj_factors(var)
+            factors = [fac for fac in adj_factors if 'F' in fac.name]
+
+            # remove variable and edges
+            model_copy.remove_variable(var)
+            model_copy.remove_factors_from(adj_factors)
+
+            var_names = []
+            for fac in adj_factors:
+                for entry in fac.variables:
+                    var_names.append(entry.replace('V','B'))
+            var_names = list(set(var_names))
+
+            nbrs = model_copy.get_factors_from(var_names)
+
+            for nbr in nbrs:
+                # if fac is None: continue
+                fac = [f for f in factors if nbr.name.replace('B','') in f.name]
+                if not fac: continue
+                beta = nbr.log_values+fac[0].log_values[0]
+                nbr.log_values = beta
+                # nbr_num = int(nbr.name.replace('B',''))
+
+            H_temp = extract_var_weights(model_copy, index)
+            print(H_temp)
+
+            t1 = time.time()
+            Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+            t2 = time.time()
+            print('partition function computation {} complete: {} (time taken: {})'.format(index, Z_copy, t2-t1))
+            results[0].append([var, Z_copy, t2 - t1])
+            #utils.append_to_csv(filename, [var, Z_copy, t2-t1])
+            #Zi.append(Z_copy)
+        except:
+            print("Failed on var: ", var)
+            results[0].append([])
+    '''
+    # COMMENT THE ABOVE ''' TO RUN CODE SERIALLY
+    for index in range(N):
+        try:# I USED TRY/EXCEPT BECAUSE THE CODE FAILS BECAUSE A NUMBER GOES TO INFINITY WHILE CALCULATING
+            Zi.append(results[0][index][1])
+        except:# IF PREVIOUS CODES FAIL FILL Zi WITH 0
+            print("Zi ", index, " not calculated!")
+            Zi.append(0)
+
+    print(Zi)
+    for index in range(N):
+        try:# I USED TRY/EXCEPT BECAUSE THE CODE FAILS BECAUSE A NUMBER GOES TO INFINITY WHILE CALCULATING
+            utils.append_to_csv(filename, [results[0][index][0],results[0][index][1],results[0][index][2]])
+        except:# IF PREVIOUS CODES FAIL WRITE ZERO FOR THE V VALUES
+            utils.append_to_csv(filename, ["V"+str(index), 0, 0])
+            print("Row ",index," written by 0!")
+
+
+
+def compute_partition_functionsParallel(index):
+    # I USED TRY/EXCEPT BECAUSE THE CODE FAILS BECAUSE A NUMBER GOES TO INFINITY WHILE CALCULATING
+    try:
         var = seattle.variables[index]
         model_copy = seattle.copy()
         print('var {} has {} neighbors'.format(var, seattle.degree(var)))
@@ -210,16 +284,16 @@ def compute_partition_functions():
         var_names = []
         for fac in adj_factors:
             for entry in fac.variables:
-                var_names.append(entry.replace('V','B'))
+                var_names.append(entry.replace('V', 'B'))
         var_names = list(set(var_names))
 
         nbrs = model_copy.get_factors_from(var_names)
 
         for nbr in nbrs:
             # if fac is None: continue
-            fac = [f for f in factors if nbr.name.replace('B','') in f.name]
+            fac = [f for f in factors if nbr.name.replace('B', '') in f.name]
             if not fac: continue
-            beta = nbr.log_values+fac[0].log_values[0]
+            beta = nbr.log_values + fac[0].log_values[0]
             nbr.log_values = beta
             # nbr_num = int(nbr.name.replace('B',''))
 
@@ -229,10 +303,14 @@ def compute_partition_functions():
         t1 = time.time()
         Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
         t2 = time.time()
-        print('partition function computation {} complete: {} (time taken: {})'.format(index, Z_copy, t2-t1))
-        utils.append_to_csv(filename, [var, Z_copy, t2-t1])
-        Zi.append(Z_copy)
-    print(Zi)
+        print('partition function computation {} complete: {} (time taken: {})'.format(index, Z_copy, t2 - t1))
+        # utils.append_to_csv(filename, [var, Z_copy, t2 - t1])
+        #Zi.append(Z_copy)
+        return [var, Z_copy, t2 - t1]
+    except:
+        print("Failed on var: ",var)
+        return []
+
 
 def compute_marginal_probabilities(seattle):
     filename = "seattle_marginal_probabilities_init_inf={}_BETA={}_MU={}_EPS={}.csv".format(init_inf, BETA, MU, eps)
@@ -255,9 +333,9 @@ def compute_marginal_probabilities(seattle):
 
 # init_inf = [0, 81, 93]
 init_inf = [0]
-BETA = 5
-MU = 120
-eps = 3e-1
+BETA = 3
+MU = 100
+eps = 4e-1
 # for inf in init_inf:
 #     for MU in MUS:
 print('init_inf={} MU={} BETA={} eps={}'.format(init_inf, MU, BETA, eps))
@@ -286,12 +364,9 @@ def test0():
 def degree_distribution(seattle):
     '''degree distribution'''
     degree = [seattle.degree(var) for var in seattle.variables]
-    weights = [G[i][j]['weight'] for i,j in G.edges ]
-    maxJ = np.round(np.max(weights),3)
-    minJ = np.round(np.min(weights),3)
     plt.plot(range(N), degree)
-    plt.title('eps = {}, BETA = {}, MU = {},\n max J = {}, min J = {}'.format(eps, BETA, MU, maxJ, minJ))
-    plt.savefig('./results/eps={}_MU={}_BETA={}_maxJ={}_minJ={}.png'.format(eps, MU, BETA, maxJ, minJ))
+    plt.title('degree of each node for eps = {}'.format(eps))
+    plt.savefig('eps_treshold_{}_deg_dist_MU={}_BETA={}.png'.format(eps, MU, BETA))
     plt.show()
     # quit()
 
@@ -310,9 +385,12 @@ H = extract_var_weights(seattle)
 normfac = np.exp(H)
 # print(H)
 
+t1 = time.time()
 # =====================================
 compute_partition_functions()
 # =====================================
+t2 = time.time()
+print("compute_partition_functions RUNTIME: ",t2-t1)
 
 # quit()
 filename = "seattle_marginal_probabilities_init_inf={}_BETA={}_MU={}_EPS={}.csv".format(init_inf, BETA, MU, eps)
