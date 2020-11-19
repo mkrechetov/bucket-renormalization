@@ -21,6 +21,7 @@ import itertools
 
 
 NUM_STATES = 0
+J_raw = 0
 
 def extract_seattle_data(eps=1e-1, MU=300):
     # Read Data
@@ -194,7 +195,7 @@ def compute_partition_functions():
     node_buckets = [fac for fac in seattle.factors if 'B' in fac.name]
     # collect partition functions of modified GMs
     for index in range(N):
-        if index != 26: continue
+        # if index <=117: continue
         var = seattle.variables[index]
         model_copy = seattle.copy()
         print('var {} has {} neighbors'.format(var, seattle.degree(var)))
@@ -223,7 +224,7 @@ def compute_partition_functions():
             # nbr_num = int(nbr.name.replace('B',''))
 
         H_temp = extract_var_weights(model_copy, index)
-        print(H_temp)
+        # print(H_temp)
 
         t1 = time.time()
         Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
@@ -254,9 +255,9 @@ def compute_marginal_probabilities(seattle):
 
 # init_inf = [0, 81, 93]
 init_inf = [0]
-BETA = 3
-MU = 100
-eps = 4e-1
+BETA = 5
+MU = 120
+eps = 3e-1
 # for inf in init_inf:
 #     for MU in MUS:
 print('init_inf={} MU={} BETA={} eps={}'.format(init_inf, MU, BETA, eps))
@@ -285,9 +286,12 @@ def test0():
 def degree_distribution(seattle):
     '''degree distribution'''
     degree = [seattle.degree(var) for var in seattle.variables]
+    weights = [G[i][j]['weight'] for i,j in G.edges ]
+    maxJ = np.round(np.max(weights),3)
+    minJ = np.round(np.min(weights),3)
     plt.plot(range(N), degree)
-    plt.title('degree of each node for eps = {}'.format(eps))
-    plt.savefig('eps_treshold_{}_deg_dist_MU={}_BETA={}.png'.format(eps, MU, BETA))
+    plt.title('eps = {}, BETA = {}, MU = {},\n max J = {}, min J = {}'.format(eps, BETA, MU, maxJ, minJ))
+    plt.savefig('./results/eps={}_MU={}_BETA={}_maxJ={}_minJ={}.png'.format(eps, MU, BETA, maxJ, minJ))
     plt.show()
     # quit()
 
