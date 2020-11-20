@@ -21,6 +21,12 @@ import itertools
 
 from joblib import Parallel, delayed
 import multiprocessing as mp
+import matplotlib.image as mpimg
+import matplotlib as mpl
+from matplotlib.patches import Ellipse
+import numpy.random as rnd
+import matplotlib.colors as mcolors
+from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 
 NUM_STATES = 0
@@ -328,7 +334,59 @@ def compute_marginal_probabilities(seattle):
         print('P( x_{} = {} ) = {}'.format(idx, 1, marg_prob))
         utils.append_to_csv(filename, [seattle.variables[idx], marg_prob])
 
+def make_colormap(seq):
+    """Return a LinearSegmentedColormap
+    seq: a sequence of floats and RGB-tuples. The floats should be increasing
+    and in the interval (0,1).
+    """
+    seq = [(None,) * 3, 0.0] + list(seq) + [1.0, (None,) * 3]
+    cdict = {'red': [], 'green': [], 'blue': []}
+    for i, item in enumerate(seq):
+        if isinstance(item, float):
+            r1, g1, b1 = seq[i - 1]
+            r2, g2, b2 = seq[i + 1]
+            cdict['red'].append([item, r1, r2])
+            cdict['green'].append([item, g1, g2])
+            cdict['blue'].append([item, b1, b2])
+    return mcolors.LinearSegmentedColormap('CustomMap', cdict)
 
+def drawProbabilityHeatmap(passedFileName,tractUVCoords,rawSeattleImage,probabilities):
+    fig, ax = plt.subplots(figsize=(19.20,10.80))
+    c = mcolors.ColorConverter().to_rgb
+    rvb = make_colormap(
+        [c('blue'), c('red')])
+    norm = mpl.colors.Normalize(vmin=probabilities.T.min(), vmax=probabilities.T.max())
+
+    divider = make_axes_locatable(ax)
+    cax = divider.append_axes('right', size='3%', pad=0.05)
+
+    mpl.colorbar.ColorbarBase(cax, cmap=rvb,
+                              norm=norm,
+                              orientation='vertical')
+
+    ax.imshow(rawSeattleImage,cmap=rvb)
+    for index in range(probabilities.shape[1]):
+        ax.add_patch(Ellipse((tractUVCoords.iloc[index][1],tractUVCoords.iloc[index][2]), width=11, height=11,
+                             edgecolor='None',
+                             facecolor=(probabilities.iloc[0][index],0,1-probabilities.iloc[0][index],1),
+                             linewidth=1))
+    plt.tight_layout()
+    #plt.show()
+    fig.savefig("./results/"+passedFileName+".png")#AUTOMATICALLY SAVES THE IMAGE FILES IN RESULTS FOLDER
+
+#\/\/\/ TESTING FOR SAVE PROBABILITY HEATMAP TO FILE
+#TO DO: MIX THIS TEST CODE WITH HPC RELATED CODE.
+tractUVCoords = pd.read_csv('./seattle/tractUVCoordinates.csv')#GIS DATA WHICH SHOULD BE READ ONCE AND USED MULTIPLE TIMES
+rawSeattleImage=mpimg.imread('./seattle/SeattleRawImage.jpg')#GIS DATA WHICH SHOULD BE READ ONCE AND USED MULTIPLE TIMES
+
+#TEST RANDOM PROBABILITIES. PROBABILITIES SHOULD BE IN A SINGLE ROW
+testProbabilities = pd.DataFrame()#TEST RANDOM PROBABILITIES
+for i in range(tractUVCoords.shape[0]):#TEST RANDOM PROBABILITIES
+    testProbabilities[str(i)] = rnd.rand(1)#TEST RANDOM PROBABILITIES
+#A NAMING SCHEMA IS REQUIRED TO REPLACE "test". THE DIRECTORY IS SET INSIDE THE FUNCTION.
+#tractUVCoords, AND rawSeattleImage SHOULD BE READ ONCE AND USED MULTIPLE TIMES.
+drawProbabilityHeatmap("test",tractUVCoords,rawSeattleImage,testProbabilities)
+#^^^ TESTING FOR SAVE PROBABILITY HEATMAP TO FILE
 
 
 # init_inf = [0, 81, 93]
