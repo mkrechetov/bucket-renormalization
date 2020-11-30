@@ -386,7 +386,7 @@ for i in range(tractUVCoords.shape[0]):#TEST RANDOM PROBABILITIES
 #A NAMING SCHEMA IS REQUIRED TO REPLACE "test". THE DIRECTORY IS SET INSIDE THE FUNCTION.
 #tractUVCoords, AND rawSeattleImage SHOULD BE READ ONCE AND USED MULTIPLE TIMES.
 test_name = "seattle_marginal_probabilities_init_inf=[0]_BETA=3_MU=100_EPS=0.4.csv"
-drawProbabilityHeatmap(test_name,tractUVCoords,rawSeattleImage,testProbabilities)
+# drawProbabilityHeatmap(test_name,tractUVCoords,rawSeattleImage,testProbabilities)
 #^^^ TESTING FOR SAVE PROBABILITY HEATMAP TO FILE
 
 
@@ -417,9 +417,9 @@ random.seed(args.seed)
 
 # init_inf = [0, 81, 93]
 init_inf = [0]
-BETA = args.beta
-MU = args.mu
-eps = args.eps
+BETA = float(args.beta)
+MU = int(args.mu)
+eps = float(args.eps)
 # for inf in init_inf:
 #     for MU in MUS:
 print('init_inf={} MU={} BETA={} eps={}'.format(init_inf, MU, BETA, eps))
@@ -448,9 +448,12 @@ def test0():
 def degree_distribution(seattle):
     '''degree distribution'''
     degree = [seattle.degree(var) for var in seattle.variables]
+    weights = [G[i][j]['weight'] for i,j in G.edges ]
+    maxJ = np.round(np.max(weights),3)
+    minJ = np.round(np.min(weights),3)
     plt.plot(range(N), degree)
-    plt.title('degree of each node for eps = {}'.format(eps))
-    plt.savefig('eps_treshold_{}_deg_dist_MU={}_BETA={}.png'.format(eps, MU, BETA))
+    plt.title('eps = {}, BETA = {}, MU = {},\n max J = {}, min J = {}'.format(eps, BETA, MU, maxJ, minJ))
+    plt.savefig('./results/eps={}_MU={}_BETA={}_maxJ={}_minJ={}.png'.format(eps, MU, BETA, maxJ, minJ))
     plt.show()
     # quit()
 
