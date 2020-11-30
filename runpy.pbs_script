@@ -1,0 +1,20 @@
+ne (above) specifies the shell to use for parsing
+## the remaining lines of the batch script. can run up to select = 10, ncpus = 28
+#
+## Required PBS Directives --------------------------------------
+#PBS -q standard
+#PBS -l select=1:ncpus=1:mem=6gb
+#PBS -l walltime=4:10:00
+#
+## Optional PBS Directives --------------------------------------
+#PBS -N graphical_model
+#PBS -m bea
+#PBS -W group_list=chertkov
+#PBS -M USERNAME@email.arizona.edu
+#
+## Execution Block ----------------------------------------------
+cd $PBS_O_WORKDIR
+#
+date
+singularity run mypython_torchdiffeq.sif ./small.py
+date
