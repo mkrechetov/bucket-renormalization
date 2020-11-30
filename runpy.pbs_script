@@ -1,20 +1,31 @@
-ne (above) specifies the shell to use for parsing
+#!/bin/csh
+## The first line (above) specifies the shell to use for parsing
 ## the remaining lines of the batch script. can run up to select = 10, ncpus = 28
 #
 ## Required PBS Directives --------------------------------------
 #PBS -q standard
-#PBS -l select=1:ncpus=1:mem=6gb
-#PBS -l walltime=4:10:00
+#PBS -l select=5:ncpus=28:mem=6gb
+#PBS -l walltime=1:00:00
 #
 ## Optional PBS Directives --------------------------------------
-#PBS -N graphical_model
+#PBS -N marginalization
 #PBS -m bea
 #PBS -W group_list=chertkov
-#PBS -M USERNAME@email.arizona.edu
+#PBS -M rabrams12@email.arizona.edu
 #
 ## Execution Block ----------------------------------------------
 cd $PBS_O_WORKDIR
+module load python
 #
 date
-singularity run mypython_torchdiffeq.sif ./small.py
+
+foreach BETA ( 3 4 5 )
+  foreach MU ( 100 120 150 )
+    foreach EPS ( .1 .2 .3 .4 .5 )
+      echo "Running experiment beta=$BETA mu=$MU eps=$EPS"
+      #python marginalization -mu $MU -beta $BETA -eps $EPS
+    end
+  end
+end
+
 date
