@@ -391,9 +391,34 @@ drawProbabilityHeatmap("test",tractUVCoords,rawSeattleImage,testProbabilities)
 
 # init_inf = [0, 81, 93]
 init_inf = [0]
-BETA = 3
-MU = 100
-eps = 4e-1
+
+# input into program from command line
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    '-m','--mu',
+    default='100',
+    help='MU parameter - max interaction factor')
+parser.add_argument(
+    '-b','--beta',
+    default='3',
+    help='BETA paremeter - inverse temperature')
+parser.add_argument(
+    '-e','--eps',
+    default='.2',
+    help='EPS parameter - interaction threshhold')
+parser.add_argument(
+    '--seed',
+    type=int,
+    default=0)
+args = parser.parse_args()
+
+np.random.seed(args.seed)
+random.seed(args.seed)
+
+
+BETA = args.beta
+MU = args.mu
+eps = args.eps
 # for inf in init_inf:
 #     for MU in MUS:
 print('init_inf={} MU={} BETA={} eps={}'.format(init_inf, MU, BETA, eps))
