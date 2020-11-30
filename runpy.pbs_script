@@ -14,7 +14,7 @@
 #PBS -M rabrams12@email.arizona.edu
 #
 ## Execution Block ----------------------------------------------
-cd $PBS_O_WORKDIR
+#cd $PBS_O_WORKDIR
 module load python
 #
 date
