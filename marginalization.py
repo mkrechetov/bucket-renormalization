@@ -385,12 +385,12 @@ for i in range(tractUVCoords.shape[0]):#TEST RANDOM PROBABILITIES
     testProbabilities[str(i)] = rnd.rand(1)#TEST RANDOM PROBABILITIES
 #A NAMING SCHEMA IS REQUIRED TO REPLACE "test". THE DIRECTORY IS SET INSIDE THE FUNCTION.
 #tractUVCoords, AND rawSeattleImage SHOULD BE READ ONCE AND USED MULTIPLE TIMES.
-drawProbabilityHeatmap("test",tractUVCoords,rawSeattleImage,testProbabilities)
+test_name = "seattle_marginal_probabilities_init_inf=[0]_BETA=3_MU=100_EPS=0.4.csv"
+drawProbabilityHeatmap(test_name,tractUVCoords,rawSeattleImage,testProbabilities)
 #^^^ TESTING FOR SAVE PROBABILITY HEATMAP TO FILE
 
 
-# init_inf = [0, 81, 93]
-init_inf = [0]
+
 
 # input into program from command line
 parser = argparse.ArgumentParser()
@@ -415,7 +415,8 @@ args = parser.parse_args()
 np.random.seed(args.seed)
 random.seed(args.seed)
 
-
+# init_inf = [0, 81, 93]
+init_inf = [0]
 BETA = args.beta
 MU = args.mu
 eps = args.eps
