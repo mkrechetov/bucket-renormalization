@@ -9,7 +9,7 @@
 #PBS -l walltime=00:50:00
 #
 ## Optional PBS Directives --------------------------------------
-#PBS -N marginalization
+#PBS -N marg
 #PBS -m bea
 #PBS -M rabrams12@email.arizona.edu
 #PBS -W group_list=chertkov
