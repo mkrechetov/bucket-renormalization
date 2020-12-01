@@ -5,7 +5,7 @@
 ## Required PBS Directives --------------------------------------
 #PBS -q standard
 #PBS -l select=5:ncpus=28:mem=6gb
-#PBS -l walltime=1:00:00
+#PBS -l walltime=2:00:00
 #
 ## Optional PBS Directives --------------------------------------
 #PBS -N marginalization
@@ -14,7 +14,7 @@
 #PBS -M rabrams12@email.arizona.edu
 #
 ## Execution Block ----------------------------------------------
-#cd $PBS_O_WORKDIR
+cd $PBS_O_WORKDIR
 module load python
 #
 date
@@ -23,7 +23,7 @@ foreach BETA ( 3 4 5 )
   foreach MU ( 100 120 150 )
     foreach EPS ( .1 .2 .3 .4 .5 )
       echo "Running experiment beta=$BETA mu=$MU eps=$EPS"
-      #python marginalization -mu $MU -beta $BETA -eps $EPS
+      python marginalization.py --mu $MU --beta $BETA --eps $EPS
     end
   end
 end

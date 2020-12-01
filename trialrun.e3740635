@@ -1,0 +1,405 @@
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "marginalization.py", line 9, in <module>
+    import protocols
+  File "/groups/chertkov/rabrams/bucket-renormalization/protocols.py", line 7, in <module>
+    from mean_field import MeanField
+  File "inference/mean_field.py", line 34
+    old_mean_field = {var : copy(self.mean_fields[var]) for var in self.model.variables}
+                                                          ^
+SyntaxError: invalid syntax
