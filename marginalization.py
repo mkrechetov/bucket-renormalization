@@ -97,28 +97,6 @@ def generate_seattle(G, init_inf, inv_temp):
             log_values = log_values)
         model.add_factor(factor)
 
-    # # this removes a variable and updates its neighbors MF.
-    # for inf in init_inf:
-    #     model.remove_variable(ith_object_name('V', inf))
-    #
-    #     adj_factors = model.get_adj_factors(ith_object_name('B', inf))
-    #     model.remove_factors_from(adj_factors)
-    #
-    #     var_names = []
-    #     for fac in adj_factors:
-    #         for entry in fac.variables:
-    #             var_names.append(entry.replace('V','B'))
-    #     var_names = list(set(var_names))
-    #
-    #     nbrs = model.get_factors_from(var_names)
-    #
-    #     for nbr in nbrs:
-    #         # if fac is None: continue
-    #         fac = [f for f in factors if nbr.name.replace('B','') in f.name]
-    #         if not fac: continue
-    #         beta = nbr.log_values+fac[0].log_values[0]
-    #         nbr.log_values = beta
-
     return model
 
 
