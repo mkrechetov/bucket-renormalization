@@ -19,7 +19,7 @@
 #PBS -l place=free:shared
 ### CPUtime required in hhh:mm:ss.
 ### Leading 0's can be omitted e.g 48:0:0 sets 48 hours
-#PBS -l cputime=116:40:00
+###PBS -l cputime=116:40:00
 
 ## Execution Block ----------------------------------------------
 cd $PBS_O_WORKDIR

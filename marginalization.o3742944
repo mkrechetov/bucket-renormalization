@@ -1,0 +1,49 @@
+Tue Dec  1 14:16:48 MST 2020
+Running experiment beta=3 mu=100 eps=.1
+Running experiment beta=3 mu=100 eps=.2
+Running experiment beta=3 mu=100 eps=.3
+Running experiment beta=3 mu=100 eps=.4
+Running experiment beta=3 mu=100 eps=.5
+Running experiment beta=3 mu=120 eps=.1
+Running experiment beta=3 mu=120 eps=.2
+Running experiment beta=3 mu=120 eps=.3
+Running experiment beta=3 mu=120 eps=.4
+Running experiment beta=3 mu=120 eps=.5
+Running experiment beta=3 mu=150 eps=.1
+Running experiment beta=3 mu=150 eps=.2
+Running experiment beta=3 mu=150 eps=.3
+Running experiment beta=3 mu=150 eps=.4
+Running experiment beta=3 mu=150 eps=.5
+Running experiment beta=4 mu=100 eps=.1
+Running experiment beta=4 mu=100 eps=.2
+Running experiment beta=4 mu=100 eps=.3
+Running experiment beta=4 mu=100 eps=.4
+Running experiment beta=4 mu=100 eps=.5
+Running experiment beta=4 mu=120 eps=.1
+Running experiment beta=4 mu=120 eps=.2
+Running experiment beta=4 mu=120 eps=.3
+Running experiment beta=4 mu=120 eps=.4
+Running experiment beta=4 mu=120 eps=.5
+Running experiment beta=4 mu=150 eps=.1
+Running experiment beta=4 mu=150 eps=.2
+Running experiment beta=4 mu=150 eps=.3
+Running experiment beta=4 mu=150 eps=.4
+Running experiment beta=4 mu=150 eps=.5
+Running experiment beta=5 mu=100 eps=.1
+Running experiment beta=5 mu=100 eps=.2
+Running experiment beta=5 mu=100 eps=.3
+Running experiment beta=5 mu=100 eps=.4
+Running experiment beta=5 mu=100 eps=.5
+Running experiment beta=5 mu=120 eps=.1
+Running experiment beta=5 mu=120 eps=.2
+Running experiment beta=5 mu=120 eps=.3
+Running experiment beta=5 mu=120 eps=.4
+Running experiment beta=5 mu=120 eps=.5
+Running experiment beta=5 mu=150 eps=.1
+Running experiment beta=5 mu=150 eps=.2
+Running experiment beta=5 mu=150 eps=.3
+Running experiment beta=5 mu=150 eps=.4
+Running experiment beta=5 mu=150 eps=.5
+Tue Dec  1 14:18:16 MST 2020
+Your group chertkov has been charged 3:30:00 (0:01:30 X 140 cpus).
+You previously had 35256:42:33.  You now have 35253:12:33 of standard_time remaining
