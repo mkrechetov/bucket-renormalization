@@ -18,6 +18,7 @@ from generate_model import generate_complete_gmi, generate_complete
 from bucket_elimination import BucketElimination
 from bucket_renormalization import BucketRenormalization
 import itertools
+import traceback
 
 from joblib import Parallel, delayed
 import multiprocessing as mp
@@ -257,7 +258,9 @@ def compute_partition_functions():
             results[0].append([var, Z_copy, t2 - t1])
             #utils.append_to_csv(filename, [var, Z_copy, t2-t1])
             #Zi.append(Z_copy)
-        except:
+        except Exception as e:
+            print(e)
+            traceback.print_exc():
             print("Failed on var: ", var)
             results[0].append([])
     '''
@@ -319,7 +322,9 @@ def compute_partition_functionsParallel(index):
         # utils.append_to_csv(filename, [var, Z_copy, t2 - t1])
         #Zi.append(Z_copy)
         return [var, Z_copy, t2 - t1]
-    except:
+    except Exception as e:
+        print(e)
+        traceback.print_exc()
         print("Failed on var: ",var)
         return []
 
@@ -377,8 +382,22 @@ def drawProbabilityHeatmap(passedFileName,tractUVCoords,rawSeattleImage,probabil
                              facecolor=(probabilities.iloc[0][index],0,1-probabilities.iloc[0][index],1),
                              linewidth=1))
     plt.tight_layout()
-    #plt.show()
+    plt.show()
     fig.savefig("./results/"+passedFileName+".png")#AUTOMATICALLY SAVES THE IMAGE FILES IN RESULTS FOLDER
+
+def renormalizeProbability(input):
+    output=pd.DataFrame()
+    max_value=0
+    min_value=1000000
+    for i in range(input.shape[0]):  # TEST RANDOM PROBABILITIES
+        if input.iloc[i][1]<min_value:
+            min_value=input.iloc[i][1]
+        if input.iloc[i][1]>max_value:
+            max_value=input.iloc[i][1]
+    for i in range(input.shape[0]):  # TEST RANDOM PROBABILITIES
+        output[str(i)] = np.array([(input.iloc[i][1]-min_value)/(max_value-min_value)])
+    return output
+
 
 #\/\/\/ TESTING FOR SAVE PROBABILITY HEATMAP TO FILE
 #TO DO: MIX THIS TEST CODE WITH HPC RELATED CODE.
@@ -386,13 +405,15 @@ tractUVCoords = pd.read_csv('./seattle/tractUVCoordinates.csv')#GIS DATA WHICH S
 rawSeattleImage=mpimg.imread('./seattle/SeattleRawImage.jpg')#GIS DATA WHICH SHOULD BE READ ONCE AND USED MULTIPLE TIMES
 
 #TEST RANDOM PROBABILITIES. PROBABILITIES SHOULD BE IN A SINGLE ROW
-testProbabilities = pd.DataFrame()#TEST RANDOM PROBABILITIES
-for i in range(tractUVCoords.shape[0]):#TEST RANDOM PROBABILITIES
-    testProbabilities[str(i)] = rnd.rand(1)#TEST RANDOM PROBABILITIES
+# testProbabilities = pd.DataFrame()#TEST RANDOM PROBABILITIES
+# for i in range(tractUVCoords.shape[0]):#TEST RANDOM PROBABILITIES
+#     testProbabilities[str(i)] = rnd.rand(1)#TEST RANDOM PROBABILITIES
+testProbabilities = pd.read_csv('./results/seattle_marginal_probabilities_init_inf=[0]_BETA=3.0_MU=140_EPS=0.5.csv')#GIS DATA WHICH SHOULD BE READ ONCE AND USED MULTIPLE TIMES
+testProbabilities = renormalizeProbability(testProbabilities)
 #A NAMING SCHEMA IS REQUIRED TO REPLACE "test". THE DIRECTORY IS SET INSIDE THE FUNCTION.
 #tractUVCoords, AND rawSeattleImage SHOULD BE READ ONCE AND USED MULTIPLE TIMES.
-test_name = "seattle_marginal_probabilities_init_inf=[0]_BETA=3_MU=100_EPS=0.4.csv"
-# drawProbabilityHeatmap(test_name,tractUVCoords,rawSeattleImage,testProbabilities)
+test_name = "seattle_marginal_probabilities_init_inf=[0]_BETA=3.0_MU=140_EPS=0.5"
+drawProbabilityHeatmap(test_name,tractUVCoords,rawSeattleImage,testProbabilities)
 #^^^ TESTING FOR SAVE PROBABILITY HEATMAP TO FILE
 
 
