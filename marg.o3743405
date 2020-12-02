@@ -1,0 +1,14 @@
+Tue Dec  1 17:26:43 MST 2020
+Running experiment beta=3 mu=100 eps=.1
+init_inf=[0] MU=100 BETA=3.0 eps=0.1
+3.595376902469075 0.34657359027997264
+Number of variables: 123
+Max degree of variables: 121
+Max number of variables associated to each factor: 2
+Total number of factors: 1797
+None
+check 4
+1192.0470900105927
+879.1739521026611
+Your group chertkov has been charged 117:47:40 (0:50:29 X 140 cpus).
+You previously had 35242:28:33.  You now have 35124:40:53 of standard_time remaining
