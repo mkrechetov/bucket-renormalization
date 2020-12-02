@@ -5,7 +5,7 @@ import time
 import os.path
 import random
 import sys
-from py4j.java_gateway import JavaGateway
+# from py4j.java_gateway import JavaGateway
 import sched, time
 import traceback
 
@@ -165,30 +165,30 @@ class GMI(object):
         s.run()
 
 
-    def view_current_state_from_java(self, isSync):
-        gateway = JavaGateway()  # connect to the JVM
-        refreshStack = gateway.entry_point.getRefreshStack()
-        isBusy = gateway.entry_point.isBusyRefreshing()
-        #print(isBusy)
-        #print(self.node_color)
-        if isBusy == "0":
-            colorStack = gateway.entry_point.getGraphColorStack()
-            for i in range(len(self.node_color)):
-                colorStack.push(self.node_color[i])
-
-            if isSync == 1:
-                refreshStack.push("1")
-                refreshStack.push("1")
-                s = sched.scheduler(time.time, time.sleep)
-                def waitForNextStep(sc):
-                    isBusy = gateway.entry_point.isBusyRefreshing()
-                    if isBusy == "1":
-                        sc.enter(1, 1, waitForNextStep, (sc,))
-
-                s.enter(1, 1, waitForNextStep, (s,))
-                s.run()
-            else:
-                refreshStack.push("1")
+    # def view_current_state_from_java(self, isSync):
+    #     gateway = JavaGateway()  # connect to the JVM
+    #     refreshStack = gateway.entry_point.getRefreshStack()
+    #     isBusy = gateway.entry_point.isBusyRefreshing()
+    #     #print(isBusy)
+    #     #print(self.node_color)
+    #     if isBusy == "0":
+    #         colorStack = gateway.entry_point.getGraphColorStack()
+    #         for i in range(len(self.node_color)):
+    #             colorStack.push(self.node_color[i])
+    #
+    #         if isSync == 1:
+    #             refreshStack.push("1")
+    #             refreshStack.push("1")
+    #             s = sched.scheduler(time.time, time.sleep)
+    #             def waitForNextStep(sc):
+    #                 isBusy = gateway.entry_point.isBusyRefreshing()
+    #                 if isBusy == "1":
+    #                     sc.enter(1, 1, waitForNextStep, (sc,))
+    #
+    #             s.enter(1, 1, waitForNextStep, (s,))
+    #             s.run()
+    #         else:
+    #             refreshStack.push("1")
 
 
     def plot_demo(self, n):
@@ -229,26 +229,26 @@ class GMI(object):
                 self.G.nodes[node]['state'] = 0
 
 
-    def externalInfect(self):
-        gateway = JavaGateway()  # connect to the JVM
-        s = sched.scheduler(time.time, time.sleep)
-
-        def waitForEndSelection(sc):
-            isBusy = gateway.entry_point.isBusyRefreshing()
-            if isBusy == "1":
-                sc.enter(1, 1, waitForEndSelection, (sc,))
-            else:
-                selectionStack = gateway.entry_point.getSelectionStack()
-                for node in self.G.nodes:
-                    value = selectionStack.pop()
-                    if value == "0":
-                        self.G.nodes[node]['state'] = 0
-                    else:
-                        self.node_color[node] = 'r'
-                        self.G.nodes[node]['state'] = 1
-
-        s.enter(1, 1, waitForEndSelection, (s,))
-        s.run()
+    # def externalInfect(self):
+    #     gateway = JavaGateway()  # connect to the JVM
+    #     s = sched.scheduler(time.time, time.sleep)
+    #
+    #     def waitForEndSelection(sc):
+    #         isBusy = gateway.entry_point.isBusyRefreshing()
+    #         if isBusy == "1":
+    #             sc.enter(1, 1, waitForEndSelection, (sc,))
+    #         else:
+    #             selectionStack = gateway.entry_point.getSelectionStack()
+    #             for node in self.G.nodes:
+    #                 value = selectionStack.pop()
+    #                 if value == "0":
+    #                     self.G.nodes[node]['state'] = 0
+    #                 else:
+    #                     self.node_color[node] = 'r'
+    #                     self.G.nodes[node]['state'] = 1
+    #
+    #     s.enter(1, 1, waitForEndSelection, (s,))
+    #     s.run()
 
 
 
