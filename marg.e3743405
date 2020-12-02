@@ -1,8 +1,0 @@
-Badly placed ()'s.
-graphical_model/factor.py:242: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
-  fac.log_values = fac.log_values[slice_]
-graphical_model/factor.py:253: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
-  fac1.log_values = fac1.log_values[slice_]
-=>> PBS: job killed: walltime 3018 exceeded limit 3000
-/cm/shared/uaapps/anaconda/2019.07/lib/python3.7/site-packages/joblib/externals/loky/backend/semaphore_tracker.py:198: UserWarning: semaphore_tracker: There appear to be 34 leaked semaphores to clean up at shutdown
-  len(cache))
