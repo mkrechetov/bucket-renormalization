@@ -1,0 +1,271 @@
+Badly placed ()'s.
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
+Traceback (most recent call last):
+  File "marginalization.py", line 13, in <module>
+    from gmi import GMI
+  File "/groups/chertkov/rabrams/bucket-renormalization/gmi.py", line 8, in <module>
+    from py4j.java_gateway import JavaGateway
+ModuleNotFoundError: No module named 'py4j'
