@@ -30,6 +30,34 @@ from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 
 NUM_STATES = 0
+np.random.seed(args.seed)
+random.seed(args.seed)
+
+# input into program from command line
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    '-m','--mu',
+    default='100',
+    help='MU parameter - max interaction factor')
+parser.add_argument(
+    '-b','--beta',
+    default='3',
+    help='BETA paremeter - inverse temperature')
+parser.add_argument(
+    '-e','--eps',
+    default='.2',
+    help='EPS parameter - interaction threshhold')
+parser.add_argument(
+    '--seed',
+    type=int,
+    default=0)
+args = parser.parse_args()
+
+# init_inf = [0, 81, 93]
+init_inf = [0]
+BETA = float(args.beta)
+MU = int(args.mu)
+eps = float(args.eps)
 
 def extract_seattle_data(eps=1e-1, MU=300):
     # Read Data
@@ -370,34 +398,6 @@ test_name = "seattle_marginal_probabilities_init_inf=[0]_BETA=3_MU=100_EPS=0.4.c
 
 
 
-# input into program from command line
-parser = argparse.ArgumentParser()
-parser.add_argument(
-    '-m','--mu',
-    default='100',
-    help='MU parameter - max interaction factor')
-parser.add_argument(
-    '-b','--beta',
-    default='3',
-    help='BETA paremeter - inverse temperature')
-parser.add_argument(
-    '-e','--eps',
-    default='.2',
-    help='EPS parameter - interaction threshhold')
-parser.add_argument(
-    '--seed',
-    type=int,
-    default=0)
-args = parser.parse_args()
-
-np.random.seed(args.seed)
-random.seed(args.seed)
-
-# init_inf = [0, 81, 93]
-init_inf = [0]
-BETA = float(args.beta)
-MU = int(args.mu)
-eps = float(args.eps)
 # for inf in init_inf:
 #     for MU in MUS:
 print('init_inf={} MU={} BETA={} eps={}'.format(init_inf, MU, BETA, eps))
