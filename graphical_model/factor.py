@@ -239,7 +239,7 @@ class Factor():
             if extra_variables:
                 slice_ = [slice(None)] * len(fac.variables)
                 slice_.extend([np.newaxis] * len(extra_variables))
-                fac.log_values = fac.log_values[slice_]
+                fac.log_values = fac.log_values[tuple(slice_)]
 
                 fac.variables.extend(extra_variables)
                 new_variable_card = fac1.get_cardinalities_for_(extra_variables)
@@ -250,7 +250,7 @@ class Factor():
                 slice_ = [slice(None)] * len(fac1.variables)
                 slice_.extend([np.newaxis] * len(extra_variables))
 
-                fac1.log_values = fac1.log_values[slice_]
+                fac1.log_values = fac1.log_values[tuple(slice_)]
                 fac1.variables.extend(extra_variables)
             for axis in range(fac.log_values.ndim):
                 exchange_index = fac1.variables.index(fac.variables[axis])
