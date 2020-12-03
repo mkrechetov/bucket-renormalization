@@ -1,0 +1,1911 @@
+Badly placed ()'s.
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
+Traceback (most recent call last):
+  File "marginalization.py", line 320, in compute_partition_functionsParallel
+    Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+  File "inference/bucket_renormalization.py", line 14, in __init__
+    self.initialize_projectors()
+  File "inference/bucket_renormalization.py", line 25, in initialize_projectors
+    replicated_projector = self._get_svd_projector(fac, rvar)
+  File "inference/bucket_renormalization.py", line 82, in _get_svd_projector
+    raise ValueError()
+ValueError
