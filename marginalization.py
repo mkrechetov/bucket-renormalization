@@ -31,8 +31,6 @@ from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 
 NUM_STATES = 0
-np.random.seed(args.seed)
-random.seed(args.seed)
 
 # input into program from command line
 parser = argparse.ArgumentParser()
@@ -53,6 +51,9 @@ parser.add_argument(
     type=int,
     default=0)
 args = parser.parse_args()
+
+np.random.seed(args.seed)
+random.seed(args.seed)
 
 # init_inf = [0, 81, 93]
 init_inf = [0]
