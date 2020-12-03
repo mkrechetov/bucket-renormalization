@@ -402,19 +402,19 @@ def renormalizeProbability(input):
 
 #\/\/\/ TESTING FOR SAVE PROBABILITY HEATMAP TO FILE
 #TO DO: MIX THIS TEST CODE WITH HPC RELATED CODE.
-tractUVCoords = pd.read_csv('./seattle/tractUVCoordinates.csv')#GIS DATA WHICH SHOULD BE READ ONCE AND USED MULTIPLE TIMES
-rawSeattleImage=mpimg.imread('./seattle/SeattleRawImage.jpg')#GIS DATA WHICH SHOULD BE READ ONCE AND USED MULTIPLE TIMES
+# tractUVCoords = pd.read_csv('./seattle/tractUVCoordinates.csv')#GIS DATA WHICH SHOULD BE READ ONCE AND USED MULTIPLE TIMES
+# rawSeattleImage=mpimg.imread('./seattle/SeattleRawImage.jpg')#GIS DATA WHICH SHOULD BE READ ONCE AND USED MULTIPLE TIMES
 
 #TEST RANDOM PROBABILITIES. PROBABILITIES SHOULD BE IN A SINGLE ROW
 # testProbabilities = pd.DataFrame()#TEST RANDOM PROBABILITIES
 # for i in range(tractUVCoords.shape[0]):#TEST RANDOM PROBABILITIES
 #     testProbabilities[str(i)] = rnd.rand(1)#TEST RANDOM PROBABILITIES
-testProbabilities = pd.read_csv('./results/seattle_marginal_probabilities_init_inf=[0]_BETA=3.0_MU=140_EPS=0.5.csv')#GIS DATA WHICH SHOULD BE READ ONCE AND USED MULTIPLE TIMES
-testProbabilities = renormalizeProbability(testProbabilities)
+# testProbabilities = pd.read_csv('./results/seattle_marginal_probabilities_init_inf=[0]_BETA=3.0_MU=140_EPS=0.5.csv')#GIS DATA WHICH SHOULD BE READ ONCE AND USED MULTIPLE TIMES
+# testProbabilities = renormalizeProbability(testProbabilities)
 #A NAMING SCHEMA IS REQUIRED TO REPLACE "test". THE DIRECTORY IS SET INSIDE THE FUNCTION.
 #tractUVCoords, AND rawSeattleImage SHOULD BE READ ONCE AND USED MULTIPLE TIMES.
-test_name = "seattle_marginal_probabilities_init_inf=[0]_BETA=3.0_MU=140_EPS=0.5"
-drawProbabilityHeatmap(test_name,tractUVCoords,rawSeattleImage,testProbabilities)
+# test_name = "seattle_marginal_probabilities_init_inf=[0]_BETA=3.0_MU=140_EPS=0.5"
+# drawProbabilityHeatmap(test_name,tractUVCoords,rawSeattleImage,testProbabilities)
 #^^^ TESTING FOR SAVE PROBABILITY HEATMAP TO FILE
 
 
