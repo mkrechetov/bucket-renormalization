@@ -63,7 +63,7 @@ def drawProbabilityHeatmap(passedFileName,tractUVCoords,rawSeattleImage,betas,mu
                     # sub region of the original image
                     x1, x2, y1, y2 = 450, 650, 400, 700
                     axins.set_xlim(x1, x2)
-                    axins.set_ylim(y1, y2)
+                    axins.set_ylim(y2, y1)
                     axins.axes.xaxis.set_visible(False)
                     axins.axes.yaxis.set_visible(False)
                     axins.set_xticklabels('')
@@ -121,7 +121,7 @@ def drawProbabilityHeatmap(passedFileName,tractUVCoords,rawSeattleImage,betas,mu
                     # sub region of the original image
                     x1, x2, y1, y2 = 450, 650, 400, 700
                     axins.set_xlim(x1, x2)
-                    axins.set_ylim(y1, y2)
+                    axins.set_ylim(y2, y1)
                     axins.axes.xaxis.set_visible(False)
                     axins.axes.yaxis.set_visible(False)
                     axins.set_xticklabels('')
