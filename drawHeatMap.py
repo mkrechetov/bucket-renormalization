@@ -49,15 +49,40 @@ def drawProbabilityHeatmap(passedFileName,tractUVCoords,rawSeattleImage,betas,mu
             for m in mu:
                 for e in eps:
                     ax = fig.add_subplot(gs[0, counter])
-                    ax.axes.xaxis.set_visible(False)
-                    ax.axes.yaxis.set_visible(False)
+                    #ax.axes.xaxis.set_visible(False)
+                    #ax.axes.yaxis.set_visible(False)
                     ax.set_title('BETA=' + b + '_MU=' + m + '_EPS='+e)
                     #axes.append(ax)
 
-                    ax.imshow(rawSeattleImage, cmap=rvb)
+                    ax.imshow(rawSeattleImage, interpolation="nearest")
+
+                    # inset axes....
+                    axins = ax.inset_axes([0.01, 0.5, 0.47, 0.47])
+                    axins.imshow(rawSeattleImage, interpolation="nearest",
+                                 origin="lower")
+                    # sub region of the original image
+                    x1, x2, y1, y2 = 450, 650, 400, 700
+                    axins.set_xlim(x1, x2)
+                    axins.set_ylim(y1, y2)
+                    axins.axes.xaxis.set_visible(False)
+                    axins.axes.yaxis.set_visible(False)
+                    axins.set_xticklabels('')
+                    axins.set_yticklabels('')
+
+                    ax.indicate_inset_zoom(axins)
+
+
+                    #ax.imshow(rawSeattleImage, cmap=rvb)
+
                     for index in range(probabilities[counter].shape[1]):
                         ax.add_patch(
                             Ellipse((tractUVCoords.iloc[index][1], tractUVCoords.iloc[index][2]), width=11, height=11,
+                                    edgecolor='None',
+                                    facecolor=(probabilities[counter].iloc[0][index], 0, 1 - probabilities[counter].iloc[0][index], 1),
+                                    linewidth=1))
+                    for index in range(probabilities[counter].shape[1]):
+                        axins.add_patch(
+                            Ellipse((tractUVCoords.iloc[index][1], tractUVCoords.iloc[index][2]), width=15, height=15,
                                     edgecolor='None',
                                     facecolor=(probabilities[counter].iloc[0][index], 0, 1 - probabilities[counter].iloc[0][index], 1),
                                     linewidth=1))
@@ -87,7 +112,24 @@ def drawProbabilityHeatmap(passedFileName,tractUVCoords,rawSeattleImage,betas,mu
                     ax.set_title('BETA=' + b + '_MU=' + m + '_EPS=' + e)
                     # axes.append(ax)
 
-                    ax.imshow(rawSeattleImage, cmap=rvb)
+                    ax.imshow(rawSeattleImage, interpolation="nearest")
+
+                    # inset axes....
+                    axins = ax.inset_axes([0.01, 0.5, 0.47, 0.47])
+                    axins.imshow(rawSeattleImage, interpolation="nearest",
+                                 origin="lower")
+                    # sub region of the original image
+                    x1, x2, y1, y2 = 450, 650, 400, 700
+                    axins.set_xlim(x1, x2)
+                    axins.set_ylim(y1, y2)
+                    axins.axes.xaxis.set_visible(False)
+                    axins.axes.yaxis.set_visible(False)
+                    axins.set_xticklabels('')
+                    axins.set_yticklabels('')
+
+                    ax.indicate_inset_zoom(axins)
+
+                    #ax.imshow(rawSeattleImage, cmap=rvb)
                     for index in range(probabilities[counterP].shape[1]):
                         ax.add_patch(
                             Ellipse((tractUVCoords.iloc[index][1], tractUVCoords.iloc[index][2]), width=11, height=11,
@@ -95,6 +137,12 @@ def drawProbabilityHeatmap(passedFileName,tractUVCoords,rawSeattleImage,betas,mu
                                     facecolor=(
                                     probabilities[counterP].iloc[0][index], 0, 1 - probabilities[counterP].iloc[0][index],
                                     1),
+                                    linewidth=1))
+                    for index in range(probabilities[counterP].shape[1]):
+                        axins.add_patch(
+                            Ellipse((tractUVCoords.iloc[index][1], tractUVCoords.iloc[index][2]), width=15, height=15,
+                                    edgecolor='None',
+                                    facecolor=(probabilities[counterP].iloc[0][index], 0, 1 - probabilities[counterP].iloc[0][index], 1),
                                     linewidth=1))
                     counterR=counterR+1
                     if counterR>=3:
