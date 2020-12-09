@@ -28,8 +28,8 @@ source ./bin/activate
 #
 date
 
-foreach BETA ( 1 3 5 7 )
-  foreach MU ( 90 )
+foreach BETA ( 5 )
+  foreach MU ( 0.001 0.01 0.1 )
     foreach EPS ( .4 )
       echo "Running experiment beta=$BETA mu=$MU eps=$EPS"
       python3 marginalization.py --mu $MU --beta $BETA --eps $EPS

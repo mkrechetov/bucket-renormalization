@@ -64,8 +64,11 @@ eps = float(args.eps)
 def extract_seattle_data(eps=1e-1, MU=300):
     # Read Data
     rawnumbers = pd.read_csv('./seattle/TractTravelRawNumbers.csv', header=None).values
-    g_raw = rawnumbers/MU
-    J_raw = np.log(1+np.exp(g_raw))/2
+    # g_raw = rawnumbers/MU
+    # J_raw = np.log(1+np.exp(g_raw))/2
+
+    # alternate way of estimating J_raw
+    J_raw = -(rawnumbers/2)*np.log(1-MU)
 
     # j_0 =
     print(np.max(J_raw), np.min(J_raw))
