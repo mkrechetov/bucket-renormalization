@@ -58,7 +58,7 @@ random.seed(args.seed)
 # init_inf = [0, 81, 93]
 init_inf = [0]
 BETA = float(args.beta)
-MU = int(args.mu)
+MU = float(args.mu)
 eps = float(args.eps)
 
 def extract_seattle_data(eps=1e-1, MU=300):
