@@ -1,0 +1,418 @@
+Wed Dec  9 16:41:07 MST 2020
+Running experiment beta=5 mu=0.001 eps=.4
+init_inf=[0] MU=0.001 BETA=5.0 eps=0.4
+0.3596798699232806 0.0
+Number of variables: 123
+Max degree of variables: 0
+Max number of variables associated to each factor: 1
+Total number of factors: 0
+None
+Running experiment beta=5 mu=0.01 eps=.4
+init_inf=[0] MU=0.01 BETA=5.0 eps=0.4
+3.6130957393337715 0.0
+Number of variables: 123
+Max degree of variables: 108
+Max number of variables associated to each factor: 2
+Total number of factors: 254
+None
+check 4
+350.8633683833261
+5.3627541065216064
+Zi  18  not calculated!
+Zi  54  not calculated!
+Zi  60  not calculated!
+Zi  62  not calculated!
+Zi  121  not calculated!
+[345.8172600433365, 173.00350409174928, 354.0234010957001, 354.5985943534091, 354.6561839796326, 291.0403092169332, 354.69560139812603, 354.71639173352287, 322.4728674262806, 277.72069121977063, 348.9870934711234, 354.5668176261131, 153.36169243018844, 348.4395059539901, 354.56514285569165, 294.8671230517442, 324.74715929488417, 347.0900094384114, 0, 354.5280651805472, 323.1072660463527, 354.7007878184178, 270.67170148156015, 162.26557271869217, 353.99405074730214, 337.69312328305216, 354.6714735247604, 354.71027673731857, 354.62657780966265, 354.70589394058015, 354.715408164009, 290.27915392704654, 226.98373327610048, 193.03317995215355, 354.6802095286302, 354.72689399486836, 350.125067949831, 350.1315905450059, 350.12405773255887, 256.4515412762611, 354.66125819340294, 354.65145308744377, 354.7246984189496, 347.17872307955287, 354.64054869071157, 354.6729398218986, 268.00648998146323, 354.6986819509593, 323.6772850352249, 354.7007137301775, 354.7154808697783, 327.79063576900705, 354.71553000118627, 345.5821253657089, 0, 351.70153885035177, 354.6884463543285, 352.3973408145311, 354.69622935987485, 354.7146627725279, 0, 354.6841795704363, 0, 347.70139402441504, 354.67860034865487, 354.63670086658453, 354.6959669917971, 354.65186280285, 354.70934378404485, 354.71622780544595, 354.71082920755833, 354.7168578684736, 354.7202316132542, 153.05851542806946, 354.6878449506997, 354.62833934131027, 311.2492394191231, 354.63641583876137, 348.67978410290567, 354.71653825533457, 159.5894370330909, 353.7533754554087, 354.6805144494427, 354.25156618779886, 354.71528927622643, 354.6669107190664, 354.56092197540363, 354.57019568609917, 354.65533489426764, 346.7760187068736, 349.66487721602454, 354.5997188175881, 350.06798405560386, 354.71553305729657, 302.04124132464773, 341.00090120167636, 354.71494693550994, 262.58534252911727, 354.67508431087805, 354.7146915825302, 354.7145280686126, 354.71622732910777, 320.3589449873724, 354.7112350121491, 349.90194433024925, 354.7155301252687, 354.71497203026513, 179.01030369925988, 354.67104922506184, 354.6684282501402, 354.71551128152146, 348.6694747860372, 323.5481819734627, 348.5245796844538, 354.68825091063144, 354.71552129283117, 208.20554188772513, 352.4954450996901, 354.7142084148133, 354.6636023104471, 316.90611086306825, 0, 354.65700175204114]
+Row  18  written by 0!
+Row  54  written by 0!
+Row  60  written by 0!
+Row  62  written by 0!
+Row  121  written by 0!
+compute_partition_functions RUNTIME:  23.518651247024536
+[345.8172600433365, 173.00350409174928, 354.0234010957001, 354.5985943534091, 354.6561839796326, 291.0403092169332, 354.69560139812603, 354.71639173352287, 322.4728674262806, 277.72069121977063, 348.9870934711234, 354.5668176261131, 153.36169243018844, 348.4395059539901, 354.56514285569165, 294.8671230517442, 324.74715929488417, 347.0900094384114, 0.0, 354.5280651805472, 323.1072660463527, 354.7007878184178, 270.67170148156015, 162.26557271869217, 353.99405074730214, 337.69312328305216, 354.6714735247604, 354.71027673731857, 354.62657780966265, 354.70589394058015, 354.715408164009, 290.27915392704654, 226.98373327610048, 193.03317995215355, 354.6802095286302, 354.72689399486836, 350.125067949831, 350.1315905450059, 350.12405773255887, 256.4515412762611, 354.66125819340294, 354.65145308744377, 354.7246984189496, 347.17872307955287, 354.64054869071157, 354.6729398218986, 268.00648998146323, 354.6986819509593, 323.6772850352249, 354.7007137301775, 354.7154808697783, 327.79063576900705, 354.71553000118627, 345.5821253657089, 0.0, 351.70153885035177, 354.6884463543285, 352.3973408145311, 354.69622935987485, 354.7146627725279, 0.0, 354.6841795704363, 0.0, 347.70139402441504, 354.67860034865487, 354.63670086658453, 354.6959669917971, 354.65186280285, 354.70934378404485, 354.71622780544595, 354.71082920755833, 354.7168578684736, 354.7202316132542, 153.05851542806946, 354.6878449506997, 354.62833934131027, 311.2492394191231, 354.63641583876137, 348.67978410290567, 354.71653825533457, 159.5894370330909, 353.7533754554087, 354.6805144494427, 354.25156618779886, 354.71528927622643, 354.6669107190664, 354.56092197540363, 354.57019568609917, 354.65533489426764, 346.7760187068736, 349.66487721602454, 354.5997188175881, 350.06798405560386, 354.71553305729657, 302.04124132464773, 341.00090120167636, 354.71494693550994, 262.58534252911727, 354.67508431087805, 354.7146915825302, 354.7145280686126, 354.71622732910777, 320.3589449873724, 354.7112350121491, 349.90194433024925, 354.7155301252687, 354.71497203026513, 179.01030369925988, 354.67104922506184, 354.6684282501402, 354.71551128152146, 348.6694747860372, 323.5481819734627, 348.5245796844538, 354.68825091063144, 354.71552129283117, 208.20554188772513, 352.4954450996901, 354.7142084148133, 354.6636023104471, 316.90611086306825, 0.0, 354.65700175204114]
+P( x_0 = 1 ) = 0.006641042010961011
+P( x_1 = 1 ) = 0.493079414043415
+P( x_2 = 1 ) = 1.009006448085289
+P( x_3 = 1 ) = 1.0106458134609317
+P( x_4 = 1 ) = 1.0108099503626802
+P( x_5 = 1 ) = 0.8294975635614521
+P( x_6 = 1 ) = 1.0109222944317549
+P( x_7 = 1 ) = 1.010981549222281
+P( x_8 = 1 ) = 0.9190838841687564
+P( x_9 = 1 ) = 0.7915351565466207
+P( x_10 = 1 ) = 0.994652405804436
+P( x_11 = 1 ) = 1.010555246219779
+P( x_12 = 1 ) = 0.43709804513601247
+P( x_13 = 1 ) = 0.9930917198894132
+P( x_14 = 1 ) = 1.01055047293601
+P( x_15 = 1 ) = 0.8404044127216931
+P( x_16 = 1 ) = 0.9255658713852699
+P( x_17 = 1 ) = 0.9892455032786661
+P( x_18 = 1 ) = 0.0
+P( x_19 = 1 ) = 1.0104447973982207
+P( x_20 = 1 ) = 0.9208919914755843
+P( x_21 = 1 ) = 1.010937076311994
+P( x_22 = 1 ) = 0.7714447442283153
+P( x_23 = 1 ) = 0.46247510381708873
+P( x_24 = 1 ) = 1.0089227962964653
+P( x_25 = 1 ) = 0.9624633225150905
+P( x_26 = 1 ) = 1.0108535272832297
+P( x_27 = 1 ) = 1.0109641207964168
+P( x_28 = 1 ) = 1.010725569453649
+P( x_29 = 1 ) = 1.0109516293335474
+P( x_30 = 1 ) = 1.0109787459387167
+P( x_31 = 1 ) = 0.8273281855115466
+P( x_32 = 1 ) = 0.6469291289141238
+P( x_33 = 1 ) = 0.5501662394726271
+P( x_34 = 1 ) = 1.0108784258752659
+P( x_35 = 1 ) = 1.0110114818464642
+P( x_36 = 1 ) = 0.9978957608572906
+P( x_37 = 1 ) = 0.9979143509859921
+P( x_38 = 1 ) = 0.9978928816246229
+P( x_39 = 1 ) = 0.73091569079415
+P( x_40 = 1 ) = 1.0108244124417332
+P( x_41 = 1 ) = 1.0107964667886877
+P( x_42 = 1 ) = 1.011005224208544
+P( x_43 = 1 ) = 0.9894983471179937
+P( x_44 = 1 ) = 1.0107653880334946
+P( x_45 = 1 ) = 1.010857706394731
+P( x_46 = 1 ) = 0.7638485921638309
+P( x_47 = 1 ) = 1.0109310743532596
+P( x_48 = 1 ) = 0.922516609603999
+P( x_49 = 1 ) = 1.0109368651521895
+P( x_50 = 1 ) = 1.0109789531583238
+P( x_51 = 1 ) = 0.9342401211028917
+P( x_52 = 1 ) = 1.0109790931883536
+P( x_53 = 1 ) = 0.9849478643440278
+P( x_54 = 1 ) = 0.0
+P( x_55 = 1 ) = 1.0023888799531502
+P( x_56 = 1 ) = 1.0109019017534582
+P( x_57 = 1 ) = 1.0043719936859556
+P( x_58 = 1 ) = 1.0109240841932559
+P( x_59 = 1 ) = 1.0109766214892921
+P( x_60 = 1 ) = 0.0
+P( x_61 = 1 ) = 1.010889740940228
+P( x_62 = 1 ) = 0.0
+P( x_63 = 1 ) = 0.9909880180040439
+P( x_64 = 1 ) = 1.0108738395316337
+P( x_65 = 1 ) = 1.0107544213026423
+P( x_66 = 1 ) = 1.0109233364147716
+P( x_67 = 1 ) = 1.0107976345236045
+P( x_68 = 1 ) = 1.010961461774821
+P( x_69 = 1 ) = 1.0109810820088534
+P( x_70 = 1 ) = 1.0109656953986397
+P( x_71 = 1 ) = 1.0109828777592351
+P( x_72 = 1 ) = 1.0109924933107135
+P( x_73 = 1 ) = 0.43623395663479353
+P( x_74 = 1 ) = 1.0109001876855817
+P( x_75 = 1 ) = 1.0107305900166554
+P( x_76 = 1 ) = 0.8870952839940713
+P( x_77 = 1 ) = 1.0107536089413391
+P( x_78 = 1 ) = 0.9937765395957928
+P( x_79 = 1 ) = 1.010981966825898
+P( x_80 = 1 ) = 0.45484781659718854
+P( x_81 = 1 ) = 1.0082368446880017
+P( x_82 = 1 ) = 1.0108792949338226
+P( x_83 = 1 ) = 1.009656744219508
+P( x_84 = 1 ) = 1.010978407095186
+P( x_85 = 1 ) = 1.0108405227746227
+P( x_86 = 1 ) = 1.0105384429532065
+P( x_87 = 1 ) = 1.0105648740700777
+P( x_88 = 1 ) = 1.0108075303740423
+P( x_89 = 1 ) = 0.9883505944342785
+P( x_90 = 1 ) = 0.9965841655889476
+P( x_91 = 1 ) = 1.0106490183101131
+P( x_92 = 1 ) = 0.9977330653485227
+P( x_93 = 1 ) = 1.0109791018986112
+P( x_94 = 1 ) = 0.8608514554151487
+P( x_95 = 1 ) = 0.9718908610292005
+P( x_96 = 1 ) = 1.010977431385701
+P( x_97 = 1 ) = 0.7483977131583509
+P( x_98 = 1 ) = 1.0108638184291374
+P( x_99 = 1 ) = 1.0109767036010338
+P( x_100 = 1 ) = 1.010976237568007
+P( x_101 = 1 ) = 1.0109810806512363
+P( x_102 = 1 ) = 0.9130589678355168
+P( x_103 = 1 ) = 1.010966851987293
+P( x_104 = 1 ) = 0.9972598334858758
+P( x_105 = 1 ) = 1.0109790935420024
+P( x_106 = 1 ) = 1.0109775029085712
+P( x_107 = 1 ) = 0.5101994674567655
+P( x_108 = 1 ) = 1.0108523179814421
+P( x_109 = 1 ) = 1.0108448479085939
+P( x_110 = 1 ) = 1.0109790398352068
+P( x_111 = 1 ) = 0.9937471568850357
+P( x_112 = 1 ) = 0.9221486513803832
+P( x_113 = 1 ) = 0.9933341895745665
+P( x_114 = 1 ) = 1.0109013447169743
+P( x_115 = 1 ) = 1.0109790683685638
+P( x_116 = 1 ) = 0.5934091747653062
+P( x_117 = 1 ) = 1.004651601915253
+P( x_118 = 1 ) = 1.0109753265187835
+P( x_119 = 1 ) = 1.010831093438541
+P( x_120 = 1 ) = 0.9032180028461713
+P( x_121 = 1 ) = 0.0
+P( x_122 = 1 ) = 1.010812281105876
+var V10 has 2 neighbors
+partition function computation 10 complete: 348.9870934711234 (time taken: 4.5306010246276855)
+var V46 has 3 neighbors
+partition function computation 46 complete: 268.00648998146323 (time taken: 5.915283441543579)
+var V89 has 2 neighbors
+partition function computation 89 complete: 346.7760187068736 (time taken: 2.9338908195495605)
+var V105 has 8 neighbors
+partition function computation 105 complete: 354.7155301252687 (time taken: 2.482318162918091)
+var V21 has 3 neighbors
+partition function computation 21 complete: 354.7007878184178 (time taken: 3.3999669551849365)
+var V35 has 4 neighbors
+partition function computation 35 complete: 354.72689399486836 (time taken: 3.9531502723693848)
+var V67 has 2 neighbors
+partition function computation 67 complete: 354.65186280285 (time taken: 4.233760833740234)
+var V98 has 5 neighbors
+partition function computation 98 complete: 354.67508431087805 (time taken: 4.075857639312744)
+var V5 has 2 neighbors
+partition function computation 5 complete: 291.0403092169332 (time taken: 4.305378437042236)
+var V42 has 5 neighbors
+partition function computation 42 complete: 354.7246984189496 (time taken: 5.520920991897583)
+var V82 has 33 neighbors
+partition function computation 82 complete: 354.6805144494427 (time taken: 3.081853151321411)
+var V101 has 7 neighbors
+partition function computation 101 complete: 354.71622732910777 (time taken: 3.212665319442749)
+var V13 has 2 neighbors
+partition function computation 13 complete: 348.4395059539901 (time taken: 3.0749049186706543)
+var V33 has 2 neighbors
+partition function computation 33 complete: 193.03317995215355 (time taken: 4.325253486633301)
+var V64 has 2 neighbors
+partition function computation 64 complete: 354.67860034865487 (time taken: 3.31546688079834)
+var V92 has 1 neighbors
+partition function computation 92 complete: 350.06798405560386 (time taken: 5.4008660316467285)
+var V1 has 6 neighbors
+partition function computation 1 complete: 173.00350409174928 (time taken: 5.3464226722717285)
+var V53 has 4 neighbors
+partition function computation 53 complete: 345.5821253657089 (time taken: 5.8819169998168945)
+var V93 has 36 neighbors
+partition function computation 93 complete: 354.71553305729657 (time taken: 2.53114652633667)
+var V106 has 9 neighbors
+partition function computation 106 complete: 354.71497203026513 (time taken: 2.917231798171997)
+var V14 has 2 neighbors
+partition function computation 14 complete: 354.56514285569165 (time taken: 3.839083671569824)
+var V39 has 5 neighbors
+partition function computation 39 complete: 256.4515412762611 (time taken: 5.585258722305298)
+var V80 has 3 neighbors
+partition function computation 80 complete: 159.5894370330909 (time taken: 7.379548788070679)
+var V19 has 2 neighbors
+partition function computation 19 complete: 354.5280651805472 (time taken: 3.7164599895477295)
+var V40 has 6 neighbors
+partition function computation 40 complete: 354.66125819340294 (time taken: 5.019377708435059)
+var V77 has 2 neighbors
+partition function computation 77 complete: 354.63641583876137 (time taken: 5.042101144790649)
+var V109 has 3 neighbors
+partition function computation 109 complete: 354.6684282501402 (time taken: 2.971036911010742)
+var V15 has 2 neighbors
+partition function computation 15 complete: 294.8671230517442 (time taken: 7.406201124191284)
+var V65 has 2 neighbors
+partition function computation 65 complete: 354.63670086658453 (time taken: 2.539722204208374)
+var V85 has 6 neighbors
+partition function computation 85 complete: 354.6669107190664 (time taken: 5.623174667358398)
+var V121 has 5 neighbors
+
+Failed on var:  V121
+var V24 has 1 neighbors
+partition function computation 24 complete: 353.99405074730214 (time taken: 3.655914068222046)
+var V41 has 8 neighbors
+partition function computation 41 complete: 354.65145308744377 (time taken: 5.5078489780426025)
+var V81 has 109 neighbors
+partition function computation 81 complete: 353.7533754554087 (time taken: 1.78182053565979)
+var V96 has 3 neighbors
+partition function computation 96 complete: 354.71494693550994 (time taken: 3.5168979167938232)
+var V115 has 6 neighbors
+partition function computation 115 complete: 354.71552129283117 (time taken: 2.2388315200805664)
+var V12 has 7 neighbors
+partition function computation 12 complete: 153.36169243018844 (time taken: 5.088963031768799)
+var V52 has 19 neighbors
+partition function computation 52 complete: 354.71553000118627 (time taken: 2.700073480606079)
+var V69 has 6 neighbors
+partition function computation 69 complete: 354.71622780544595 (time taken: 3.272941827774048)
+var V94 has 4 neighbors
+partition function computation 94 complete: 302.04124132464773 (time taken: 6.314419746398926)
+var V2 has 1 neighbors
+partition function computation 2 complete: 354.0234010957001 (time taken: 3.1929054260253906)
+var V31 has 4 neighbors
+partition function computation 31 complete: 290.27915392704654 (time taken: 3.1032142639160156)
+var V58 has 4 neighbors
+partition function computation 58 complete: 354.69622935987485 (time taken: 3.1470868587493896)
+var V78 has 2 neighbors
+partition function computation 78 complete: 348.67978410290567 (time taken: 2.8483262062072754)
+var V99 has 5 neighbors
+partition function computation 99 complete: 354.7146915825302 (time taken: 5.373009443283081)
+var V11 has 2 neighbors
+partition function computation 11 complete: 354.5668176261131 (time taken: 2.6920106410980225)
+var V29 has 3 neighbors
+partition function computation 29 complete: 354.70589394058015 (time taken: 2.2756564617156982)
+var V49 has 3 neighbors
+partition function computation 49 complete: 354.7007137301775 (time taken: 3.4773504734039307)
+var V75 has 2 neighbors
+partition function computation 75 complete: 354.62833934131027 (time taken: 4.546739816665649)
+var V103 has 3 neighbors
+partition function computation 103 complete: 354.7112350121491 (time taken: 4.54681921005249)
+var V26 has 2 neighbors
+partition function computation 26 complete: 354.6714735247604 (time taken: 3.2248122692108154)
+var V36 has 1 neighbors
+partition function computation 36 complete: 350.125067949831 (time taken: 2.505089521408081)
+var V59 has 4 neighbors
+partition function computation 59 complete: 354.7146627725279 (time taken: 2.2699928283691406)
+var V76 has 2 neighbors
+partition function computation 76 complete: 311.2492394191231 (time taken: 4.65229868888855)
+var V104 has 5 neighbors
+partition function computation 104 complete: 349.90194433024925 (time taken: 4.807315826416016)
+var V20 has 2 neighbors
+partition function computation 20 complete: 323.1072660463527 (time taken: 2.50520658493042)
+var V30 has 5 neighbors
+partition function computation 30 complete: 354.715408164009 (time taken: 2.8724365234375)
+var V56 has 3 neighbors
+partition function computation 56 complete: 354.6884463543285 (time taken: 5.8398919105529785)
+var V97 has 4 neighbors
+partition function computation 97 complete: 262.58534252911727 (time taken: 3.6726410388946533)
+var V117 has 3 neighbors
+partition function computation 117 complete: 352.4954450996901 (time taken: 2.7896487712860107)
+var V9 has 1 neighbors
+partition function computation 9 complete: 277.72069121977063 (time taken: 4.876421928405762)
+var V48 has 2 neighbors
+partition function computation 48 complete: 323.6772850352249 (time taken: 6.4244208335876465)
+var V95 has 2 neighbors
+partition function computation 95 complete: 341.00090120167636 (time taken: 6.789926528930664)
+var V27 has 4 neighbors
+partition function computation 27 complete: 354.71027673731857 (time taken: 3.708958387374878)
+var V44 has 2 neighbors
+partition function computation 44 complete: 354.64054869071157 (time taken: 2.4530506134033203)
+var V61 has 2 neighbors
+partition function computation 61 complete: 354.6841795704363 (time taken: 3.285749912261963)
+var V84 has 5 neighbors
+partition function computation 84 complete: 354.71528927622643 (time taken: 4.055296182632446)
+var V110 has 9 neighbors
+partition function computation 110 complete: 354.71551128152146 (time taken: 4.2850117683410645)
+var V6 has 7 neighbors
+partition function computation 6 complete: 354.69560139812603 (time taken: 4.791569232940674)
+var V47 has 6 neighbors
+partition function computation 47 complete: 354.6986819509593 (time taken: 3.533083915710449)
+var V72 has 8 neighbors
+partition function computation 72 complete: 354.7202316132542 (time taken: 6.4834678173065186)
+var V114 has 2 neighbors
+partition function computation 114 complete: 354.68825091063144 (time taken: 3.54964017868042)
+var V3 has 2 neighbors
+partition function computation 3 complete: 354.5985943534091 (time taken: 5.408290386199951)
+var V54 has 4 neighbors
+
+Failed on var:  V54
+var V62 has 3 neighbors
+
+Failed on var:  V62
+var V74 has 4 neighbors
+partition function computation 74 complete: 354.6878449506997 (time taken: 5.232795238494873)
+var V107 has 6 neighbors
+partition function computation 107 complete: 179.01030369925988 (time taken: 4.909104824066162)
+var V22 has 3 neighbors
+partition function computation 22 complete: 270.67170148156015 (time taken: 4.719866037368774)
+var V50 has 5 neighbors
+partition function computation 50 complete: 354.7154808697783 (time taken: 4.867546081542969)
+var V83 has 2 neighbors
+partition function computation 83 complete: 354.25156618779886 (time taken: 2.9276115894317627)
+var V102 has 2 neighbors
+partition function computation 102 complete: 320.3589449873724 (time taken: 5.722918748855591)
+var V16 has 2 neighbors
+partition function computation 16 complete: 324.74715929488417 (time taken: 5.475536108016968)
+var V55 has 6 neighbors
+partition function computation 55 complete: 351.70153885035177 (time taken: 4.469151973724365)
+var V86 has 2 neighbors
+partition function computation 86 complete: 354.56092197540363 (time taken: 4.629137992858887)
+var V113 has 2 neighbors
+partition function computation 113 complete: 348.5245796844538 (time taken: 4.043186902999878)
+var V4 has 4 neighbors
+partition function computation 4 complete: 354.6561839796326 (time taken: 3.5262961387634277)
+var V34 has 2 neighbors
+partition function computation 34 complete: 354.6802095286302 (time taken: 2.354592800140381)
+var V57 has 4 neighbors
+partition function computation 57 complete: 352.3973408145311 (time taken: 4.447511911392212)
+var V88 has 2 neighbors
+partition function computation 88 complete: 354.65533489426764 (time taken: 4.986903667449951)
+var V119 has 3 neighbors
+partition function computation 119 complete: 354.6636023104471 (time taken: 3.584935426712036)
+var V18 has 2 neighbors
+
+Failed on var:  V18
+var V28 has 2 neighbors
+partition function computation 28 complete: 354.62657780966265 (time taken: 2.5083560943603516)
+var V43 has 2 neighbors
+partition function computation 43 complete: 347.17872307955287 (time taken: 5.2527947425842285)
+var V79 has 4 neighbors
+partition function computation 79 complete: 354.71653825533457 (time taken: 5.26980996131897)
+var V112 has 3 neighbors
+partition function computation 112 complete: 323.5481819734627 (time taken: 4.513131141662598)
+var V17 has 2 neighbors
+partition function computation 17 complete: 347.0900094384114 (time taken: 4.868152856826782)
+var V51 has 8 neighbors
+partition function computation 51 complete: 327.79063576900705 (time taken: 3.1622729301452637)
+var V73 has 8 neighbors
+partition function computation 73 complete: 153.05851542806946 (time taken: 6.875965118408203)
+var V118 has 5 neighbors
+partition function computation 118 complete: 354.7142084148133 (time taken: 4.118849515914917)
+var V23 has 3 neighbors
+partition function computation 23 complete: 162.26557271869217 (time taken: 5.916571855545044)
+var V60 has 2 neighbors
+
+Failed on var:  V60
+var V70 has 4 neighbors
+partition function computation 70 complete: 354.71082920755833 (time taken: 2.7422423362731934)
+var V91 has 2 neighbors
+partition function computation 91 complete: 354.5997188175881 (time taken: 4.077893495559692)
+var V111 has 3 neighbors
+partition function computation 111 complete: 348.6694747860372 (time taken: 4.777302026748657)
+var V0 has 3 neighbors
+partition function computation 0 complete: 345.8172600433365 (time taken: 3.310589551925659)
+var V32 has 4 neighbors
+partition function computation 32 complete: 226.98373327610048 (time taken: 4.031444311141968)
+var V63 has 2 neighbors
+partition function computation 63 complete: 347.70139402441504 (time taken: 5.222608327865601)
+var V100 has 4 neighbors
+partition function computation 100 complete: 354.7145280686126 (time taken: 2.639157772064209)
+var V116 has 7 neighbors
+partition function computation 116 complete: 208.20554188772513 (time taken: 4.688930988311768)
+var V8 has 2 neighbors
+partition function computation 8 complete: 322.4728674262806 (time taken: 4.556222915649414)
+var V45 has 5 neighbors
+partition function computation 45 complete: 354.6729398218986 (time taken: 3.7404630184173584)
+var V71 has 16 neighbors
+partition function computation 71 complete: 354.7168578684736 (time taken: 5.551818132400513)
+var V108 has 3 neighbors
+partition function computation 108 complete: 354.67104922506184 (time taken: 6.239396810531616)
+var V7 has 4 neighbors
+partition function computation 7 complete: 354.71639173352287 (time taken: 3.8839588165283203)
+var V37 has 1 neighbors
+partition function computation 37 complete: 350.1315905450059 (time taken: 3.920325994491577)
+var V68 has 2 neighbors
+partition function computation 68 complete: 354.70934378404485 (time taken: 2.442328691482544)
+var V87 has 2 neighbors
+partition function computation 87 complete: 354.57019568609917 (time taken: 5.288451194763184)
+var V120 has 4 neighbors
+partition function computation 120 complete: 316.90611086306825 (time taken: 6.130647659301758)
+var V25 has 3 neighbors
+partition function computation 25 complete: 337.69312328305216 (time taken: 3.3860409259796143)
+var V38 has 1 neighbors
+partition function computation 38 complete: 350.12405773255887 (time taken: 3.7180099487304688)
+var V66 has 5 neighbors
+partition function computation 66 complete: 354.6959669917971 (time taken: 2.880845785140991)
+var V90 has 2 neighbors
+partition function computation 90 complete: 349.66487721602454 (time taken: 5.209945440292358)
+var V122 has 4 neighbors
+partition function computation 122 complete: 354.65700175204114 (time taken: 6.8371124267578125)
+Running experiment beta=5 mu=0.1 eps=.4
+init_inf=[0] MU=0.1 BETA=5.0 eps=0.4
+37.877105378988546 0.0
+Number of variables: 123
+Max degree of variables: 122
+Max number of variables associated to each factor: 2
+Total number of factors: 3384
+None
+Wed Dec  9 16:42:44 MST 2020
+Your group chertkov has been charged 3:53:20 (0:01:40 X 140 cpus).
+You previously had 34697:55:35.  You now have 34694:02:15 of standard_time remaining

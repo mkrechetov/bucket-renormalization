@@ -1,0 +1,2 @@
+This is our 4th experiment. Here we redefine our J values as J = -N/2 log(1-MU)
+and we vary MU to take on values of 0.001, 0.01, and 0.1.
