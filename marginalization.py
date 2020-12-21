@@ -36,7 +36,7 @@ NUM_STATES = 0
 parser = argparse.ArgumentParser()
 parser.add_argument(
     '-m','--mu',
-    default='100',
+    default='0.01',
     help='MU parameter - max interaction factor')
 parser.add_argument(
     '-b','--beta',
