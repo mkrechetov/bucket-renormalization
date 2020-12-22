@@ -1,0 +1,319 @@
+import numpy as np
+import csv
+import time
+import sys
+sys.path.extend(['./', './seattle/'])
+import argparse
+import os
+import random
+import protocols
+import utils
+import networkx as nx
+import matplotlib.pyplot as plt
+from gmi import GMI
+import pandas as pd
+from graphical_model import *
+from factor import *
+from generate_model import generate_complete_gmi, generate_complete
+from bucket_elimination import BucketElimination
+from bucket_renormalization import BucketRenormalization
+import itertools
+import traceback
+
+from joblib import Parallel, delayed
+import multiprocessing as mp
+import matplotlib.image as mpimg
+import matplotlib as mpl
+from matplotlib.patches import Ellipse
+import numpy.random as rnd
+import matplotlib.colors as mcolors
+from mpl_toolkits.axes_grid1 import make_axes_locatable
+
+
+def extract_seattle_data(eps=1e-1, MU=300):
+    # Read Data
+    rawnumbers = pd.read_csv('./seattle/TractTravelRawNumbers.csv', header=None).values
+    # g_raw = rawnumbers/MU
+    # J_raw = np.log(1+np.exp(g_raw))/2
+
+    # alternate way of estimating J_raw
+    J_raw = -(rawnumbers/2)*np.log(1-MU)
+
+    # j_0 =
+    print(np.max(J_raw), np.min(J_raw))
+    summary = pd.read_csv('./seattle/TractSummary159.csv')
+    # Create Graph
+    G = nx.Graph()
+    pos = {}
+    # add nodes
+    for row in summary.iterrows():
+        G.add_node(row[0],
+                   Tract=row[1]['Tract'],
+                   Sus=row[1]['Sus'],
+                   Inf=row[1]['Inf'],
+                   Symp=row[1]['Symp'],
+                   RecoveredCalc=row[1]['RecoveredCalc'],
+                   Lat=row[1]['Lat'],
+                   Lon=row[1]['Lon']
+                  )
+        pos[row[0]] = [row[1]['Lat'], row[1]['Lon']]
+
+    N = len(G.nodes)
+    # eps = 1e-1
+    # add edges
+    for i in range(N):
+        for j in range(N):
+            if J_raw[j][i] > np.log(2)/2+eps:
+                G.add_edge(i,j, weight=J_raw[j][i])
+    return G
+
+def ith_object_name(prefix, i):
+    return prefix + str(int(i))
+def ijth_object_name(prefix, i,j):
+    return prefix + '(' + str(int(i)) + ',' + str(int(j)) + ')'
+
+def generate_seattle(G, init_inf, inv_temp):
+    model = GraphicalModel()
+    N = len(G.nodes)
+    # node_colors = ['b']*N
+
+    for node in G.nodes:
+        model.add_variable(ith_object_name('V', node))
+
+    for a,b in G.edges:
+        beta = G[a][b]['weight']
+        log_values = np.array([beta, -beta, -beta, beta]).reshape([2,2])
+        factor = Factor(
+            name = ijth_object_name('F', a, b),
+            variables = [ith_object_name('V', a), ith_object_name('V', b)],
+            log_values = log_values)
+        model.add_factor(factor)
+
+    for node in G.nodes:
+        # define factor definitions
+        beta = -inv_temp if node in init_inf else 0
+        log_values = np.array([-beta, beta])
+        factor = Factor(
+            name = ith_object_name('B', node),
+            variables = [ith_object_name('V', node)],
+            log_values = log_values)
+        model.add_factor(factor)
+
+    return model
+
+
+def generate_star(N):
+    model = GraphicalModel()
+
+    center = 0
+
+    for i in range(N):
+        model.add_variable(ith_object_name('V', i))
+        val = np.random.uniform(0,1)
+        log_values = [-val, val]
+        # print(log_values)
+        bucket = Factor(
+            name = ith_object_name('B', i),
+            variables = [ith_object_name('V', i)],
+            log_values = np.array([-val, val]))
+        model.add_factor(bucket)
+
+        if i != center:
+            beta = np.random.uniform(0,1)
+            log_values = np.array([beta, -beta, -beta, beta]).reshape([2,2])
+            factor = Factor(
+                name = ijth_object_name('F', center, i),
+                variables = [ith_object_name('V', center), ith_object_name('V', i)],
+                log_values = log_values)
+            model.add_factor(factor)
+    return model
+
+
+def extract_factor_matrix(model):
+    J = np.zeros([N,N])
+    for (a,b) in itertools.product(range(N), range(N)):
+        if a < b:
+            name = 'F({},{})'.format(a,b)
+            fac = model.get_factor(name)
+            J[a,b] = fac.log_values[1][1] if fac is not None else 0
+            J[b,a] = J[a,b]
+    return J
+
+def extract_var_weights(model, nbr_num=-1):
+    N = len(model.variables)
+    H = np.zeros([N])
+    for a in range(N):
+        if a != nbr_num:
+            name = 'B{}'.format(a)
+            fac = model.get_factor(name)
+            H[a] = fac.log_values[1]
+    return H
+
+def update_nbg_mf(model, init_inf):
+    '''returns a copy of the GM modified by removing variable var'''
+
+    for inf in init_inf:
+        model.remove_variable(ith_object_name('V', inf))
+
+        adj_factors = model.get_adj_factors(ith_object_name('B', inf))
+        model.remove_factors_from(adj_factors)
+
+        var_names = []
+        for fac in adj_factors:
+            for entry in fac.variables:
+                var_names.append(entry.replace('V','B'))
+        var_names = list(set(var_names))
+
+        nbrs = model.get_factors_from(var_names)
+
+        for nbr in nbrs:
+            # if fac is None: continue
+            fac = [f for f in factors if nbr.name.replace('B','') in f.name]
+            if not fac: continue
+            beta = nbr.log_values+fac[0].log_values[0]
+            nbr.log_values = beta
+
+def compute_partition_functions():
+    filename = "seattle_marginal_Z_init_inf={}_BETA={}_MU={}_EPS={}.csv".format(init_inf, BETA, MU, eps)
+    utils.append_to_csv(filename, ['Tract', 'Z_i', 'time'])
+
+    Zi = []
+    # N=len(seattle.variables)
+    # H = extract_var_weights(seattle)
+    node_buckets = [fac for fac in seattle.factors if 'B' in fac.name]
+
+    results=[]
+
+    # UNCOMMENT THE NEXT LINE AND COMMENT THE THIRD ''' APPROXIMATLY 50 LINES BELOW TO RUN CODE SERIALLY
+    #'''
+    results.append(Parallel(n_jobs=mp.cpu_count())(delayed(compute_partition_functionsParallel)(index) for index in range(N)))
+    '''
+    results.append([])
+    # collect partition functions of modified GMs
+    for index in range(N):
+        # I USED TRY/EXCEPT BECAUSE THE CODE FAILS BECAUSE A NUMBER GOES TO INFINITY WHILE CALCULATING
+        try:
+            #if index != 26: continue
+            var = seattle.variables[index]
+            model_copy = seattle.copy()
+            print('var {} has {} neighbors'.format(var, seattle.degree(var)))
+
+            adj_factors = seattle.get_adj_factors(var)
+            factors = [fac for fac in adj_factors if 'F' in fac.name]
+
+            # remove variable and edges
+            model_copy.remove_variable(var)
+            model_copy.remove_factors_from(adj_factors)
+
+            var_names = []
+            for fac in adj_factors:
+                for entry in fac.variables:
+                    var_names.append(entry.replace('V','B'))
+            var_names = list(set(var_names))
+
+            nbrs = model_copy.get_factors_from(var_names)
+
+            for nbr in nbrs:
+                # if fac is None: continue
+                fac = [f for f in factors if nbr.name.replace('B','') in f.name]
+                if not fac: continue
+                beta = nbr.log_values+fac[0].log_values[0]
+                nbr.log_values = beta
+                # nbr_num = int(nbr.name.replace('B',''))
+
+            H_temp = extract_var_weights(model_copy, index)
+            print(H_temp)
+
+            t1 = time.time()
+            Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+            t2 = time.time()
+            print('partition function computation {} complete: {} (time taken: {})'.format(index, Z_copy, t2-t1))
+            results[0].append([var, Z_copy, t2 - t1])
+            #utils.append_to_csv(filename, [var, Z_copy, t2-t1])
+            #Zi.append(Z_copy)
+        except Exception as e:
+            print(e)
+            traceback.print_exc():
+            print("Failed on var: ", var)
+            results[0].append([])
+    '''
+    # COMMENT THE ABOVE ''' TO RUN CODE SERIALLY
+    for index in range(N):
+        try:# I USED TRY/EXCEPT BECAUSE THE CODE FAILS BECAUSE A NUMBER GOES TO INFINITY WHILE CALCULATING
+            Zi.append(results[0][index][1])
+        except:# IF PREVIOUS CODES FAIL FILL Zi WITH 0
+            print("Zi ", index, " not calculated!")
+            Zi.append(0)
+
+    print(Zi)
+    for index in range(N):
+        try:# I USED TRY/EXCEPT BECAUSE THE CODE FAILS BECAUSE A NUMBER GOES TO INFINITY WHILE CALCULATING
+            utils.append_to_csv(filename, [results[0][index][0],results[0][index][1],results[0][index][2]])
+        except:# IF PREVIOUS CODES FAIL WRITE ZERO FOR THE V VALUES
+            utils.append_to_csv(filename, ["V"+str(index), 0, 0])
+            print("Row ",index," written by 0!")
+
+
+
+def compute_partition_functionsParallel(index):
+    # I USED TRY/EXCEPT BECAUSE THE CODE FAILS BECAUSE A NUMBER GOES TO INFINITY WHILE CALCULATING
+    try:
+        var = seattle.variables[index]
+        model_copy = seattle.copy()
+        print('var {} has {} neighbors'.format(var, seattle.degree(var)))
+
+        adj_factors = seattle.get_adj_factors(var)
+        factors = [fac for fac in adj_factors if 'F' in fac.name]
+
+        # remove variable and edges
+        model_copy.remove_variable(var)
+        model_copy.remove_factors_from(adj_factors)
+
+        var_names = []
+        for fac in adj_factors:
+            for entry in fac.variables:
+                var_names.append(entry.replace('V', 'B'))
+        var_names = list(set(var_names))
+
+        nbrs = model_copy.get_factors_from(var_names)
+
+        for nbr in nbrs:
+            # if fac is None: continue
+            fac = [f for f in factors if nbr.name.replace('B', '') in f.name]
+            if not fac: continue
+            beta = nbr.log_values + fac[0].log_values[0]
+            nbr.log_values = beta
+            # nbr_num = int(nbr.name.replace('B',''))
+
+        H_temp = extract_var_weights(model_copy, index)
+        # print(H_temp)
+
+        t1 = time.time()
+        Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
+        t2 = time.time()
+        print('partition function computation {} complete: {} (time taken: {})'.format(index, Z_copy, t2 - t1))
+        # utils.append_to_csv(filename, [var, Z_copy, t2 - t1])
+        #Zi.append(Z_copy)
+        return [var, Z_copy, t2 - t1]
+    except Exception as e:
+        print(e)
+        traceback.print_exc()
+        print("Failed on var: ",var)
+        return []
+
+
+def compute_marginal_probabilities(seattle):
+    filename = "seattle_marginal_probabilities_init_inf={}_BETA={}_MU={}_EPS={}.csv".format(init_inf, BETA, MU, eps)
+    utils.append_to_csv(filename, ['Tract', 'probability'])
+
+    pfs = utils.read_csv("seattle_marginal_Z_init_inf={}_BETA={}_MU={}_EPS={}.csv".format(init_inf, BETA, MU, eps))
+    Zi = [float(entry[1]) for entry in pfs[1:]]
+    print(Zi)
+
+    P = lambda i: normfac[i]*Zi[i]/Z
+
+
+    for idx in range(N):
+        marg_prob = P(idx)
+        print('P( x_{} = {} ) = {}'.format(idx, 1, marg_prob))
+        utils.append_to_csv(filename, [seattle.variables[idx], marg_prob])
