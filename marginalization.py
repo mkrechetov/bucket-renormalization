@@ -68,70 +68,45 @@ seattle = generate_seattle(G, init_inf, BETA)
 N = len(seattle.variables)
 print(seattle.summary())
 
-def test0():
-    nb_vars = 70
-    delta = 1.0
-
-    for i in range(2,20):
-        print(10*i)
-        toy = generate_complete(10*i, delta)
-        # toy = generate_star(10*i)
-        t1 = time.time()
-        Z = BucketRenormalization(toy, ibound=10).run(max_iter=1)
-        t2 = time.time()
-
-        print(Z)
-        print(t2-t1)
-    # quit()
-
-def degree_distribution(seattle):
-    '''degree distribution'''
-    degree = [seattle.degree(var) for var in seattle.variables]
-    weights = [G[i][j]['weight'] for i,j in G.edges ]
-    # counts, bins = np.histogram(weights)
-    plt.hist(weights, bins=100)
-    plt.title('min value = {}'.format(np.min(weights)))
-    maxJ = np.round(np.max(weights),3)
-    minJ = np.round(np.min(weights),3)
-    # plt.plot(range(N), degree)
-    # plt.title('eps = {}, BETA = {}, MU = {},\n max J = {}, min J = {}'.format(eps, BETA, MU, maxJ, minJ))
-    # plt.savefig('./results/eps={}_MU={}_BETA={}_maxJ={}_minJ={}.png'.format(eps, MU, BETA, maxJ, minJ))
-    plt.show()
-    # quit()
-
 degree_distribution(seattle)
 
+
+# compute partition function for Seattle GM
+# =====================================
 t1 = time.time()
 Z = BucketRenormalization(seattle, ibound=10).run(max_iter=1)
 t2 = time.time()
-# print('check 4')
+# =====================================
+
 print('partition function = {}'.format(Z))
 print('time taken for GBR = {}'.format(t2-t1))
-# quit()
-H = extract_var_weights(seattle)
-# print(H)
-# quit()
-normfac = np.exp(H)
-# print(H)
 
+
+
+
+# compute partition functions for sub-GMs
+# =====================================
 t1 = time.time()
-# =====================================
 compute_partition_functions()
-# =====================================
 t2 = time.time()
+# =====================================
+
 print("compute_partition_functions RUNTIME: ",t2-t1)
 
-# quit()
+
 filename = "seattle_marginal_probabilities_init_inf={}_BETA={}_MU={}_EPS={}.csv".format(init_inf, BETA, MU, eps)
 utils.append_to_csv(filename, ['Tract', 'probability'])
 
 pfs = utils.read_csv("seattle_marginal_Z_init_inf={}_BETA={}_MU={}_EPS={}.csv".format(init_inf, BETA, MU, eps))
 Zi = [float(entry[1]) for entry in pfs[1:]]
-print(Zi)
 
+# magnetic field H
+H = extract_var_weights(seattle)
+normfac = np.exp(H)
+# formula to compute marginal probabilities
 P = lambda i: normfac[i]*Zi[i]/Z
 
-
+# compute marginal probabilities
 for idx in range(N):
     marg_prob = P(idx)
     print('P( x_{} = {} ) = {}'.format(idx, 1, marg_prob))

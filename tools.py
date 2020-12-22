@@ -317,3 +317,35 @@ def compute_marginal_probabilities(seattle):
         marg_prob = P(idx)
         print('P( x_{} = {} ) = {}'.format(idx, 1, marg_prob))
         utils.append_to_csv(filename, [seattle.variables[idx], marg_prob])
+
+
+def test0():
+    nb_vars = 70
+    delta = 1.0
+
+    for i in range(2,20):
+        print(10*i)
+        toy = generate_complete(10*i, delta)
+        # toy = generate_star(10*i)
+        t1 = time.time()
+        Z = BucketRenormalization(toy, ibound=10).run(max_iter=1)
+        t2 = time.time()
+
+        print(Z)
+        print(t2-t1)
+    # quit()
+
+def degree_distribution(seattle):
+    '''degree distribution'''
+    degree = [seattle.degree(var) for var in seattle.variables]
+    weights = [G[i][j]['weight'] for i,j in G.edges ]
+    # counts, bins = np.histogram(weights)
+    plt.hist(weights, bins=100)
+    plt.title('min value = {}'.format(np.min(weights)))
+    maxJ = np.round(np.max(weights),3)
+    minJ = np.round(np.min(weights),3)
+    # plt.plot(range(N), degree)
+    # plt.title('eps = {}, BETA = {}, MU = {},\n max J = {}, min J = {}'.format(eps, BETA, MU, maxJ, minJ))
+    # plt.savefig('./results/eps={}_MU={}_BETA={}_maxJ={}_minJ={}.png'.format(eps, MU, BETA, maxJ, minJ))
+    plt.show()
+    # quit()
