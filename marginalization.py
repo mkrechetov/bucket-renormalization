@@ -428,6 +428,7 @@ def renormalizeProbability(input):
 print('init_inf={} MU={} BETA={} eps={}'.format(init_inf, MU, BETA, eps))
 
 G = extract_seattle_data(eps, MU)
+
 seattle = generate_seattle(G, init_inf, BETA)
 N = len(seattle.variables)
 print(seattle.summary())
@@ -452,11 +453,14 @@ def degree_distribution(seattle):
     '''degree distribution'''
     degree = [seattle.degree(var) for var in seattle.variables]
     weights = [G[i][j]['weight'] for i,j in G.edges ]
+    # counts, bins = np.histogram(weights)
+    plt.hist(weights, bins=100)
+    plt.title('min value = {}'.format(np.min(weights)))
     maxJ = np.round(np.max(weights),3)
     minJ = np.round(np.min(weights),3)
-    plt.plot(range(N), degree)
-    plt.title('eps = {}, BETA = {}, MU = {},\n max J = {}, min J = {}'.format(eps, BETA, MU, maxJ, minJ))
-    plt.savefig('./results/eps={}_MU={}_BETA={}_maxJ={}_minJ={}.png'.format(eps, MU, BETA, maxJ, minJ))
+    # plt.plot(range(N), degree)
+    # plt.title('eps = {}, BETA = {}, MU = {},\n max J = {}, min J = {}'.format(eps, BETA, MU, maxJ, minJ))
+    # plt.savefig('./results/eps={}_MU={}_BETA={}_maxJ={}_minJ={}.png'.format(eps, MU, BETA, maxJ, minJ))
     plt.show()
     # quit()
 
@@ -465,9 +469,9 @@ degree_distribution(seattle)
 t1 = time.time()
 Z = BucketRenormalization(seattle, ibound=10).run(max_iter=1)
 t2 = time.time()
-print('check 4')
-print(Z)
-print(t2-t1)
+# print('check 4')
+print('partition function = {}'.format(Z))
+print('time taken for GBR = {}'.format(t2-t1))
 # quit()
 H = extract_var_weights(seattle)
 # print(H)

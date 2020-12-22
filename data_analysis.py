@@ -12,14 +12,16 @@ count = 0
 for row in numbers:
     # collect max three numbers
     top_numbers[count] = sorted(row)[-3:]
+    # collect average of max three numbers
     avg_top[count] = np.mean(sorted(row)[-3:])
+    # collect average of row
     avg[count] = np.mean(row)
     print(top_numbers[count])
     print(avg_top[count])
     print(avg[count])
     count+=1
     # quit()
-    # collect average of max three numbers
-    # collect average of row
+
+
 # top_travels = np.max(data)
 # print(top_travels)
