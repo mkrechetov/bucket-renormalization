@@ -28,19 +28,27 @@ from matplotlib.patches import Ellipse
 import numpy.random as rnd
 import matplotlib.colors as mcolors
 from mpl_toolkits.axes_grid1 import make_axes_locatable
+# 1) create graph with all nodes degree 2 with largest numbers
+# 2) use global threshold to add more factors to each variable
+# for each census tract
+ # collect 2-10 most significant travels # thresholding parameter to exclude edges
+ # least degree is 2
+ # overall threshhold  T = 100
+ # check all nodes > T
+ # populate with J_raw
+ # check J_raw is not 0 or infty
+ # generate GM
 
-
-def extract_seattle_data(eps=1e-1, MU=300):
+# check degree dist
+def extract_seattle_data(TAU=100, MU=300):
     # Read Data
-    rawnumbers = pd.read_csv('./seattle/TractTravelRawNumbers.csv', header=None).values
+    data = pd.read_csv('./seattle/TractTravelRawNumbers.csv', header=None).values
     # g_raw = rawnumbers/MU
     # J_raw = np.log(1+np.exp(g_raw))/2
 
     # alternate way of estimating J_raw
-    J_raw = -(rawnumbers/2)*np.log(1-MU)
+    J_raw = -(data/2)*np.log(1-MU)
 
-    # j_0 =
-    print(np.max(J_raw), np.min(J_raw))
     summary = pd.read_csv('./seattle/TractSummary159.csv')
     # Create Graph
     G = nx.Graph()
@@ -58,13 +66,17 @@ def extract_seattle_data(eps=1e-1, MU=300):
                   )
         pos[row[0]] = [row[1]['Lat'], row[1]['Lon']]
 
-    N = len(G.nodes)
-    # eps = 1e-1
     # add edges
-    for i in range(N):
-        for j in range(N):
-            if J_raw[j][i] > np.log(2)/2+eps:
-                G.add_edge(i,j, weight=J_raw[j][i])
+    count = 0
+    for row in data:
+        # sort the number of people in descending order and collect their indices
+        indices = np.argsort(row)[::-1]
+
+        for idx, val in enumerate(indices):
+            # if the first two numbers, or numbers greater than threshold
+            if idx in [0,1] or data[count][val] > TAU:
+                G.add_edge(count, val, weight=J_raw[count][val])
+        count+=1
     return G
 
 def ith_object_name(prefix, i):
@@ -74,8 +86,6 @@ def ijth_object_name(prefix, i,j):
 
 def generate_seattle(G, init_inf, inv_temp):
     model = GraphicalModel()
-    N = len(G.nodes)
-    # node_colors = ['b']*N
 
     for node in G.nodes:
         model.add_variable(ith_object_name('V', node))
@@ -149,8 +159,8 @@ def extract_var_weights(model, nbr_num=-1):
             H[a] = fac.log_values[1]
     return H
 
-def update_nbg_mf(model, init_inf):
-    '''returns a copy of the GM modified by removing variable var'''
+'''def update_nbg_mf(model, init_inf):
+    ''''''returns a copy of the GM modified by removing variable var''''''
 
     for inf in init_inf:
         model.remove_variable(ith_object_name('V', inf))
@@ -171,14 +181,31 @@ def update_nbg_mf(model, init_inf):
             fac = [f for f in factors if nbr.name.replace('B','') in f.name]
             if not fac: continue
             beta = nbr.log_values+fac[0].log_values[0]
-            nbr.log_values = beta
+            nbr.log_values = beta'''
 
-def compute_partition_functions():
-    filename = "seattle_marginal_Z_init_inf={}_BETA={}_MU={}_EPS={}.csv".format(init_inf, BETA, MU, eps)
+def degree_distribution(seattle, G, params):
+    '''degree distribution'''
+    degree = [seattle.degree(var) for var in seattle.variables]
+    weights = [G[i][j]['weight'] for i,j in G.edges ]
+    # counts, bins = np.histogram(weights)
+    # plt.hist(weights, bins=100)
+    plt.title('min value = {}'.format(np.min(weights)))
+    maxJ = np.round(np.max(weights),3)
+    minJ = np.round(np.min(weights),3)
+    N = len(G.nodes)
+    plt.plot(range(N), degree)
+    plt.title(R"$\tau$ = {}, $\beta$ = {}, $\mu$ = {}," "\n" "max J = {}, min J = {}".format(params[0], params[1], params[2], maxJ, minJ))
+    plt.savefig('./results/TAU={}_MU={}_BETA={}_maxJ={}_minJ={}.png'.format(params[0], params[1], params[2], maxJ, minJ))
+    plt.show()
+    # quit()
+
+def compute_partition_functions(seattle, init_inf, params):
+    BETA, MU, TAU = params
+    filename = "seattle_marg_Z_init_inf={}_BETA={}_MU={}_TAU={}.csv".format(init_inf, BETA, MU, TAU)
     utils.append_to_csv(filename, ['Tract', 'Z_i', 'time'])
 
     Zi = []
-    # N=len(seattle.variables)
+    N = len(seattle.variables)
     # H = extract_var_weights(seattle)
     node_buckets = [fac for fac in seattle.factors if 'B' in fac.name]
 
@@ -186,7 +213,7 @@ def compute_partition_functions():
 
     # UNCOMMENT THE NEXT LINE AND COMMENT THE THIRD ''' APPROXIMATLY 50 LINES BELOW TO RUN CODE SERIALLY
     #'''
-    results.append(Parallel(n_jobs=mp.cpu_count())(delayed(compute_partition_functionsParallel)(index) for index in range(N)))
+    results.append(Parallel(n_jobs=mp.cpu_count())(delayed(compute_partition_functionsParallel)(seattle, index) for index in range(N)))
     '''
     results.append([])
     # collect partition functions of modified GMs
@@ -255,12 +282,12 @@ def compute_partition_functions():
 
 
 
-def compute_partition_functionsParallel(index):
+def compute_partition_functionsParallel(seattle, index):
     # I USED TRY/EXCEPT BECAUSE THE CODE FAILS BECAUSE A NUMBER GOES TO INFINITY WHILE CALCULATING
     try:
         var = seattle.variables[index]
         model_copy = seattle.copy()
-        print('var {} has {} neighbors'.format(var, seattle.degree(var)))
+        # print('var {} has {} neighbors'.format(var, seattle.degree(var)))
 
         adj_factors = seattle.get_adj_factors(var)
         factors = [fac for fac in adj_factors if 'F' in fac.name]
@@ -269,6 +296,7 @@ def compute_partition_functionsParallel(index):
         model_copy.remove_variable(var)
         model_copy.remove_factors_from(adj_factors)
 
+        # collect variable names of neighbors
         var_names = []
         for fac in adj_factors:
             for entry in fac.variables:
@@ -277,8 +305,8 @@ def compute_partition_functionsParallel(index):
 
         nbrs = model_copy.get_factors_from(var_names)
 
+        # update the magnetic field of neighboring variables
         for nbr in nbrs:
-            # if fac is None: continue
             fac = [f for f in factors if nbr.name.replace('B', '') in f.name]
             if not fac: continue
             beta = nbr.log_values + fac[0].log_values[0]
@@ -292,8 +320,6 @@ def compute_partition_functionsParallel(index):
         Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
         t2 = time.time()
         print('partition function computation {} complete: {} (time taken: {})'.format(index, Z_copy, t2 - t1))
-        # utils.append_to_csv(filename, [var, Z_copy, t2 - t1])
-        #Zi.append(Z_copy)
         return [var, Z_copy, t2 - t1]
     except Exception as e:
         print(e)
@@ -303,10 +329,10 @@ def compute_partition_functionsParallel(index):
 
 
 def compute_marginal_probabilities(seattle):
-    filename = "seattle_marginal_probabilities_init_inf={}_BETA={}_MU={}_EPS={}.csv".format(init_inf, BETA, MU, eps)
+    filename = "seattle_marginal_probabilities_init_inf={}_BETA={}_MU={}_TAU={}.csv".format(init_inf, BETA, MU, TAU)
     utils.append_to_csv(filename, ['Tract', 'probability'])
 
-    pfs = utils.read_csv("seattle_marginal_Z_init_inf={}_BETA={}_MU={}_EPS={}.csv".format(init_inf, BETA, MU, eps))
+    pfs = utils.read_csv("seattle_marginal_Z_init_inf={}_BETA={}_MU={}_TAU={}.csv".format(init_inf, BETA, MU, TAU))
     Zi = [float(entry[1]) for entry in pfs[1:]]
     print(Zi)
 
@@ -333,19 +359,4 @@ def test0():
 
         print(Z)
         print(t2-t1)
-    # quit()
-
-def degree_distribution(seattle):
-    '''degree distribution'''
-    degree = [seattle.degree(var) for var in seattle.variables]
-    weights = [G[i][j]['weight'] for i,j in G.edges ]
-    # counts, bins = np.histogram(weights)
-    plt.hist(weights, bins=100)
-    plt.title('min value = {}'.format(np.min(weights)))
-    maxJ = np.round(np.max(weights),3)
-    minJ = np.round(np.min(weights),3)
-    # plt.plot(range(N), degree)
-    # plt.title('eps = {}, BETA = {}, MU = {},\n max J = {}, min J = {}'.format(eps, BETA, MU, maxJ, minJ))
-    # plt.savefig('./results/eps={}_MU={}_BETA={}_maxJ={}_minJ={}.png'.format(eps, MU, BETA, maxJ, minJ))
-    plt.show()
     # quit()

@@ -41,9 +41,9 @@ parser.add_argument(
     default='3',
     help='BETA paremeter - inverse temperature')
 parser.add_argument(
-    '-e','--eps',
-    default='.2',
-    help='EPS parameter - interaction threshhold')
+    '-t','--tau',
+    default='100',
+    help='TAU parameter - minimal number of people traversing an edge')
 parser.add_argument(
     '--seed',
     type=int,
@@ -57,18 +57,17 @@ random.seed(args.seed)
 init_inf = [0]
 BETA = float(args.beta)
 MU = float(args.mu)
-eps = float(args.eps)
+TAU = float(args.tau)
 
 
-print('init_inf={} MU={} BETA={} eps={}'.format(init_inf, MU, BETA, eps))
+print('init_inf={} MU={} BETA={} TAU={}'.format(init_inf, MU, BETA, TAU))
 
-G = extract_seattle_data(eps, MU)
+G = extract_seattle_data(TAU, MU)
 
 seattle = generate_seattle(G, init_inf, BETA)
-N = len(seattle.variables)
 print(seattle.summary())
 
-degree_distribution(seattle)
+degree_distribution(seattle, G, (TAU, BETA, MU))
 
 
 # compute partition function for Seattle GM
@@ -81,23 +80,20 @@ t2 = time.time()
 print('partition function = {}'.format(Z))
 print('time taken for GBR = {}'.format(t2-t1))
 
-
-
-
 # compute partition functions for sub-GMs
 # =====================================
 t1 = time.time()
-compute_partition_functions()
+compute_partition_functions(seattle, init_inf, (BETA, MU, TAU))
 t2 = time.time()
 # =====================================
 
 print("compute_partition_functions RUNTIME: ",t2-t1)
 
 
-filename = "seattle_marginal_probabilities_init_inf={}_BETA={}_MU={}_EPS={}.csv".format(init_inf, BETA, MU, eps)
+filename = "seattle_marg_prob_init_inf={}_BETA={}_MU={}_TAU={}.csv".format(init_inf, BETA, MU, TAU)
 utils.append_to_csv(filename, ['Tract', 'probability'])
 
-pfs = utils.read_csv("seattle_marginal_Z_init_inf={}_BETA={}_MU={}_EPS={}.csv".format(init_inf, BETA, MU, eps))
+pfs = utils.read_csv("seattle_marg_Z_init_inf={}_BETA={}_MU={}_TAU={}.csv".format(init_inf, BETA, MU, TAU))
 Zi = [float(entry[1]) for entry in pfs[1:]]
 
 # magnetic field H
