@@ -1,0 +1,5 @@
+clc
+clear
+rawData=readmatrix("F:\MySoftwareDevelops\COVID\bucket_renorm_pycharm\wisconsin\RawData.csv");
+countyTravel(size(rawData,1)-1,size(rawData,1)-1)=0;
+for i=1:size(
