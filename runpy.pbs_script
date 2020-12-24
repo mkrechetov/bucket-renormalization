@@ -6,7 +6,7 @@
 # Your job will use 5 nodes, 140 cores, and 840gb of memory total.
 #PBS -q standard
 #PBS -l select=5:ncpus=28:mem=168gb:pcmem=6gb:ngpus=1
-#PBS -l walltime=00:50:00
+#PBS -l walltime=04:00:00
 #
 ## Optional PBS Directives --------------------------------------
 #PBS -N marg
@@ -28,9 +28,9 @@ source ./bin/activate
 #
 date
 
-foreach BETA ( 3 4 5 )
-  foreach MU ( 0.01 0.012 0.014 0.016 0.018 0.02 )
-    foreach TAU ( 80 90 100 110 120 )
+foreach BETA ( 3 5 7 )
+  foreach MU ( 0.01 0.013 0.016 0.019 )
+    foreach TAU ( 90 100 110 120 )
       echo "Running experiment beta=$BETA mu=$MU eps=$TAU"
       python3 marginalization.py --mu $MU --beta $BETA --eps $TAU
     end
