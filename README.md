@@ -7,3 +7,4 @@ Goal: compute marginal probabilities that a census tract contracts the COVID-19 
 * The "drawHeatMap.py" visualizes probabilities.  
 * "runpy.pbs_script" runs different experiments with various parameters.  
 * "./seattle/" contains the data related to Seattle case study and it has the compiled Java app for visualization.
+* "./wisconsin/" contains the data related to Wisconsin counties.
