@@ -159,30 +159,6 @@ def extract_var_weights(model, nbr_num=-1):
             H[a] = fac.log_values[1]
     return H
 
-'''def update_nbg_mf(model, init_inf):
-    ''''''returns a copy of the GM modified by removing variable var''''''
-
-    for inf in init_inf:
-        model.remove_variable(ith_object_name('V', inf))
-
-        adj_factors = model.get_adj_factors(ith_object_name('B', inf))
-        model.remove_factors_from(adj_factors)
-
-        var_names = []
-        for fac in adj_factors:
-            for entry in fac.variables:
-                var_names.append(entry.replace('V','B'))
-        var_names = list(set(var_names))
-
-        nbrs = model.get_factors_from(var_names)
-
-        for nbr in nbrs:
-            # if fac is None: continue
-            fac = [f for f in factors if nbr.name.replace('B','') in f.name]
-            if not fac: continue
-            beta = nbr.log_values+fac[0].log_values[0]
-            nbr.log_values = beta'''
-
 def degree_distribution(seattle, G, params):
     '''degree distribution'''
     degree = [seattle.degree(var) for var in seattle.variables]
@@ -199,72 +175,32 @@ def degree_distribution(seattle, G, params):
     plt.show()
     # quit()
 
-def compute_partition_functions(seattle, init_inf, params):
+def compute_marginals(seattle, init_inf, params):
     BETA, MU, TAU = params
-    filename = "seattle_marg_Z_init_inf={}_BETA={}_MU={}_TAU={}.csv".format(init_inf, BETA, MU, TAU)
-    utils.append_to_csv(filename, ['Tract', 'Z_i', 'time'])
+
+    # =====================================
+    # Compute partition function for Seattle GM
+    # =====================================
+    t1 = time.time()
+    Z = BucketRenormalization(seattle, ibound=10).run(max_iter=1)
+    t2 = time.time()
+    # =====================================
+    print('partition function = {}'.format(Z))
+    print('time taken for GBR = {}'.format(t2-t1))
+
+    filename = "seattle_marg_prob_init_inf={}_BETA={}_MU={}_TAU={}.csv".format(init_inf, BETA, MU, TAU)
+    utils.append_to_csv(filename, ['Tract', 'Z_i', 'time', 'P_i'])
 
     Zi = []
     N = len(seattle.variables)
-    # H = extract_var_weights(seattle)
+
     node_buckets = [fac for fac in seattle.factors if 'B' in fac.name]
 
     results=[]
 
-    # UNCOMMENT THE NEXT LINE AND COMMENT THE THIRD ''' APPROXIMATLY 50 LINES BELOW TO RUN CODE SERIALLY
-    #'''
     results.append(Parallel(n_jobs=mp.cpu_count())(delayed(compute_partition_functionsParallel)(seattle, index) for index in range(N)))
-    '''
-    results.append([])
-    # collect partition functions of modified GMs
-    for index in range(N):
-        # I USED TRY/EXCEPT BECAUSE THE CODE FAILS BECAUSE A NUMBER GOES TO INFINITY WHILE CALCULATING
-        try:
-            #if index != 26: continue
-            var = seattle.variables[index]
-            model_copy = seattle.copy()
-            print('var {} has {} neighbors'.format(var, seattle.degree(var)))
 
-            adj_factors = seattle.get_adj_factors(var)
-            factors = [fac for fac in adj_factors if 'F' in fac.name]
-
-            # remove variable and edges
-            model_copy.remove_variable(var)
-            model_copy.remove_factors_from(adj_factors)
-
-            var_names = []
-            for fac in adj_factors:
-                for entry in fac.variables:
-                    var_names.append(entry.replace('V','B'))
-            var_names = list(set(var_names))
-
-            nbrs = model_copy.get_factors_from(var_names)
-
-            for nbr in nbrs:
-                # if fac is None: continue
-                fac = [f for f in factors if nbr.name.replace('B','') in f.name]
-                if not fac: continue
-                beta = nbr.log_values+fac[0].log_values[0]
-                nbr.log_values = beta
-                # nbr_num = int(nbr.name.replace('B',''))
-
-            H_temp = extract_var_weights(model_copy, index)
-            print(H_temp)
-
-            t1 = time.time()
-            Z_copy = BucketRenormalization(model_copy, ibound=10).run(max_iter=1)
-            t2 = time.time()
-            print('partition function computation {} complete: {} (time taken: {})'.format(index, Z_copy, t2-t1))
-            results[0].append([var, Z_copy, t2 - t1])
-            #utils.append_to_csv(filename, [var, Z_copy, t2-t1])
-            #Zi.append(Z_copy)
-        except Exception as e:
-            print(e)
-            traceback.print_exc():
-            print("Failed on var: ", var)
-            results[0].append([])
-    '''
-    # COMMENT THE ABOVE ''' TO RUN CODE SERIALLY
+    # collect partition functions for sub GMs
     for index in range(N):
         try:# I USED TRY/EXCEPT BECAUSE THE CODE FAILS BECAUSE A NUMBER GOES TO INFINITY WHILE CALCULATING
             Zi.append(results[0][index][1])
@@ -272,13 +208,23 @@ def compute_partition_functions(seattle, init_inf, params):
             print("Zi ", index, " not calculated!")
             Zi.append(0)
 
-    print(Zi)
+    # compute marginal probabilities formula
+    # =====================================
+    H = extract_var_weights(seattle)
+    normfac = np.exp(H)
+    P = lambda i: normfac[i]*Zi[i]/Z
+    # =====================================
+
+    # write them to file
     for index in range(N):
+        marg_prob = P(index)
+        print('P( x_{} = {} ) = {}'.format(index, 1, marg_prob))
         try:# I USED TRY/EXCEPT BECAUSE THE CODE FAILS BECAUSE A NUMBER GOES TO INFINITY WHILE CALCULATING
-            utils.append_to_csv(filename, [results[0][index][0],results[0][index][1],results[0][index][2]])
+            utils.append_to_csv(filename, [results[0][index][0],results[0][index][1],results[0][index][2], marg_prob])
         except:# IF PREVIOUS CODES FAIL WRITE ZERO FOR THE V VALUES
             utils.append_to_csv(filename, ["V"+str(index), 0, 0])
             print("Row ",index," written by 0!")
+    utils.append_to_csv(filename, ['whole GM',Z,t2-t1, 'N/A'])
 
 
 
@@ -328,21 +274,21 @@ def compute_partition_functionsParallel(seattle, index):
         return []
 
 
-def compute_marginal_probabilities(seattle):
-    filename = "seattle_marginal_probabilities_init_inf={}_BETA={}_MU={}_TAU={}.csv".format(init_inf, BETA, MU, TAU)
-    utils.append_to_csv(filename, ['Tract', 'probability'])
-
-    pfs = utils.read_csv("seattle_marginal_Z_init_inf={}_BETA={}_MU={}_TAU={}.csv".format(init_inf, BETA, MU, TAU))
-    Zi = [float(entry[1]) for entry in pfs[1:]]
-    print(Zi)
-
-    P = lambda i: normfac[i]*Zi[i]/Z
-
-
-    for idx in range(N):
-        marg_prob = P(idx)
-        print('P( x_{} = {} ) = {}'.format(idx, 1, marg_prob))
-        utils.append_to_csv(filename, [seattle.variables[idx], marg_prob])
+# def compute_marginal_probabilities(seattle):
+#     filename = "seattle_marginal_probabilities_init_inf={}_BETA={}_MU={}_TAU={}.csv".format(init_inf, BETA, MU, TAU)
+#     utils.append_to_csv(filename, ['Tract', 'probability'])
+#
+#     pfs = utils.read_csv("seattle_marginal_Z_init_inf={}_BETA={}_MU={}_TAU={}.csv".format(init_inf, BETA, MU, TAU))
+#     Zi = [float(entry[1]) for entry in pfs[1:]]
+#     print(Zi)
+#
+#     P = lambda i: normfac[i]*Zi[i]/Z
+#
+#
+#     for idx in range(N):
+#         marg_prob = P(idx)
+#         print('P( x_{} = {} ) = {}'.format(idx, 1, marg_prob))
+#         utils.append_to_csv(filename, [seattle.variables[idx], marg_prob])
 
 
 def test0():

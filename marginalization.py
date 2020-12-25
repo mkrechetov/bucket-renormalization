@@ -72,38 +72,36 @@ degree_distribution(seattle, G, (TAU, BETA, MU))
 
 # compute partition function for Seattle GM
 # =====================================
-t1 = time.time()
-Z = BucketRenormalization(seattle, ibound=10).run(max_iter=1)
-t2 = time.time()
+# t1 = time.time()
+# Z = BucketRenormalization(seattle, ibound=10).run(max_iter=1)
+# t2 = time.time()
 # =====================================
 
-print('partition function = {}'.format(Z))
-print('time taken for GBR = {}'.format(t2-t1))
 
-# compute partition functions for sub-GMs
+# compute partition functions for Seattle GM and all sub-GMs
 # =====================================
 t1 = time.time()
-compute_partition_functions(seattle, init_inf, (BETA, MU, TAU))
+compute_marginals(seattle, init_inf, (BETA, MU, TAU))
 t2 = time.time()
 # =====================================
 
 print("compute_partition_functions RUNTIME: ",t2-t1)
 
 
-filename = "seattle_marg_prob_init_inf={}_BETA={}_MU={}_TAU={}.csv".format(init_inf, BETA, MU, TAU)
-utils.append_to_csv(filename, ['Tract', 'probability'])
+# filename = "seattle_marg_prob_init_inf={}_BETA={}_MU={}_TAU={}.csv".format(init_inf, BETA, MU, TAU)
+# utils.append_to_csv(filename, ['Tract', 'probability'])
 
-pfs = utils.read_csv("seattle_marg_Z_init_inf={}_BETA={}_MU={}_TAU={}.csv".format(init_inf, BETA, MU, TAU))
-Zi = [float(entry[1]) for entry in pfs[1:]]
+# pfs = utils.read_csv("seattle_marg_Z_init_inf={}_BETA={}_MU={}_TAU={}.csv".format(init_inf, BETA, MU, TAU))
+# Zi = [float(entry[1]) for entry in pfs[1:]]
 
 # magnetic field H
-H = extract_var_weights(seattle)
-normfac = np.exp(H)
+# H = extract_var_weights(seattle)
+# normfac = np.exp(H)
 # formula to compute marginal probabilities
-P = lambda i: normfac[i]*Zi[i]/Z
+# P = lambda i: normfac[i]*Zi[i]/Z
 
 # compute marginal probabilities
-for idx in range(N):
-    marg_prob = P(idx)
-    print('P( x_{} = {} ) = {}'.format(idx, 1, marg_prob))
-    utils.append_to_csv(filename, [seattle.variables[idx], marg_prob])
+# for idx in range(N):
+    # marg_prob = P(idx)
+    # print('P( x_{} = {} ) = {}'.format(idx, 1, marg_prob))
+    # utils.append_to_csv(filename, [seattle.variables[idx], marg_prob])
