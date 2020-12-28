@@ -16,4 +16,8 @@ for i=size(countyTravel,1):-1:1
         countyTravel(i,j)=round(avg);
     end
 end
-writematrix(countyTravel,"wisconsinCountyTravelsAnnual.csv");
+sumTravel=sum(sum(countyTravel));
+countyTravelProbabilities=countyTravel./sumTravel;
+writematrix(countyTravelProbabilities,"wisconsin_travel_probabilities.csv");
+countyTravelDaily=countyTravel./365;
+writematrix(countyTravelDaily,"wisconsin_travel_numbers.csv");
