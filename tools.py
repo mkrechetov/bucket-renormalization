@@ -161,6 +161,7 @@ def extract_var_weights(model, nbr_num=-1):
 
 def degree_distribution(seattle, G, params):
     '''degree distribution'''
+    BETA, MU, TAU = params
     degree = [seattle.degree(var) for var in seattle.variables]
     weights = [G[i][j]['weight'] for i,j in G.edges ]
     # counts, bins = np.histogram(weights)
@@ -170,8 +171,8 @@ def degree_distribution(seattle, G, params):
     minJ = np.round(np.min(weights),3)
     N = len(G.nodes)
     plt.plot(range(N), degree)
-    plt.title(R"$\tau$ = {}, $\beta$ = {}, $\mu$ = {}," "\n" "max J = {}, min J = {}".format(params[0], params[1], params[2], maxJ, minJ))
-    plt.savefig('./results/TAU={}_MU={}_BETA={}_maxJ={}_minJ={}.png'.format(params[0], params[1], params[2], maxJ, minJ))
+    plt.title(R"$\beta$ = {}, $\mu$ = {}, $\tau$ = {}," "\n" "max J = {}, min J = {}".format(BETA, MU, TAU, maxJ, minJ))
+    plt.savefig('./results/BETA={}_MU={}_TAU={}_maxJ={}_minJ={}.png'.format(BETA, MU, TAU, maxJ, minJ))
     plt.show()
     # quit()
 

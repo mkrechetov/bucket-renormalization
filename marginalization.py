@@ -60,14 +60,14 @@ MU = float(args.mu)
 TAU = float(args.tau)
 
 
-print('init_inf={} MU={} BETA={} TAU={}'.format(init_inf, MU, BETA, TAU))
+print('init_inf={} BETA={} MU={} TAU={}'.format(init_inf, BETA, MU, TAU))
 
 G = extract_seattle_data(TAU, MU)
 
 seattle = generate_seattle(G, init_inf, BETA)
 print(seattle.summary())
 
-degree_distribution(seattle, G, (TAU, MU, BETA))
+degree_distribution(seattle, G, (BETA, MU, TAU))
 
 
 # compute partition function for Seattle GM
