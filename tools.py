@@ -195,7 +195,6 @@ def compute_marginals(seattle, init_inf, params):
     # =====================================
     print('partition function = {}'.format(Z))
     print('time taken for GBR = {}'.format(t2-t1))
-    quit()
 
     filename = "seattle_marg_prob_init_inf={}_BETA={}_MU={}_TAU={}.csv".format(init_inf, BETA, MU, TAU)
     utils.append_to_csv(filename, ['Tract', 'Z_i', 'time', 'P_i'])

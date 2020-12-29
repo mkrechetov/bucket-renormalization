@@ -80,7 +80,7 @@ seattle = generate_seattle(G, init_inf, BETA)
 
 print(seattle.summary())
 
-degree_distribution(seattle, G, (BETA, MU, TAU))
+# degree_distribution(seattle, G, (BETA, MU, TAU))
 
 
 # compute partition function for Seattle GM
