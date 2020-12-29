@@ -40,14 +40,21 @@ from mpl_toolkits.axes_grid1 import make_axes_locatable
  # generate GM
 
 # check degree dist
-def extract_seattle_data(TAU=100, MU=300):
+def extract_seattle_data(TAU=-1, MU=300):
     # Read Data
     data = pd.read_csv('./seattle/TractTravelRawNumbers.csv', header=None).values
     # g_raw = rawnumbers/MU
     # J_raw = np.log(1+np.exp(g_raw))/2
 
     # alternate way of estimating J_raw
-    J_raw = -(data/2)*np.log(1-MU)
+    J_raw = -data*np.log(1-MU)
+
+    # MU = 1-np.exp(-J_raw/np.max(data))
+
+    minJ = np.round(np.min(J_raw), 5)
+    maxJ = np.round(np.max(J_raw), 5)
+    # print(minJ, maxJ)
+    # quit()
 
     summary = pd.read_csv('./seattle/TractSummary159.csv')
     # Create Graph
@@ -163,7 +170,7 @@ def degree_distribution(seattle, G, params):
     '''degree distribution'''
     BETA, MU, TAU = params
     degree = [seattle.degree(var) for var in seattle.variables]
-    weights = [G[i][j]['weight'] for i,j in G.edges ]
+    weights = [G[i][j]['weight'] for i,j in G.edges]
     # counts, bins = np.histogram(weights)
     # plt.hist(weights, bins=100)
     plt.title('min value = {}'.format(np.min(weights)))
@@ -188,6 +195,7 @@ def compute_marginals(seattle, init_inf, params):
     # =====================================
     print('partition function = {}'.format(Z))
     print('time taken for GBR = {}'.format(t2-t1))
+    quit()
 
     filename = "seattle_marg_prob_init_inf={}_BETA={}_MU={}_TAU={}.csv".format(init_inf, BETA, MU, TAU)
     utils.append_to_csv(filename, ['Tract', 'Z_i', 'time', 'P_i'])
@@ -307,3 +315,54 @@ def test0():
         print(Z)
         print(t2-t1)
     # quit()
+
+def testing_run_time():
+    init_inf = [0]
+    runtime = []
+    TAUS = [60, 70, 80, 90, 100, 110, 120]
+    for BETA in [1.0]:
+        for MU in [0.00138985]:
+            for TAU in TAUS:
+                G = extract_seattle_data(TAU, MU)
+                seattle = generate_seattle(G, init_inf, BETA)
+                # =====================================
+                # Compute partition function for Seattle GM
+                # =====================================
+                t1 = time.time()
+                Z = BucketRenormalization(seattle, ibound=10).run(max_iter=1)
+                t2 = time.time()
+                # =====================================
+                print('partition function = {}'.format(Z))
+                print('time taken for GBR = {}'.format(t2-t1))
+                runtime.append(t2-t1)
+    plt.plot(TAUS, runtime)
+    plt.ylabel("GBR Runtime")
+    plt.xlabel(R"minium threshold $\tau$")
+    plt.show()
+    quit()
+
+def testing_partition_function_dependence_on_TAU():
+    init_inf = [0]
+    pf = []
+    TAUS = [70, 80, 90, 100, 110, 120]
+    for BETA in [1.0]:
+        for MU in [0.00138985]:
+            for TAU in TAUS:
+                G = extract_seattle_data(TAU, MU)
+                seattle = generate_seattle(G, init_inf, BETA)
+                # =====================================
+                # Compute partition function for Seattle GM
+                # =====================================
+                t1 = time.time()
+                Z = BucketRenormalization(seattle, ibound=10).run(max_iter=1)
+                t2 = time.time()
+                # =====================================
+                print('partition function = {}'.format(Z))
+                print('time taken for GBR = {}'.format(t2-t1))
+                pf.append(Z)
+    plt.plot(TAUS, pf)
+    plt.ylabel("Z Value")
+    plt.xlabel(R"minium threshold $\tau$")
+    pls.savefig("Z_dependence_on_tau.png")
+    plt.show()
+    quit()

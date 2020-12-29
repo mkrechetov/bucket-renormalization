@@ -42,12 +42,17 @@ parser.add_argument(
     help='BETA paremeter - inverse temperature')
 parser.add_argument(
     '-t','--tau',
-    default='100',
+    default='-1',
     help='TAU parameter - minimal number of people traversing an edge')
 parser.add_argument(
     '--seed',
     type=int,
     default=0)
+parser.add_argument(
+    '--testing',
+    default=0,
+    help='testing various aspects of the algorithm'
+)
 args = parser.parse_args()
 
 np.random.seed(args.seed)
@@ -58,13 +63,21 @@ init_inf = [0]
 BETA = float(args.beta)
 MU = float(args.mu)
 TAU = float(args.tau)
+TESTING = int(args.testing)
 
 
-print('init_inf={} BETA={} MU={} TAU={}'.format(init_inf, BETA, MU, TAU))
+# TESTING Purposes
+if TESTING:
+    testing_partition_function_dependence_on_TAU()
+    testing_run_time()
+
+
+print('experiment: init_inf={} BETA={} MU={} TAU={}'.format(init_inf, BETA, MU, TAU))
 
 G = extract_seattle_data(TAU, MU)
 
 seattle = generate_seattle(G, init_inf, BETA)
+
 print(seattle.summary())
 
 degree_distribution(seattle, G, (BETA, MU, TAU))
