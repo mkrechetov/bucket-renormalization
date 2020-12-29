@@ -1,0 +1,85 @@
+Tue Dec 29 12:13:41 MST 2020
+Running experiment beta=0.1 mu=0.00013907
+experiment: init_inf=[0] BETA=0.1 MU=0.00013907 TAU=120.0
+Number of variables: 123
+Max degree of variables: 115
+Max number of variables associated to each factor: 2
+Total number of factors: 399
+None
+partition function = 85.50107780198947
+time taken for GBR = 17.300657272338867
+Running experiment beta=0.1 mu=0.0006951
+experiment: init_inf=[0] BETA=0.1 MU=0.0006951 TAU=120.0
+Number of variables: 123
+Max degree of variables: 115
+Max number of variables associated to each factor: 2
+Total number of factors: 399
+None
+partition function = 95.20014724557959
+time taken for GBR = 16.109451055526733
+Running experiment beta=0.1 mu=0.00138985
+experiment: init_inf=[0] BETA=0.1 MU=0.00138985 TAU=120.0
+Number of variables: 123
+Max degree of variables: 115
+Max number of variables associated to each factor: 2
+Total number of factors: 399
+None
+partition function = 137.93910917006235
+time taken for GBR = 16.06049394607544
+Running experiment beta=0.5 mu=0.00013907
+experiment: init_inf=[0] BETA=0.5 MU=0.00013907 TAU=120.0
+Number of variables: 123
+Max degree of variables: 115
+Max number of variables associated to each factor: 2
+Total number of factors: 399
+None
+partition function = 85.6230015497008
+time taken for GBR = 16.342419147491455
+Running experiment beta=0.5 mu=0.0006951
+experiment: init_inf=[0] BETA=0.5 MU=0.0006951 TAU=120.0
+Number of variables: 123
+Max degree of variables: 115
+Max number of variables associated to each factor: 2
+Total number of factors: 399
+None
+partition function = 96.21994788359662
+time taken for GBR = 15.845102071762085
+Running experiment beta=0.5 mu=0.00138985
+experiment: init_inf=[0] BETA=0.5 MU=0.00138985 TAU=120.0
+Number of variables: 123
+Max degree of variables: 115
+Max number of variables associated to each factor: 2
+Total number of factors: 399
+None
+partition function = 139.53111482667137
+time taken for GBR = 16.00073003768921
+Running experiment beta=1 mu=0.00013907
+experiment: init_inf=[0] BETA=1.0 MU=0.00013907 TAU=120.0
+Number of variables: 123
+Max degree of variables: 115
+Max number of variables associated to each factor: 2
+Total number of factors: 399
+None
+partition function = 85.9408537978336
+time taken for GBR = 15.778170347213745
+Running experiment beta=1 mu=0.0006951
+experiment: init_inf=[0] BETA=1.0 MU=0.0006951 TAU=120.0
+Number of variables: 123
+Max degree of variables: 115
+Max number of variables associated to each factor: 2
+Total number of factors: 399
+None
+partition function = 96.86409809711262
+time taken for GBR = 16.312520742416382
+Running experiment beta=1 mu=0.00138985
+experiment: init_inf=[0] BETA=1.0 MU=0.00138985 TAU=120.0
+Number of variables: 123
+Max degree of variables: 115
+Max number of variables associated to each factor: 2
+Total number of factors: 399
+None
+partition function = 140.1155711662262
+time taken for GBR = 16.593042373657227
+Tue Dec 29 12:16:42 MST 2020
+Your group chertkov has been charged 7:11:40 (0:03:05 X 140 cpus).
+You previously had 28093:18:37.  You now have 28086:06:57 of standard_time remaining
