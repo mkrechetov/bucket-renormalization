@@ -67,7 +67,7 @@ G = extract_seattle_data(TAU, MU)
 seattle = generate_seattle(G, init_inf, BETA)
 print(seattle.summary())
 
-degree_distribution(seattle, G, (TAU, BETA, MU))
+degree_distribution(seattle, G, (TAU, MU, BETA))
 
 
 # compute partition function for Seattle GM
