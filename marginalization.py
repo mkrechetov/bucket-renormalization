@@ -60,7 +60,7 @@ np.random.seed(args.seed)
 random.seed(args.seed)
 
 # init_inf = [0, 81, 93]
-init_inf = [0]
+init_inf = [52]
 H_a = float(args.magfield)
 MU = float(args.mu)
 TAU = float(args.tau)
