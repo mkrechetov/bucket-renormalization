@@ -198,7 +198,7 @@ def compute_PF_of_modified_GM(model, index):
 
 
 def compute_marginals(model, params):
-    H_a, MU, TAU = params
+    init_inf, H_a, MU, TAU = params
 
     # ==========================================
     # Compute partition function for Seattle GM
