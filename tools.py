@@ -103,7 +103,7 @@ def generate_seattle(G, init_inf, H_a):
 
     # define magentic fields
     for node in G.nodes:
-        h_a = -H_a
+        h_a = H_a
         log_values = np.array([-h_a, h_a])
         factor = Factor(
             name = ith_object_name('B', node),
