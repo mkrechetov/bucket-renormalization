@@ -29,6 +29,7 @@ import numpy.random as rnd
 import matplotlib.colors as mcolors
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 from tools import *
+from testing import *
 
 # input into program from command line
 parser = argparse.ArgumentParser()
@@ -87,7 +88,7 @@ seattle = generate_seattle(G, init_inf, H_a)
 # compute partition functions for Seattle GM and all sub-GMs
 # =====================================
 t1 = time.time()
-compute_marginals(seattle, (H_a, MU, TAU))
+compute_marginals(seattle, (init_inf, H_a, MU, TAU))
 t2 = time.time()
 # =====================================
 
