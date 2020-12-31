@@ -37,9 +37,9 @@ parser.add_argument(
     default='0.01',
     help='MU parameter - max interaction factor')
 parser.add_argument(
-    '-b','--beta',
-    default='3',
-    help='BETA paremeter - inverse temperature')
+    '--magfield',
+    default='0.1',
+    help='H_a paremeter - magnetic field')
 parser.add_argument(
     '-t','--tau',
     default='-1',
@@ -60,7 +60,7 @@ random.seed(args.seed)
 
 # init_inf = [0, 81, 93]
 init_inf = [0]
-BETA = float(args.beta)
+H_a = float(args.magfield)
 MU = float(args.mu)
 TAU = float(args.tau)
 TESTING = int(args.testing)
@@ -72,49 +72,23 @@ if TESTING:
     testing_run_time()
 
 
-print('experiment: init_inf={} BETA={} MU={} TAU={}'.format(init_inf, BETA, MU, TAU))
+print('experiment: init_inf={} H_a={} MU={} TAU={}'.format(init_inf, H_a, MU, TAU))
 
+print('extracting seattle data...')
 G = extract_seattle_data(TAU, MU)
 
-seattle = generate_seattle(G, init_inf, BETA)
 
-print(seattle.summary())
-
-# degree_distribution(seattle, G, (BETA, MU, TAU))
-
-
-# compute partition function for Seattle GM
-# =====================================
-# t1 = time.time()
-# Z = BucketRenormalization(seattle, ibound=10).run(max_iter=1)
-# t2 = time.time()
-# =====================================
-
+print('generating GM...')
+# generates a Graphical Model of Infection
+# - removes and modifies GM to reflect initial seed of infection
+# - sets magnetic field to all nodes to H_a
+seattle = generate_seattle(G, init_inf, H_a)
 
 # compute partition functions for Seattle GM and all sub-GMs
 # =====================================
 t1 = time.time()
-compute_marginals(seattle, init_inf, (BETA, MU, TAU))
+compute_marginals(seattle, (H_a, MU, TAU))
 t2 = time.time()
 # =====================================
 
 print("compute_partition_functions RUNTIME: ",t2-t1)
-
-
-# filename = "seattle_marg_prob_init_inf={}_BETA={}_MU={}_TAU={}.csv".format(init_inf, BETA, MU, TAU)
-# utils.append_to_csv(filename, ['Tract', 'probability'])
-
-# pfs = utils.read_csv("seattle_marg_Z_init_inf={}_BETA={}_MU={}_TAU={}.csv".format(init_inf, BETA, MU, TAU))
-# Zi = [float(entry[1]) for entry in pfs[1:]]
-
-# magnetic field H
-# H = extract_var_weights(seattle)
-# normfac = np.exp(H)
-# formula to compute marginal probabilities
-# P = lambda i: normfac[i]*Zi[i]/Z
-
-# compute marginal probabilities
-# for idx in range(N):
-    # marg_prob = P(idx)
-    # print('P( x_{} = {} ) = {}'.format(idx, 1, marg_prob))
-    # utils.append_to_csv(filename, [seattle.variables[idx], marg_prob])
