@@ -1,0 +1,2263 @@
+Wed Dec 30 21:19:58 MST 2020
+Running experiment h_a=0 mu=0.001 tau=120
+experiment: init_inf=[0] H_a=0.0 MU=0.001 TAU=120.0
+extracting seattle data...
+generating GM...
+partition function = 110.30573741825896
+time taken for GBR = 20.481714725494385
+P( x_0 = 1 ) = 1.0193131385317942
+P( x_1 = 1 ) = 1.024518877041952
+P( x_2 = 1 ) = 1.0240743086548318
+P( x_3 = 1 ) = 1.0186541899359531
+P( x_4 = 1 ) = 1.0162472816678363
+P( x_5 = 1 ) = 1.031033874934634
+P( x_6 = 1 ) = 1.0192268004547402
+P( x_7 = 1 ) = 1.0157055595485476
+P( x_8 = 1 ) = 1.0317669993988463
+P( x_9 = 1 ) = 1.0148566392563545
+P( x_10 = 1 ) = 1.029456445985346
+P( x_11 = 1 ) = 1.0324097280050835
+P( x_12 = 1 ) = 1.0317287457225095
+P( x_13 = 1 ) = 1.028668623917629
+P( x_14 = 1 ) = 1.0292326648326806
+P( x_15 = 1 ) = 1.0152336454593682
+P( x_16 = 1 ) = 1.0254647841438118
+P( x_17 = 1 ) = 1.0153513949645336
+P( x_18 = 1 ) = 1.0280103533475164
+P( x_19 = 1 ) = 1.0297606299048256
+P( x_20 = 1 ) = 1.0339773033047506
+P( x_21 = 1 ) = 1.0327740779081276
+P( x_22 = 1 ) = 1.0123780466830403
+P( x_23 = 1 ) = 1.0307966496702765
+P( x_24 = 1 ) = 1.0237363417719656
+P( x_25 = 1 ) = 1.0312944803453628
+P( x_26 = 1 ) = 1.0276927494557069
+P( x_27 = 1 ) = 1.0287242005369688
+P( x_28 = 1 ) = 1.0198051606003893
+P( x_29 = 1 ) = 1.0310214504852084
+P( x_30 = 1 ) = 1.0284652687067666
+P( x_31 = 1 ) = 1.031345587434556
+P( x_32 = 1 ) = 1.0308467343418901
+P( x_33 = 1 ) = 1.0285420489265564
+P( x_34 = 1 ) = 1.0401694345334174
+P( x_35 = 1 ) = 1.0282542700188213
+P( x_36 = 1 ) = 1.0259782827518191
+P( x_37 = 1 ) = 1.02985971881366
+P( x_38 = 1 ) = 1.0310172938691164
+P( x_39 = 1 ) = 1.0331111150473926
+P( x_40 = 1 ) = 1.0330159964179841
+P( x_41 = 1 ) = 1.0359636487559787
+P( x_42 = 1 ) = 1.0201714283030605
+P( x_43 = 1 ) = 1.0285059936414958
+P( x_44 = 1 ) = 1.0383941387950057
+P( x_45 = 1 ) = 1.0281509445733439
+P( x_46 = 1 ) = 1.0343054411108317
+P( x_47 = 1 ) = 1.0318125948501806
+P( x_48 = 1 ) = 1.0175227780506353
+P( x_49 = 1 ) = 1.0344586757522234
+P( x_50 = 1 ) = 1.0327205861981552
+P( x_51 = 1 ) = 1.0229787375074908
+P( x_52 = 1 ) = 1.0341789094045328
+P( x_53 = 1 ) = 1.0171480072144023
+P( x_54 = 1 ) = 1.0311037796434228
+P( x_55 = 1 ) = 1.0373409295543514
+P( x_56 = 1 ) = 1.0295971378236943
+P( x_57 = 1 ) = 1.0383424960305299
+P( x_58 = 1 ) = 1.0324176747368334
+P( x_59 = 1 ) = 1.0288861065814159
+P( x_60 = 1 ) = 1.0236028824317243
+P( x_61 = 1 ) = 1.0093045733838422
+P( x_62 = 1 ) = 0.9901131382725658
+P( x_63 = 1 ) = 1.0275087044576454
+P( x_64 = 1 ) = 1.0284126992022111
+P( x_65 = 1 ) = 1.0422817419412185
+P( x_66 = 1 ) = 1.0256172661905145
+P( x_67 = 1 ) = 1.0199405634089773
+P( x_68 = 1 ) = 1.0289279161816796
+P( x_69 = 1 ) = 1.024781529370308
+P( x_70 = 1 ) = 1.0349136644160788
+P( x_71 = 1 ) = 1.0358204805221585
+P( x_72 = 1 ) = 1.03640587793005
+P( x_73 = 1 ) = 1.0345721146832336
+P( x_74 = 1 ) = 1.024846952729175
+P( x_75 = 1 ) = 1.0314799067722105
+P( x_76 = 1 ) = 1.032761587272557
+P( x_77 = 1 ) = 1.0312068193198567
+P( x_78 = 1 ) = 1.0297744294698519
+P( x_79 = 1 ) = 1.0211296519257134
+P( x_80 = 1 ) = 1.0366736945232915
+P( x_81 = 1 ) = 1.041913091825293
+P( x_82 = 1 ) = 1.034153077936161
+P( x_83 = 1 ) = 1.0281089863764867
+P( x_84 = 1 ) = 1.0322903700903006
+P( x_85 = 1 ) = 1.0322395566490108
+P( x_86 = 1 ) = 1.0311606504576316
+P( x_87 = 1 ) = 1.0239186320042735
+P( x_88 = 1 ) = 1.0277571183983665
+P( x_89 = 1 ) = 1.024183647140823
+P( x_90 = 1 ) = 1.0332621656147978
+P( x_91 = 1 ) = 1.0211061383466624
+P( x_92 = 1 ) = 1.0408817635064993
+P( x_93 = 1 ) = 1.0303353186555944
+P( x_94 = 1 ) = 1.0265262856590114
+P( x_95 = 1 ) = 1.032116458492102
+P( x_96 = 1 ) = 1.029655861061718
+P( x_97 = 1 ) = 1.0388178606862075
+P( x_98 = 1 ) = 1.0305374344012268
+P( x_99 = 1 ) = 1.0316143230589256
+P( x_100 = 1 ) = 1.0357334126877076
+P( x_101 = 1 ) = 1.0283485866281679
+P( x_102 = 1 ) = 1.0275898735621443
+P( x_103 = 1 ) = 1.0343500555829779
+P( x_104 = 1 ) = 1.0289340390575192
+P( x_105 = 1 ) = 1.0317328639698806
+P( x_106 = 1 ) = 1.0282860103640417
+P( x_107 = 1 ) = 1.0307824663761902
+P( x_108 = 1 ) = 1.0133923100212272
+P( x_109 = 1 ) = 1.0371232253197988
+P( x_110 = 1 ) = 1.0302014353199969
+P( x_111 = 1 ) = 1.0321121108204383
+P( x_112 = 1 ) = 1.0222762538982597
+P( x_113 = 1 ) = 1.0260146293849124
+P( x_114 = 1 ) = 1.0362111329688752
+P( x_115 = 1 ) = 1.016130414707977
+P( x_116 = 1 ) = 1.0334900042581496
+P( x_117 = 1 ) = 1.0298462649507623
+P( x_118 = 1 ) = 1.0296876685763392
+P( x_119 = 1 ) = 1.0282011557107595
+P( x_120 = 1 ) = 1.0182012117389696
+P( x_121 = 1 ) = 1.034516104578874
+compute_partition_functions RUNTIME:  88.34394788742065
+partition function computation 24 complete: 112.92399210102744 (time taken: 17.40641212463379)
+partition function computation 53 complete: 112.19726099929724 (time taken: 14.926729440689087)
+partition function computation 88 complete: 113.3675068317967 (time taken: 15.311019659042358)
+partition function computation 27 complete: 113.47418154023926 (time taken: 13.86177682876587)
+partition function computation 43 complete: 113.45011206772435 (time taken: 9.105113983154297)
+partition function computation 67 complete: 112.50529596962176 (time taken: 13.519586324691772)
+partition function computation 96 complete: 113.57694904144519 (time taken: 11.20807957649231)
+partition function computation 12 complete: 113.80560011253681 (time taken: 16.660523414611816)
+partition function computation 49 complete: 114.10672705756464 (time taken: 9.555524826049805)
+partition function computation 73 complete: 114.11924002250166 (time taken: 11.03691554069519)
+partition function computation 97 complete: 114.58757016625033 (time taken: 11.016416549682617)
+partition function computation 13 complete: 113.46805112025977 (time taken: 14.433061838150024)
+partition function computation 44 complete: 114.54083121058105 (time taken: 10.456012725830078)
+partition function computation 72 complete: 114.32151462969225 (time taken: 8.876600742340088)
+partition function computation 91 complete: 112.63386557263934 (time taken: 15.339831590652466)
+partition function computation 1 complete: 113.01031023103909 (time taken: 17.053821325302124)
+partition function computation 48 complete: 112.23860037275077 (time taken: 13.537947177886963)
+partition function computation 80 complete: 114.35105633650258 (time taken: 3.578167200088501)
+partition function computation 90 complete: 113.97474512452749 (time taken: 15.710085391998291)
+partition function computation 21 complete: 113.92090625011843 (time taken: 11.87368369102478)
+partition function computation 37 complete: 113.59943572110159 (time taken: 10.120711326599121)
+partition function computation 63 complete: 113.34010534888048 (time taken: 20.619555711746216)
+partition function computation 107 complete: 113.70122007143739 (time taken: 6.845474720001221)
+partition function computation 11 complete: 113.8807163653849 (time taken: 15.944804430007935)
+partition function computation 47 complete: 113.81484915239645 (time taken: 13.263647556304932)
+partition function computation 77 complete: 113.74802863581412 (time taken: 6.948824882507324)
+partition function computation 94 complete: 113.2317389188436 (time taken: 16.491612911224365)
+partition function computation 20 complete: 114.05362891477333 (time taken: 8.934761047363281)
+partition function computation 32 complete: 113.70830919678627 (time taken: 13.861883163452148)
+partition function computation 65 complete: 114.96965614241358 (time taken: 20.55750036239624)
+partition function computation 110 complete: 113.63712901232105 (time taken: 9.101047992706299)
+partition function computation 26 complete: 113.3604065681098 (time taken: 13.184896230697632)
+partition function computation 39 complete: 113.95808338030241 (time taken: 13.160452127456665)
+partition function computation 74 complete: 113.04649886164722 (time taken: 11.42039704322815)
+partition function computation 102 complete: 113.34905876680781 (time taken: 14.684951305389404)
+partition function computation 14 complete: 113.53026806932859 (time taken: 9.822216510772705)
+partition function computation 34 complete: 114.73665651614203 (time taken: 8.414371728897095)
+partition function computation 56 complete: 113.57047153137141 (time taken: 5.903841495513916)
+partition function computation 69 complete: 113.03928228980301 (time taken: 11.970445394515991)
+partition function computation 95 complete: 113.84836705549318 (time taken: 17.347917795181274)
+partition function computation 5 complete: 113.72895187786978 (time taken: 14.555940389633179)
+partition function computation 42 complete: 112.53076169200759 (time taken: 8.887566089630127)
+partition function computation 66 complete: 113.13146885604348 (time taken: 9.664491176605225)
+partition function computation 89 complete: 112.97333244959042 (time taken: 8.419727563858032)
+partition function computation 105 complete: 113.80605437884994 (time taken: 12.428057670593262)
+partition function computation 4 complete: 112.0979058036718 (time taken: 15.819018840789795)
+partition function computation 45 complete: 113.41094811844218 (time taken: 15.00333285331726)
+partition function computation 81 complete: 114.9289919195271 (time taken: 13.113860130310059)
+partition function computation 109 complete: 114.40064216250356 (time taken: 11.09987473487854)
+partition function computation 23 complete: 113.70278457015058 (time taken: 6.1988844871521)
+partition function computation 29 complete: 113.72758138981388 (time taken: 9.177371501922607)
+partition function computation 46 complete: 114.08982439744791 (time taken: 8.966906309127808)
+partition function computation 71 complete: 114.25694193693204 (time taken: 13.37989068031311)
+partition function computation 101 complete: 113.4327491710444 (time taken: 6.792215824127197)
+partition function computation 116 complete: 113.99987703409478 (time taken: 9.83897876739502)
+partition function computation 3 complete: 112.36340159508454 (time taken: 11.739312887191772)
+partition function computation 36 complete: 113.1712910540584 (time taken: 20.518191814422607)
+partition function computation 87 complete: 112.94409975952631 (time taken: 12.636461973190308)
+partition function computation 111 complete: 113.84788748236426 (time taken: 10.38505244255066)
+partition function computation 0 complete: 112.4360874058695 (time taken: 6.440894365310669)
+partition function computation 28 complete: 112.49036026297195 (time taken: 13.504035234451294)
+partition function computation 58 complete: 113.88159293549064 (time taken: 15.171895503997803)
+partition function computation 93 complete: 113.65189711238216 (time taken: 20.770252227783203)
+partition function computation 25 complete: 113.75769814987541 (time taken: 6.674978256225586)
+partition function computation 30 complete: 113.44561987376773 (time taken: 10.846182823181152)
+partition function computation 54 complete: 113.73666276832174 (time taken: 13.127551555633545)
+partition function computation 82 complete: 114.07301786511047 (time taken: 9.067103385925293)
+partition function computation 104 complete: 113.49732793298732 (time taken: 15.3872811794281)
+partition function computation 2 complete: 112.96127178726496 (time taken: 17.556653022766113)
+partition function computation 50 complete: 113.91500580760417 (time taken: 9.850913047790527)
+partition function computation 76 complete: 113.919528461351 (time taken: 10.29812216758728)
+partition function computation 98 complete: 113.674191638748 (time taken: 18.579983472824097)
+partition function computation 7 complete: 112.03815074582788 (time taken: 17.723226308822632)
+partition function computation 51 complete: 112.84042400396334 (time taken: 13.581845760345459)
+partition function computation 83 complete: 113.40631988859712 (time taken: 14.567260980606079)
+partition function computation 119 complete: 113.41648669498143 (time taken: 12.063226222991943)
+partition function computation 6 complete: 112.42656382061278 (time taken: 19.610430002212524)
+partition function computation 59 complete: 113.49204070586447 (time taken: 12.248551368713379)
+partition function computation 86 complete: 113.74293594542061 (time taken: 13.612435579299927)
+partition function computation 118 complete: 113.58045759280093 (time taken: 13.698022365570068)
+partition function computation 9 complete: 111.94450996698819 (time taken: 14.318649530410767)
+partition function computation 41 complete: 114.27273421453845 (time taken: 7.316504240036011)
+partition function computation 62 complete: 109.21515984466195 (time taken: 23.29261875152588)
+partition function computation 114 complete: 114.30003314314136 (time taken: 14.428691387176514)
+partition function computation 15 complete: 111.98609591422289 (time taken: 19.891865491867065)
+partition function computation 61 complete: 111.33208524672598 (time taken: 23.426011085510254)
+partition function computation 108 complete: 111.78298605088436 (time taken: 16.155359268188477)
+partition function computation 17 complete: 111.99908436022079 (time taken: 18.38725972175598)
+partition function computation 57 complete: 114.53513471736322 (time taken: 11.1688814163208)
+partition function computation 78 complete: 113.59002781713892 (time taken: 15.551945924758911)
+partition function computation 117 complete: 113.59795168283352 (time taken: 15.280232667922974)
+partition function computation 8 complete: 113.8098197125141 (time taken: 8.869395017623901)
+partition function computation 31 complete: 113.76333555503618 (time taken: 13.748212814331055)
+partition function computation 64 complete: 113.43982115580204 (time taken: 16.279815912246704)
+partition function computation 103 complete: 114.09474562969751 (time taken: 5.989868402481079)
+partition function computation 113 complete: 113.17530029622444 (time taken: 16.02418351173401)
+partition function computation 18 complete: 113.39544009960277 (time taken: 9.459208011627197)
+partition function computation 33 complete: 113.45408917253079 (time taken: 7.932439088821411)
+partition function computation 52 complete: 114.07586722427783 (time taken: 12.428902387619019)
+partition function computation 79 complete: 112.6364592553159 (time taken: 12.051975011825562)
+partition function computation 106 complete: 113.42584665008508 (time taken: 19.596057176589966)
+partition function computation 16 complete: 113.11464921143892 (time taken: 12.602637529373169)
+partition function computation 38 complete: 113.7271228912107 (time taken: 11.899141550064087)
+partition function computation 70 complete: 114.15691491764815 (time taken: 6.725332736968994)
+partition function computation 84 complete: 113.86755050257804 (time taken: 13.184871435165405)
+partition function computation 112 complete: 112.76293603142287 (time taken: 17.83306074142456)
+partition function computation 10 complete: 113.55495241439365 (time taken: 13.942076444625854)
+partition function computation 40 complete: 113.9475912497433 (time taken: 9.831795692443848)
+partition function computation 68 complete: 113.49665254465272 (time taken: 7.869219779968262)
+partition function computation 85 complete: 113.86194548846584 (time taken: 6.221935272216797)
+partition function computation 100 complete: 114.24733785524751 (time taken: 10.073981046676636)
+partition function computation 121 complete: 114.11306178663739 (time taken: 16.39491558074951)
+partition function computation 22 complete: 111.67110698542935 (time taken: 19.100122928619385)
+partition function computation 60 complete: 112.90927077008678 (time taken: 14.72095775604248)
+partition function computation 92 complete: 114.81523048880223 (time taken: 10.58571481704712)
+partition function computation 115 complete: 112.0850147074847 (time taken: 20.465999841690063)
+partition function computation 19 complete: 113.58850564594263 (time taken: 10.228874444961548)
+partition function computation 35 complete: 113.42234550789964 (time taken: 7.498680114746094)
+partition function computation 55 complete: 114.42465618863494 (time taken: 8.862996101379395)
+partition function computation 75 complete: 113.77815174862567 (time taken: 10.574892044067383)
+partition function computation 99 complete: 113.79297863625281 (time taken: 9.227024555206299)
+partition function computation 120 complete: 112.31343550103188 (time taken: 18.726744890213013)
+Running experiment h_a=0 mu=0.0015 tau=120
+experiment: init_inf=[0] H_a=0.0 MU=0.0015 TAU=120.0
+extracting seattle data...
+generating GM...
+partition function = 146.25701564254223
+time taken for GBR = 20.90044927597046
+P( x_0 = 1 ) = 1.0102045944039018
+P( x_1 = 1 ) = 1.0065975416631077
+P( x_2 = 1 ) = 1.007564176481241
+P( x_3 = 1 ) = 1.0075795539856576
+P( x_4 = 1 ) = 1.0057928221005454
+P( x_5 = 1 ) = 1.0038959168894974
+P( x_6 = 1 ) = 1.0054040648091225
+P( x_7 = 1 ) = 1.0054631479036922
+P( x_8 = 1 ) = 1.0016835048614467
+P( x_9 = 1 ) = 1.00497741791636
+P( x_10 = 1 ) = 1.0097013660599095
+P( x_11 = 1 ) = 1.0098194026191414
+P( x_12 = 1 ) = 1.005269234160358
+P( x_13 = 1 ) = 1.006291845578471
+P( x_14 = 1 ) = 0.9962584796271227
+P( x_15 = 1 ) = 1.0038379017129437
+P( x_16 = 1 ) = 1.0085322770246914
+P( x_17 = 1 ) = 1.0080441186080693
+P( x_18 = 1 ) = 1.0055636486330286
+P( x_19 = 1 ) = 1.0074823406576376
+P( x_20 = 1 ) = 1.0073996477845037
+P( x_21 = 1 ) = 1.0074930405645124
+P( x_22 = 1 ) = 1.006712935091447
+P( x_23 = 1 ) = 1.0020657887244726
+P( x_24 = 1 ) = 1.0078976970188125
+P( x_25 = 1 ) = 1.0040105624008522
+P( x_26 = 1 ) = 1.005634740723767
+P( x_27 = 1 ) = 1.008113288482218
+P( x_28 = 1 ) = 1.005931158519464
+P( x_29 = 1 ) = 1.0101947118978651
+P( x_30 = 1 ) = 1.0094312141488728
+P( x_31 = 1 ) = 1.00839168798529
+P( x_32 = 1 ) = 1.0047007064934352
+P( x_33 = 1 ) = 1.0062425093262424
+P( x_34 = 1 ) = 1.0039611536891118
+P( x_35 = 1 ) = 1.0079669008263334
+P( x_36 = 1 ) = 1.0086410314732155
+P( x_37 = 1 ) = 1.008019673128586
+P( x_38 = 1 ) = 1.0054919451298976
+P( x_39 = 1 ) = 1.008487367233422
+P( x_40 = 1 ) = 1.010220196544396
+P( x_41 = 1 ) = 1.0028160513302462
+P( x_42 = 1 ) = 1.0068468222087184
+P( x_43 = 1 ) = 1.0018249683183582
+P( x_44 = 1 ) = 1.007633993845338
+P( x_45 = 1 ) = 1.0100322013713892
+P( x_46 = 1 ) = 1.0109052005860202
+P( x_47 = 1 ) = 1.0066365713051295
+P( x_48 = 1 ) = 1.0076430701742725
+P( x_49 = 1 ) = 1.0084519293507483
+P( x_50 = 1 ) = 1.0066984044119036
+P( x_51 = 1 ) = 1.001969506004489
+P( x_52 = 1 ) = 1.0058886417785282
+P( x_53 = 1 ) = 1.0050442209525832
+P( x_54 = 1 ) = 1.0090417108848304
+P( x_55 = 1 ) = 1.003677871883455
+P( x_56 = 1 ) = 1.0069043520183167
+P( x_57 = 1 ) = 1.0090375829252822
+P( x_58 = 1 ) = 1.010318890798294
+P( x_59 = 1 ) = 1.009794896698292
+P( x_60 = 1 ) = 1.0066357431540056
+P( x_61 = 1 ) = 1.0081983435302126
+P( x_62 = 1 ) = 1.0085272200217743
+P( x_63 = 1 ) = 1.0027557434915135
+P( x_64 = 1 ) = 1.005089824373076
+P( x_65 = 1 ) = 1.011130764309301
+P( x_66 = 1 ) = 1.0068055023401827
+P( x_67 = 1 ) = 1.0096813825994049
+P( x_68 = 1 ) = 1.0089088617096538
+P( x_69 = 1 ) = 1.008605473351878
+P( x_70 = 1 ) = 1.0074019214105705
+P( x_71 = 1 ) = 1.0105731180558324
+P( x_72 = 1 ) = 1.0100245248255892
+P( x_73 = 1 ) = 1.0069228127404628
+P( x_74 = 1 ) = 1.0069263186031128
+P( x_75 = 1 ) = 1.0033819293307658
+P( x_76 = 1 ) = 1.0072792043753347
+P( x_77 = 1 ) = 1.0060248309043087
+P( x_78 = 1 ) = 1.0103547356688598
+P( x_79 = 1 ) = 1.0028830471681862
+P( x_80 = 1 ) = 1.0070788014443464
+P( x_81 = 1 ) = 1.0076693940914185
+P( x_82 = 1 ) = 1.007876609362826
+P( x_83 = 1 ) = 1.00716075698997
+P( x_84 = 1 ) = 1.0091011797417386
+P( x_85 = 1 ) = 1.0058765007809358
+P( x_86 = 1 ) = 1.00428769887279
+P( x_87 = 1 ) = 0.999868003130231
+P( x_88 = 1 ) = 1.0029830125127395
+P( x_89 = 1 ) = 1.0082191878385478
+P( x_90 = 1 ) = 1.0053824432384881
+P( x_91 = 1 ) = 1.0073817286659164
+P( x_92 = 1 ) = 1.012396622180843
+P( x_93 = 1 ) = 1.0099714210011965
+P( x_94 = 1 ) = 1.00811266786683
+P( x_95 = 1 ) = 1.0099262744930475
+P( x_96 = 1 ) = 1.0080765899322641
+P( x_97 = 1 ) = 1.008841430595405
+P( x_98 = 1 ) = 1.0099477705556297
+P( x_99 = 1 ) = 1.0080551951947734
+P( x_100 = 1 ) = 1.0082615004542828
+P( x_101 = 1 ) = 1.0081438084252945
+P( x_102 = 1 ) = 1.0071916313622602
+P( x_103 = 1 ) = 1.0066104224180803
+P( x_104 = 1 ) = 1.010442341999539
+P( x_105 = 1 ) = 1.0070261589816873
+P( x_106 = 1 ) = 1.0089940409625007
+P( x_107 = 1 ) = 1.010389392710754
+P( x_108 = 1 ) = 1.0047595268206366
+P( x_109 = 1 ) = 1.0105110579189212
+P( x_110 = 1 ) = 1.0042465304289967
+P( x_111 = 1 ) = 1.0082508147737497
+P( x_112 = 1 ) = 1.0067989855006922
+P( x_113 = 1 ) = 1.0068141117367173
+P( x_114 = 1 ) = 1.0109498818233664
+P( x_115 = 1 ) = 1.00788172371752
+P( x_116 = 1 ) = 1.0077234962604038
+P( x_117 = 1 ) = 1.005125009442754
+P( x_118 = 1 ) = 1.0054646909304477
+P( x_119 = 1 ) = 1.0094163711839947
+P( x_120 = 1 ) = 1.0085082760197392
+P( x_121 = 1 ) = 1.0097530685703784
+compute_partition_functions RUNTIME:  89.10728764533997
+partition function computation 6 complete: 147.04739803386337 (time taken: 17.828598260879517)
+partition function computation 49 complete: 147.4931696058043 (time taken: 14.530273675918579)
+partition function computation 82 complete: 147.40902502133125 (time taken: 7.217048168182373)
+partition function computation 101 complete: 147.4481047587904 (time taken: 9.027663946151733)
+partition function computation 19 complete: 147.35136045714916 (time taken: 19.871274709701538)
+partition function computation 57 complete: 147.578825549816 (time taken: 20.89584708213806)
+partition function computation 105 complete: 147.28464068663385 (time taken: 7.657369136810303)
+partition function computation 11 complete: 147.69317216501042 (time taken: 9.598604202270508)
+partition function computation 30 complete: 147.6363968778421 (time taken: 19.160622119903564)
+partition function computation 76 complete: 147.3216503507308 (time taken: 6.663361310958862)
+partition function computation 90 complete: 147.04423572746887 (time taken: 13.632306814193726)
+partition function computation 21 complete: 147.3529253935963 (time taken: 21.899881601333618)
+partition function computation 61 complete: 147.45608090048347 (time taken: 14.95433259010315)
+partition function computation 97 complete: 147.55013689543682 (time taken: 12.148942470550537)
+partition function computation 5 complete: 146.8268208199915 (time taken: 14.554776906967163)
+partition function computation 46 complete: 147.85197773523686 (time taken: 13.141499042510986)
+partition function computation 74 complete: 147.27003833082293 (time taken: 9.6520357131958)
+partition function computation 96 complete: 147.43827358260378 (time taken: 13.032103538513184)
+partition function computation 0 complete: 147.7495091658995 (time taken: 12.447553634643555)
+partition function computation 38 complete: 147.06025114731364 (time taken: 11.973805665969849)
+partition function computation 64 complete: 147.001438165493 (time taken: 6.963445663452148)
+partition function computation 80 complete: 147.29234001611843 (time taken: 4.8015217781066895)
+partition function computation 91 complete: 147.33664524750216 (time taken: 15.004469394683838)
+partition function computation 16 complete: 147.50492101680902 (time taken: 13.986728429794312)
+partition function computation 45 complete: 147.72429547544664 (time taken: 18.896479845046997)
+partition function computation 85 complete: 147.11649510918298 (time taken: 7.832377672195435)
+partition function computation 104 complete: 147.78428141971358 (time taken: 10.450725078582764)
+partition function computation 12 complete: 147.02767810555792 (time taken: 11.009199380874634)
+partition function computation 34 complete: 146.83636215961317 (time taken: 14.42674970626831)
+partition function computation 68 complete: 147.5599991689683 (time taken: 7.957948923110962)
+partition function computation 87 complete: 146.23771017429567 (time taken: 18.235276222229004)
+partition function computation 27 complete: 147.44364100299842 (time taken: 8.283673524856567)
+partition function computation 29 complete: 147.7480637800595 (time taken: 11.29273772239685)
+partition function computation 58 complete: 147.766225815442 (time taken: 6.0334250926971436)
+partition function computation 71 complete: 147.80340833542456 (time taken: 13.409992933273315)
+partition function computation 102 complete: 147.30884218318772 (time taken: 12.109894037246704)
+partition function computation 3 complete: 147.36557858838603 (time taken: 12.099702835083008)
+partition function computation 36 complete: 147.52082711788802 (time taken: 14.461475849151611)
+partition function computation 70 complete: 147.3395985780729 (time taken: 17.242089986801147)
+partition function computation 108 complete: 146.9531298311992 (time taken: 8.6157968044281)
+partition function computation 26 complete: 147.08113600471987 (time taken: 11.583049058914185)
+partition function computation 43 complete: 146.5239300624275 (time taken: 7.7565765380859375)
+partition function computation 55 complete: 146.79493020813197 (time taken: 19.823104858398438)
+partition function computation 103 complete: 147.2238362975472 (time taken: 12.692936897277832)
+partition function computation 17 complete: 147.4335244236331 (time taken: 11.883873462677002)
+partition function computation 42 complete: 147.25841142542444 (time taken: 11.902190208435059)
+partition function computation 65 complete: 147.88496801224113 (time taken: 12.447361946105957)
+partition function computation 92 complete: 148.07010860676047 (time taken: 6.686685800552368)
+partition function computation 106 complete: 147.57245723228436 (time taken: 10.373400211334229)
+partition function computation 9 complete: 146.98499793259475 (time taken: 11.987218141555786)
+partition function computation 37 complete: 147.4299491007579 (time taken: 8.724316835403442)
+partition function computation 59 complete: 147.6895880021614 (time taken: 17.326051712036133)
+partition function computation 98 complete: 147.71194687630538 (time taken: 8.847118377685547)
+partition function computation 118 complete: 147.05626502943838 (time taken: 6.9781694412231445)
+partition function computation 1 complete: 147.2219523967657 (time taken: 8.804649829864502)
+partition function computation 28 complete: 147.12448918690185 (time taken: 9.844921350479126)
+partition function computation 51 complete: 146.54506971304886 (time taken: 14.485799074172974)
+partition function computation 83 complete: 147.30432658963673 (time taken: 11.100898265838623)
+partition function computation 110 complete: 146.87810050992252 (time taken: 10.202455043792725)
+partition function computation 23 complete: 146.55915173633161 (time taken: 16.071236848831177)
+partition function computation 48 complete: 147.37486827657784 (time taken: 11.49128270149231)
+partition function computation 75 complete: 146.75164653357402 (time taken: 15.982970952987671)
+partition function computation 112 complete: 147.2514149712704 (time taken: 10.917736530303955)
+partition function computation 20 complete: 147.3392660443097 (time taken: 9.123729705810547)
+partition function computation 31 complete: 147.48435888347413 (time taken: 17.433149814605713)
+partition function computation 72 complete: 147.72317272676747 (time taken: 11.421606540679932)
+partition function computation 99 complete: 147.43514445214794 (time taken: 16.862682580947876)
+partition function computation 25 complete: 146.84358853033905 (time taken: 11.335481882095337)
+partition function computation 39 complete: 147.49835264476485 (time taken: 10.96867036819458)
+partition function computation 63 complete: 146.66006246148737 (time taken: 13.673062801361084)
+partition function computation 93 complete: 147.71540591989262 (time taken: 6.629295825958252)
+partition function computation 107 complete: 147.77653721475548 (time taken: 12.28186559677124)
+partition function computation 8 complete: 146.50324003939716 (time taken: 22.93301010131836)
+partition function computation 62 complete: 147.50418139465427 (time taken: 14.180117845535278)
+partition function computation 95 complete: 147.70880292634405 (time taken: 19.758689403533936)
+partition function computation 15 complete: 146.81833569340677 (time taken: 18.69900679588318)
+partition function computation 53 complete: 146.99476834530861 (time taken: 13.904135465621948)
+partition function computation 84 complete: 147.5881270303953 (time taken: 15.02165412902832)
+partition function computation 119 complete: 147.63422599009573 (time taken: 9.580246925354004)
+partition function computation 10 complete: 147.67590849012043 (time taken: 12.078198432922363)
+partition function computation 40 complete: 147.7517910884058 (time taken: 5.7759950160980225)
+partition function computation 50 complete: 147.23670428139408 (time taken: 18.849151134490967)
+partition function computation 94 complete: 147.44355023364392 (time taken: 8.22840666770935)
+partition function computation 115 complete: 147.40977303158573 (time taken: 13.044901847839355)
+partition function computation 7 complete: 147.05603935095004 (time taken: 18.855610609054565)
+partition function computation 52 complete: 147.11827081525777 (time taken: 6.184597969055176)
+partition function computation 67 complete: 147.67298576882482 (time taken: 23.226723670959473)
+partition function computation 120 complete: 147.5014107014523 (time taken: 10.255332469940186)
+partition function computation 14 complete: 145.70979203883942 (time taken: 13.932552099227905)
+partition function computation 44 complete: 147.3735407997949 (time taken: 7.4470741748809814)
+partition function computation 60 complete: 147.22753963281752 (time taken: 7.419579744338989)
+partition function computation 77 complete: 147.1381894303574 (time taken: 14.753572225570679)
+partition function computation 109 complete: 147.79433160500955 (time taken: 14.615957975387573)
+partition function computation 4 complete: 147.10425651511616 (time taken: 15.877607107162476)
+partition function computation 47 complete: 147.2276607557294 (time taken: 16.410191774368286)
+partition function computation 81 complete: 147.37871833413965 (time taken: 6.736897945404053)
+partition function computation 100 complete: 147.46531804371514 (time taken: 7.666438579559326)
+partition function computation 117 complete: 147.00658422877927 (time taken: 12.981473445892334)
+partition function computation 22 complete: 147.23882949521936 (time taken: 9.42555832862854)
+partition function computation 32 complete: 146.94452694568358 (time taken: 14.443943500518799)
+partition function computation 66 complete: 147.2523681047657 (time taken: 9.161155223846436)
+partition function computation 88 complete: 146.69330215027986 (time taken: 10.691574573516846)
+partition function computation 113 complete: 147.2536272894093 (time taken: 16.368038415908813)
+partition function computation 13 complete: 147.17724219973314 (time taken: 11.94961166381836)
+partition function computation 41 complete: 146.66888290600025 (time taken: 14.989497661590576)
+partition function computation 73 complete: 147.2695255738145 (time taken: 6.569514274597168)
+partition function computation 89 complete: 147.4591295268137 (time taken: 10.238321542739868)
+partition function computation 111 complete: 147.46375518797026 (time taken: 18.555872440338135)
+partition function computation 2 complete: 147.36332952048204 (time taken: 11.225409030914307)
+partition function computation 33 complete: 147.17002642671918 (time taken: 8.947102069854736)
+partition function computation 54 complete: 147.57942929286023 (time taken: 10.942993402481079)
+partition function computation 79 complete: 146.67868151731784 (time taken: 13.878759145736694)
+partition function computation 114 complete: 147.85851267966632 (time taken: 19.38578486442566)
+partition function computation 18 complete: 147.0707382876927 (time taken: 11.293938159942627)
+partition function computation 35 complete: 147.42223078132187 (time taken: 13.966261863708496)
+partition function computation 69 complete: 147.51562649317933 (time taken: 7.915722608566284)
+partition function computation 86 complete: 146.8841216836504 (time taken: 12.871839046478271)
+partition function computation 116 complete: 147.3866311559152 (time taken: 18.849869966506958)
+partition function computation 24 complete: 147.41210923896276 (time taken: 19.48616671562195)
+partition function computation 56 complete: 147.2668255636868 (time taken: 9.102252006530762)
+partition function computation 78 complete: 147.77146837923704 (time taken: 18.904858827590942)
+partition function computation 121 complete: 147.68347034500283 (time taken: 17.612809896469116)
+Running experiment h_a=0 mu=0.002 tau=120
+experiment: init_inf=[0] H_a=0.0 MU=0.002 TAU=120.0
+extracting seattle data...
+generating GM...
+partition function = 184.0475464757615
+time taken for GBR = 21.301831245422363
+P( x_0 = 1 ) = 1.0035208587301765
+P( x_1 = 1 ) = 1.0030062523681507
+P( x_2 = 1 ) = 1.0040266988833364
+P( x_3 = 1 ) = 1.004083272263475
+P( x_4 = 1 ) = 1.0019972732048765
+P( x_5 = 1 ) = 1.0044408062538965
+P( x_6 = 1 ) = 1.0008760772776486
+P( x_7 = 1 ) = 0.9818181917954385
+P( x_8 = 1 ) = 1.0016992606002304
+P( x_9 = 1 ) = 1.0031325845488648
+P( x_10 = 1 ) = 1.0034455307475851
+P( x_11 = 1 ) = 1.0021775020692583
+P( x_12 = 1 ) = 1.0036392467119213
+P( x_13 = 1 ) = 1.0020933145572073
+P( x_14 = 1 ) = 1.0037336122842586
+P( x_15 = 1 ) = 1.0029002956472919
+P( x_16 = 1 ) = 1.0047909243141855
+P( x_17 = 1 ) = 1.0041620643903566
+P( x_18 = 1 ) = 1.0032724557312214
+P( x_19 = 1 ) = 1.0033652313453223
+P( x_20 = 1 ) = 1.0053983940119728
+P( x_21 = 1 ) = 1.0042092631603694
+P( x_22 = 1 ) = 1.0038459969522562
+P( x_23 = 1 ) = 1.0010155663373081
+P( x_24 = 1 ) = 1.0029866869586055
+P( x_25 = 1 ) = 1.0030649123374475
+P( x_26 = 1 ) = 1.0044494817714584
+P( x_27 = 1 ) = 1.0033951624473372
+P( x_28 = 1 ) = 1.0036702635281523
+P( x_29 = 1 ) = 1.0034449202877769
+P( x_30 = 1 ) = 1.0016530794269067
+P( x_31 = 1 ) = 1.0039856945885497
+P( x_32 = 1 ) = 1.0054932812980162
+P( x_33 = 1 ) = 1.00431254104846
+P( x_34 = 1 ) = 1.0024397276261403
+P( x_35 = 1 ) = 1.000364167440799
+P( x_36 = 1 ) = 1.000944893369927
+P( x_37 = 1 ) = 1.0026671891088241
+P( x_38 = 1 ) = 1.004923896672968
+P( x_39 = 1 ) = 1.0034103639120662
+P( x_40 = 1 ) = 1.0066215936533627
+P( x_41 = 1 ) = 1.002565804878714
+P( x_42 = 1 ) = 0.9980887055687987
+P( x_43 = 1 ) = 0.9998887053776746
+P( x_44 = 1 ) = 1.0053121062985173
+P( x_45 = 1 ) = 1.0015137141927801
+P( x_46 = 1 ) = 1.005347499537134
+P( x_47 = 1 ) = 1.004331571358559
+P( x_48 = 1 ) = 1.0016458492640226
+P( x_49 = 1 ) = 1.0046899334711108
+P( x_50 = 1 ) = 1.0052262902527866
+P( x_51 = 1 ) = 1.0004426102957311
+P( x_52 = 1 ) = 1.0028627422606133
+P( x_53 = 1 ) = 1.004306725081128
+P( x_54 = 1 ) = 1.0039532075274142
+P( x_55 = 1 ) = 0.9986109530615525
+P( x_56 = 1 ) = 1.0024811171611407
+P( x_57 = 1 ) = 1.003937424181857
+P( x_58 = 1 ) = 1.0046411465646996
+P( x_59 = 1 ) = 1.0050681871554745
+P( x_60 = 1 ) = 1.0034898920977349
+P( x_61 = 1 ) = 1.0047095693288592
+P( x_62 = 1 ) = 1.0017745468594716
+P( x_63 = 1 ) = 1.001971836598062
+P( x_64 = 1 ) = 1.0003500569785853
+P( x_65 = 1 ) = 1.004072963110952
+P( x_66 = 1 ) = 1.0032074403941857
+P( x_67 = 1 ) = 1.0041938103247803
+P( x_68 = 1 ) = 1.0033435619504723
+P( x_69 = 1 ) = 1.0022567514844622
+P( x_70 = 1 ) = 1.0047242823733529
+P( x_71 = 1 ) = 1.0042902396255255
+P( x_72 = 1 ) = 1.004095043209931
+P( x_73 = 1 ) = 1.0049624310329413
+P( x_74 = 1 ) = 1.0029301437149685
+P( x_75 = 1 ) = 1.00373932428932
+P( x_76 = 1 ) = 1.0027340242599034
+P( x_77 = 1 ) = 1.0035986283565095
+P( x_78 = 1 ) = 1.0031613334782115
+P( x_79 = 1 ) = 0.9999229359317338
+P( x_80 = 1 ) = 1.0029165845808306
+P( x_81 = 1 ) = 1.0056470056852937
+P( x_82 = 1 ) = 1.0044587339849538
+P( x_83 = 1 ) = 1.0010816036799595
+P( x_84 = 1 ) = 1.002137381314017
+P( x_85 = 1 ) = 1.0039477239025194
+P( x_86 = 1 ) = 1.0033913605097906
+P( x_87 = 1 ) = 1.002587086381045
+P( x_88 = 1 ) = 1.005495492518328
+P( x_89 = 1 ) = 1.0046922147242952
+P( x_90 = 1 ) = 1.0018610244895632
+P( x_91 = 1 ) = 1.0003991197792843
+P( x_92 = 1 ) = 1.008746597347123
+P( x_93 = 1 ) = 1.0051051305411978
+P( x_94 = 1 ) = 1.0046392365817671
+P( x_95 = 1 ) = 1.0039301848830449
+P( x_96 = 1 ) = 1.0008382155594564
+P( x_97 = 1 ) = 1.0027153766817334
+P( x_98 = 1 ) = 1.0051020018356305
+P( x_99 = 1 ) = 1.0048652870914934
+P( x_100 = 1 ) = 1.004238679408048
+P( x_101 = 1 ) = 1.0042051287143554
+P( x_102 = 1 ) = 1.0054639130859262
+P( x_103 = 1 ) = 1.0038762957774363
+P( x_104 = 1 ) = 1.0043544278665166
+P( x_105 = 1 ) = 1.0040784978626602
+P( x_106 = 1 ) = 1.004352079908677
+P( x_107 = 1 ) = 1.0032439347127862
+P( x_108 = 1 ) = 1.001250995140301
+P( x_109 = 1 ) = 1.005346677358811
+P( x_110 = 1 ) = 1.0046306496008877
+P( x_111 = 1 ) = 1.0036260612403631
+P( x_112 = 1 ) = 1.004769271833749
+P( x_113 = 1 ) = 1.003266529047816
+P( x_114 = 1 ) = 1.0017039212960066
+P( x_115 = 1 ) = 1.0050513375256989
+P( x_116 = 1 ) = 1.0023162015697098
+P( x_117 = 1 ) = 1.005655985844085
+P( x_118 = 1 ) = 1.0043943545482452
+P( x_119 = 1 ) = 1.003606925859713
+P( x_120 = 1 ) = 1.0048641595661956
+P( x_121 = 1 ) = 1.004932307963418
+compute_partition_functions RUNTIME:  88.54697227478027
+partition function computation 9 complete: 184.62409097610794 (time taken: 11.456271409988403)
+partition function computation 39 complete: 184.67521558636673 (time taken: 8.595810174942017)
+partition function computation 62 complete: 184.37414747135352 (time taken: 10.095481395721436)
+partition function computation 86 complete: 184.67171805680323 (time taken: 9.201738834381104)
+partition function computation 103 complete: 184.76096920301302 (time taken: 6.468025207519531)
+partition function computation 24 complete: 184.59723888258398 (time taken: 8.260186910629272)
+partition function computation 36 complete: 184.22145178217778 (time taken: 11.189246654510498)
+partition function computation 61 complete: 184.91433115569555 (time taken: 9.438846588134766)
+partition function computation 83 complete: 184.2466129793172 (time taken: 16.475873947143555)
+partition function computation 8 complete: 184.3602912200568 (time taken: 8.657059907913208)
+partition function computation 35 complete: 184.1145705997469 (time taken: 12.266904592514038)
+partition function computation 65 complete: 184.79716534321847 (time taken: 5.517148494720459)
+partition function computation 71 complete: 184.83715455263257 (time taken: 12.675488233566284)
+partition function computation 100 complete: 184.82766502111005 (time taken: 7.175448179244995)
+partition function computation 6 complete: 184.20878634923588 (time taken: 5.585916042327881)
+partition function computation 28 complete: 184.7230494730374 (time taken: 22.496577501296997)
+partition function computation 76 complete: 184.55073693280193 (time taken: 11.473431825637817)
+partition function computation 104 complete: 184.84896824089955 (time taken: 9.820202112197876)
+partition function computation 3 complete: 184.7990627174466 (time taken: 7.889732122421265)
+partition function computation 33 complete: 184.84125907480654 (time taken: 13.17148470878601)
+partition function computation 63 complete: 184.41045816368595 (time taken: 15.816164255142212)
+partition function computation 99 complete: 184.94299062785103 (time taken: 12.837934255599976)
+partition function computation 7 complete: 180.70122928521909 (time taken: 7.188657760620117)
+partition function computation 32 complete: 185.05857142076255 (time taken: 21.003507375717163)
+partition function computation 78 complete: 184.629382146018 (time taken: 15.727386474609375)
+partition function computation 116 complete: 184.4738376918099 (time taken: 5.558528900146484)
+partition function computation 21 complete: 184.8222510328983 (time taken: 8.400651931762695)
+partition function computation 37 complete: 184.53843608722747 (time taken: 9.477250337600708)
+partition function computation 57 complete: 184.77221973586663 (time taken: 14.036258459091187)
+partition function computation 90 complete: 184.39006346699688 (time taken: 17.152490615844727)
+partition function computation 10 complete: 184.68168795616134 (time taken: 17.70029044151306)
+partition function computation 54 complete: 184.7751246218916 (time taken: 15.003337860107422)
+partition function computation 92 complete: 185.65733625751088 (time taken: 6.396625280380249)
+partition function computation 101 complete: 184.82149009825338 (time taken: 10.420162677764893)
+partition function computation 16 complete: 184.92930434113842 (time taken: 11.856032848358154)
+partition function computation 41 complete: 184.51977656842433 (time taken: 20.205623388290405)
+partition function computation 91 complete: 184.1210034918887 (time taken: 10.242781162261963)
+partition function computation 111 complete: 184.71491415042118 (time taken: 7.446251392364502)
+partition function computation 26 complete: 184.86646267888705 (time taken: 5.039988040924072)
+partition function computation 30 complete: 184.35179168841321 (time taken: 12.348235845565796)
+partition function computation 56 complete: 184.50419000178837 (time taken: 14.16177225112915)
+partition function computation 89 complete: 184.91113708330548 (time taken: 18.33893132209778)
+partition function computation 20 complete: 185.04110764857452 (time taken: 14.542380094528198)
+partition function computation 49 complete: 184.910717224254 (time taken: 5.794570207595825)
+partition function computation 64 complete: 184.11197360379683 (time taken: 14.496450901031494)
+partition function computation 96 complete: 184.20181799289725 (time taken: 15.655599594116211)
+partition function computation 11 complete: 184.44831038905437 (time taken: 9.826679229736328)
+partition function computation 38 complete: 184.95377757752144 (time taken: 6.931615829467773)
+partition function computation 51 complete: 184.12900781473573 (time taken: 6.6737542152404785)
+partition function computation 68 complete: 184.66292084923563 (time taken: 16.205017805099487)
+partition function computation 105 complete: 184.79818400069075 (time taken: 11.250938653945923)
+partition function computation 12 complete: 184.71734090411059 (time taken: 7.69336199760437)
+partition function computation 34 complete: 184.49657235942175 (time taken: 20.156473636627197)
+partition function computation 77 complete: 184.70986519545517 (time taken: 14.84163236618042)
+partition function computation 113 complete: 184.64874313250382 (time taken: 9.432343006134033)
+partition function computation 4 complete: 184.41513970876082 (time taken: 17.637954711914062)
+partition function computation 53 complete: 184.84018866028873 (time taken: 18.664336919784546)
+partition function computation 97 complete: 184.547304891792 (time taken: 16.57574486732483)
+partition function computation 17 complete: 184.81356421508076 (time taken: 24.788793802261353)
+partition function computation 70 complete: 184.9170390554358 (time taken: 14.202513217926025)
+partition function computation 102 complete: 185.053166273383 (time taken: 13.737340688705444)
+partition function computation 5 complete: 184.8648659711654 (time taken: 17.185768842697144)
+partition function computation 52 complete: 184.57442716501987 (time taken: 12.414778709411621)
+partition function computation 84 complete: 184.44092626248948 (time taken: 11.176519870758057)
+partition function computation 106 complete: 184.84853610501992 (time taken: 12.972543239593506)
+partition function computation 18 complete: 184.64983392404332 (time taken: 14.46336841583252)
+partition function computation 48 complete: 184.35046099467377 (time taken: 13.383397579193115)
+partition function computation 79 complete: 184.03336302307565 (time taken: 12.576115369796753)
+partition function computation 108 complete: 184.277789061987 (time taken: 13.199170112609863)
+partition function computation 1 complete: 184.6008398482066 (time taken: 13.179989099502563)
+partition function computation 44 complete: 185.02522660662203 (time taken: 17.64089059829712)
+partition function computation 87 complete: 184.5236933767137 (time taken: 14.628347158432007)
+partition function computation 119 complete: 184.71139233056164 (time taken: 9.812230587005615)
+partition function computation 22 complete: 184.75539277857752 (time taken: 11.983684301376343)
+partition function computation 42 complete: 183.69577742510612 (time taken: 14.387139797210693)
+partition function computation 72 complete: 184.8012291312615 (time taken: 16.83005452156067)
+partition function computation 115 complete: 184.97723275378732 (time taken: 11.445596694946289)
+partition function computation 0 complete: 184.69555188653823 (time taken: 5.899267196655273)
+partition function computation 29 complete: 184.68157560253138 (time taken: 7.277121067047119)
+partition function computation 43 complete: 184.02706297358657 (time taken: 15.104958534240723)
+partition function computation 75 complete: 184.73575993668805 (time taken: 14.681071281433105)
+partition function computation 110 complete: 184.8998061733938 (time taken: 13.761021852493286)
+partition function computation 2 complete: 184.78865052563626 (time taken: 12.092696189880371)
+partition function computation 40 complete: 185.26623454142236 (time taken: 6.727872371673584)
+partition function computation 58 complete: 184.90173811382886 (time taken: 8.480043888092041)
+partition function computation 74 complete: 184.5868322373228 (time taken: 8.080668210983276)
+partition function computation 95 complete: 184.77088736068202 (time taken: 10.295677185058594)
+partition function computation 120 complete: 184.9427831095864 (time taken: 11.257613897323608)
+partition function computation 27 complete: 184.67241779408053 (time taken: 15.036249160766602)
+partition function computation 50 complete: 185.00943237395708 (time taken: 12.622767210006714)
+partition function computation 80 complete: 184.5843367119524 (time taken: 4.550434350967407)
+partition function computation 93 complete: 184.98713322630744 (time taken: 11.077194929122925)
+partition function computation 117 complete: 185.088516793267 (time taken: 12.866446495056152)
+partition function computation 19 complete: 184.6669090481914 (time taken: 18.25271487236023)
+partition function computation 59 complete: 184.98033388680656 (time taken: 11.35609221458435)
+partition function computation 85 complete: 184.7741153741839 (time taken: 14.234426021575928)
+partition function computation 118 complete: 184.85631664871062 (time taken: 12.783752918243408)
+partition function computation 14 complete: 184.73470865617105 (time taken: 13.253921508789062)
+partition function computation 46 complete: 185.0317406453513 (time taken: 10.75298523902893)
+partition function computation 69 complete: 184.4628960494823 (time taken: 16.4806387424469)
+partition function computation 107 complete: 184.64458470057735 (time taken: 16.31557607650757)
+partition function computation 13 complete: 184.4328158840175 (time taken: 13.236137390136719)
+partition function computation 45 complete: 184.32614185900823 (time taken: 8.940864086151123)
+partition function computation 67 complete: 184.81940697642202 (time taken: 6.142042636871338)
+partition function computation 81 complete: 185.08686401707448 (time taken: 5.648014068603516)
+partition function computation 94 complete: 184.90138658615632 (time taken: 7.285930871963501)
+partition function computation 109 complete: 185.03158932544815 (time taken: 16.68077850341797)
+partition function computation 25 complete: 184.611636071632 (time taken: 17.251123666763306)
+partition function computation 55 complete: 183.79189579480055 (time taken: 9.11470627784729)
+partition function computation 73 complete: 184.9608697319295 (time taken: 16.162294387817383)
+partition function computation 114 complete: 184.3611490096793 (time taken: 19.115570783615112)
+partition function computation 23 complete: 184.23445896842642 (time taken: 13.572193145751953)
+partition function computation 47 complete: 184.84476155668895 (time taken: 6.83874249458313)
+partition function computation 66 complete: 184.63786801077862 (time taken: 8.23953914642334)
+partition function computation 82 complete: 184.86816552608033 (time taken: 6.89664626121521)
+partition function computation 98 complete: 184.9865573957241 (time taken: 6.528342008590698)
+partition function computation 112 complete: 184.92531925523897 (time taken: 20.418212890625)
+partition function computation 15 complete: 184.58133877369988 (time taken: 6.605701923370361)
+partition function computation 31 complete: 184.78110378578577 (time taken: 12.520732164382935)
+partition function computation 60 complete: 184.68985255381475 (time taken: 12.340628623962402)
+partition function computation 88 complete: 185.05897839043567 (time taken: 13.82725715637207)
+partition function computation 121 complete: 184.95532565489145 (time taken: 19.352164268493652)
+Running experiment h_a=.5 mu=0.001 tau=120
+experiment: init_inf=[0] H_a=0.5 MU=0.001 TAU=120.0
+extracting seattle data...
+generating GM...
+partition function = 158.3692148960666
+time taken for GBR = 21.35017728805542
+P( x_0 = 1 ) = 0.998472273860859
+P( x_1 = 1 ) = 0.9970731778249586
+P( x_2 = 1 ) = 0.997341577961315
+P( x_3 = 1 ) = 0.9971089924511812
+P( x_4 = 1 ) = 0.9968215808699062
+P( x_5 = 1 ) = 0.9987143467430993
+P( x_6 = 1 ) = 0.9978208624897752
+P( x_7 = 1 ) = 0.9966540050187549
+P( x_8 = 1 ) = 0.9954903936097507
+P( x_9 = 1 ) = 0.9971446891104806
+P( x_10 = 1 ) = 0.9972600940916746
+P( x_11 = 1 ) = 0.9974816682669495
+P( x_12 = 1 ) = 0.9965829824843501
+P( x_13 = 1 ) = 0.9961487081342157
+P( x_14 = 1 ) = 0.9975079383178809
+P( x_15 = 1 ) = 0.9975113158070895
+P( x_16 = 1 ) = 0.9983584735906037
+P( x_17 = 1 ) = 0.9981565483166864
+P( x_18 = 1 ) = 0.9968750166006012
+P( x_19 = 1 ) = 0.9973449502675971
+P( x_20 = 1 ) = 0.999766107366304
+P( x_21 = 1 ) = 0.9985207855423974
+P( x_22 = 1 ) = 0.9971282265962238
+P( x_23 = 1 ) = 0.997841586896245
+P( x_24 = 1 ) = 0.9978971623671924
+P( x_25 = 1 ) = 0.9954602504445519
+P( x_26 = 1 ) = 0.9980848929462243
+P( x_27 = 1 ) = 0.9976333831367767
+P( x_28 = 1 ) = 0.9973433411010811
+P( x_29 = 1 ) = 0.9990219248997328
+P( x_30 = 1 ) = 0.9973344386942578
+P( x_31 = 1 ) = 0.9955410420319234
+P( x_32 = 1 ) = 0.9973462420755128
+P( x_33 = 1 ) = 0.9972745840021432
+P( x_34 = 1 ) = 0.9979040030797452
+P( x_35 = 1 ) = 0.9972307974082242
+P( x_36 = 1 ) = 0.9977647468661772
+P( x_37 = 1 ) = 0.9991086907709171
+P( x_38 = 1 ) = 0.9976679880843714
+P( x_39 = 1 ) = 0.997539266678177
+P( x_40 = 1 ) = 1.000079436427331
+P( x_41 = 1 ) = 0.9976487965044342
+P( x_42 = 1 ) = 0.9969602986234506
+P( x_43 = 1 ) = 0.9987913297357983
+P( x_44 = 1 ) = 0.9984780532919941
+P( x_45 = 1 ) = 0.9987910288355208
+P( x_46 = 1 ) = 0.9978172516276859
+P( x_47 = 1 ) = 0.9980131859782689
+P( x_48 = 1 ) = 0.997545277847289
+P( x_49 = 1 ) = 0.9978742132719627
+P( x_50 = 1 ) = 0.9995147163293896
+P( x_51 = 1 ) = 0.9971446484368877
+P( x_52 = 1 ) = 0.9992567600118155
+P( x_53 = 1 ) = 0.9980220472448548
+P( x_54 = 1 ) = 0.9980661723920896
+P( x_55 = 1 ) = 0.997199217718795
+P( x_56 = 1 ) = 0.9988828854592735
+P( x_57 = 1 ) = 0.9973409289107135
+P( x_58 = 1 ) = 0.9976904292425102
+P( x_59 = 1 ) = 0.997787695420839
+P( x_60 = 1 ) = 0.9983912474438832
+P( x_61 = 1 ) = 0.997271833997644
+P( x_62 = 1 ) = 0.9972232274698538
+P( x_63 = 1 ) = 0.9970304929214341
+P( x_64 = 1 ) = 0.9977815560109556
+P( x_65 = 1 ) = 0.999607792445275
+P( x_66 = 1 ) = 0.9978928087415543
+P( x_67 = 1 ) = 0.9974051005797455
+P( x_68 = 1 ) = 0.9982743380792097
+P( x_69 = 1 ) = 0.9977721768378651
+P( x_70 = 1 ) = 0.9965319041174517
+P( x_71 = 1 ) = 0.9991939717783954
+P( x_72 = 1 ) = 0.9986334775061
+P( x_73 = 1 ) = 0.9979768690046907
+P( x_74 = 1 ) = 0.9981170964810981
+P( x_75 = 1 ) = 0.9974090554127559
+P( x_76 = 1 ) = 0.9970641020847474
+P( x_77 = 1 ) = 0.9988576371421789
+P( x_78 = 1 ) = 0.9976256890010615
+P( x_79 = 1 ) = 0.9970304108724681
+P( x_80 = 1 ) = 0.9979222831052721
+P( x_81 = 1 ) = 0.9989135597640227
+P( x_82 = 1 ) = 0.99821983905227
+P( x_83 = 1 ) = 0.9979548360605845
+P( x_84 = 1 ) = 0.9960656945790572
+P( x_85 = 1 ) = 0.9969403078793709
+P( x_86 = 1 ) = 0.9975521388583048
+P( x_87 = 1 ) = 0.9973274964457894
+P( x_88 = 1 ) = 0.9972322713957497
+P( x_89 = 1 ) = 0.9980376671486837
+P( x_90 = 1 ) = 0.9986220186344162
+P( x_91 = 1 ) = 0.9970931134923021
+P( x_92 = 1 ) = 1.0008083713875502
+P( x_93 = 1 ) = 0.9989252786121705
+P( x_94 = 1 ) = 0.9973176808548135
+P( x_95 = 1 ) = 0.9980468929081339
+P( x_96 = 1 ) = 0.9982222008291671
+P( x_97 = 1 ) = 0.9980117233897012
+P( x_98 = 1 ) = 0.9980470722481025
+P( x_99 = 1 ) = 0.9989991083622448
+P( x_100 = 1 ) = 0.9971087712382526
+P( x_101 = 1 ) = 0.9975428106815744
+P( x_102 = 1 ) = 0.9983199057894886
+P( x_103 = 1 ) = 0.997546834784256
+P( x_104 = 1 ) = 0.9994475753943389
+P( x_105 = 1 ) = 0.9975410563146241
+P( x_106 = 1 ) = 1.0002672812505793
+P( x_107 = 1 ) = 0.9979227244671717
+P( x_108 = 1 ) = 0.996697766169589
+P( x_109 = 1 ) = 0.9979871172821261
+P( x_110 = 1 ) = 0.9975556798815496
+P( x_111 = 1 ) = 0.9987914201783189
+P( x_112 = 1 ) = 0.9967949036298203
+P( x_113 = 1 ) = 0.9960256620587922
+P( x_114 = 1 ) = 0.9971148998196565
+P( x_115 = 1 ) = 0.9981427870513089
+P( x_116 = 1 ) = 0.99776067359035
+P( x_117 = 1 ) = 0.998292432279803
+P( x_118 = 1 ) = 0.9974353856204887
+P( x_119 = 1 ) = 0.996983456448177
+P( x_120 = 1 ) = 0.9986061368342333
+P( x_121 = 1 ) = 0.9987551578367875
+compute_partition_functions RUNTIME:  92.75587248802185
+partition function computation 27 complete: 157.99441564147816 (time taken: 7.2918853759765625)
+partition function computation 31 complete: 157.66305322340776 (time taken: 19.305002212524414)
+partition function computation 70 complete: 157.81997527396317 (time taken: 13.280757427215576)
+partition function computation 99 complete: 158.21070447319929 (time taken: 10.512108564376831)
+partition function computation 0 complete: 158.12727010683466 (time taken: 15.906630754470825)
+partition function computation 48 complete: 157.98046247595377 (time taken: 10.577903985977173)
+partition function computation 67 complete: 157.95826271214665 (time taken: 14.921577453613281)
+partition function computation 101 complete: 157.98007175285653 (time taken: 10.712411403656006)
+partition function computation 26 complete: 158.06592089551822 (time taken: 15.027849674224854)
+partition function computation 49 complete: 158.03255572091086 (time taken: 12.505071640014648)
+partition function computation 74 complete: 158.0710209440531 (time taken: 23.668057680130005)
+partition function computation 18 complete: 157.87431372854059 (time taken: 12.551445960998535)
+partition function computation 42 complete: 157.887819775544 (time taken: 12.244933128356934)
+partition function computation 66 complete: 158.03550067083071 (time taken: 18.506299257278442)
+partition function computation 105 complete: 157.97979391514 (time taken: 8.176068544387817)
+partition function computation 2 complete: 157.94820268493766 (time taken: 7.155573129653931)
+partition function computation 29 complete: 158.2143179103279 (time taken: 8.336507320404053)
+partition function computation 46 complete: 158.02353475002755 (time taken: 17.648237228393555)
+partition function computation 85 complete: 157.8846538570989 (time taken: 9.306444644927979)
+partition function computation 102 complete: 158.10313969499649 (time taken: 9.949071407318115)
+partition function computation 20 complete: 158.3321735032982 (time taken: 19.887885332107544)
+partition function computation 60 complete: 158.11443801679235 (time taken: 14.542120218276978)
+partition function computation 92 complete: 158.49723603805737 (time taken: 11.196305751800537)
+partition function computation 110 complete: 157.98210983795295 (time taken: 5.943774938583374)
+partition function computation 12 complete: 157.82806451482702 (time taken: 11.943327903747559)
+partition function computation 40 complete: 158.38179518069717 (time taken: 15.421849489212036)
+partition function computation 71 complete: 158.241564839427 (time taken: 6.368772745132446)
+partition function computation 89 complete: 158.0584417830389 (time taken: 10.67954397201538)
+partition function computation 108 complete: 157.8462427169412 (time taken: 7.677041292190552)
+partition function computation 10 complete: 157.93529814847602 (time taken: 6.595435619354248)
+partition function computation 28 complete: 157.9484819119982 (time taken: 19.63514280319214)
+partition function computation 69 complete: 158.01639629095203 (time taken: 11.339548587799072)
+partition function computation 96 complete: 158.08766623713893 (time taken: 14.542025566101074)
+partition function computation 19 complete: 157.94873675443594 (time taken: 16.788232803344727)
+partition function computation 51 complete: 157.91701511076425 (time taken: 16.83333158493042)
+partition function computation 91 complete: 157.90885356205052 (time taken: 18.406709909439087)
+partition function computation 1 complete: 157.90569636606492 (time taken: 17.905953407287598)
+partition function computation 52 complete: 158.25150856265847 (time taken: 16.2856228351593)
+partition function computation 90 complete: 158.1509850690577 (time taken: 19.23263955116272)
+partition function computation 25 complete: 157.65025832314552 (time taken: 20.961365461349487)
+partition function computation 61 complete: 157.93715738816735 (time taken: 8.77978801727295)
+partition function computation 82 complete: 158.08729220438596 (time taken: 16.484063625335693)
+partition function computation 112 complete: 157.861626300255 (time taken: 7.190829038619995)
+partition function computation 14 complete: 157.97454904399683 (time taken: 18.236623525619507)
+partition function computation 56 complete: 158.19229834330278 (time taken: 17.322280168533325)
+partition function computation 93 complete: 158.19901211364405 (time taken: 19.3504798412323)
+partition function computation 24 complete: 158.03619015110496 (time taken: 9.085814476013184)
+partition function computation 35 complete: 157.9306584557189 (time taken: 15.397355794906616)
+partition function computation 64 complete: 158.01788166323075 (time taken: 7.505076169967651)
+partition function computation 84 complete: 157.74614203539056 (time taken: 12.879742860794067)
+partition function computation 109 complete: 158.05043624035906 (time taken: 10.496105670928955)
+partition function computation 23 complete: 158.02738870740356 (time taken: 8.78688669204712)
+partition function computation 34 complete: 158.0372735093813 (time taken: 10.724805116653442)
+partition function computation 59 complete: 158.0188539567539 (time taken: 7.38399338722229)
+partition function computation 72 complete: 158.15279980156984 (time taken: 16.95285654067993)
+partition function computation 107 complete: 158.04023840080978 (time taken: 11.959237813949585)
+partition function computation 17 complete: 158.0772689002814 (time taken: 12.427882671356201)
+partition function computation 41 complete: 157.99685664441296 (time taken: 5.567046165466309)
+partition function computation 55 complete: 157.92565720509737 (time taken: 11.146252870559692)
+partition function computation 80 complete: 158.04016850267226 (time taken: 7.263835191726685)
+partition function computation 95 complete: 158.05990285931983 (time taken: 19.744350910186768)
+partition function computation 15 complete: 157.97508393431113 (time taken: 17.363481283187866)
+partition function computation 53 complete: 158.05596807113275 (time taken: 15.385559320449829)
+partition function computation 86 complete: 157.98154904888176 (time taken: 7.538146018981934)
+partition function computation 100 complete: 157.91133326698375 (time taken: 7.32508111000061)
+partition function computation 114 complete: 157.9123038456091 (time taken: 9.800499439239502)
+partition function computation 9 complete: 157.91702155220923 (time taken: 10.584193229675293)
+partition function computation 37 complete: 158.22805895322713 (time taken: 18.846035480499268)
+partition function computation 78 complete: 157.99319712724562 (time taken: 8.954313516616821)
+partition function computation 97 complete: 158.05433309029738 (time taken: 20.33270788192749)
+partition function computation 6 complete: 158.02410659942174 (time taken: 16.469797134399414)
+partition function computation 50 complete: 158.29236090215016 (time taken: 11.196241617202759)
+partition function computation 73 complete: 158.0488132287076 (time taken: 20.832087755203247)
+partition function computation 116 complete: 158.0145745306743 (time taken: 10.602077722549438)
+partition function computation 7 complete: 157.83931229784065 (time taken: 10.88935399055481)
+partition function computation 38 complete: 157.99989599986023 (time taken: 17.648024320602417)
+partition function computation 75 complete: 157.95888903594556 (time taken: 7.907172441482544)
+partition function computation 94 complete: 157.94441811894274 (time taken: 6.511411905288696)
+partition function computation 103 complete: 157.98070904683888 (time taken: 6.300967454910278)
+partition function computation 118 complete: 157.96305893027224 (time taken: 10.077616214752197)
+partition function computation 16 complete: 158.10924764737936 (time taken: 19.386847257614136)
+partition function computation 58 complete: 158.00344998845603 (time taken: 9.47615671157837)
+partition function computation 77 complete: 158.18829978714706 (time taken: 19.917367219924927)
+partition function computation 117 complete: 158.09878873683715 (time taken: 10.262646436691284)
+partition function computation 8 complete: 157.65503207255253 (time taken: 10.119194507598877)
+partition function computation 36 complete: 158.01521961216912 (time taken: 8.61434006690979)
+partition function computation 57 complete: 157.94809989530347 (time taken: 10.771789789199829)
+partition function computation 79 complete: 157.89892339737548 (time taken: 17.087328672409058)
+partition function computation 111 complete: 158.17781305856775 (time taken: 13.966974973678589)
+partition function computation 21 complete: 158.13495286375317 (time taken: 21.116175889968872)
+partition function computation 62 complete: 157.9294596105224 (time taken: 7.849355459213257)
+partition function computation 81 complete: 158.1971562088634 (time taken: 14.063739776611328)
+partition function computation 104 complete: 158.2817278449788 (time taken: 18.919453620910645)
+partition function computation 22 complete: 157.91441439675117 (time taken: 7.983839988708496)
+partition function computation 33 complete: 157.93759290422085 (time taken: 5.711501359939575)
+partition function computation 45 complete: 158.17775108191606 (time taken: 17.84588098526001)
+partition function computation 83 complete: 158.04532388864763 (time taken: 17.838446617126465)
+partition function computation 119 complete: 157.8914872620646 (time taken: 13.412091970443726)
+partition function computation 3 complete: 157.91136830030158 (time taken: 13.926867008209229)
+partition function computation 43 complete: 158.17779873525677 (time taken: 15.278592348098755)
+partition function computation 76 complete: 157.90425904821305 (time taken: 18.833194971084595)
+partition function computation 113 complete: 157.73980211658588 (time taken: 15.574491500854492)
+partition function computation 11 complete: 157.97038867665555 (time taken: 15.215670824050903)
+partition function computation 47 complete: 158.05456471930057 (time taken: 9.859527349472046)
+partition function computation 65 complete: 158.3071012935485 (time taken: 13.961443662643433)
+partition function computation 98 complete: 158.05993126124986 (time taken: 8.795430421829224)
+partition function computation 115 complete: 158.07508953948758 (time taken: 15.999633073806763)
+partition function computation 5 complete: 158.16560699914268 (time taken: 11.092103481292725)
+partition function computation 39 complete: 157.97951049182092 (time taken: 15.303630590438843)
+partition function computation 68 complete: 158.09592317249502 (time taken: 24.28487229347229)
+partition function computation 120 complete: 158.14846988083158 (time taken: 13.79582929611206)
+partition function computation 4 complete: 157.86585115382303 (time taken: 8.527369737625122)
+partition function computation 32 complete: 157.94894133704136 (time taken: 9.865045309066772)
+partition function computation 54 complete: 158.0629561360575 (time taken: 14.864215612411499)
+partition function computation 87 complete: 157.94597260637934 (time taken: 17.7166109085083)
+partition function computation 121 complete: 158.17207022000912 (time taken: 14.417609214782715)
+partition function computation 13 complete: 157.75928882694674 (time taken: 6.810519456863403)
+partition function computation 30 complete: 157.94707204481887 (time taken: 6.958739519119263)
+partition function computation 44 complete: 158.12818539080607 (time taken: 8.974945306777954)
+partition function computation 63 complete: 157.8989363914058 (time taken: 10.516460418701172)
+partition function computation 88 complete: 157.9308918899661 (time taken: 10.485883235931396)
+partition function computation 106 complete: 158.41154401787728 (time taken: 25.107671976089478)
+Running experiment h_a=.5 mu=0.0015 tau=120
+experiment: init_inf=[0] H_a=0.5 MU=0.0015 TAU=120.0
+extracting seattle data...
+generating GM...
+partition function = 197.3063653796908
+time taken for GBR = 20.861769914627075
+P( x_0 = 1 ) = 0.9982918043011038
+P( x_1 = 1 ) = 0.9985825359027737
+P( x_2 = 1 ) = 0.9989747618122697
+P( x_3 = 1 ) = 0.9992980815607805
+P( x_4 = 1 ) = 0.9989367114091182
+P( x_5 = 1 ) = 0.9990280996412674
+P( x_6 = 1 ) = 0.9969807719063006
+P( x_7 = 1 ) = 0.9982018713631408
+P( x_8 = 1 ) = 0.9983981446229421
+P( x_9 = 1 ) = 0.9983366154545515
+P( x_10 = 1 ) = 0.9978710693863154
+P( x_11 = 1 ) = 0.9989695915675553
+P( x_12 = 1 ) = 0.9985510105459063
+P( x_13 = 1 ) = 0.9983734770014615
+P( x_14 = 1 ) = 0.9982914307842855
+P( x_15 = 1 ) = 0.998441074594132
+P( x_16 = 1 ) = 0.9990387891110645
+P( x_17 = 1 ) = 0.9984260810616281
+P( x_18 = 1 ) = 0.997985964097474
+P( x_19 = 1 ) = 0.9988984400916393
+P( x_20 = 1 ) = 0.9991739697983447
+P( x_21 = 1 ) = 0.9986786602888252
+P( x_22 = 1 ) = 0.999208846503649
+P( x_23 = 1 ) = 0.9984772864952749
+P( x_24 = 1 ) = 0.9988595837905347
+P( x_25 = 1 ) = 0.9991788989750386
+P( x_26 = 1 ) = 0.9991367688625525
+P( x_27 = 1 ) = 0.9984570624904462
+P( x_28 = 1 ) = 0.9992010507380783
+P( x_29 = 1 ) = 0.9992351254152062
+P( x_30 = 1 ) = 0.9990925786821472
+P( x_31 = 1 ) = 0.9991584645355156
+P( x_32 = 1 ) = 0.9986795511317603
+P( x_33 = 1 ) = 0.9992397829595075
+P( x_34 = 1 ) = 0.9992266982759941
+P( x_35 = 1 ) = 0.9990654181653373
+P( x_36 = 1 ) = 0.9984084989730231
+P( x_37 = 1 ) = 0.9980877977779347
+P( x_38 = 1 ) = 0.9992504063174649
+P( x_39 = 1 ) = 0.999063426943063
+P( x_40 = 1 ) = 1.0014468222831845
+P( x_41 = 1 ) = 0.9993670521616895
+P( x_42 = 1 ) = 0.9983650397839214
+P( x_43 = 1 ) = 0.9987682426849965
+P( x_44 = 1 ) = 0.9995387272040777
+P( x_45 = 1 ) = 0.9993023915216
+P( x_46 = 1 ) = 0.9990880529030538
+P( x_47 = 1 ) = 0.9991463875589776
+P( x_48 = 1 ) = 0.9986346740547327
+P( x_49 = 1 ) = 0.9993673179138505
+P( x_50 = 1 ) = 0.9991449364394273
+P( x_51 = 1 ) = 0.9967803139979509
+P( x_52 = 1 ) = 0.9997461329368579
+P( x_53 = 1 ) = 0.9993675336022279
+P( x_54 = 1 ) = 0.999381221895304
+P( x_55 = 1 ) = 0.998989060846889
+P( x_56 = 1 ) = 0.9996617899029105
+P( x_57 = 1 ) = 0.9989800633909413
+P( x_58 = 1 ) = 0.9991291366980349
+P( x_59 = 1 ) = 0.9993914580468449
+P( x_60 = 1 ) = 0.998680846992479
+P( x_61 = 1 ) = 0.999162782373701
+P( x_62 = 1 ) = 0.9993081924949752
+P( x_63 = 1 ) = 0.9991084089917817
+P( x_64 = 1 ) = 0.9986996090142646
+P( x_65 = 1 ) = 0.9995178637970609
+P( x_66 = 1 ) = 0.9993860175993724
+P( x_67 = 1 ) = 0.9991389891435252
+P( x_68 = 1 ) = 0.9994309358678591
+P( x_69 = 1 ) = 0.9986190753897256
+P( x_70 = 1 ) = 0.9981820351249012
+P( x_71 = 1 ) = 0.9992298852996655
+P( x_72 = 1 ) = 0.9994585683082963
+P( x_73 = 1 ) = 0.9992537596880866
+P( x_74 = 1 ) = 0.998799559372861
+P( x_75 = 1 ) = 0.9980161388937889
+P( x_76 = 1 ) = 0.9981224605584287
+P( x_77 = 1 ) = 0.9984802654305848
+P( x_78 = 1 ) = 0.9989826350198511
+P( x_79 = 1 ) = 0.9983346262675822
+P( x_80 = 1 ) = 0.9989181945160764
+P( x_81 = 1 ) = 1.0001276074906276
+P( x_82 = 1 ) = 0.9989588770858674
+P( x_83 = 1 ) = 0.9994926904320623
+P( x_84 = 1 ) = 0.997648764788256
+P( x_85 = 1 ) = 0.9987079643818195
+P( x_86 = 1 ) = 0.998875816383298
+P( x_87 = 1 ) = 0.9989086603115369
+P( x_88 = 1 ) = 0.9993724059067853
+P( x_89 = 1 ) = 0.9983031146955784
+P( x_90 = 1 ) = 0.9984275815840781
+P( x_91 = 1 ) = 0.9980052958850371
+P( x_92 = 1 ) = 1.0028179748872315
+P( x_93 = 1 ) = 0.9990959869543861
+P( x_94 = 1 ) = 0.99906121870184
+P( x_95 = 1 ) = 0.9990240679246898
+P( x_96 = 1 ) = 0.9987895213022674
+P( x_97 = 1 ) = 0.9991537906734678
+P( x_98 = 1 ) = 0.9992443935220319
+P( x_99 = 1 ) = 0.9993944372394459
+P( x_100 = 1 ) = 0.999401046504035
+P( x_101 = 1 ) = 0.9993074979959661
+P( x_102 = 1 ) = 0.9991506540949631
+P( x_103 = 1 ) = 0.9993436338238795
+P( x_104 = 1 ) = 0.999052826555122
+P( x_105 = 1 ) = 0.9993383297106347
+P( x_106 = 1 ) = 0.9994497168395212
+P( x_107 = 1 ) = 0.998993167041619
+P( x_108 = 1 ) = 0.9991873093308921
+P( x_109 = 1 ) = 0.9992549480631746
+P( x_110 = 1 ) = 0.9985485785302006
+P( x_111 = 1 ) = 0.9982289201837239
+P( x_112 = 1 ) = 0.9990913009216233
+P( x_113 = 1 ) = 0.9983804461122209
+P( x_114 = 1 ) = 0.9991664402798618
+P( x_115 = 1 ) = 0.9990187264553475
+P( x_116 = 1 ) = 0.9978408555226893
+P( x_117 = 1 ) = 0.9991469246893601
+P( x_118 = 1 ) = 0.9991337422303215
+P( x_119 = 1 ) = 0.9989327643278739
+P( x_120 = 1 ) = 0.998956302803494
+P( x_121 = 1 ) = 0.9989272664705098
+compute_partition_functions RUNTIME:  87.63079905509949
+partition function computation 0 complete: 196.96932749498436 (time taken: 12.06273603439331)
+partition function computation 43 complete: 197.06333182083762 (time taken: 12.701545476913452)
+partition function computation 67 complete: 197.1364824570473 (time taken: 15.003509283065796)
+partition function computation 105 complete: 197.1758136198164 (time taken: 9.819038152694702)
+partition function computation 26 complete: 197.13604438147846 (time taken: 5.230089426040649)
+partition function computation 28 complete: 197.14872760469822 (time taken: 23.885584115982056)
+partition function computation 81 complete: 197.33154314986172 (time taken: 13.284886598587036)
+partition function computation 113 complete: 196.98681708855653 (time taken: 6.877618074417114)
+partition function computation 8 complete: 196.99030911737958 (time taken: 12.024372816085815)
+partition function computation 45 complete: 197.16872278635964 (time taken: 15.236005306243896)
+partition function computation 73 complete: 197.15912741604734 (time taken: 12.068268537521362)
+partition function computation 104 complete: 197.11948202989774 (time taken: 10.672224283218384)
+partition function computation 14 complete: 196.96925379773853 (time taken: 7.492237091064453)
+partition function computation 30 complete: 197.1273253775972 (time taken: 13.55516242980957)
+partition function computation 62 complete: 197.16986735533195 (time taken: 15.061010837554932)
+partition function computation 98 complete: 197.15727941186555 (time taken: 13.998640060424805)
+partition function computation 3 complete: 197.1678724036554 (time taken: 9.64311695098877)
+partition function computation 36 complete: 196.99235209655993 (time taken: 8.456379890441895)
+partition function computation 53 complete: 197.18157573352158 (time taken: 11.812783241271973)
+partition function computation 80 complete: 197.09291827161002 (time taken: 5.181258678436279)
+partition function computation 93 complete: 197.12799785140487 (time taken: 16.55320429801941)
+partition function computation 5 complete: 197.11460325239804 (time taken: 8.175980567932129)
+partition function computation 31 complete: 197.14032507585526 (time taken: 5.851032733917236)
+partition function computation 46 complete: 197.12643241257376 (time taken: 11.314754247665405)
+partition function computation 69 complete: 197.03390016397418 (time taken: 6.700649261474609)
+partition function computation 84 complete: 196.84245170590884 (time taken: 5.8657026290893555)
+partition function computation 102 complete: 197.13878402621782 (time taken: 13.918628692626953)
+partition function computation 13 complete: 196.98544203864267 (time taken: 7.27913761138916)
+partition function computation 29 complete: 197.15545075539382 (time taken: 19.9930579662323)
+partition function computation 74 complete: 197.06951080269587 (time taken: 9.028061151504517)
+partition function computation 99 complete: 197.18688399239656 (time taken: 15.556944847106934)
+partition function computation 12 complete: 197.02047053703006 (time taken: 18.931519031524658)
+partition function computation 59 complete: 197.1862961787327 (time taken: 20.694143533706665)
+partition function computation 106 complete: 197.19779100936708 (time taken: 12.292008638381958)
+partition function computation 16 complete: 197.11671235283154 (time taken: 9.736493110656738)
+partition function computation 38 complete: 197.1584657746782 (time taken: 11.634494304656982)
+partition function computation 63 complete: 197.130448798454 (time taken: 11.69367504119873)
+partition function computation 89 complete: 196.97155910780916 (time taken: 18.84631061553955)
+partition function computation 10 complete: 196.88631381815912 (time taken: 21.24681830406189)
+partition function computation 61 complete: 197.14117701281393 (time taken: 10.85003113746643)
+partition function computation 86 complete: 197.08455679625993 (time taken: 20.332130193710327)
+partition function computation 6 complete: 196.71065245827072 (time taken: 8.270202875137329)
+partition function computation 32 complete: 197.0458324128287 (time taken: 6.806939363479614)
+partition function computation 47 complete: 197.13794221150977 (time taken: 12.685962915420532)
+partition function computation 75 complete: 196.91493695540615 (time taken: 10.470165729522705)
+partition function computation 103 complete: 197.17686015512228 (time taken: 14.706190347671509)
+partition function computation 17 complete: 196.99582115455837 (time taken: 9.715758562088013)
+partition function computation 39 complete: 197.121573553914 (time taken: 8.551843404769897)
+partition function computation 57 complete: 197.1051253944397 (time taken: 10.151607751846313)
+partition function computation 77 complete: 197.0065120754576 (time taken: 7.684128284454346)
+partition function computation 100 complete: 197.18818804237048 (time taken: 16.90183138847351)
+partition function computation 25 complete: 197.14435692084612 (time taken: 9.11821985244751)
+partition function computation 37 complete: 196.9290757093841 (time taken: 22.380577087402344)
+partition function computation 85 complete: 197.0514385279265 (time taken: 9.909669399261475)
+partition function computation 108 complete: 197.1460163375911 (time taken: 11.797085523605347)
+partition function computation 27 complete: 197.00193398767274 (time taken: 8.167168855667114)
+partition function computation 34 complete: 197.15378802718533 (time taken: 8.86215853691101)
+partition function computation 51 complete: 196.6711008369626 (time taken: 17.3090558052063)
+partition function computation 94 complete: 197.1211378538644 (time taken: 12.171041250228882)
+partition function computation 119 complete: 197.09579298822004 (time taken: 6.80121111869812)
+partition function computation 24 complete: 197.08135400238112 (time taken: 11.314327001571655)
+partition function computation 44 complete: 197.21535332087882 (time taken: 5.991717338562012)
+partition function computation 54 complete: 197.1842765208767 (time taken: 11.380268573760986)
+partition function computation 78 complete: 197.10563279319302 (time taken: 12.788888216018677)
+partition function computation 109 complete: 197.15936189001667 (time taken: 12.097164869308472)
+partition function computation 23 complete: 197.0059243125589 (time taken: 17.719951391220093)
+partition function computation 55 complete: 197.10690064977044 (time taken: 8.942360401153564)
+partition function computation 72 complete: 197.19953746049936 (time taken: 9.888959884643555)
+partition function computation 101 complete: 197.1697303262567 (time taken: 17.224013090133667)
+partition function computation 7 complete: 196.95158315386695 (time taken: 10.709747552871704)
+partition function computation 41 complete: 197.18148074223882 (time taken: 13.162806034088135)
+partition function computation 66 complete: 197.18522274381587 (time taken: 19.93689250946045)
+partition function computation 114 complete: 197.1418987409834 (time taken: 10.597792387008667)
+partition function computation 22 complete: 197.15026575886836 (time taken: 18.890015125274658)
+partition function computation 60 complete: 197.04608809439713 (time taken: 13.190083980560303)
+partition function computation 88 complete: 197.18253707022484 (time taken: 11.766618967056274)
+partition function computation 116 complete: 196.88035243054298 (time taken: 10.050143718719482)
+partition function computation 21 complete: 197.04565664384705 (time taken: 17.199631690979004)
+partition function computation 52 complete: 197.2562757921726 (time taken: 16.93615174293518)
+partition function computation 92 complete: 197.86236976242168 (time taken: 6.683999061584473)
+partition function computation 107 complete: 197.10771082812815 (time taken: 13.685089588165283)
+partition function computation 18 complete: 196.90898327601917 (time taken: 9.97296142578125)
+partition function computation 40 complete: 197.59183262573626 (time taken: 11.359373092651367)
+partition function computation 64 complete: 197.04978996072282 (time taken: 7.881332874298096)
+partition function computation 79 complete: 196.97777654154862 (time taken: 6.2262561321258545)
+partition function computation 97 complete: 197.1394028931223 (time taken: 19.789685249328613)
+partition function computation 1 complete: 197.02669069061085 (time taken: 15.651447057723999)
+partition function computation 49 complete: 197.18153317683178 (time taken: 9.246596336364746)
+partition function computation 68 complete: 197.19408540411013 (time taken: 10.777260541915894)
+partition function computation 95 complete: 197.11380776905386 (time taken: 11.518995523452759)
+partition function computation 118 complete: 197.1354472076736 (time taken: 8.870529651641846)
+partition function computation 15 complete: 196.99877947396092 (time taken: 18.033149242401123)
+partition function computation 56 complete: 197.23963437469936 (time taken: 17.23404836654663)
+partition function computation 96 complete: 197.06753022747162 (time taken: 6.571678400039673)
+partition function computation 110 complete: 197.01999068485063 (time taken: 15.053595542907715)
+partition function computation 19 complete: 197.08902059792416 (time taken: 8.259592533111572)
+partition function computation 33 complete: 197.15636971853152 (time taken: 19.712258338928223)
+partition function computation 76 complete: 196.93591489661733 (time taken: 14.344151735305786)
+partition function computation 112 complete: 197.12707326731243 (time taken: 14.65865159034729)
+partition function computation 9 complete: 196.9781690207996 (time taken: 11.094770193099976)
+partition function computation 42 complete: 196.98377732191594 (time taken: 14.368280172348022)
+partition function computation 70 complete: 196.9476693377971 (time taken: 8.227470636367798)
+partition function computation 90 complete: 196.99611721718915 (time taken: 15.466470718383789)
+partition function computation 120 complete: 197.1004372792912 (time taken: 11.611314296722412)
+partition function computation 20 complete: 197.14338436290834 (time taken: 16.90773034095764)
+partition function computation 50 complete: 197.13765589638555 (time taken: 13.392033815383911)
+partition function computation 82 complete: 197.10094520158978 (time taken: 16.125093698501587)
+partition function computation 117 complete: 197.13804819075327 (time taken: 15.026708364486694)
+partition function computation 2 complete: 197.10407935922126 (time taken: 9.460174798965454)
+partition function computation 35 complete: 197.12196643474363 (time taken: 13.774701833724976)
+partition function computation 65 complete: 197.2112368378709 (time taken: 9.389456272125244)
+partition function computation 87 complete: 197.09103711236554 (time taken: 10.058773279190063)
+partition function computation 111 complete: 196.95692005834402 (time taken: 19.965874433517456)
+partition function computation 11 complete: 197.10305923702853 (time taken: 14.925213098526001)
+partition function computation 48 complete: 197.0369778798715 (time taken: 16.629230260849)
+partition function computation 83 complete: 197.20626997271867 (time taken: 12.602343797683716)
+partition function computation 115 complete: 197.11275386315216 (time taken: 18.734657526016235)
+partition function computation 4 complete: 197.09657177247422 (time taken: 18.965747594833374)
+partition function computation 58 complete: 197.13453850683752 (time taken: 8.33935832977295)
+partition function computation 71 complete: 197.15441684724232 (time taken: 6.674165725708008)
+partition function computation 91 complete: 196.91279756075954 (time taken: 15.416823625564575)
+partition function computation 121 complete: 197.09470822596614 (time taken: 15.113586902618408)
+Running experiment h_a=.5 mu=0.002 tau=120
+experiment: init_inf=[0] H_a=0.5 MU=0.002 TAU=120.0
+extracting seattle data...
+generating GM...
+partition function = 238.1230648785968
+time taken for GBR = 21.307075262069702
+P( x_0 = 1 ) = 0.9991117977385718
+P( x_1 = 1 ) = 0.9986680910801293
+P( x_2 = 1 ) = 0.9990940691917243
+P( x_3 = 1 ) = 0.9992615802608197
+P( x_4 = 1 ) = 0.9989966940309548
+P( x_5 = 1 ) = 0.9993844201223144
+P( x_6 = 1 ) = 0.9980023805782844
+P( x_7 = 1 ) = 0.9987012368964737
+P( x_8 = 1 ) = 0.9987318438876486
+P( x_9 = 1 ) = 0.9985010200627714
+P( x_10 = 1 ) = 0.9990491544491923
+P( x_11 = 1 ) = 0.9987922967145233
+P( x_12 = 1 ) = 0.9990685754984084
+P( x_13 = 1 ) = 0.9989321027966414
+P( x_14 = 1 ) = 0.9986454402425395
+P( x_15 = 1 ) = 0.9989243050741029
+P( x_16 = 1 ) = 0.999351380500335
+P( x_17 = 1 ) = 0.9991076985607729
+P( x_18 = 1 ) = 0.9990362918341046
+P( x_19 = 1 ) = 0.9989958264560818
+P( x_20 = 1 ) = 0.9992790735570132
+P( x_21 = 1 ) = 0.9992325322031022
+P( x_22 = 1 ) = 0.9989449016653872
+P( x_23 = 1 ) = 0.9988349708458258
+P( x_24 = 1 ) = 0.9992624131935561
+P( x_25 = 1 ) = 0.9991258307815785
+P( x_26 = 1 ) = 0.9991669445385548
+P( x_27 = 1 ) = 0.9990252384673894
+P( x_28 = 1 ) = 0.999231595571157
+P( x_29 = 1 ) = 0.9992407300057227
+P( x_30 = 1 ) = 0.9995049038080364
+P( x_31 = 1 ) = 0.9994616505126661
+P( x_32 = 1 ) = 0.9991621671558654
+P( x_33 = 1 ) = 0.9990881211011078
+P( x_34 = 1 ) = 0.999103123253585
+P( x_35 = 1 ) = 0.9989142518210031
+P( x_36 = 1 ) = 0.99882560181361
+P( x_37 = 1 ) = 0.9989535890666956
+P( x_38 = 1 ) = 0.9994156090275012
+P( x_39 = 1 ) = 0.9994844252432417
+P( x_40 = 1 ) = 1.0016578465104082
+P( x_41 = 1 ) = 0.9993564263486034
+P( x_42 = 1 ) = 0.998953067177497
+P( x_43 = 1 ) = 0.99912075319046
+P( x_44 = 1 ) = 0.9996282256369057
+P( x_45 = 1 ) = 0.9992018531323197
+P( x_46 = 1 ) = 0.9992932690320796
+P( x_47 = 1 ) = 0.9990005919017699
+P( x_48 = 1 ) = 0.9989741812726073
+P( x_49 = 1 ) = 0.9992875291648515
+P( x_50 = 1 ) = 0.999301199246632
+P( x_51 = 1 ) = 0.9965882329316001
+P( x_52 = 1 ) = 0.999299450375407
+P( x_53 = 1 ) = 0.9993665653884701
+P( x_54 = 1 ) = 0.9993859617842722
+P( x_55 = 1 ) = 0.9988006736806414
+P( x_56 = 1 ) = 0.9994175716674781
+P( x_57 = 1 ) = 0.9992851816978333
+P( x_58 = 1 ) = 0.999329302142228
+P( x_59 = 1 ) = 0.9992238076416637
+P( x_60 = 1 ) = 0.9990848914527657
+P( x_61 = 1 ) = 0.9994759969699453
+P( x_62 = 1 ) = 0.9989308421212411
+P( x_63 = 1 ) = 0.9990838216501933
+P( x_64 = 1 ) = 0.9989706632982843
+P( x_65 = 1 ) = 0.9993451716147181
+P( x_66 = 1 ) = 0.9991410440566396
+P( x_67 = 1 ) = 0.9990840149499628
+P( x_68 = 1 ) = 0.999405344252176
+P( x_69 = 1 ) = 0.9992854161880473
+P( x_70 = 1 ) = 0.9989167260927547
+P( x_71 = 1 ) = 0.9993256286997285
+P( x_72 = 1 ) = 0.9995627629278722
+P( x_73 = 1 ) = 0.9993525748595268
+P( x_74 = 1 ) = 0.999135484491274
+P( x_75 = 1 ) = 0.9991975193294738
+P( x_76 = 1 ) = 0.9987822184932493
+P( x_77 = 1 ) = 0.9989789132799494
+P( x_78 = 1 ) = 0.9992439486404785
+P( x_79 = 1 ) = 0.9991186168901384
+P( x_80 = 1 ) = 0.9993469832009805
+P( x_81 = 1 ) = 1.0001369088569914
+P( x_82 = 1 ) = 0.9991148730315451
+P( x_83 = 1 ) = 0.9992990270085186
+P( x_84 = 1 ) = 0.9972220634461716
+P( x_85 = 1 ) = 0.9990528587047712
+P( x_86 = 1 ) = 0.9989322824574037
+P( x_87 = 1 ) = 0.9992117102532431
+P( x_88 = 1 ) = 0.9988685674312795
+P( x_89 = 1 ) = 0.999096342660942
+P( x_90 = 1 ) = 0.9985941333117364
+P( x_91 = 1 ) = 0.9987629592302408
+P( x_92 = 1 ) = 1.003381550827249
+P( x_93 = 1 ) = 0.9996041956573188
+P( x_94 = 1 ) = 0.9992890095334297
+P( x_95 = 1 ) = 0.9992864757686591
+P( x_96 = 1 ) = 0.9991888375631947
+P( x_97 = 1 ) = 0.9993984474551645
+P( x_98 = 1 ) = 0.9992869985739167
+P( x_99 = 1 ) = 0.9992773676573229
+P( x_100 = 1 ) = 0.9987742409835146
+P( x_101 = 1 ) = 0.9989388562036265
+P( x_102 = 1 ) = 0.9988391152880033
+P( x_103 = 1 ) = 0.9992618778789467
+P( x_104 = 1 ) = 0.9995604714009285
+P( x_105 = 1 ) = 0.999724900735121
+P( x_106 = 1 ) = 0.9993043784646891
+P( x_107 = 1 ) = 0.9992420519384432
+P( x_108 = 1 ) = 0.9988448006738629
+P( x_109 = 1 ) = 0.9993160971106836
+P( x_110 = 1 ) = 0.9992745684539082
+P( x_111 = 1 ) = 0.9993601714019856
+P( x_112 = 1 ) = 0.998972933481657
+P( x_113 = 1 ) = 0.9990004115975137
+P( x_114 = 1 ) = 0.9985368501545708
+P( x_115 = 1 ) = 0.9994450801817156
+P( x_116 = 1 ) = 0.9989696727117132
+P( x_117 = 1 ) = 0.9993838832280886
+P( x_118 = 1 ) = 0.9990329605172275
+P( x_119 = 1 ) = 0.9993186012667205
+P( x_120 = 1 ) = 0.9992904953192867
+P( x_121 = 1 ) = 0.9991352294857317
+compute_partition_functions RUNTIME:  88.84339189529419
+partition function computation 10 complete: 237.8966466218123 (time taken: 10.99385118484497)
+partition function computation 40 complete: 238.51783637075349 (time taken: 10.45073914527893)
+partition function computation 63 complete: 237.9049016819654 (time taken: 12.6761474609375)
+partition function computation 91 complete: 237.82849693912198 (time taken: 13.728412866592407)
+partition function computation 15 complete: 237.86691710596784 (time taken: 13.118191957473755)
+partition function computation 43 complete: 237.91369593352442 (time taken: 15.706780195236206)
+partition function computation 79 complete: 237.91318723114432 (time taken: 20.458176374435425)
+partition function computation 12 complete: 237.9012712215748 (time taken: 13.258117914199829)
+partition function computation 44 complete: 238.0345368278135 (time taken: 8.434335470199585)
+partition function computation 64 complete: 237.87795606839225 (time taken: 7.605295419692993)
+partition function computation 80 complete: 237.96756651699707 (time taken: 5.271064281463623)
+partition function computation 93 complete: 238.0288147354253 (time taken: 15.76723027229309)
+partition function computation 20 complete: 237.95139566444075 (time taken: 13.767482280731201)
+partition function computation 46 complete: 237.95477593447097 (time taken: 12.190507650375366)
+partition function computation 72 complete: 238.01894864690317 (time taken: 11.626616716384888)
+partition function computation 98 complete: 237.95328279375502 (time taken: 12.901742219924927)
+partition function computation 2 complete: 237.90734185796225 (time taken: 10.174275159835815)
+partition function computation 37 complete: 237.8738903000359 (time taken: 13.797644853591919)
+partition function computation 66 complete: 237.91852765676813 (time taken: 15.963436365127563)
+partition function computation 102 complete: 237.84663145300544 (time taken: 12.639179229736328)
+partition function computation 27 complete: 237.89095167492582 (time taken: 9.361592769622803)
+partition function computation 38 complete: 237.983907909138 (time taken: 18.77656102180481)
+partition function computation 78 complete: 237.94303161166192 (time taken: 8.821945667266846)
+partition function computation 97 complete: 237.97982134293505 (time taken: 14.742852687835693)
+partition function computation 7 complete: 237.81379942783389 (time taken: 9.386648654937744)
+partition function computation 34 complete: 237.9094978389221 (time taken: 12.62296986579895)
+partition function computation 65 complete: 237.96713513652398 (time taken: 9.447290897369385)
+partition function computation 83 complete: 237.95614704146814 (time taken: 12.06723928451538)
+partition function computation 110 complete: 237.9503228954818 (time taken: 9.164175748825073)
+partition function computation 16 complete: 237.96861361539655 (time taken: 15.627318859100342)
+partition function computation 51 complete: 237.31064444761756 (time taken: 9.354076623916626)
+partition function computation 70 complete: 237.86511237570056 (time taken: 6.532944202423096)
+partition function computation 84 complete: 237.4615741123609 (time taken: 21.011619806289673)
+partition function computation 14 complete: 237.80051295758912 (time taken: 14.431156158447266)
+partition function computation 47 complete: 237.88508275918178 (time taken: 10.471017360687256)
+partition function computation 69 complete: 237.952905991182 (time taken: 13.976493120193481)
+partition function computation 99 complete: 237.95098945037813 (time taken: 14.079855918884277)
+partition function computation 21 complete: 237.94031309460388 (time taken: 15.73296856880188)
+partition function computation 52 complete: 237.95624785488917 (time taken: 8.922324419021606)
+partition function computation 68 complete: 237.9814636293773 (time taken: 7.517329931259155)
+partition function computation 88 complete: 237.8536446876296 (time taken: 13.758827209472656)
+partition function computation 118 complete: 237.8927904731004 (time taken: 6.869913339614868)
+partition function computation 26 complete: 237.92469515890363 (time taken: 8.283181190490723)
+partition function computation 32 complete: 237.9235575538955 (time taken: 19.029428005218506)
+partition function computation 75 complete: 237.93197572182527 (time taken: 12.725988864898682)
+partition function computation 104 complete: 238.01840298148412 (time taken: 13.959872484207153)
+partition function computation 5 complete: 237.97648111144474 (time taken: 17.98394012451172)
+partition function computation 53 complete: 237.97222948749913 (time taken: 15.93568754196167)
+partition function computation 90 complete: 237.78829559397676 (time taken: 8.042628288269043)
+partition function computation 107 complete: 237.9425799631601 (time taken: 13.110140800476074)
+partition function computation 8 complete: 237.82108765837916 (time taken: 9.103868007659912)
+partition function computation 33 complete: 237.90592548039447 (time taken: 10.658071041107178)
+partition function computation 58 complete: 237.96335624909665 (time taken: 11.502663135528564)
+partition function computation 82 complete: 237.91229573206164 (time taken: 11.93791389465332)
+partition function computation 109 complete: 237.96021182651344 (time taken: 11.90055775642395)
+partition function computation 1 complete: 237.80590664445805 (time taken: 15.631667137145996)
+partition function computation 50 complete: 237.95666430146534 (time taken: 13.286411046981812)
+partition function computation 77 complete: 237.87992057931152 (time taken: 12.69579029083252)
+partition function computation 106 complete: 237.95742134661302 (time taken: 14.342707872390747)
+partition function computation 25 complete: 237.91490502508375 (time taken: 12.729854345321655)
+partition function computation 42 complete: 237.8737660261804 (time taken: 13.963762283325195)
+partition function computation 74 complete: 237.9172037960239 (time taken: 15.669458389282227)
+partition function computation 108 complete: 237.84798527451136 (time taken: 13.225921869277954)
+partition function computation 11 complete: 237.83548287079515 (time taken: 8.37163496017456)
+partition function computation 31 complete: 237.99487144869704 (time taken: 12.705860376358032)
+partition function computation 62 complete: 237.86847372766763 (time taken: 24.87041687965393)
+partition function computation 117 complete: 237.97635326454616 (time taken: 10.513025283813477)
+partition function computation 9 complete: 237.76612318175242 (time taken: 12.049442529678345)
+partition function computation 41 complete: 237.96981514825114 (time taken: 6.9702887535095215)
+partition function computation 55 complete: 237.83747761964156 (time taken: 12.192576885223389)
+partition function computation 81 complete: 238.1556660352326 (time taken: 9.817538499832153)
+partition function computation 105 complete: 238.05755739849798 (time taken: 16.11869168281555)
+partition function computation 24 complete: 237.94742844763238 (time taken: 19.950883626937866)
+partition function computation 59 complete: 237.93823557529444 (time taken: 11.68946385383606)
+partition function computation 86 complete: 237.86881670492915 (time taken: 7.411556720733643)
+partition function computation 101 complete: 237.87038206552745 (time taken: 17.694196224212646)
+partition function computation 13 complete: 237.86877392355777 (time taken: 7.0453712940216064)
+partition function computation 30 complete: 238.0051710559567 (time taken: 20.960856437683105)
+partition function computation 76 complete: 237.83308301385685 (time taken: 17.53449583053589)
+partition function computation 115 complete: 237.99092567070505 (time taken: 11.801969766616821)
+partition function computation 22 complete: 237.8718216294105 (time taken: 4.995692729949951)
+partition function computation 28 complete: 237.94009006093444 (time taken: 9.269847869873047)
+partition function computation 48 complete: 237.8787937792202 (time taken: 18.90446400642395)
+partition function computation 89 complete: 237.9078832234203 (time taken: 13.74425721168518)
+partition function computation 120 complete: 237.95411544947964 (time taken: 10.300815105438232)
+partition function computation 6 complete: 237.64738561943688 (time taken: 17.992268323898315)
+partition function computation 54 complete: 237.97684821671513 (time taken: 9.316458702087402)
+partition function computation 73 complete: 237.96889801986788 (time taken: 12.457756042480469)
+partition function computation 103 complete: 237.9473009768769 (time taken: 18.11849617958069)
+partition function computation 18 complete: 237.89358373648525 (time taken: 20.363372087478638)
+partition function computation 61 complete: 237.9982876710745 (time taken: 13.476436376571655)
+partition function computation 92 complete: 238.92829012562407 (time taken: 10.960934400558472)
+partition function computation 114 complete: 237.77465515302657 (time taken: 14.030038595199585)
+partition function computation 23 complete: 237.84564456573193 (time taken: 9.685542106628418)
+partition function computation 39 complete: 238.00029463734347 (time taken: 9.43068790435791)
+partition function computation 56 complete: 237.98437525898456 (time taken: 17.26210069656372)
+partition function computation 96 complete: 237.92990839303033 (time taken: 7.598064422607422)
+partition function computation 112 complete: 237.8784966514148 (time taken: 14.939246416091919)
+partition function computation 4 complete: 237.88415458623678 (time taken: 15.16434931755066)
+partition function computation 49 complete: 237.95340913969463 (time taken: 5.594913482666016)
+partition function computation 60 complete: 237.90515642663277 (time taken: 11.570620775222778)
+partition function computation 85 complete: 237.89752869050386 (time taken: 13.92225956916809)
+partition function computation 116 complete: 237.8777201868819 (time taken: 13.453722953796387)
+partition function computation 0 complete: 237.91156343387343 (time taken: 10.232247591018677)
+partition function computation 36 complete: 237.84341358306577 (time taken: 16.017276287078857)
+partition function computation 71 complete: 237.96248151771 (time taken: 9.48305344581604)
+partition function computation 94 complete: 237.95376164959762 (time taken: 12.20440125465393)
+partition function computation 121 complete: 237.91714307332262 (time taken: 12.228324174880981)
+partition function computation 19 complete: 237.883947996649 (time taken: 13.164855241775513)
+partition function computation 45 complete: 237.93300770024152 (time taken: 10.465496063232422)
+partition function computation 67 complete: 237.90494771109897 (time taken: 15.386414051055908)
+partition function computation 100 complete: 237.83118338478874 (time taken: 7.66653847694397)
+partition function computation 119 complete: 237.96080812382388 (time taken: 13.169655323028564)
+partition function computation 3 complete: 237.94723010713633 (time taken: 7.023922443389893)
+partition function computation 29 complete: 237.94226518048913 (time taken: 12.918875694274902)
+partition function computation 57 complete: 237.95285015365357 (time taken: 17.095601081848145)
+partition function computation 95 complete: 237.95315830176477 (time taken: 7.473012447357178)
+partition function computation 111 complete: 237.97070693184065 (time taken: 17.776838779449463)
+partition function computation 17 complete: 237.91058732509245 (time taken: 9.181805849075317)
+partition function computation 35 complete: 237.86452319452772 (time taken: 22.886297702789307)
+partition function computation 87 complete: 237.93535490808668 (time taken: 12.652738809585571)
+partition function computation 113 complete: 237.88503982457968 (time taken: 20.151928424835205)
+Running experiment h_a=1 mu=0.001 tau=120
+experiment: init_inf=[0] H_a=1.0 MU=0.001 TAU=120.0
+extracting seattle data...
+generating GM...
+partition function = 212.16087439949035
+time taken for GBR = 20.79011869430542
+P( x_0 = 1 ) = 0.9975608975318125
+P( x_1 = 1 ) = 0.9967754217506393
+P( x_2 = 1 ) = 0.9968054828791657
+P( x_3 = 1 ) = 0.9966818593106147
+P( x_4 = 1 ) = 0.9965259123284415
+P( x_5 = 1 ) = 0.9972623743257941
+P( x_6 = 1 ) = 0.9958690303715664
+P( x_7 = 1 ) = 0.9973178659694506
+P( x_8 = 1 ) = 0.9970961129924052
+P( x_9 = 1 ) = 0.9971354423036722
+P( x_10 = 1 ) = 0.9971332287000988
+P( x_11 = 1 ) = 0.9973348428370641
+P( x_12 = 1 ) = 0.9965484524150408
+P( x_13 = 1 ) = 0.996505911006174
+P( x_14 = 1 ) = 0.9966308217069207
+P( x_15 = 1 ) = 0.9957181664653356
+P( x_16 = 1 ) = 0.997250693289839
+P( x_17 = 1 ) = 0.9961691852310434
+P( x_18 = 1 ) = 0.9970292926301507
+P( x_19 = 1 ) = 0.9971550791302971
+P( x_20 = 1 ) = 0.9974852661435945
+P( x_21 = 1 ) = 0.9972685330263744
+P( x_22 = 1 ) = 0.9971909921236592
+P( x_23 = 1 ) = 0.9965264331669429
+P( x_24 = 1 ) = 0.9965776998576914
+P( x_25 = 1 ) = 0.9969251103961535
+P( x_26 = 1 ) = 0.9965582063333901
+P( x_27 = 1 ) = 0.9973790303039105
+P( x_28 = 1 ) = 0.997199732505524
+P( x_29 = 1 ) = 0.9963196711985476
+P( x_30 = 1 ) = 0.9969530247335852
+P( x_31 = 1 ) = 0.9966320673707885
+P( x_32 = 1 ) = 0.996768633788704
+P( x_33 = 1 ) = 0.9968733728824053
+P( x_34 = 1 ) = 0.9966105913794828
+P( x_35 = 1 ) = 0.9972405909916738
+P( x_36 = 1 ) = 0.9964843925171192
+P( x_37 = 1 ) = 0.9968401799996522
+P( x_38 = 1 ) = 0.997335513365372
+P( x_39 = 1 ) = 0.997527596317949
+P( x_40 = 1 ) = 0.9989064839359884
+P( x_41 = 1 ) = 0.9971786815850997
+P( x_42 = 1 ) = 0.9971566155896685
+P( x_43 = 1 ) = 0.9967313218523333
+P( x_44 = 1 ) = 0.9959864200149942
+P( x_45 = 1 ) = 0.9964041063077155
+P( x_46 = 1 ) = 0.9963072567567027
+P( x_47 = 1 ) = 0.9975048132935922
+P( x_48 = 1 ) = 0.9974129025844508
+P( x_49 = 1 ) = 0.9973947873133756
+P( x_50 = 1 ) = 0.9973527631841154
+P( x_51 = 1 ) = 0.9955041146382483
+P( x_52 = 1 ) = 0.997251117562826
+P( x_53 = 1 ) = 0.9974081524543037
+P( x_54 = 1 ) = 0.9966769894597065
+P( x_55 = 1 ) = 0.9972167001981453
+P( x_56 = 1 ) = 0.9969833480784308
+P( x_57 = 1 ) = 0.9973790331626742
+P( x_58 = 1 ) = 0.996852983010028
+P( x_59 = 1 ) = 0.996924213553552
+P( x_60 = 1 ) = 0.9972658504985891
+P( x_61 = 1 ) = 0.9972981282453542
+P( x_62 = 1 ) = 0.9967086373029272
+P( x_63 = 1 ) = 0.9971980422537232
+P( x_64 = 1 ) = 0.9968401096417884
+P( x_65 = 1 ) = 0.9973997013546096
+P( x_66 = 1 ) = 0.9961569317010119
+P( x_67 = 1 ) = 0.9971751798630304
+P( x_68 = 1 ) = 0.9976386808102264
+P( x_69 = 1 ) = 0.9971313174242266
+P( x_70 = 1 ) = 0.9971356245992559
+P( x_71 = 1 ) = 0.996932160369075
+P( x_72 = 1 ) = 0.9977009142169213
+P( x_73 = 1 ) = 0.9966764666127275
+P( x_74 = 1 ) = 0.9973888247391
+P( x_75 = 1 ) = 0.9968534888488942
+P( x_76 = 1 ) = 0.9970075945519019
+P( x_77 = 1 ) = 0.9971815574614745
+P( x_78 = 1 ) = 0.9973959583999612
+P( x_79 = 1 ) = 0.9969419612544962
+P( x_80 = 1 ) = 0.997389380540404
+P( x_81 = 1 ) = 0.9974612148515554
+P( x_82 = 1 ) = 0.997011750821145
+P( x_83 = 1 ) = 0.9975049228794032
+P( x_84 = 1 ) = 0.9951242193172262
+P( x_85 = 1 ) = 0.9966607426925972
+P( x_86 = 1 ) = 0.9963149240744709
+P( x_87 = 1 ) = 0.9972147173893681
+P( x_88 = 1 ) = 0.9970801491304412
+P( x_89 = 1 ) = 0.9971483477464352
+P( x_90 = 1 ) = 0.9970057369523525
+P( x_91 = 1 ) = 0.9968359563607854
+P( x_92 = 1 ) = 0.9996208087662052
+P( x_93 = 1 ) = 0.9966822706200827
+P( x_94 = 1 ) = 0.9969605322924091
+P( x_95 = 1 ) = 0.9971847289585024
+P( x_96 = 1 ) = 0.9967046161929909
+P( x_97 = 1 ) = 0.9972676615824794
+P( x_98 = 1 ) = 0.9975629172903223
+P( x_99 = 1 ) = 0.9974448790405557
+P( x_100 = 1 ) = 0.9974746966524289
+P( x_101 = 1 ) = 0.9969857085555477
+P( x_102 = 1 ) = 0.9970541978944885
+P( x_103 = 1 ) = 0.9970444446739308
+P( x_104 = 1 ) = 0.9974911816948634
+P( x_105 = 1 ) = 0.9971599508031291
+P( x_106 = 1 ) = 0.9974156444313979
+P( x_107 = 1 ) = 0.997324015998391
+P( x_108 = 1 ) = 0.9969003278276372
+P( x_109 = 1 ) = 0.9972950213498225
+P( x_110 = 1 ) = 0.9973116413437373
+P( x_111 = 1 ) = 0.9965397678619817
+P( x_112 = 1 ) = 0.9974626381416585
+P( x_113 = 1 ) = 0.9974012150901668
+P( x_114 = 1 ) = 0.9974589758456399
+P( x_115 = 1 ) = 0.9972547894495933
+P( x_116 = 1 ) = 0.9967095387015579
+P( x_117 = 1 ) = 0.9972026903504381
+P( x_118 = 1 ) = 0.996727716134387
+P( x_119 = 1 ) = 0.9965744563459558
+P( x_120 = 1 ) = 0.9975515531575699
+P( x_121 = 1 ) = 0.9970146629210312
+compute_partition_functions RUNTIME:  86.88160824775696
+partition function computation 3 complete: 211.45689476944983 (time taken: 12.296605587005615)
+partition function computation 41 complete: 211.5623010176257 (time taken: 14.4385404586792)
+partition function computation 70 complete: 211.5531660098601 (time taken: 5.732448101043701)
+partition function computation 80 complete: 211.60700309221815 (time taken: 4.950022459030151)
+partition function computation 93 complete: 211.45698203322624 (time taken: 14.622580528259277)
+partition function computation 1 complete: 211.4767450585364 (time taken: 9.671002388000488)
+partition function computation 32 complete: 211.4753049185968 (time taken: 12.649456262588501)
+partition function computation 63 complete: 211.56640859400986 (time taken: 22.264070749282837)
+partition function computation 110 complete: 211.59050987627822 (time taken: 7.809487342834473)
+partition function computation 0 complete: 211.64339228708974 (time taken: 17.826948881149292)
+partition function computation 53 complete: 211.61098575788526 (time taken: 9.709097623825073)
+partition function computation 71 complete: 211.5099988608759 (time taken: 11.838656187057495)
+partition function computation 97 complete: 211.58117909167385 (time taken: 13.145617723464966)
+partition function computation 7 complete: 211.59183049831236 (time taken: 9.703145980834961)
+partition function computation 33 complete: 211.4975264563003 (time taken: 9.850794792175293)
+partition function computation 56 complete: 211.52085889005133 (time taken: 16.80784034729004)
+partition function computation 92 complete: 212.08042485576382 (time taken: 6.601064443588257)
+partition function computation 106 complete: 211.61257526229653 (time taken: 9.576955080032349)
+partition function computation 22 complete: 211.56491283225085 (time taken: 16.547250270843506)
+partition function computation 50 complete: 211.59923432188975 (time taken: 17.654037714004517)
+partition function computation 87 complete: 211.569946405369 (time taken: 11.405987739562988)
+partition function computation 112 complete: 211.6225454889567 (time taken: 6.961022138595581)
+partition function computation 24 complete: 211.43479620884065 (time taken: 11.170137643814087)
+partition function computation 39 complete: 211.6363270724379 (time taken: 10.906192541122437)
+partition function computation 64 complete: 211.49046929808566 (time taken: 13.275379419326782)
+partition function computation 91 complete: 211.48958813435644 (time taken: 17.435539960861206)
+partition function computation 4 complete: 211.423808921352 (time taken: 15.999063730239868)
+partition function computation 46 complete: 211.3774187640596 (time taken: 19.538023471832275)
+partition function computation 90 complete: 211.52560893311937 (time taken: 18.203725814819336)
+partition function computation 20 complete: 211.62734626563335 (time taken: 16.069391012191772)
+partition function computation 49 complete: 211.60815019789948 (time taken: 8.348353385925293)
+partition function computation 66 complete: 211.3455256688001 (time taken: 9.166698217391968)
+partition function computation 85 complete: 211.4524146493069 (time taken: 19.927550315856934)
+partition function computation 12 complete: 211.42859104583394 (time taken: 10.878312349319458)
+partition function computation 36 complete: 211.41500004187697 (time taken: 21.65582847595215)
+partition function computation 82 complete: 211.52688484078092 (time taken: 11.070688009262085)
+partition function computation 108 complete: 211.50324524105008 (time taken: 10.210866689682007)
+partition function computation 26 complete: 211.43066044567976 (time taken: 19.882258415222168)
+partition function computation 58 complete: 211.49320052314783 (time taken: 8.613357305526733)
+partition function computation 74 complete: 211.6068851729275 (time taken: 8.87636399269104)
+partition function computation 94 complete: 211.51601827293885 (time taken: 16.604448080062866)
+partition function computation 27 complete: 211.60480717699343 (time taken: 10.849525690078735)
+partition function computation 37 complete: 211.4904842252716 (time taken: 14.213488340377808)
+partition function computation 67 complete: 211.5615580892096 (time taken: 18.692704916000366)
+partition function computation 109 complete: 211.58698376383674 (time taken: 10.307409524917603)
+partition function computation 25 complete: 211.50850313245638 (time taken: 8.547028541564941)
+partition function computation 31 complete: 211.44633086795827 (time taken: 12.461295366287231)
+partition function computation 62 complete: 211.46257601171354 (time taken: 17.00467300415039)
+partition function computation 96 complete: 211.46172288951337 (time taken: 16.779181480407715)
+partition function computation 11 complete: 211.5954323253898 (time taken: 16.082257986068726)
+partition function computation 47 complete: 211.6314934060689 (time taken: 13.422070026397705)
+partition function computation 76 complete: 211.52600304306407 (time taken: 13.021189212799072)
+partition function computation 103 complete: 211.53382119717546 (time taken: 12.782417297363281)
+partition function computation 18 complete: 211.5306065263181 (time taken: 14.473932266235352)
+partition function computation 43 complete: 211.46738878555087 (time taken: 18.935828685760498)
+partition function computation 84 complete: 211.1264245064529 (time taken: 22.358170986175537)
+partition function computation 6 complete: 211.28444427100413 (time taken: 11.632853031158447)
+partition function computation 38 complete: 211.59557458526191 (time taken: 9.082079410552979)
+partition function computation 60 complete: 211.58079485053207 (time taken: 7.772400379180908)
+partition function computation 72 complete: 211.67309834943293 (time taken: 12.599919319152832)
+partition function computation 100 complete: 211.62510383314572 (time taken: 6.289043664932251)
+partition function computation 114 complete: 211.62176849303108 (time taken: 8.818593263626099)
+partition function computation 19 complete: 211.55729350017683 (time taken: 17.325722694396973)
+partition function computation 54 complete: 211.45586157762295 (time taken: 8.22887134552002)
+partition function computation 68 complete: 211.6598948554517 (time taken: 16.9779372215271)
+partition function computation 105 complete: 211.55832707854466 (time taken: 13.765880107879639)
+partition function computation 13 complete: 211.4195654233306 (time taken: 16.84324860572815)
+partition function computation 51 complete: 211.20702342994124 (time taken: 17.27187204360962)
+partition function computation 86 complete: 211.37904546890158 (time taken: 13.94010305404663)
+partition function computation 115 complete: 211.57844812870536 (time taken: 9.162454843521118)
+partition function computation 9 complete: 211.55312733386967 (time taken: 17.162901639938354)
+partition function computation 52 complete: 211.57766909799813 (time taken: 12.634413003921509)
+partition function computation 77 complete: 211.56291116607207 (time taken: 8.498038053512573)
+partition function computation 95 complete: 211.56358403365465 (time taken: 19.085518836975098)
+partition function computation 15 complete: 211.2524368527429 (time taken: 14.734025955200195)
+partition function computation 44 complete: 211.30934976039921 (time taken: 14.452094554901123)
+partition function computation 75 complete: 211.493307842364 (time taken: 12.935742139816284)
+partition function computation 102 complete: 211.53589044897717 (time taken: 15.862943887710571)
+partition function computation 16 complete: 211.5775790838702 (time taken: 12.616801023483276)
+partition function computation 42 complete: 211.55761947674054 (time taken: 19.435357570648193)
+partition function computation 81 complete: 211.6222435224839 (time taken: 11.312618017196655)
+partition function computation 107 complete: 211.59313529382996 (time taken: 5.819325923919678)
+partition function computation 119 complete: 211.4341080625547 (time taken: 9.713366031646729)
+partition function computation 2 complete: 211.48312285385 (time taken: 6.553548097610474)
+partition function computation 28 complete: 211.56676719930985 (time taken: 13.368357181549072)
+partition function computation 57 complete: 211.60480778351123 (time taken: 22.059446573257446)
+partition function computation 101 complete: 211.52135969094044 (time taken: 7.198507308959961)
+partition function computation 118 complete: 211.46662379327856 (time taken: 11.64890456199646)
+partition function computation 14 complete: 211.44606658682287 (time taken: 9.908440113067627)
+partition function computation 35 complete: 211.57543577145805 (time taken: 9.139442920684814)
+partition function computation 55 complete: 211.57036707981294 (time taken: 11.09256362915039)
+partition function computation 78 complete: 211.60839865665346 (time taken: 9.65047025680542)
+partition function computation 99 complete: 211.61877770253818 (time taken: 20.76760983467102)
+partition function computation 8 complete: 211.54478319280173 (time taken: 9.910900115966797)
+partition function computation 34 complete: 211.44177450286426 (time taken: 6.386667490005493)
+partition function computation 48 complete: 211.61199354965078 (time taken: 12.594296932220459)
+partition function computation 73 complete: 211.45575064995072 (time taken: 17.872556447982788)
+partition function computation 113 complete: 211.60951392064393 (time taken: 14.526647329330444)
+partition function computation 17 complete: 211.34812538844602 (time taken: 6.583178758621216)
+partition function computation 29 complete: 211.38005262289659 (time taken: 8.76857614517212)
+partition function computation 45 complete: 211.39796644948765 (time taken: 19.510242462158203)
+partition function computation 88 complete: 211.54139628588865 (time taken: 9.723153114318848)
+partition function computation 111 complete: 211.42674852346317 (time taken: 16.846989631652832)
+partition function computation 10 complete: 211.55265769379994 (time taken: 11.774654626846313)
+partition function computation 40 complete: 211.92887307517975 (time taken: 14.12245774269104)
+partition function computation 69 complete: 211.55225219583969 (time taken: 16.8006374835968)
+partition function computation 104 complete: 211.62860131416312 (time taken: 8.088104009628296)
+partition function computation 120 complete: 211.64140977647972 (time taken: 10.900908708572388)
+partition function computation 5 complete: 211.58005734267235 (time taken: 7.5765380859375)
+partition function computation 30 complete: 211.51442546269416 (time taken: 15.284048795700073)
+partition function computation 65 complete: 211.60919276518453 (time taken: 12.502233266830444)
+partition function computation 89 complete: 211.55586536389077 (time taken: 13.546958923339844)
+partition function computation 117 complete: 211.56739473827315 (time taken: 13.013498067855835)
+partition function computation 23 complete: 211.42391942290388 (time taken: 20.148329734802246)
+partition function computation 59 complete: 211.50831285754583 (time taken: 12.23590087890625)
+partition function computation 83 complete: 211.63151665589038 (time taken: 15.850879430770874)
+partition function computation 116 complete: 211.4627672532352 (time taken: 13.553730249404907)
+partition function computation 21 complete: 211.58136397797261 (time taken: 21.095879793167114)
+partition function computation 61 complete: 211.5876429255094 (time taken: 9.697594404220581)
+partition function computation 79 complete: 211.51207822529673 (time taken: 8.684652090072632)
+partition function computation 98 complete: 211.64382080082126 (time taken: 11.77303695678711)
+partition function computation 121 complete: 211.52750267443912 (time taken: 12.147314548492432)
+Running experiment h_a=1 mu=0.0015 tau=120
+experiment: init_inf=[0] H_a=1.0 MU=0.0015 TAU=120.0
+extracting seattle data...
+generating GM...
+partition function = 253.75678958888852
+time taken for GBR = 20.853389501571655
+P( x_0 = 1 ) = 0.9977758410593865
+P( x_1 = 1 ) = 0.997187972478941
+P( x_2 = 1 ) = 0.9977148928346011
+P( x_3 = 1 ) = 0.9977038752745145
+P( x_4 = 1 ) = 0.9973933384045734
+P( x_5 = 1 ) = 0.9973761680972217
+P( x_6 = 1 ) = 0.9966886710802989
+P( x_7 = 1 ) = 0.9975315830719689
+P( x_8 = 1 ) = 0.9975665649597937
+P( x_9 = 1 ) = 0.9974510513745528
+P( x_10 = 1 ) = 0.9975642969529601
+P( x_11 = 1 ) = 0.9974487432153682
+P( x_12 = 1 ) = 0.9975431336195563
+P( x_13 = 1 ) = 0.9975764233487455
+P( x_14 = 1 ) = 0.9967965291976606
+P( x_15 = 1 ) = 0.9975793412512662
+P( x_16 = 1 ) = 0.9977160600972697
+P( x_17 = 1 ) = 0.9969750717005785
+P( x_18 = 1 ) = 0.9976214201834506
+P( x_19 = 1 ) = 0.9975543662141656
+P( x_20 = 1 ) = 0.9975972833800553
+P( x_21 = 1 ) = 0.9975538319998786
+P( x_22 = 1 ) = 0.9977251660336147
+P( x_23 = 1 ) = 0.997578746471562
+P( x_24 = 1 ) = 0.9974853460026583
+P( x_25 = 1 ) = 0.9975719903983439
+P( x_26 = 1 ) = 0.9977380042845748
+P( x_27 = 1 ) = 0.9976892294348766
+P( x_28 = 1 ) = 0.9975900482679996
+P( x_29 = 1 ) = 0.9977058450199473
+P( x_30 = 1 ) = 0.9977582493765866
+P( x_31 = 1 ) = 0.9975851159821917
+P( x_32 = 1 ) = 0.9976699253222923
+P( x_33 = 1 ) = 0.9975731074862262
+P( x_34 = 1 ) = 0.9977538240347937
+P( x_35 = 1 ) = 0.9974806682537984
+P( x_36 = 1 ) = 0.9974802226886735
+P( x_37 = 1 ) = 0.9975423254689477
+P( x_38 = 1 ) = 0.9977643560660767
+P( x_39 = 1 ) = 0.9976205721947563
+P( x_40 = 1 ) = 0.9994670216746195
+P( x_41 = 1 ) = 0.9976559184244301
+P( x_42 = 1 ) = 0.9975714424799134
+P( x_43 = 1 ) = 0.9976534306962783
+P( x_44 = 1 ) = 0.9980370443189039
+P( x_45 = 1 ) = 0.997582711819336
+P( x_46 = 1 ) = 0.997555335125477
+P( x_47 = 1 ) = 0.9977335966145392
+P( x_48 = 1 ) = 0.9976269218885879
+P( x_49 = 1 ) = 0.9977245747746145
+P( x_50 = 1 ) = 0.9978083566290853
+P( x_51 = 1 ) = 0.9958037031306436
+P( x_52 = 1 ) = 0.9975898667289538
+P( x_53 = 1 ) = 0.9976877320856704
+P( x_54 = 1 ) = 0.9978302704731479
+P( x_55 = 1 ) = 0.9977564530196021
+P( x_56 = 1 ) = 0.9976703099323548
+P( x_57 = 1 ) = 0.997767401557405
+P( x_58 = 1 ) = 0.9977909385059648
+P( x_59 = 1 ) = 0.9975515184911863
+P( x_60 = 1 ) = 0.9976689121223157
+P( x_61 = 1 ) = 0.9974543231444536
+P( x_62 = 1 ) = 0.997536533656806
+P( x_63 = 1 ) = 0.9977453259845764
+P( x_64 = 1 ) = 0.9976338782468275
+P( x_65 = 1 ) = 0.9978156458677306
+P( x_66 = 1 ) = 0.997612101706636
+P( x_67 = 1 ) = 0.9976891979002009
+P( x_68 = 1 ) = 0.997642620507412
+P( x_69 = 1 ) = 0.9977141804068606
+P( x_70 = 1 ) = 0.9975174334991952
+P( x_71 = 1 ) = 0.9977212804122562
+P( x_72 = 1 ) = 0.9976207491526216
+P( x_73 = 1 ) = 0.9973165530094632
+P( x_74 = 1 ) = 0.9972815189818621
+P( x_75 = 1 ) = 0.9973777319130703
+P( x_76 = 1 ) = 0.9976211232336009
+P( x_77 = 1 ) = 0.9971913823517248
+P( x_78 = 1 ) = 0.9973074641988928
+P( x_79 = 1 ) = 0.9976428267231547
+P( x_80 = 1 ) = 0.9976433126451586
+P( x_81 = 1 ) = 0.9983521991606646
+P( x_82 = 1 ) = 0.9974354003325036
+P( x_83 = 1 ) = 0.997592659882021
+P( x_84 = 1 ) = 0.9964088803972574
+P( x_85 = 1 ) = 0.997592679267991
+P( x_86 = 1 ) = 0.9975730887326395
+P( x_87 = 1 ) = 0.9976219589300096
+P( x_88 = 1 ) = 0.9976509252128545
+P( x_89 = 1 ) = 0.9976494410014903
+P( x_90 = 1 ) = 0.9975744178277476
+P( x_91 = 1 ) = 0.9975052069440353
+P( x_92 = 1 ) = 1.0008952477218949
+P( x_93 = 1 ) = 0.9977619630784393
+P( x_94 = 1 ) = 0.9974969235276545
+P( x_95 = 1 ) = 0.9976531203550563
+P( x_96 = 1 ) = 0.997746607697218
+P( x_97 = 1 ) = 0.9977405443758133
+P( x_98 = 1 ) = 0.9975085914104247
+P( x_99 = 1 ) = 0.9973632165124123
+P( x_100 = 1 ) = 0.997667932457478
+P( x_101 = 1 ) = 0.9977140127693788
+P( x_102 = 1 ) = 0.9977407126999266
+P( x_103 = 1 ) = 0.9977185138259581
+P( x_104 = 1 ) = 0.9977975718225588
+P( x_105 = 1 ) = 0.9977522146749633
+P( x_106 = 1 ) = 0.9977584053257706
+P( x_107 = 1 ) = 0.9973301442798383
+P( x_108 = 1 ) = 0.9972878713785055
+P( x_109 = 1 ) = 0.9977917454999212
+P( x_110 = 1 ) = 0.9977128816853864
+P( x_111 = 1 ) = 0.9977326575647155
+P( x_112 = 1 ) = 0.9976312210567058
+P( x_113 = 1 ) = 0.9975861475523313
+P( x_114 = 1 ) = 0.997795218696359
+P( x_115 = 1 ) = 0.9977946938101361
+P( x_116 = 1 ) = 0.9976748504239642
+P( x_117 = 1 ) = 0.9976251898127612
+P( x_118 = 1 ) = 0.9977110499295068
+P( x_119 = 1 ) = 0.9976120071945437
+P( x_120 = 1 ) = 0.9975938164998018
+P( x_121 = 1 ) = 0.9973323089299977
+compute_partition_functions RUNTIME:  85.86712002754211
+partition function computation 1 complete: 253.043218512909 (time taken: 20.950599670410156)
+partition function computation 58 complete: 253.19622523615772 (time taken: 9.631879329681396)
+partition function computation 85 complete: 253.14591560842314 (time taken: 4.63063383102417)
+partition function computation 95 complete: 253.1612529446361 (time taken: 10.546427726745605)
+partition function computation 2 complete: 253.17692813073035 (time taken: 9.218025207519531)
+partition function computation 35 complete: 253.11749205306305 (time taken: 13.770849704742432)
+partition function computation 65 complete: 253.20249489695863 (time taken: 12.9434175491333)
+partition function computation 97 complete: 253.18343738347633 (time taken: 10.161758661270142)
+partition function computation 25 complete: 253.14066566728127 (time taken: 10.11096978187561)
+partition function computation 41 complete: 253.16196297373745 (time taken: 7.109621047973633)
+partition function computation 53 complete: 253.17003590627886 (time taken: 16.37480854988098)
+partition function computation 91 complete: 253.12371891231828 (time taken: 13.111432313919067)
+partition function computation 15 complete: 253.14253099611958 (time taken: 9.942104578018188)
+partition function computation 40 complete: 253.62154272011952 (time taken: 20.04528522491455)
+partition function computation 84 complete: 252.84551860746683 (time taken: 6.8407227993011475)
+partition function computation 99 complete: 253.08768787623728 (time taken: 10.66059160232544)
+partition function computation 24 complete: 253.1186790635962 (time taken: 9.41124963760376)
+partition function computation 38 complete: 253.1894797615523 (time taken: 14.7863130569458)
+partition function computation 71 complete: 253.17854902192934 (time taken: 15.460834980010986)
+partition function computation 109 complete: 253.1964300163533 (time taken: 8.086811304092407)
+partition function computation 20 complete: 253.1470839331195 (time taken: 10.595911026000977)
+partition function computation 43 complete: 253.16133169582827 (time taken: 13.252513647079468)
+partition function computation 67 complete: 253.17040786666826 (time taken: 5.178181171417236)
+partition function computation 80 complete: 253.15876417165924 (time taken: 6.789218187332153)
+partition function computation 98 complete: 253.12457774364373 (time taken: 12.949443340301514)
+partition function computation 18 complete: 253.15320881086 (time taken: 11.157274961471558)
+partition function computation 44 complete: 253.25867625714832 (time taken: 10.883149862289429)
+partition function computation 63 complete: 253.18465074916514 (time taken: 15.62830114364624)
+partition function computation 105 complete: 253.1863988011222 (time taken: 11.108541488647461)
+partition function computation 6 complete: 252.91651739295233 (time taken: 11.64689016342163)
+partition function computation 45 complete: 253.14338630065205 (time taken: 15.376862525939941)
+partition function computation 76 complete: 253.15313345781948 (time taken: 12.266376256942749)
+partition function computation 106 complete: 253.18796972079653 (time taken: 10.32871413230896)
+partition function computation 11 complete: 253.1093908578035 (time taken: 6.431507587432861)
+partition function computation 28 complete: 253.1452479743119 (time taken: 13.540283918380737)
+partition function computation 57 complete: 253.19025257565445 (time taken: 8.273336172103882)
+partition function computation 78 complete: 253.07354034814642 (time taken: 8.794185400009155)
+partition function computation 100 complete: 253.16501161619368 (time taken: 14.329612731933594)
+partition function computation 0 complete: 253.19239415658302 (time taken: 7.831423997879028)
+partition function computation 30 complete: 253.18793014763227 (time taken: 16.457845211029053)
+partition function computation 66 complete: 253.15084418409967 (time taken: 8.805780410766602)
+partition function computation 88 complete: 253.16069591239827 (time taken: 18.787984609603882)
+partition function computation 4 complete: 253.09533151088843 (time taken: 11.11853837966919)
+partition function computation 42 complete: 253.1405266292594 (time taken: 18.73494529724121)
+partition function computation 82 complete: 253.1060050106839 (time taken: 11.000096321105957)
+partition function computation 112 complete: 253.15569584899242 (time taken: 10.958958625793457)
+partition function computation 12 complete: 253.13334306373824 (time taken: 7.013790607452393)
+partition function computation 29 complete: 253.174632186331 (time taken: 6.693333864212036)
+partition function computation 50 complete: 253.20064520316143 (time taken: 14.691725969314575)
+partition function computation 79 complete: 253.15864086565156 (time taken: 14.310261011123657)
+partition function computation 115 complete: 253.19717817008816 (time taken: 9.204293012619019)
+partition function computation 5 complete: 253.0909744288186 (time taken: 13.267301559448242)
+partition function computation 48 complete: 253.15460490589294 (time taken: 13.747721672058105)
+partition function computation 75 complete: 253.09137125770786 (time taken: 7.573923826217651)
+partition function computation 93 complete: 253.1888725246919 (time taken: 9.801117420196533)
+partition function computation 120 complete: 253.1462041887165 (time taken: 8.041033506393433)
+partition function computation 17 complete: 252.98919349489074 (time taken: 7.467890739440918)
+partition function computation 31 complete: 253.14399637329996 (time taken: 16.889150142669678)
+partition function computation 69 complete: 253.17674734735408 (time taken: 7.10530161857605)
+partition function computation 87 complete: 253.15334552145723 (time taken: 5.835300922393799)
+partition function computation 101 complete: 253.17670480820487 (time taken: 14.929066181182861)
+partition function computation 23 complete: 253.14238006673133 (time taken: 18.832106590270996)
+partition function computation 55 complete: 253.18747430985093 (time taken: 14.692019939422607)
+partition function computation 90 complete: 253.1412816439737 (time taken: 20.128835201263428)
+partition function computation 21 complete: 253.13605785038263 (time taken: 12.661131143569946)
+partition function computation 47 complete: 253.1816743418806 (time taken: 11.865546941757202)
+partition function computation 72 complete: 253.15303853223114 (time taken: 15.453223943710327)
+partition function computation 110 complete: 253.17641778796224 (time taken: 13.830724716186523)
+partition function computation 9 complete: 253.10997656886803 (time taken: 8.343213558197021)
+partition function computation 32 complete: 253.16551731917104 (time taken: 15.911090850830078)
+partition function computation 68 complete: 253.15858853700672 (time taken: 13.724990129470825)
+partition function computation 104 complete: 253.19790848528095 (time taken: 16.28601336479187)
+partition function computation 7 complete: 253.13041203386447 (time taken: 18.031299114227295)
+partition function computation 54 complete: 253.2062059898783 (time taken: 7.479541063308716)
+partition function computation 74 complete: 253.06695657316752 (time taken: 15.13911485671997)
+partition function computation 111 complete: 253.18143605161208 (time taken: 13.789944887161255)
+partition function computation 16 complete: 253.1772243315577 (time taken: 9.550751686096191)
+partition function computation 37 complete: 253.13313799003433 (time taken: 9.917699575424194)
+partition function computation 56 complete: 253.16561491658575 (time taken: 21.53089737892151)
+partition function computation 114 complete: 253.19731136353099 (time taken: 13.119782447814941)
+partition function computation 27 complete: 253.17041586880632 (time taken: 20.76980948448181)
+partition function computation 59 complete: 253.1354707818442 (time taken: 13.41842794418335)
+partition function computation 94 complete: 253.12161693917065 (time taken: 8.82567834854126)
+partition function computation 119 complete: 253.15082020101457 (time taken: 10.977395057678223)
+partition function computation 10 complete: 253.1387134032798 (time taken: 9.654707431793213)
+partition function computation 36 complete: 253.1173789878874 (time taken: 6.383774757385254)
+partition function computation 52 complete: 253.14520190754646 (time taken: 9.243788242340088)
+partition function computation 73 complete: 253.07584669553793 (time taken: 15.276388168334961)
+partition function computation 113 complete: 253.14425814122683 (time taken: 13.814163446426392)
+partition function computation 19 complete: 253.13619341088506 (time taken: 9.708954095840454)
+partition function computation 39 complete: 253.15299362797134 (time taken: 17.293434381484985)
+partition function computation 77 complete: 253.04408379127952 (time taken: 12.488796472549438)
+partition function computation 108 complete: 253.06856853694595 (time taken: 16.499351978302002)
+partition function computation 26 complete: 253.1827928180784 (time taken: 14.465310096740723)
+partition function computation 51 complete: 252.69195076715874 (time taken: 18.198819875717163)
+partition function computation 89 complete: 253.16031928368744 (time taken: 9.980448007583618)
+partition function computation 117 complete: 253.15416537989182 (time taken: 14.766942024230957)
+partition function computation 8 complete: 253.13928892541267 (time taken: 8.815952062606812)
+partition function computation 34 complete: 253.18680718710607 (time taken: 4.762985706329346)
+partition function computation 49 complete: 253.17938498874514 (time taken: 11.194042921066284)
+partition function computation 70 complete: 253.12682148370337 (time taken: 12.904742002487183)
+partition function computation 102 complete: 253.18348009686295 (time taken: 20.28496813774109)
+partition function computation 13 complete: 253.1417905585436 (time taken: 8.346928358078003)
+partition function computation 33 complete: 253.14094913591597 (time taken: 13.038418054580688)
+partition function computation 60 complete: 253.16526021279776 (time taken: 8.808018922805786)
+partition function computation 86 complete: 253.14094437706603 (time taken: 14.417228698730469)
+partition function computation 121 complete: 253.07984486734978 (time taken: 13.853259563446045)
+partition function computation 3 complete: 253.17413235005367 (time taken: 22.562304258346558)
+partition function computation 62 complete: 253.13166827837932 (time taken: 7.91192626953125)
+partition function computation 83 complete: 253.1459106891016 (time taken: 9.435306310653687)
+partition function computation 107 complete: 253.07929557267477 (time taken: 19.52414345741272)
+partition function computation 22 complete: 253.17953502473082 (time taken: 21.36346960067749)
+partition function computation 61 complete: 253.11080680269433 (time taken: 13.192659378051758)
+partition function computation 96 complete: 253.18497599245026 (time taken: 7.8903913497924805)
+partition function computation 116 complete: 253.16676709715972 (time taken: 17.03623914718628)
+partition function computation 14 complete: 252.94388712254514 (time taken: 11.551406621932983)
+partition function computation 46 complete: 253.13643927870885 (time taken: 10.8025484085083)
+partition function computation 64 complete: 253.15637012902704 (time taken: 6.825609445571899)
+partition function computation 81 complete: 253.33864893801692 (time taken: 4.814236640930176)
+partition function computation 92 complete: 253.98396477668334 (time taken: 3.6204824447631836)
+partition function computation 103 complete: 253.17784698187222 (time taken: 5.4025185108184814)
+partition function computation 118 complete: 253.1759529674709 (time taken: 19.180737733840942)
+Running experiment h_a=1 mu=0.002 tau=120
+experiment: init_inf=[0] H_a=1.0 MU=0.002 TAU=120.0
+extracting seattle data...
+generating GM...
+partition function = 296.0925347460372
+time taken for GBR = 20.56870436668396
+P( x_0 = 1 ) = 0.9978960795607354
+P( x_1 = 1 ) = 0.9976650608336981
+P( x_2 = 1 ) = 0.997606026741643
+P( x_3 = 1 ) = 0.997860583394533
+P( x_4 = 1 ) = 0.9977413788046653
+P( x_5 = 1 ) = 0.9978850341516528
+P( x_6 = 1 ) = 0.9965330183485588
+P( x_7 = 1 ) = 0.9977496075018193
+P( x_8 = 1 ) = 0.9976979298917977
+P( x_9 = 1 ) = 0.9977540147004578
+P( x_10 = 1 ) = 0.9977871876657513
+P( x_11 = 1 ) = 0.997483521527908
+P( x_12 = 1 ) = 0.9978041247054114
+P( x_13 = 1 ) = 0.9977596269872437
+P( x_14 = 1 ) = 0.9976994235603697
+P( x_15 = 1 ) = 0.9977150751164965
+P( x_16 = 1 ) = 0.997763595975664
+P( x_17 = 1 ) = 0.997842672104136
+P( x_18 = 1 ) = 0.9977474116438166
+P( x_19 = 1 ) = 0.997789575375818
+P( x_20 = 1 ) = 0.997936894075693
+P( x_21 = 1 ) = 0.9977713085825415
+P( x_22 = 1 ) = 0.9977668521763694
+P( x_23 = 1 ) = 0.9977592216510495
+P( x_24 = 1 ) = 0.9978659679848798
+P( x_25 = 1 ) = 0.9978315618509896
+P( x_26 = 1 ) = 0.9978826886929849
+P( x_27 = 1 ) = 0.9978303545481139
+P( x_28 = 1 ) = 0.9978206382758242
+P( x_29 = 1 ) = 0.9978879416601285
+P( x_30 = 1 ) = 0.9979413506501648
+P( x_31 = 1 ) = 0.9974772831820095
+P( x_32 = 1 ) = 0.9978027860452763
+P( x_33 = 1 ) = 0.9978453164004292
+P( x_34 = 1 ) = 0.9979137568394884
+P( x_35 = 1 ) = 0.9977435602537014
+P( x_36 = 1 ) = 0.9977796851240014
+P( x_37 = 1 ) = 0.9977394155459742
+P( x_38 = 1 ) = 0.997649163133064
+P( x_39 = 1 ) = 0.9978019722118356
+P( x_40 = 1 ) = 1.000053021908171
+P( x_41 = 1 ) = 0.9978450027743245
+P( x_42 = 1 ) = 0.9977634838566911
+P( x_43 = 1 ) = 0.9978172777678127
+P( x_44 = 1 ) = 0.9982091101816668
+P( x_45 = 1 ) = 0.9978662415234677
+P( x_46 = 1 ) = 0.9979264094633262
+P( x_47 = 1 ) = 0.9978206376422746
+P( x_48 = 1 ) = 0.9977820294203466
+P( x_49 = 1 ) = 0.9976963496115381
+P( x_50 = 1 ) = 0.9979164066794219
+P( x_51 = 1 ) = 0.9956237324891298
+P( x_52 = 1 ) = 0.9978928194914617
+P( x_53 = 1 ) = 0.9978848011227016
+P( x_54 = 1 ) = 0.9978907523042652
+P( x_55 = 1 ) = 0.9978805752628024
+P( x_56 = 1 ) = 0.9975982702832986
+P( x_57 = 1 ) = 0.9977990576873416
+P( x_58 = 1 ) = 0.9979411641634277
+P( x_59 = 1 ) = 0.997884157609745
+P( x_60 = 1 ) = 0.9978161750609789
+P( x_61 = 1 ) = 0.9979159929814118
+P( x_62 = 1 ) = 0.9978136800226293
+P( x_63 = 1 ) = 0.9978830654996486
+P( x_64 = 1 ) = 0.997766159724775
+P( x_65 = 1 ) = 0.9978956544721734
+P( x_66 = 1 ) = 0.99775593363034
+P( x_67 = 1 ) = 0.9978550941471429
+P( x_68 = 1 ) = 0.9978469916052891
+P( x_69 = 1 ) = 0.9977770475637096
+P( x_70 = 1 ) = 0.9975534854265473
+P( x_71 = 1 ) = 0.9978358877827245
+P( x_72 = 1 ) = 0.9975813981508485
+P( x_73 = 1 ) = 0.9978648040160015
+P( x_74 = 1 ) = 0.9977344471002079
+P( x_75 = 1 ) = 0.9978416192536272
+P( x_76 = 1 ) = 0.9978652665901863
+P( x_77 = 1 ) = 0.9977359344773223
+P( x_78 = 1 ) = 0.9978872675551029
+P( x_79 = 1 ) = 0.9978148607067593
+P( x_80 = 1 ) = 0.9982784081178102
+P( x_81 = 1 ) = 0.9985685044299857
+P( x_82 = 1 ) = 0.9978548822851172
+P( x_83 = 1 ) = 0.9978747999295482
+P( x_84 = 1 ) = 0.9963035919247845
+P( x_85 = 1 ) = 0.9978114230168595
+P( x_86 = 1 ) = 0.9975920781750014
+P( x_87 = 1 ) = 0.9978348571189469
+P( x_88 = 1 ) = 0.9978448874961886
+P( x_89 = 1 ) = 0.9978333196973155
+P( x_90 = 1 ) = 0.9977857564162084
+P( x_91 = 1 ) = 0.9976456852663254
+P( x_92 = 1 ) = 1.0015456738957165
+P( x_93 = 1 ) = 0.9979045701568229
+P( x_94 = 1 ) = 0.9978721246509388
+P( x_95 = 1 ) = 0.9978349951026272
+P( x_96 = 1 ) = 0.9978967900415596
+P( x_97 = 1 ) = 0.9976161905121591
+P( x_98 = 1 ) = 0.9978963113213952
+P( x_99 = 1 ) = 0.9976369049149946
+P( x_100 = 1 ) = 0.9978654843591407
+P( x_101 = 1 ) = 0.9978711030673498
+P( x_102 = 1 ) = 0.9978946232459442
+P( x_103 = 1 ) = 0.9978623264709657
+P( x_104 = 1 ) = 0.9978698411556014
+P( x_105 = 1 ) = 0.9978848232518513
+P( x_106 = 1 ) = 0.9974867129093585
+P( x_107 = 1 ) = 0.99793253129811
+P( x_108 = 1 ) = 0.9978389982962195
+P( x_109 = 1 ) = 0.9978528967535233
+P( x_110 = 1 ) = 0.9977358806750253
+P( x_111 = 1 ) = 0.9979367984294637
+P( x_112 = 1 ) = 0.9977574422385614
+P( x_113 = 1 ) = 0.9978036669699561
+P( x_114 = 1 ) = 0.9979422902547643
+P( x_115 = 1 ) = 0.9979031457729703
+P( x_116 = 1 ) = 0.9977714791786858
+P( x_117 = 1 ) = 0.9979419529972062
+P( x_118 = 1 ) = 0.9977078102676067
+P( x_119 = 1 ) = 0.9975834067192929
+P( x_120 = 1 ) = 0.9979055703683081
+P( x_121 = 1 ) = 0.9977119725588909
+compute_partition_functions RUNTIME:  90.64701652526855
+partition function computation 20 complete: 295.48166448345955 (time taken: 21.105969190597534)
+partition function computation 61 complete: 295.47547582547486 (time taken: 12.739378690719604)
+partition function computation 89 complete: 295.450996883231 (time taken: 14.166615009307861)
+partition function computation 12 complete: 295.44235246407624 (time taken: 15.249727964401245)
+partition function computation 49 complete: 295.4104410633488 (time taken: 23.82074737548828)
+partition function computation 97 complete: 295.3867065524307 (time taken: 9.413216590881348)
+partition function computation 24 complete: 295.46066379745105 (time taken: 12.688624620437622)
+partition function computation 39 complete: 295.44171512679736 (time taken: 16.045042514801025)
+partition function computation 77 complete: 295.42216184659645 (time taken: 6.311686992645264)
+partition function computation 92 complete: 296.5501972477106 (time taken: 13.601593017578125)
+partition function computation 3 complete: 295.4590694604467 (time taken: 16.05365753173828)
+partition function computation 51 complete: 294.7967546060169 (time taken: 7.125688076019287)
+partition function computation 65 complete: 295.46945374472153 (time taken: 9.768704414367676)
+partition function computation 85 complete: 295.4445134396123 (time taken: 7.676888704299927)
+partition function computation 100 complete: 295.4605205994801 (time taken: 9.196533203125)
+partition function computation 0 complete: 295.46957961027135 (time taken: 15.682903528213501)
+partition function computation 48 complete: 295.43581021511545 (time taken: 14.125101804733276)
+partition function computation 78 complete: 295.4669704411874 (time taken: 12.740555047988892)
+partition function computation 105 complete: 295.46624670124197 (time taken: 10.160707712173462)
+partition function computation 1 complete: 295.40117668980906 (time taken: 8.248233318328857)
+partition function computation 32 complete: 295.44195609680366 (time taken: 6.755277156829834)
+partition function computation 44 complete: 295.56226564027605 (time taken: 8.798197746276855)
+partition function computation 66 complete: 295.4280834465062 (time taken: 17.846943855285645)
+partition function computation 102 complete: 295.46914840633343 (time taken: 11.110338687896729)
+partition function computation 8 complete: 295.4109089725365 (time taken: 6.5458667278289795)
+partition function computation 28 complete: 295.4472420089975 (time taken: 8.629485368728638)
+partition function computation 47 complete: 295.44724182140817 (time taken: 10.097315788269043)
+partition function computation 71 complete: 295.4517572741492 (time taken: 7.908238172531128)
+partition function computation 86 complete: 295.37956706940304 (time taken: 8.906250476837158)
+partition function computation 104 complete: 295.4618106143875 (time taken: 10.59098744392395)
+partition function computation 19 complete: 295.4380445161981 (time taken: 11.952693939208984)
+partition function computation 38 complete: 295.39646949933166 (time taken: 10.004449367523193)
+partition function computation 64 complete: 295.43111131672805 (time taken: 10.080434083938599)
+partition function computation 84 complete: 294.9980559095909 (time taken: 9.491207122802734)
+partition function computation 103 complete: 295.45958557236594 (time taken: 11.032543659210205)
+partition function computation 5 complete: 295.46630914709874 (time taken: 17.614893436431885)
+partition function computation 54 complete: 295.46800224939983 (time taken: 14.240541934967041)
+partition function computation 83 complete: 295.46327887033465 (time taken: 11.601685762405396)
+partition function computation 108 complete: 295.4526782739743 (time taken: 10.054236888885498)
+partition function computation 11 complete: 295.34742425660164 (time taken: 6.7878358364105225)
+partition function computation 30 complete: 295.4829840418912 (time taken: 15.363900423049927)
+partition function computation 63 complete: 295.4657262439368 (time taken: 12.467823266983032)
+partition function computation 91 complete: 295.39543972895353 (time taken: 11.795466423034668)
+partition function computation 117 complete: 295.4831623923535 (time taken: 8.909186124801636)
+partition function computation 7 complete: 295.4262103270774 (time taken: 14.394091129302979)
+partition function computation 42 complete: 295.43031901216443 (time taken: 10.915555953979492)
+partition function computation 70 complete: 295.36814004469045 (time taken: 11.650360822677612)
+partition function computation 93 complete: 295.4720936123884 (time taken: 18.868452310562134)
+partition function computation 6 complete: 295.06598736094395 (time taken: 6.654552698135376)
+partition function computation 29 complete: 295.46717003865314 (time taken: 11.656280279159546)
+partition function computation 55 complete: 295.4649889033969 (time taken: 10.748245477676392)
+partition function computation 76 complete: 295.4604561197184 (time taken: 15.815402030944824)
+partition function computation 112 complete: 295.42853013413844 (time taken: 11.20235824584961)
+partition function computation 4 complete: 295.4237738712794 (time taken: 10.438642501831055)
+partition function computation 33 complete: 295.45454901746456 (time taken: 23.528055667877197)
+partition function computation 87 complete: 295.45145210229884 (time taken: 5.5816614627838135)
+partition function computation 98 complete: 295.46964823287254 (time taken: 17.136461973190308)
+partition function computation 23 complete: 295.4290570048924 (time taken: 20.70808458328247)
+partition function computation 59 complete: 295.4660496095835 (time taken: 9.41373586654663)
+partition function computation 79 complete: 295.44553131392837 (time taken: 16.692776679992676)
+partition function computation 120 complete: 295.4723897675423 (time taken: 9.768574953079224)
+partition function computation 22 complete: 295.4313163464758 (time taken: 10.929067850112915)
+partition function computation 36 complete: 295.43511608646844 (time taken: 19.791658639907837)
+partition function computation 80 complete: 295.5827842418414 (time taken: 5.7214744091033936)
+partition function computation 94 complete: 295.46248674031006 (time taken: 20.306300163269043)
+partition function computation 16 complete: 295.4303522097553 (time taken: 17.99056053161621)
+partition function computation 56 complete: 295.3814005064442 (time taken: 12.951727867126465)
+partition function computation 81 complete: 295.66867959423394 (time taken: 6.320901393890381)
+partition function computation 96 complete: 295.46978997833946 (time taken: 6.358253240585327)
+partition function computation 109 complete: 295.45679350342647 (time taken: 13.671341180801392)
+partition function computation 13 complete: 295.4291770219136 (time taken: 19.948556661605835)
+partition function computation 57 complete: 295.44085215785236 (time taken: 13.695208072662354)
+partition function computation 88 complete: 295.4544220221208 (time taken: 10.49295163154602)
+partition function computation 110 complete: 295.42214591613794 (time taken: 13.91420865058899)
+partition function computation 10 complete: 295.4373375330722 (time taken: 13.28245234489441)
+partition function computation 40 complete: 296.1082341372246 (time taken: 10.347040891647339)
+partition function computation 67 complete: 295.45744413527314 (time taken: 16.058230876922607)
+partition function computation 99 complete: 295.39283993247204 (time taken: 7.8804261684417725)
+partition function computation 121 complete: 295.4150669014307 (time taken: 10.745822429656982)
+partition function computation 26 complete: 295.46561467429666 (time taken: 6.459640741348267)
+partition function computation 31 complete: 295.3455771289519 (time taken: 9.208141326904297)
+partition function computation 53 complete: 295.46624014896594 (time taken: 18.201356887817383)
+partition function computation 90 complete: 295.4369137507672 (time taken: 11.629860162734985)
+partition function computation 116 complete: 295.43268636731995 (time taken: 13.86292028427124)
+partition function computation 18 complete: 295.42556014991544 (time taken: 10.777180433273315)
+partition function computation 34 complete: 295.4748137205447 (time taken: 17.671525716781616)
+partition function computation 75 complete: 295.45345431989665 (time taken: 15.915767908096313)
+partition function computation 111 complete: 295.4816361633251 (time taken: 15.499886751174927)
+partition function computation 17 complete: 295.4537660610725 (time taken: 14.325281381607056)
+partition function computation 43 complete: 295.44624698766233 (time taken: 6.167266845703125)
+partition function computation 58 complete: 295.48292882456053 (time taken: 22.08357000350952)
+partition function computation 107 complete: 295.48037269758646 (time taken: 18.28000545501709)
+partition function computation 25 complete: 295.4504763980567 (time taken: 15.715732336044312)
+partition function computation 52 complete: 295.46861432809663 (time taken: 8.647217035293579)
+partition function computation 69 complete: 295.43433512455607 (time taken: 20.991315364837646)
+partition function computation 114 complete: 295.48326225179875 (time taken: 15.327984094619751)
+partition function computation 14 complete: 295.41135123665003 (time taken: 11.681818723678589)
+partition function computation 37 complete: 295.4231925650372 (time taken: 10.314719915390015)
+partition function computation 62 complete: 295.4451817221716 (time taken: 9.241782426834106)
+partition function computation 82 complete: 295.4573814045089 (time taken: 9.146762609481812)
+partition function computation 101 complete: 295.46218425703574 (time taken: 22.073780298233032)
+partition function computation 15 complete: 295.41598554557635 (time taken: 13.350673198699951)
+partition function computation 41 complete: 295.45445615511625 (time taken: 13.022676944732666)
+partition function computation 72 complete: 295.37640479398044 (time taken: 18.83222723007202)
+partition function computation 113 complete: 295.4422169320251 (time taken: 17.373276948928833)
+partition function computation 9 complete: 295.4275152656934 (time taken: 14.836690902709961)
+partition function computation 45 complete: 295.4607447901849 (time taken: 9.98682689666748)
+partition function computation 68 complete: 295.45504503311776 (time taken: 18.009141206741333)
+partition function computation 106 complete: 295.34836920082466 (time taken: 20.561488389968872)
+partition function computation 2 complete: 295.38369713585604 (time taken: 15.296333074569702)
+partition function computation 46 complete: 295.47856006800805 (time taken: 12.625449419021606)
+partition function computation 73 complete: 295.4603191549555 (time taken: 19.05159592628479)
+partition function computation 118 complete: 295.413834478054 (time taken: 17.3440203666687)
+partition function computation 27 complete: 295.450118924688 (time taken: 10.772893190383911)
+partition function computation 35 complete: 295.4244197820539 (time taken: 17.19884705543518)
+partition function computation 74 complete: 295.4217214453365 (time taken: 17.444976329803467)
+partition function computation 115 complete: 295.47167186296303 (time taken: 19.21461009979248)
+partition function computation 21 complete: 295.43263585507515 (time taken: 15.192800998687744)
+partition function computation 50 complete: 295.4755983183673 (time taken: 5.661041021347046)
+partition function computation 60 complete: 295.4459204844008 (time taken: 15.728034496307373)
+partition function computation 95 complete: 295.4514929582365 (time taken: 10.098748207092285)
+partition function computation 119 complete: 295.3769995161024 (time taken: 20.58703374862671)
+Wed Dec 30 21:33:53 MST 2020
+Your group chertkov has been charged 32:30:40 (0:13:56 X 140 cpus).
+You previously had 28021:00:57.  You now have 27988:30:17 of standard_time remaining

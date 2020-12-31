@@ -28,7 +28,7 @@ source ./bin/activate
 #
 date
 
-foreach H ( 0 .5 1 )
+foreach H ( .1 )
   foreach MU ( 0.001 0.0015 0.002 )
     foreach TAU ( 120 )
       echo "Running experiment h_a=$H mu=$MU tau=$TAU"
