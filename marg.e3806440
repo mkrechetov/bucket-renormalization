@@ -1,0 +1,19 @@
+Badly placed ()'s.
+Traceback (most recent call last):
+  File "marginalization.py", line 90, in <module>
+    compute_marginals(seattle, (H_a, MU, TAU))
+  File "/groups/chertkov/rabrams/bucket-renormalization/tools.py", line 235, in compute_marginals
+    filename = "seattle_marg_prob_init_inf={}_H_a={}_MU={}_TAU={}.csv".format(init_inf, H_a, MU, TAU)
+NameError: name 'init_inf' is not defined
+Traceback (most recent call last):
+  File "marginalization.py", line 90, in <module>
+    compute_marginals(seattle, (H_a, MU, TAU))
+  File "/groups/chertkov/rabrams/bucket-renormalization/tools.py", line 235, in compute_marginals
+    filename = "seattle_marg_prob_init_inf={}_H_a={}_MU={}_TAU={}.csv".format(init_inf, H_a, MU, TAU)
+NameError: name 'init_inf' is not defined
+Traceback (most recent call last):
+  File "marginalization.py", line 90, in <module>
+    compute_marginals(seattle, (H_a, MU, TAU))
+  File "/groups/chertkov/rabrams/bucket-renormalization/tools.py", line 235, in compute_marginals
+    filename = "seattle_marg_prob_init_inf={}_H_a={}_MU={}_TAU={}.csv".format(init_inf, H_a, MU, TAU)
+NameError: name 'init_inf' is not defined
