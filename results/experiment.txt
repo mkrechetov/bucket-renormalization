@@ -1,0 +1,1 @@
+This is a note about the sign of H_a assigned to each variable. In this experiment, H_a is negative

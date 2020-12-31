@@ -1,0 +1,3 @@
+This is a note to say that in these experiments, the updating of the magnetic field works like
+h_a --> h_a - J_ab
+previously, the code had h_a + J_ab
