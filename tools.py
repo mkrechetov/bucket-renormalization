@@ -163,7 +163,7 @@ def update_MF_of_neighbors_of(model, var):
         # collect the pair-wise factor containing the neighbor's bucket name
         fac = [f for f in factors if nbr.name.replace('B', '') in f.name].pop()
         # update the neighbor's magentic field
-        nbr.log_values += fac.log_values[1]
+        nbr.log_values -= fac.log_values[1]
         # print("updated neighbor {} log value to {}".format(nbr.name, nbr.log_values))
 
     # remove variable var and associated factors
