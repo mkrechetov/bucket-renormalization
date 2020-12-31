@@ -147,21 +147,16 @@ def update_MF_of_neighbors_of(model, var):
         1) removing the var variable and associated edges
         2) updating the magnetic field of neighbors of variable var
     '''
-    print('getting neighbors of {}'.format(var))
-    print('node {} has {} neighbors'.format(var, model.degree(var)-1))
+    # print('getting neighbors of {}'.format(var))
+    # print('node {} has {} neighbors'.format(var, model.degree(var)-1))
 
     # get B-factors of the neighboring nodes (excluding index)
     nbrs = get_neighbor_factors_of(model, var)
 
-
     adj_factors = model.get_adj_factors(var) # adj_factors contains a B factor and neighboring F factors
     factors = [fac for fac in adj_factors if 'F' in fac.name] # factors contains only F factors
 
-    print('removing {} and associated neighbors'.format(var))
-    # remove variable var and associated factors
-    model.remove_variable(var)
-    model.remove_factors_from(adj_factors)
-
+    # print('removing {} and associated neighbors'.format(var))
 
     # update the magnetic field of neighboring variables
     for nbr in nbrs:
@@ -169,8 +164,11 @@ def update_MF_of_neighbors_of(model, var):
         fac = [f for f in factors if nbr.name.replace('B', '') in f.name].pop()
         # update the neighbor's magentic field
         nbr.log_values += fac.log_values[1]
-        print("updated neighbor {} log value to {}".format(nbr.name, nbr.log_values))
+        # print("updated neighbor {} log value to {}".format(nbr.name, nbr.log_values))
 
+    # remove variable var and associated factors
+    model.remove_variable(var)
+    model.remove_factors_from(adj_factors)
 
 
 def compute_PF_of_modified_GM(model, index):
