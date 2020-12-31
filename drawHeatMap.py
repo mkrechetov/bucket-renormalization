@@ -182,7 +182,7 @@ def renormalizeProbability(input):
 
 #TO DO: MIX THIS TEST CODE WITH HPC RELATED CODE.
 tractUVCoords = pd.read_csv('./seattle/tractUVCoordinates.csv')#GIS DATA WHICH SHOULD BE READ ONCE AND USED MULTIPLE TIMES
-rawSeattleImage=mpimg.imread('./seattle/SeattleRawImage.jpg')#GIS DATA WHICH SHOULD BE READ ONCE AND USED MULTIPLE TIMES
+rawSeattleImage=mpimg.imread('./seattle/SeattleRawImage1.png')#GIS DATA WHICH SHOULD BE READ ONCE AND USED MULTIPLE TIMES
 
 #\/\/\/ SAVE PROBABILITY HEATMAP TO FILE experiment 2
 #TEST RANDOM PROBABILITIES. PROBABILITIES SHOULD BE IN A SINGLE ROW
