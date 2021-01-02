@@ -2,12 +2,14 @@ from matplotlib.gridspec import GridSpec
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
+import math
 
 import matplotlib.image as mpimg
 import matplotlib as mpl
 from matplotlib.patches import Ellipse
 import matplotlib.colors as mcolors
 from mpl_toolkits.axes_grid1 import make_axes_locatable
+from mpl_toolkits.axes_grid1.colorbar import colorbar
 
 def make_colormap(seq):
     """Return a LinearSegmentedColormap
@@ -25,17 +27,21 @@ def make_colormap(seq):
             cdict['blue'].append([item, b1, b2])
     return mcolors.LinearSegmentedColormap('CustomMap', cdict)
 
-def drawProbabilityHeatmap(passedFileName,tractUVCoords,rawSeattleImage,betas,mu,eps,probabilities):
+def drawProbabilityHeatmap(passedFileName,tractUVCoords,rawSeattleImage,initInfection,betas,mu,eps,probabilities):
     numPlots=0
-    for b in betas:
-        for m in mu:
-            for e in eps:
-                numPlots=numPlots+1
+    for i in initInfection:
+        for b in betas:
+            for m in mu:
+                for e in eps:
+                    numPlots=numPlots+1
 
     if numPlots<=5:
         fig, mainAxe = plt.subplots(figsize=(19.20, 4.6), constrained_layout=True)
         mainAxe.set_visible(False)
-        fig.suptitle('Marginal Probabilities initial infection=[0]', fontsize=16)
+        if len(initInfection) > 1:
+            fig.suptitle('Marginal Probabilities', fontsize=16)
+        else:
+            fig.suptitle('Marginal Probabilities initial infection=[' + initInfection[0] + ']', fontsize=16)
         gs = GridSpec(1, numPlots, figure=fig)
 
         c = mcolors.ColorConverter().to_rgb
@@ -45,118 +51,129 @@ def drawProbabilityHeatmap(passedFileName,tractUVCoords,rawSeattleImage,betas,mu
 
         counter = 0
         #axes=[]
-        for b in betas:
-            for m in mu:
-                for e in eps:
-                    ax = fig.add_subplot(gs[0, counter])
-                    #ax.axes.xaxis.set_visible(False)
-                    #ax.axes.yaxis.set_visible(False)
-                    ax.set_title('BETA=' + b + '_MU=' + m + '_EPS='+e)
-                    #axes.append(ax)
+        for i in initInfection:
+            for b in betas:
+                for m in mu:
+                    for e in eps:
+                        ax = fig.add_subplot(gs[0, counter])
+                        #ax.axes.xaxis.set_visible(False)
+                        #ax.axes.yaxis.set_visible(False)
+                        ax.set_title('Initial infection='+i+'_BETA=' + b + '_MU=' + m + '_EPS='+e,fontsize=8)
+                        #axes.append(ax)
 
-                    ax.imshow(rawSeattleImage, interpolation="nearest")
+                        ax.imshow(rawSeattleImage, interpolation="nearest")
 
-                    # inset axes....
-                    axins = ax.inset_axes([0.01, 0.5, 0.47, 0.47])
-                    axins.imshow(rawSeattleImage, interpolation="nearest",
-                                 origin="lower")
-                    # sub region of the original image
-                    x1, x2, y1, y2 = 450, 650, 400, 700
-                    axins.set_xlim(x1, x2)
-                    axins.set_ylim(y2, y1)
-                    axins.axes.xaxis.set_visible(False)
-                    axins.axes.yaxis.set_visible(False)
-                    axins.set_xticklabels('')
-                    axins.set_yticklabels('')
+                        # inset axes....
+                        axins = ax.inset_axes([0.01, 0.5, 0.47, 0.47])
+                        axins.imshow(rawSeattleImage, interpolation="nearest",origin="lower")
+                        # sub region of the original image
+                        x1, x2, y1, y2 = 450, 650, 400, 700
+                        axins.set_xlim(x1, x2)
+                        axins.set_ylim(y2, y1)
+                        axins.axes.xaxis.set_visible(False)
+                        axins.axes.yaxis.set_visible(False)
+                        axins.set_xticklabels('')
+                        axins.set_yticklabels('')
 
-                    ax.indicate_inset_zoom(axins)
+                        ax.indicate_inset_zoom(axins)
+                        #ax.imshow(rawSeattleImage, cmap=rvb)
 
+                        for index in range(probabilities[counter].shape[1]):
+                            ax.add_patch(
+                                Ellipse((tractUVCoords.iloc[index][1], tractUVCoords.iloc[index][2]), width=11, height=11,
+                                        edgecolor='None',
+                                        facecolor=(probabilities[counter].iloc[0][index], 0, 1 - probabilities[counter].iloc[0][index], 1),
+                                        linewidth=1))
+                        for index in range(probabilities[counter].shape[1]):
+                            axins.add_patch(
+                                Ellipse((tractUVCoords.iloc[index][1], tractUVCoords.iloc[index][2]), width=15, height=15,
+                                        edgecolor='None',
+                                        facecolor=(probabilities[counter].iloc[0][index], 0, 1 - probabilities[counter].iloc[0][index], 1),
+                                        linewidth=1))
 
-                    #ax.imshow(rawSeattleImage, cmap=rvb)
+                        counter = counter+1
 
-                    for index in range(probabilities[counter].shape[1]):
-                        ax.add_patch(
-                            Ellipse((tractUVCoords.iloc[index][1], tractUVCoords.iloc[index][2]), width=11, height=11,
-                                    edgecolor='None',
-                                    facecolor=(probabilities[counter].iloc[0][index], 0, 1 - probabilities[counter].iloc[0][index], 1),
-                                    linewidth=1))
-                    for index in range(probabilities[counter].shape[1]):
-                        axins.add_patch(
-                            Ellipse((tractUVCoords.iloc[index][1], tractUVCoords.iloc[index][2]), width=15, height=15,
-                                    edgecolor='None',
-                                    facecolor=(probabilities[counter].iloc[0][index], 0, 1 - probabilities[counter].iloc[0][index], 1),
-                                    linewidth=1))
-
-                    counter = counter+1
-
-    elif numPlots==9:
+    elif numPlots>5 and numPlots<=12:
         fig, mainAxe = plt.subplots(figsize=(19.20, 10), constrained_layout=True)
         mainAxe.set_visible(False)
-        fig.suptitle('Marginal Probabilities initial infection=[0]', fontsize=16)
-        gs = GridSpec(3, 3, figure=fig)
+        if len(initInfection)>1:
+            fig.suptitle('Marginal Probabilities', fontsize=16)
+        else:
+            fig.suptitle('Marginal Probabilities initial infection=[' + initInfection[0] +']', fontsize=16)
+        maxRows = 3
+        maxColumn=4
+        gs = GridSpec(math.ceil(numPlots/maxColumn), maxColumn, figure=fig)
 
         c = mcolors.ColorConverter().to_rgb
         rvb = make_colormap(
             [c('blue'), c('red')])
 
+
         counterP=0
         counterR = 0
         counterC=0
         # axes=[]
-        for b in betas:
-            for m in mu:
-                for e in eps:
-                    ax = fig.add_subplot(gs[counterR, counterC])
-                    ax.axes.xaxis.set_visible(False)
-                    ax.axes.yaxis.set_visible(False)
-                    ax.set_title('BETA=' + b + '_MU=' + m + '_EPS=' + e)
-                    # axes.append(ax)
+        for i in initInfection:
+            for b in betas:
+                for m in mu:
+                    for e in eps:
+                        print('___')
+                        print(counterR)
+                        print(counterC)
+                        print('___')
+                        ax = fig.add_subplot(gs[counterR, counterC])
+                        ax.axes.xaxis.set_visible(False)
+                        ax.axes.yaxis.set_visible(False)
+                        ax.set_title('Initial infection='+i+r' $\beta$=' + b + r' $\mu$=' + m + r' $\epsilon$='+e,fontsize=8)
+                        # axes.append(ax)
 
-                    ax.imshow(rawSeattleImage, interpolation="nearest")
+                        ax.imshow(rawSeattleImage, interpolation="nearest")
 
-                    # inset axes....
-                    axins = ax.inset_axes([0.01, 0.5, 0.47, 0.47])
-                    axins.imshow(rawSeattleImage, interpolation="nearest",
-                                 origin="lower")
-                    # sub region of the original image
-                    x1, x2, y1, y2 = 450, 650, 400, 700
-                    axins.set_xlim(x1, x2)
-                    axins.set_ylim(y2, y1)
-                    axins.axes.xaxis.set_visible(False)
-                    axins.axes.yaxis.set_visible(False)
-                    axins.set_xticklabels('')
-                    axins.set_yticklabels('')
+                        # inset axes....
+                        axins = ax.inset_axes([0.01, 0.5, 0.47, 0.47])
+                        axins.imshow(rawSeattleImage, interpolation="nearest",origin="lower")
+                        # sub region of the original image
+                        x1, x2, y1, y2 = 450, 650, 400, 700
+                        axins.set_xlim(x1, x2)
+                        axins.set_ylim(y2, y1)
+                        axins.axes.xaxis.set_visible(False)
+                        axins.axes.yaxis.set_visible(False)
+                        axins.set_xticklabels('')
+                        axins.set_yticklabels('')
 
-                    ax.indicate_inset_zoom(axins)
+                        ax.indicate_inset_zoom(axins)
 
-                    #ax.imshow(rawSeattleImage, cmap=rvb)
-                    for index in range(probabilities[counterP].shape[1]):
-                        ax.add_patch(
-                            Ellipse((tractUVCoords.iloc[index][1], tractUVCoords.iloc[index][2]), width=11, height=11,
-                                    edgecolor='None',
-                                    facecolor=(
-                                    probabilities[counterP].iloc[0][index], 0, 1 - probabilities[counterP].iloc[0][index],
-                                    1),
-                                    linewidth=1))
-                    for index in range(probabilities[counterP].shape[1]):
-                        axins.add_patch(
-                            Ellipse((tractUVCoords.iloc[index][1], tractUVCoords.iloc[index][2]), width=15, height=15,
-                                    edgecolor='None',
-                                    facecolor=(probabilities[counterP].iloc[0][index], 0, 1 - probabilities[counterP].iloc[0][index], 1),
-                                    linewidth=1))
-                    counterR=counterR+1
-                    if counterR>=3:
-                        counterC=counterC+1
-                        counterR=0
+                        #ax.imshow(rawSeattleImage, cmap=rvb)
+                        for index in range(probabilities[counterP].shape[1]):
+                            ax.add_patch(
+                                Ellipse((tractUVCoords.iloc[index][1], tractUVCoords.iloc[index][2]), width=11, height=11,
+                                        edgecolor='None',
+                                        facecolor=(
+                                        probabilities[counterP].iloc[0][index], 0, 1 - probabilities[counterP].iloc[0][index],
+                                        1),
+                                        linewidth=1))
+                        for index in range(probabilities[counterP].shape[1]):
+                            axins.add_patch(
+                                Ellipse((tractUVCoords.iloc[index][1], tractUVCoords.iloc[index][2]), width=15, height=15,
+                                        edgecolor='None',
+                                        facecolor=(probabilities[counterP].iloc[0][index], 0, 1 - probabilities[counterP].iloc[0][index], 1),
+                                        linewidth=1))
+                        counterR=counterR+1
+                        if counterR>=maxRows:
+                            counterC=counterC+1
+                            counterR=0
 
-                    counterP = counterP + 1
+                        counterP = counterP + 1
     else:
         print('not implemented')
 
     norm = mpl.colors.Normalize(vmin=0, vmax=1)
 
     divider = make_axes_locatable(mainAxe)
-    cax = divider.append_axes('right', size='1%', pad='2%')
+    cax = divider.append_axes('right', size='1%', pad='1%')
+
+    # cax1 = cax.append_axes("right", size="7%", pad="2%")
+    # cb1 = colorbar(im1, cax=cax1)
 
     mpl.colorbar.ColorbarBase(cax, cmap=rvb,
                               norm=norm,
@@ -180,94 +197,40 @@ def renormalizeProbability(input):
     return output
 
 
-#TO DO: MIX THIS TEST CODE WITH HPC RELATED CODE.
 tractUVCoords = pd.read_csv('./seattle/tractUVCoordinates.csv')#GIS DATA WHICH SHOULD BE READ ONCE AND USED MULTIPLE TIMES
 rawSeattleImage=mpimg.imread('./seattle/SeattleRawImage1.png')#GIS DATA WHICH SHOULD BE READ ONCE AND USED MULTIPLE TIMES
 
-#\/\/\/ SAVE PROBABILITY HEATMAP TO FILE experiment 2
-#TEST RANDOM PROBABILITIES. PROBABILITIES SHOULD BE IN A SINGLE ROW
-# testProbabilities = pd.DataFrame()#TEST RANDOM PROBABILITIES
-# for i in range(tractUVCoords.shape[0]):#TEST RANDOM PROBABILITIES
-#     testProbabilities[str(i)] = rnd.rand(1)#TEST RANDOM PROBABILITIES
-betas=['3.0']
-mu=['80','90','100','110','120']
-eps=['0.4']
+
+initInfection=['0']
+H_a=['0.0','0.1','0.5','1.0']
+mu=['0.001','0.0015','0.002']
+tau=['120.0']
 probabilities=[]
-for b in betas:
-    for m in mu:
-        for e in eps:
-            file_name='./results_experiment2/seattle_marginal_probabilities_init_inf=[0]_BETA='+b+'_MU='+m+'_EPS='+e+'.csv'
-            temp=pd.read_csv(file_name)
-            temp = renormalizeProbability(temp)
-            probabilities.append(temp)
+for i in initInfection:
+    for h in H_a:
+        for m in mu:
+            for t in tau:
+                file_name='./results/seattle_marg_prob_init_inf=['+i+']_H_a='+h+'_MU='+m+'_TAU='+t+'.csv'
+                temp=pd.read_csv(file_name)
+                temp = renormalizeProbability(temp)
+                probabilities.append(temp)
 
-#A NAMING SCHEMA IS REQUIRED TO REPLACE "test". THE DIRECTORY IS SET INSIDE THE FUNCTION.
-#tractUVCoords, AND rawSeattleImage SHOULD BE READ ONCE AND USED MULTIPLE TIMES.
-test_name = "./results_experiment2/beta_3_mu_80_to_120_EPS_0_4"
-drawProbabilityHeatmap(test_name,tractUVCoords,rawSeattleImage,betas,mu,eps,probabilities)
-#^^^ SAVE PROBABILITY HEATMAP TO FILE experiment 2
+test_name = "./results/seattle_heatmap_init_inf=[0]_H_a=[0.0,0.1,0.5]_MU_[0.001,0.0015,0.002]_TAU_[120]"
+drawProbabilityHeatmap(test_name,tractUVCoords,rawSeattleImage,initInfection,H_a,mu,tau,probabilities)
 
-#\/\/\/ SAVE PROBABILITY HEATMAP TO FILE experiment 2
-#TEST RANDOM PROBABILITIES. PROBABILITIES SHOULD BE IN A SINGLE ROW
-# testProbabilities = pd.DataFrame()#TEST RANDOM PROBABILITIES
-# for i in range(tractUVCoords.shape[0]):#TEST RANDOM PROBABILITIES
-#     testProbabilities[str(i)] = rnd.rand(1)#TEST RANDOM PROBABILITIES
-betas=['5.0']
-mu=['80','90','100','110','120']
-eps=['0.4']
+initInfection=['52']
+H_a=['0.0','0.1','0.5','1.0']
+mu=['0.001','0.0015','0.002']
+tau=['120.0']
 probabilities=[]
-for b in betas:
-    for m in mu:
-        for e in eps:
-            file_name='./results_experiment2/seattle_marginal_probabilities_init_inf=[0]_BETA='+b+'_MU='+m+'_EPS='+e+'.csv'
-            temp=pd.read_csv(file_name)
-            temp = renormalizeProbability(temp)
-            probabilities.append(temp)
+for i in initInfection:
+    for h in H_a:
+        for m in mu:
+            for t in tau:
+                file_name='./results/seattle_marg_prob_init_inf=['+i+']_H_a='+h+'_MU='+m+'_TAU='+t+'.csv'
+                temp=pd.read_csv(file_name)
+                temp = renormalizeProbability(temp)
+                probabilities.append(temp)
 
-#A NAMING SCHEMA IS REQUIRED TO REPLACE "test". THE DIRECTORY IS SET INSIDE THE FUNCTION.
-#tractUVCoords, AND rawSeattleImage SHOULD BE READ ONCE AND USED MULTIPLE TIMES.
-test_name = "./results_experiment2/beta_5_mu_80_to_120_EPS_0_4"
-drawProbabilityHeatmap(test_name,tractUVCoords,rawSeattleImage,betas,mu,eps,probabilities)
-#^^^ SAVE PROBABILITY HEATMAP TO FILE experiment 2
-
-#\/\/\/ SAVE PROBABILITY HEATMAP TO FILE experiment 1
-#TEST RANDOM PROBABILITIES. PROBABILITIES SHOULD BE IN A SINGLE ROW
-betas=['3.0']
-mu=['100','120','140']
-eps=['0.3','0.4','0.5']
-probabilities=[]
-for b in betas:
-    for m in mu:
-        for e in eps:
-            file_name='./results_experiment1/seattle_marginal_probabilities_init_inf=[0]_BETA='+b+'_MU='+m+'_EPS='+e+'.csv'
-            temp=pd.read_csv(file_name)
-            temp = renormalizeProbability(temp)
-            probabilities.append(temp)
-
-#A NAMING SCHEMA IS REQUIRED TO REPLACE "test". THE DIRECTORY IS SET INSIDE THE FUNCTION.
-#tractUVCoords, AND rawSeattleImage SHOULD BE READ ONCE AND USED MULTIPLE TIMES.
-test_name = "./results_experiment1/beta_3_mu_100_to_140_EPS_0_3_to_0_5"
-drawProbabilityHeatmap(test_name,tractUVCoords,rawSeattleImage,betas,mu,eps,probabilities)
-#^^^ SAVE PROBABILITY HEATMAP TO FILE experiment 1
-
-#\/\/\/ SAVE PROBABILITY HEATMAP TO FILE experiment 1
-#TEST RANDOM PROBABILITIES. PROBABILITIES SHOULD BE IN A SINGLE ROW
-betas=['5.0']
-mu=['100','120','140']
-eps=['0.3','0.4','0.5']
-probabilities=[]
-for b in betas:
-    for m in mu:
-        for e in eps:
-            file_name='./results_experiment1/seattle_marginal_probabilities_init_inf=[0]_BETA='+b+'_MU='+m+'_EPS='+e+'.csv'
-            temp=pd.read_csv(file_name)
-            temp = renormalizeProbability(temp)
-            probabilities.append(temp)
-
-#A NAMING SCHEMA IS REQUIRED TO REPLACE "test". THE DIRECTORY IS SET INSIDE THE FUNCTION.
-#tractUVCoords, AND rawSeattleImage SHOULD BE READ ONCE AND USED MULTIPLE TIMES.
-test_name = "./results_experiment1/beta_5_mu_100_to_140_EPS_0_3_to_0_5"
-drawProbabilityHeatmap(test_name,tractUVCoords,rawSeattleImage,betas,mu,eps,probabilities)
-#^^^ SAVE PROBABILITY HEATMAP TO FILE experiment 1
-
-
+test_name = "./results/seattle_heatmap_init_inf=[52]_H_a=[0.0,0.1,0.5]_MU_[0.001,0.0015,0.002]_TAU_[120]"
+drawProbabilityHeatmap(test_name,tractUVCoords,rawSeattleImage,initInfection,H_a,mu,tau,probabilities)
