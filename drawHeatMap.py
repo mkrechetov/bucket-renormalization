@@ -27,21 +27,21 @@ def make_colormap(seq):
             cdict['blue'].append([item, b1, b2])
     return mcolors.LinearSegmentedColormap('CustomMap', cdict)
 
-def drawProbabilityHeatmap(passedFileName,tractUVCoords,rawSeattleImage,initInfection,betas,mu,eps,probabilities):
+def drawProbabilityHeatmap(passedFileName,tractUVCoords,rawSeattleImage,initInfection,H_a,mu,TAU,probabilities):
     numPlots=0
     for i in initInfection:
-        for b in betas:
+        for h in H_a:
             for m in mu:
-                for e in eps:
+                for t in TAU:
                     numPlots=numPlots+1
 
     if numPlots<=5:
         fig, mainAxe = plt.subplots(figsize=(19.20, 4.6), constrained_layout=True)
         mainAxe.set_visible(False)
         if len(initInfection) > 1:
-            fig.suptitle('Marginal Probabilities', fontsize=16)
+            fig.suptitle('Marginal Probabilities' + r' $\tau$' + '=' + t, fontsize=16)
         else:
-            fig.suptitle('Marginal Probabilities initial infection=[' + initInfection[0] + ']', fontsize=16)
+            fig.suptitle('Marginal Probabilities initial infection=[' + initInfection[0] + ']' + r' $\tau$' + '=' + t, fontsize=16)
         gs = GridSpec(1, numPlots, figure=fig)
 
         c = mcolors.ColorConverter().to_rgb
@@ -52,13 +52,13 @@ def drawProbabilityHeatmap(passedFileName,tractUVCoords,rawSeattleImage,initInfe
         counter = 0
         #axes=[]
         for i in initInfection:
-            for b in betas:
+            for h in H_a:
                 for m in mu:
-                    for e in eps:
+                    for t in TAU:
                         ax = fig.add_subplot(gs[0, counter])
                         #ax.axes.xaxis.set_visible(False)
                         #ax.axes.yaxis.set_visible(False)
-                        ax.set_title('Initial infection='+i+'_BETA=' + b + '_MU=' + m + '_EPS='+e,fontsize=8)
+                        ax.set_title('Initial infection='+i+r' $H_a$'+'=' + h + r' $\mu$=' + m,fontsize=8)
                         #axes.append(ax)
 
                         ax.imshow(rawSeattleImage, interpolation="nearest")
@@ -96,10 +96,10 @@ def drawProbabilityHeatmap(passedFileName,tractUVCoords,rawSeattleImage,initInfe
     elif numPlots>5 and numPlots<=12:
         fig, mainAxe = plt.subplots(figsize=(19.20, 10), constrained_layout=True)
         mainAxe.set_visible(False)
-        if len(initInfection)>1:
-            fig.suptitle('Marginal Probabilities', fontsize=16)
+        if len(initInfection) > 1:
+            fig.suptitle('Marginal Probabilities' + r' $\tau$' + '=' + t, fontsize=16)
         else:
-            fig.suptitle('Marginal Probabilities initial infection=[' + initInfection[0] +']', fontsize=16)
+            fig.suptitle('Marginal Probabilities initial infection=[' + initInfection[0] + ']' + r' $\tau$' + '=' + t, fontsize=16)
         maxRows = 3
         maxColumn=4
         gs = GridSpec(math.ceil(numPlots/maxColumn), maxColumn, figure=fig)
@@ -114,9 +114,9 @@ def drawProbabilityHeatmap(passedFileName,tractUVCoords,rawSeattleImage,initInfe
         counterC=0
         # axes=[]
         for i in initInfection:
-            for b in betas:
+            for h in H_a:
                 for m in mu:
-                    for e in eps:
+                    for t in TAU:
                         print('___')
                         print(counterR)
                         print(counterC)
@@ -124,7 +124,7 @@ def drawProbabilityHeatmap(passedFileName,tractUVCoords,rawSeattleImage,initInfe
                         ax = fig.add_subplot(gs[counterR, counterC])
                         ax.axes.xaxis.set_visible(False)
                         ax.axes.yaxis.set_visible(False)
-                        ax.set_title('Initial infection='+i+r' $\beta$=' + b + r' $\mu$=' + m + r' $\epsilon$='+e,fontsize=8)
+                        ax.set_title('Initial infection='+i+r' $H_a$'+'=' + h + r' $\mu$=' + m,fontsize=8)
                         # axes.append(ax)
 
                         ax.imshow(rawSeattleImage, interpolation="nearest")
