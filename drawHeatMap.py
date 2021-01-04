@@ -7,6 +7,7 @@ import math
 import matplotlib.image as mpimg
 import matplotlib as mpl
 from matplotlib.patches import Ellipse
+from matplotlib.patches import Polygon
 import matplotlib.colors as mcolors
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 from mpl_toolkits.axes_grid1.colorbar import colorbar
@@ -79,17 +80,60 @@ def drawProbabilityHeatmap(passedFileName,tractUVCoords,rawSeattleImage,initInfe
                         #ax.imshow(rawSeattleImage, cmap=rvb)
 
                         for index in range(probabilities[counter].shape[1]):
-                            ax.add_patch(
-                                Ellipse((tractUVCoords.iloc[index][1], tractUVCoords.iloc[index][2]), width=11, height=11,
-                                        edgecolor='None',
-                                        facecolor=(probabilities[counter].iloc[0][index], 0, 1 - probabilities[counter].iloc[0][index], 1),
-                                        linewidth=1))
+                            if str(index) in initInfection:
+                                actualPoint=[tractUVCoords.iloc[index][1], tractUVCoords.iloc[index][2]]
+                                Size=12
+                                path = [
+                                    [actualPoint[0], actualPoint[1] - Size],
+                                    [actualPoint[0] - Size * 0.3, actualPoint[1] - Size * 0.3],
+                                    [actualPoint[0] - Size, actualPoint[1] - Size * 0.1],
+                                    [actualPoint[0] - Size * 0.2, actualPoint[1] + Size * 0.1],
+                                    [actualPoint[0] - Size * 0.8, actualPoint[1] + Size * 0.9],
+                                    [actualPoint[0], actualPoint[1] + Size * 0.6],
+                                    [actualPoint[0] + Size * 0.8, actualPoint[1] + Size * 0.9],
+                                    [actualPoint[0] + Size * 0.2, actualPoint[1] + Size * 0.1],
+                                    [actualPoint[0] + Size, actualPoint[1] - Size * 0.1],
+                                    [actualPoint[0] + Size * 0.3, actualPoint[1] - Size * 0.3],
+                                ]
+                                ax.add_patch(Polygon(path,
+                                            color=(1,0,0, 1),
+                                            linewidth=1))
+                            else:
+                                ax.add_patch(
+                                    Ellipse((tractUVCoords.iloc[index][1], tractUVCoords.iloc[index][2]), width=11,
+                                            height=11,
+                                            edgecolor='None',
+                                            facecolor=(probabilities[counter].iloc[0][index], 0,
+                                                       1 - probabilities[counter].iloc[0][index], 1),
+                                            linewidth=1))
+
                         for index in range(probabilities[counter].shape[1]):
-                            axins.add_patch(
-                                Ellipse((tractUVCoords.iloc[index][1], tractUVCoords.iloc[index][2]), width=15, height=15,
-                                        edgecolor='None',
-                                        facecolor=(probabilities[counter].iloc[0][index], 0, 1 - probabilities[counter].iloc[0][index], 1),
-                                        linewidth=1))
+                            if str(index) in initInfection:
+                                actualPoint = [tractUVCoords.iloc[index][1], tractUVCoords.iloc[index][2]]
+                                Size = 14
+                                path = [
+                                    [actualPoint[0], actualPoint[1] - Size],
+                                    [actualPoint[0] - Size * 0.3, actualPoint[1] - Size * 0.3],
+                                    [actualPoint[0] - Size, actualPoint[1] - Size * 0.1],
+                                    [actualPoint[0] - Size * 0.2, actualPoint[1] + Size * 0.1],
+                                    [actualPoint[0] - Size * 0.8, actualPoint[1] + Size * 0.9],
+                                    [actualPoint[0], actualPoint[1] + Size * 0.6],
+                                    [actualPoint[0] + Size * 0.8, actualPoint[1] + Size * 0.9],
+                                    [actualPoint[0] + Size * 0.2, actualPoint[1] + Size * 0.1],
+                                    [actualPoint[0] + Size, actualPoint[1] - Size * 0.1],
+                                    [actualPoint[0] + Size * 0.3, actualPoint[1] - Size * 0.3],
+                                ]
+                                ax.add_patch(Polygon(path,
+                                                     color=(1, 0, 0, 1),
+                                                     linewidth=1))
+                            else:
+                                axins.add_patch(
+                                    Ellipse((tractUVCoords.iloc[index][1], tractUVCoords.iloc[index][2]), width=15,
+                                            height=15,
+                                            edgecolor='None',
+                                            facecolor=(probabilities[counter].iloc[0][index], 0,
+                                                       1 - probabilities[counter].iloc[0][index], 1),
+                                            linewidth=1))
 
                         counter = counter+1
 
@@ -145,19 +189,63 @@ def drawProbabilityHeatmap(passedFileName,tractUVCoords,rawSeattleImage,initInfe
 
                         #ax.imshow(rawSeattleImage, cmap=rvb)
                         for index in range(probabilities[counterP].shape[1]):
-                            ax.add_patch(
-                                Ellipse((tractUVCoords.iloc[index][1], tractUVCoords.iloc[index][2]), width=11, height=11,
-                                        edgecolor='None',
-                                        facecolor=(
-                                        probabilities[counterP].iloc[0][index], 0, 1 - probabilities[counterP].iloc[0][index],
-                                        1),
-                                        linewidth=1))
+                            if str(index) in initInfection:
+                                actualPoint = [tractUVCoords.iloc[index][1], tractUVCoords.iloc[index][2]]
+                                Size = 12
+                                path = [
+                                    [actualPoint[0], actualPoint[1] - Size],
+                                    [actualPoint[0] - Size * 0.3, actualPoint[1] - Size * 0.3],
+                                    [actualPoint[0] - Size, actualPoint[1] - Size * 0.1],
+                                    [actualPoint[0] - Size * 0.2, actualPoint[1] + Size * 0.1],
+                                    [actualPoint[0] - Size * 0.8, actualPoint[1] + Size * 0.9],
+                                    [actualPoint[0], actualPoint[1] + Size * 0.6],
+                                    [actualPoint[0] + Size * 0.8, actualPoint[1] + Size * 0.9],
+                                    [actualPoint[0] + Size * 0.2, actualPoint[1] + Size * 0.1],
+                                    [actualPoint[0] + Size, actualPoint[1] - Size * 0.1],
+                                    [actualPoint[0] + Size * 0.3, actualPoint[1] - Size * 0.3],
+                                ]
+                                ax.add_patch(Polygon(path,
+                                                     color=(1, 0, 0, 1),
+                                                     linewidth=1))
+                            else:
+                                ax.add_patch(
+                                    Ellipse((tractUVCoords.iloc[index][1], tractUVCoords.iloc[index][2]), width=11,
+                                            height=11,
+                                            edgecolor='None',
+                                            facecolor=(
+                                                probabilities[counterP].iloc[0][index], 0,
+                                                1 - probabilities[counterP].iloc[0][index],
+                                                1),
+                                            linewidth=1))
                         for index in range(probabilities[counterP].shape[1]):
-                            axins.add_patch(
-                                Ellipse((tractUVCoords.iloc[index][1], tractUVCoords.iloc[index][2]), width=15, height=15,
-                                        edgecolor='None',
-                                        facecolor=(probabilities[counterP].iloc[0][index], 0, 1 - probabilities[counterP].iloc[0][index], 1),
-                                        linewidth=1))
+                            if str(index) in initInfection:
+                                actualPoint = [tractUVCoords.iloc[index][1], tractUVCoords.iloc[index][2]]
+                                Size = 14
+                                path = [
+                                    [actualPoint[0], actualPoint[1] - Size],
+                                    [actualPoint[0] - Size * 0.3, actualPoint[1] - Size * 0.3],
+                                    [actualPoint[0] - Size, actualPoint[1] - Size * 0.1],
+                                    [actualPoint[0] - Size * 0.2, actualPoint[1] + Size * 0.1],
+                                    [actualPoint[0] - Size * 0.8, actualPoint[1] + Size * 0.9],
+                                    [actualPoint[0], actualPoint[1] + Size * 0.6],
+                                    [actualPoint[0] + Size * 0.8, actualPoint[1] + Size * 0.9],
+                                    [actualPoint[0] + Size * 0.2, actualPoint[1] + Size * 0.1],
+                                    [actualPoint[0] + Size, actualPoint[1] - Size * 0.1],
+                                    [actualPoint[0] + Size * 0.3, actualPoint[1] - Size * 0.3],
+                                ]
+                                ax.add_patch(Polygon(path,
+                                                     color=(1, 0, 0, 1),
+                                                     linewidth=1))
+                            else:
+                                axins.add_patch(
+                                    Ellipse((tractUVCoords.iloc[index][1], tractUVCoords.iloc[index][2]), width=15,
+                                            height=15,
+                                            edgecolor='None',
+                                            facecolor=(probabilities[counterP].iloc[0][index], 0,
+                                                       1 - probabilities[counterP].iloc[0][index], 1),
+                                            linewidth=1))
+
+
                         counterR=counterR+1
                         if counterR>=maxRows:
                             counterC=counterC+1
@@ -199,6 +287,24 @@ def renormalizeProbability(input):
 
 tractUVCoords = pd.read_csv('./seattle/tractUVCoordinates.csv')#GIS DATA WHICH SHOULD BE READ ONCE AND USED MULTIPLE TIMES
 rawSeattleImage=mpimg.imread('./seattle/SeattleRawImage1.png')#GIS DATA WHICH SHOULD BE READ ONCE AND USED MULTIPLE TIMES
+
+
+# initInfection=['52']
+# H_a=['0.0']
+# mu=['0.001']
+# tau=['120.0']
+# probabilities=[]
+# for i in initInfection:
+#     for h in H_a:
+#         for m in mu:
+#             for t in tau:
+#                 file_name='./results/seattle_marg_prob_init_inf=['+i+']_H_a='+h+'_MU='+m+'_TAU='+t+'.csv'
+#                 temp=pd.read_csv(file_name)
+#                 temp = renormalizeProbability(temp)
+#                 probabilities.append(temp)
+#
+# test_name = "./results/seattle_heatmap_init_inf=[0]_H_a=[0.0,0.1,0.5]_MU_[0.001,0.0015,0.002]_TAU_[120]"
+# drawProbabilityHeatmap(test_name,tractUVCoords,rawSeattleImage,initInfection,H_a,mu,tau,probabilities)
 
 
 initInfection=['0']
