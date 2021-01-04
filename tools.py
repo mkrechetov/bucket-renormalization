@@ -2,7 +2,7 @@ import numpy as np
 import csv
 import time
 import sys
-sys.path.extend(['./', './seattle/'])
+#sys.path.extend(['./', './seattle/'])
 import argparse
 import os
 import random
@@ -29,9 +29,9 @@ import numpy.random as rnd
 import matplotlib.colors as mcolors
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 
-def extract_seattle_data(TAU=-1, MU=300):
+def extract_data(case, TAU=-1, MU=300):
     # Read Data
-    data = pd.read_csv('./seattle/TractTravelRawNumbers.csv', header=None).values
+    data = pd.read_csv('./'+case+'/'+case+'_travel_numbers.csv', header=None).values
     # g_raw = rawnumbers/MU
     # J_raw = np.log(1+np.exp(g_raw))/2
 
@@ -43,7 +43,7 @@ def extract_seattle_data(TAU=-1, MU=300):
     minJ = np.round(np.min(J_raw), 5)
     maxJ = np.round(np.max(J_raw), 5)
 
-    summary = pd.read_csv('./seattle/TractSummary159.csv')
+    summary = pd.read_csv('./'+case+'/'+case+'_GIS_data.csv')
     # Create Graph
     G = nx.Graph()
     pos = {}
@@ -78,7 +78,7 @@ def ith_object_name(prefix, i):
 def ijth_object_name(prefix, i,j):
     return prefix + '(' + str(int(i)) + ',' + str(int(j)) + ')'
 
-def generate_seattle(G, init_inf, H_a):
+def generate_GM_model(case, G, init_inf, H_a):
     '''
     This is done in 3 steps:
         1) add all variable names to the GM
@@ -197,11 +197,11 @@ def compute_PF_of_modified_GM(model, index):
         return []
 
 
-def compute_marginals(model, params):
+def compute_marginals(case, model, params):
     init_inf, H_a, MU, TAU = params
 
     # ==========================================
-    # Compute partition function for Seattle GM
+    # Compute partition function for GM
     # ==========================================
     try:
         t1 = time.time()
@@ -232,7 +232,7 @@ def compute_marginals(model, params):
     # ==========================================
 
     # write data to file
-    filename = "seattle_marg_prob_init_inf={}_H_a={}_MU={}_TAU={}.csv".format(init_inf, H_a, MU, TAU)
+    filename = case+"_marg_prob_init_inf={}_H_a={}_MU={}_TAU={}.csv".format(init_inf, H_a, MU, TAU)
     utils.append_to_csv(filename, ['Tract', 'Z_i', 'time', 'P_i'])
     for index in range(N):
         marg_prob = P(index)

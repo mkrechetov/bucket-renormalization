@@ -72,23 +72,22 @@ if TESTING:
     testing_partition_function_dependence_on_TAU()
     testing_run_time()
 
-
+caseStudy = 'seattle'
 print('experiment: init_inf={} H_a={} MU={} TAU={}'.format(init_inf, H_a, MU, TAU))
-
-print('extracting seattle data...')
-G = extract_seattle_data(TAU, MU)
+print('extracting '+caseStudy+' data...')
+G = extract_data(caseStudy, TAU, MU)
 
 
 print('generating GM...')
 # generates a Graphical Model of Infection
 # - removes and modifies GM to reflect initial seed of infection
 # - sets magnetic field to all nodes to H_a
-seattle = generate_seattle(G, init_inf, H_a)
+model = generate_GM_model(caseStudy, G, init_inf, H_a)
 
 # compute partition functions for Seattle GM and all sub-GMs
 # =====================================
 t1 = time.time()
-compute_marginals(seattle, (init_inf, H_a, MU, TAU))
+compute_marginals(caseStudy, model, (init_inf, H_a, MU, TAU))
 t2 = time.time()
 # =====================================
 
