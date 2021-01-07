@@ -163,7 +163,7 @@ def compare_BP_and_GBR():
 # quit()
 # decrease J to 0
 print("exp 1")
-implement_BP(case = 'seattle', init_inf = [0], H_a = 0.1, MU = 0.001, TAU = 0)
+implement_BP(case = 'seattle', init_inf = [0], H_a = 0.1, MU = 0.001, TAU = -1)
 implement_BP(case = 'seattle', init_inf = [0], H_a = 0.1, MU = 0.0001, TAU = 0)
 implement_BP(case = 'seattle', init_inf = [0], H_a = 0.1, MU = 0.00001, TAU = 0)
 # implement_BP(case = 'seattle', init_inf = [0], H_a = 0.1, MU = 0.000001, TAU = -1)

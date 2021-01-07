@@ -46,7 +46,7 @@ def extract_data(case, TAU=-1, MU=300):
 
     # alternate way of estimating J_raw
     J_raw = -data*np.log(1-MU)
-    print(np.max(J_raw))
+    # print(np.max(J_raw))
     # quit()
 
     # MU = 1-np.exp(-J_raw/np.max(data))
@@ -79,10 +79,12 @@ def extract_data(case, TAU=-1, MU=300):
         # sort the number of people in descending order and collect their indices
         indices = np.argsort(row)[::-1]
 
-        for idx, val in enumerate(indices):
+        # for idx, val in enumerate(indices):
+        for idx, entry in enumerate(row):
             # # if the first two numbers, or numbers greater than threshold
             # if idx in [0,1] or data[count][val] >= TAU: # threshold criteria
-            G.add_edge(count, val, weight=J_raw[count][val])
+            if count != idx:
+                G.add_edge(count, idx, weight=J_raw[count][idx])
         count+=1
     return G
 
