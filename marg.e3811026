@@ -1,0 +1,22 @@
+Badly placed ()'s.
+Traceback (most recent call last):
+  File "testing.py", line 166, in <module>
+    implement_BP(case = 'seattle', init_inf = [0], H_a = 0.1, MU = 0.001, TAU = 0)
+  File "testing.py", line 119, in implement_BP
+    BP = BeliefPropagation(model).run()
+  File "inference/belief_propagation.py", line 55, in run
+    self._update_messages(damp_ratio)
+  File "inference/belief_propagation.py", line 96, in _update_messages
+    next_message = self._compute_fac2var_message(fac, var)
+  File "inference/belief_propagation.py", line 119, in _compute_fac2var_message
+    message.marginalize_except_([var], inplace=True)
+  File "graphical_model/factor.py", line 171, in marginalize_except_
+    fac.transpose_by_(variables)
+  File "graphical_model/factor.py", line 118, in transpose_by_
+    fac.log_values = np.transpose(fac.log_values, axes=new_axes)
+  File "<__array_function__ internals>", line 6, in transpose
+  File "/cm/shared/uaapps/anaconda/2019.07/lib/python3.7/site-packages/numpy/core/fromnumeric.py", line 650, in transpose
+    return _wrapfunc(a, 'transpose', axes)
+  File "/cm/shared/uaapps/anaconda/2019.07/lib/python3.7/site-packages/numpy/core/fromnumeric.py", line 61, in _wrapfunc
+    return bound(*args, **kwds)
+ValueError: axes don't match array
