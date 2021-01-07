@@ -82,7 +82,7 @@ print('generating GM...')
 # generates a Graphical Model of Infection
 # - removes and modifies GM to reflect initial seed of infection
 # - sets magnetic field to all nodes to H_a
-model = generate_GM_model(caseStudy, G, init_inf, H_a)
+model = generate_graphical_model(caseStudy, G, init_inf, H_a)
 
 # compute partition functions for Seattle GM and all sub-GMs
 # =====================================

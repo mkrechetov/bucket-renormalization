@@ -5,7 +5,7 @@ from generate_model import *
 sys.path.extend(['inference/'])
 from bucket_elimination import BucketElimination
 from mean_field import MeanField
-from belief_propagation import BeliefPropagation, IterativeJoinGraphPropagation
+from belief_propagation import BeliefPropagation #, IterativeJoinGraphPropagation
 from mini_bucket_elimination import MiniBucketElimination
 from weighted_mini_bucket_elimination import WeightedMiniBucketElimination
 from bucket_renormalization import BucketRenormalization

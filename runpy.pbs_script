@@ -28,13 +28,14 @@ source ./bin/activate
 #
 date
 
-foreach H ( 0 0.1 .5 1 )
-  foreach MU ( 0.001 0.0015 0.002 )
-    foreach TAU ( 120 )
-      echo "Running experiment h_a=$H mu=$MU tau=$TAU"
-      python3 marginalization.py --mu $MU --magfield $H --tau $TAU
-    end
-  end
-end
+# foreach H ( 0 0.1 .5 1 )
+#   foreach MU ( 0.001 0.0015 0.002 )
+#     foreach TAU ( 120 )
+#       echo "Running experiment h_a=$H mu=$MU tau=$TAU"
+#       python3 marginalization.py --mu $MU --magfield $H --tau $TAU
+#     end
+#   end
+# end
+python3 testing.py
 
 date

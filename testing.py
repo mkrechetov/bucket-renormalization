@@ -1,33 +1,7 @@
-import numpy as np
-import csv
-import time
-import sys
-sys.path.extend(['./', './seattle/'])
-import argparse
-import os
-import random
-import protocols
-import utils
-import networkx as nx
-import matplotlib.pyplot as plt
-from gmi import GMI
-import pandas as pd
-from graphical_model import *
-from factor import *
-from generate_model import generate_complete_gmi, generate_complete
-from bucket_elimination import BucketElimination
-from bucket_renormalization import BucketRenormalization
-import itertools
-import traceback
 
-from joblib import Parallel, delayed
-import multiprocessing as mp
-import matplotlib.image as mpimg
-import matplotlib as mpl
-from matplotlib.patches import Ellipse
-import numpy.random as rnd
-import matplotlib.colors as mcolors
-from mpl_toolkits.axes_grid1 import make_axes_locatable
+from tools import *
+from mean_field import MeanField
+from belief_propagation import BeliefPropagation
 
 def test0():
     nb_vars = 70
@@ -95,3 +69,112 @@ def testing_partition_function_dependence_on_TAU():
     pls.savefig("Z_dependence_on_tau.png")
     plt.show()
     quit()
+
+def create_little_GM():
+    case = 'seattle'
+    G = extract_data(case, TAU=120, MU=0.02)
+
+    # infect Tract 0 and compute
+    init_inf = [0]
+    H_a = 0.1
+    model = generate_graphical_model(case, G, init_inf, H_a, condition_on_init_inf=False)
+
+    V52 = ith_object_name('V', 52)
+    # choose node 52 and its neighbors
+    adjacent_factors = model.get_adj_factors(V52)
+    # collect unique variable names from neighbors of V52
+    variables = list(set([var for fac in adjacent_factors for var in fac.variables ]))
+
+    tiny_model = GraphicalModel()
+    for fac in adjacent_factors:
+        tiny_model.add_variables_from(variables)
+        tiny_model.add_factor(fac)
+    tiny_model.summary()
+
+    # now condition on infected node
+    update_MF_of_neighbors_of(tiny_model, V52)
+
+    # @time_it
+    # BE_Z = BucketElimination(tiny_model).run()
+    #
+    # @time_it
+    # GBR_Z = BucketRenormalization(tiny_model).run()
+    #
+    # @time_it
+    # BP_Z = BeliefPropagation(tiny_model).run()
+    #
+    # @time_it
+    # MF_Z = MeanField(tiny_model).run()
+    # now compute marginals using BE, GBR, BP, and MF
+
+def implement_BP(case = 'seattle', init_inf = [0], H_a = 0.1, MU = 0.002, TAU = -1):
+
+    G = extract_data(case, TAU, MU)
+
+    # infect Tract 0 and compute
+
+    model = generate_graphical_model(case, G, init_inf, H_a)
+    degrees = [model.degree(var) for var in model.variables]
+
+    BP = BeliefPropagation(model).run()
+
+    N = len(model.variables)
+    filename = "BP_"+case+"_marg_prob_init_inf={}_H_a={}_MU={}_TAU={}.csv".format(init_inf, H_a, MU, TAU)
+    utils.append_to_csv(filename, ['Tract index', 'P'])
+    for index in range(N+1):
+        if index not in init_inf:
+            # print('P( x_{} = {} ) = {}'.format(index, 1, ))
+            utils.append_to_csv(filename, [index, BP['marginals']['MARGINAL_V{}'.format(index)]] )
+    utils.append_to_csv(filename, ['whole GM',BP['logZ']])
+
+def compare_BP_and_GBR():
+    case = 'seattle'
+    MU = 0.002
+    TAU = 120
+    H_a = 0.1
+    init_inf = [0]
+    filename = "BP_"+case+"_marg_prob_init_inf={}_H_a={}_MU={}_TAU={}.csv".format(init_inf, H_a, MU, TAU)
+    BP_data = utils.read_csv(filename)
+    filename = case+"_marg_prob_init_inf={}_H_a={}_MU={}_TAU={}.csv".format(init_inf, H_a, MU, float(TAU))
+    GBR_data = utils.read_csv(filename)
+    print(BP_data)
+    print(GBR_data)
+    N = len(BP_data)-1
+    error = []
+    for line in range(N):
+        if line == 0: continue
+        print("line number {}".format(line))
+        print("marginal using BP = {}\t marginal using GBR = {}".format(float(BP_data[line][1]),float(GBR_data[line][-1])))
+        err = float(BP_data[line][1])-float(GBR_data[line][-1])
+        print("error = {}".format(float(BP_data[line][1])-float(GBR_data[line][-1])))
+        error.append(err)
+
+    plt.plot(range(len(error)), np.log(np.abs(error)))
+    plt.xlabel('node number')
+    plt.ylabel('log of absolute difference in probability')
+    plt.title('Comparing Marginals of BP and GBR\n for init_inf[0], H_a = 0.1, TAU = 120, MU = 0.002')
+    plt.show()
+    print(np.max(np.abs(error)))
+
+# for tau in [100-i*20 for i in range(4)]:
+#     print(R"$\tau$ = {}".format(tau))
+#     implement_BP(case = 'seattle', init_inf = [0], H_a = 0.1, MU = 0.002, TAU = tau)
+# implement_BP(case = 'seattle', init_inf = [0], H_a = 0.1, MU = 0.002, TAU = 0)
+# quit()
+# decrease J to 0
+print("exp 1")
+implement_BP(case = 'seattle', init_inf = [0], H_a = 0.1, MU = 0.001, TAU = 0)
+implement_BP(case = 'seattle', init_inf = [0], H_a = 0.1, MU = 0.0001, TAU = 0)
+implement_BP(case = 'seattle', init_inf = [0], H_a = 0.1, MU = 0.00001, TAU = 0)
+# implement_BP(case = 'seattle', init_inf = [0], H_a = 0.1, MU = 0.000001, TAU = -1)
+print("exp 2")
+# increase H_a to infinity
+implement_BP(case = 'seattle', init_inf = [0], H_a = 1.0, MU = 0.002, TAU = 0)
+implement_BP(case = 'seattle', init_inf = [0], H_a = 10.0, MU = 0.002, TAU = 0)
+print("exp 3")
+# increase J to infinity
+implement_BP(case = 'seattle', init_inf = [0], H_a = 0.1, MU = 0.01, TAU = 0)
+implement_BP(case = 'seattle', init_inf = [0], H_a = 0.1, MU = 0.1, TAU = 0)
+implement_BP(case = 'seattle', init_inf = [0], H_a = 0.1, MU = 0.5, TAU = 0)
+implement_BP(case = 'seattle', init_inf = [0], H_a = 0.1, MU = 0.9, TAU = 0)
+# compare_BP_and_GBR()

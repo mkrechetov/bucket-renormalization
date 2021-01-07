@@ -29,6 +29,15 @@ import numpy.random as rnd
 import matplotlib.colors as mcolors
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 
+
+def time_it(func):
+    def wrapper():
+        t1 = time.time()
+        func()
+        t2 = time.time()
+        print('time taken: {}'.format(t2-t1))
+    return wrapper
+
 def extract_data(case, TAU=-1, MU=300):
     # Read Data
     data = pd.read_csv('./'+case+'/'+case+'_travel_numbers.csv', header=None).values
@@ -37,6 +46,8 @@ def extract_data(case, TAU=-1, MU=300):
 
     # alternate way of estimating J_raw
     J_raw = -data*np.log(1-MU)
+    print(np.max(J_raw))
+    # quit()
 
     # MU = 1-np.exp(-J_raw/np.max(data))
 
@@ -51,12 +62,14 @@ def extract_data(case, TAU=-1, MU=300):
     for row in summary.iterrows():
         G.add_node(row[0],
                    Tract=row[1]['Tract'],
-                   Sus=row[1]['Sus'],
-                   Inf=row[1]['Inf'],
-                   Symp=row[1]['Symp'],
-                   RecoveredCalc=row[1]['RecoveredCalc'],
+                   # Sus=row[1]['Sus'],
+                   # Inf=row[1]['Inf'],
+                   # Symp=row[1]['Symp'],
+                   # RecoveredCalc=row[1]['RecoveredCalc'],
                    Lat=row[1]['Lat'],
-                   Lon=row[1]['Lon']
+                   Lon=row[1]['Lon'],
+                   Population=row[1]['Population'],
+                   Density=row[1]['Density per acre']
                   )
         pos[row[0]] = [row[1]['Lat'], row[1]['Lon']]
 
@@ -67,9 +80,9 @@ def extract_data(case, TAU=-1, MU=300):
         indices = np.argsort(row)[::-1]
 
         for idx, val in enumerate(indices):
-            # if the first two numbers, or numbers greater than threshold
-            if idx in [0,1] or data[count][val] > TAU: # threshold criteria
-                G.add_edge(count, val, weight=J_raw[count][val])
+            # # if the first two numbers, or numbers greater than threshold
+            # if idx in [0,1] or data[count][val] >= TAU: # threshold criteria
+            G.add_edge(count, val, weight=J_raw[count][val])
         count+=1
     return G
 
@@ -78,7 +91,7 @@ def ith_object_name(prefix, i):
 def ijth_object_name(prefix, i,j):
     return prefix + '(' + str(int(i)) + ',' + str(int(j)) + ')'
 
-def generate_GM_model(case, G, init_inf, H_a):
+def generate_graphical_model(case, G, init_inf, H_a, condition_on_init_inf=True):
     '''
     This is done in 3 steps:
         1) add all variable names to the GM
@@ -113,8 +126,9 @@ def generate_GM_model(case, G, init_inf, H_a):
 
     # Modify the graph by conditioning it on the initially infected nodes
     # removes the initially infected nodes too.
-    for var in init_inf:
-        update_MF_of_neighbors_of(model, ith_object_name('V', var))
+    if condition_on_init_inf:
+        for var in init_inf:
+            update_MF_of_neighbors_of(model, ith_object_name('V', var))
 
     return model
 
