@@ -5,6 +5,17 @@ import time
 
 from factor import Factor, product_over_, entropy
 
+sys.path.extend(["graphical_model/"])
+from factor import Factor, product_over_, entropy
+
+
+def default_message_name(prefix="_M"):
+    default_message_name.cnt += 1
+    return prefix + str(default_message_name.cnt)
+
+
+default_message_name.cnt = 0
+
 class MeanField:
     def __init__(self, model, **kwargs):
         self.model = model.copy()
@@ -50,7 +61,7 @@ class MeanField:
             if key not in self.model.variables:
                 key = key.name
 
-            marginals[key] = mean_field.values
+            marginals["MARGINAL_{}".format(key)] = mean_field.values
 
         return {
             "logZ": logZ,

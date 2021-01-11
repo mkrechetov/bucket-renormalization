@@ -41,10 +41,10 @@ parser.add_argument(
     '--magfield',
     default='0.1',
     help='H_a paremeter - magnetic field')
-parser.add_argument(
-    '-t','--tau',
-    default='-1',
-    help='TAU parameter - minimal number of people traversing an edge')
+# parser.add_argument(
+#     '-t','--tau',
+#     default='-1',
+#     help='TAU parameter - minimal number of people traversing an edge')
 parser.add_argument(
     '--seed',
     type=int,
@@ -72,22 +72,22 @@ if TESTING:
     testing_partition_function_dependence_on_TAU()
     testing_run_time()
 
-caseStudy = 'seattle'
-print('experiment: init_inf={} H_a={} MU={} TAU={}'.format(init_inf, H_a, MU, TAU))
-print('extracting '+caseStudy+' data...')
-G = extract_data(caseStudy, TAU, MU)
+case = 'seattle'
+print('experiment: init_inf={} H_a={} MU={}'.format(init_inf, H_a, MU))
+print('extracting {} data...'.format(case))
+G = extract_data(case, TAU, MU)
 
 
 print('generating GM...')
 # generates a Graphical Model of Infection
 # - removes and modifies GM to reflect initial seed of infection
 # - sets magnetic field to all nodes to H_a
-model = generate_graphical_model(caseStudy, G, init_inf, H_a)
+model = generate_graphical_model(case, G, init_inf, H_a)
 
 # compute partition functions for Seattle GM and all sub-GMs
 # =====================================
 t1 = time.time()
-compute_marginals(caseStudy, model, (init_inf, H_a, MU, TAU))
+compute_marginals(case, model, (init_inf, H_a, MU))
 t2 = time.time()
 # =====================================
 

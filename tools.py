@@ -38,9 +38,16 @@ def time_it(func):
         print('time taken: {}'.format(t2-t1))
     return wrapper
 
-def extract_data(case, TAU=-1, MU=300):
+def extract_data(case, MU=0.002, center = 81, clique_width=100):
     # Read Data
-    data = pd.read_csv('./'+case+'/'+case+'_travel_numbers.csv', header=None).values
+    data = pd.read_csv('./{}/{}_travel_numbers.csv'.format(case, case), header=None).values
+
+    min = np.max([center-clique_width, 0])
+
+    max = np.min([center+clique_width+1, len(data)])
+    data = data[min:max,min:max]
+    # print(min, max, np.shape(data))
+    # quit()
     # g_raw = rawnumbers/MU
     # J_raw = np.log(1+np.exp(g_raw))/2
 
@@ -54,37 +61,39 @@ def extract_data(case, TAU=-1, MU=300):
     minJ = np.round(np.min(J_raw), 5)
     maxJ = np.round(np.max(J_raw), 5)
 
-    summary = pd.read_csv('./'+case+'/'+case+'_GIS_data.csv')
+    summary = pd.read_csv('./{}/{}_GIS_data.csv'.format(case, case))[min:max]
     # Create Graph
     G = nx.Graph()
     pos = {}
     # add nodes
+    row_num = min
+    # print(list(range(min, max)))
     for row in summary.iterrows():
-        G.add_node(row[0],
-                   Tract=row[1]['Tract'],
-                   # Sus=row[1]['Sus'],
-                   # Inf=row[1]['Inf'],
-                   # Symp=row[1]['Symp'],
-                   # RecoveredCalc=row[1]['RecoveredCalc'],
-                   Lat=row[1]['Lat'],
-                   Lon=row[1]['Lon'],
-                   Population=row[1]['Population'],
-                   Density=row[1]['Density per acre']
-                  )
-        pos[row[0]] = [row[1]['Lat'], row[1]['Lon']]
+        if row_num in list(range(min, max)):
+            G.add_node(row[0],
+                       Tract=row[1]['Tract'],
+                       # Sus=row[1]['Sus'],
+                       # Inf=row[1]['Inf'],
+                       # Symp=row[1]['Symp'],
+                       # RecoveredCalc=row[1]['RecoveredCalc'],
+                       Lat=row[1]['Lat'],
+                       Lon=row[1]['Lon'],
+                       Population=row[1]['Population'],
+                       Density=row[1]['Density per acre']
+            )
+            pos[row[0]] = [row[1]['Lat'], row[1]['Lon']]
+        row_num+=1
 
     # add edges
     count = 0
     for row in data:
         # sort the number of people in descending order and collect their indices
-        indices = np.argsort(row)[::-1]
+        # indices = np.argsort(row)[::-1]
 
-        # for idx, val in enumerate(indices):
+        # exclude edges between nodes and themselves
         for idx, entry in enumerate(row):
-            # # if the first two numbers, or numbers greater than threshold
-            # if idx in [0,1] or data[count][val] >= TAU: # threshold criteria
             if count != idx:
-                G.add_edge(count, idx, weight=J_raw[count][idx])
+                G.add_edge(min+count, min+idx, weight=J_raw[count][idx])
         count+=1
     return G
 
@@ -133,6 +142,23 @@ def generate_graphical_model(case, G, init_inf, H_a, condition_on_init_inf=True)
             update_MF_of_neighbors_of(model, ith_object_name('V', var))
 
     return model
+
+def threshold_GM(model, TAU, in_place = True):
+    '''
+        Tau is a percentage of the maximum J value
+        which we use as a minimum threshold to keep an edge or not
+    '''
+    copy = model if inplace else model.copy()
+
+    interactions = [fac.log_values[1] for fac in copy.factors if 'F' in fac.name]
+    maxJ = np.max(interactions)
+    for fac in copy.factors:
+        if 'F' in fac.name and fac.log_values[1] <= Tau*maxJ:
+            # get rid of the factor
+            copy.remove_factor(fac)
+
+    if not in_place:
+        return copy
 
 def get_neighbor_factors_of(model, var):
     '''
@@ -187,7 +213,7 @@ def update_MF_of_neighbors_of(model, var):
     model.remove_factors_from(adj_factors)
 
 
-def compute_PF_of_modified_GM(model, index):
+def compute_PF_of_modified_GM(model, index, ibound):
     '''
         Each computation done in parallel consists of
         1) removing the index variable and associated edges
@@ -204,9 +230,9 @@ def compute_PF_of_modified_GM(model, index):
     try:
         # compute partition function of the modified GM
         t1 = time.time()
-        Z_copy = BucketRenormalization(copy, ibound=10).run(max_iter=1)
+        Z_copy = BucketRenormalization(copy, ibound=ibound).run(max_iter=1)
         t2 = time.time()
-        print('partition function computation {} complete: {} (time taken: {})'.format(index, Z_copy, t2 - t1))
+        print('partition function computation {} complete: {} (time taken: {}) - ibound = {}'.format(index, Z_copy, t2 - t1, ibound))
         return [var, Z_copy, t2 - t1]
     except Exception as e:
         print(e)
@@ -214,14 +240,14 @@ def compute_PF_of_modified_GM(model, index):
 
 
 def compute_marginals(case, model, params):
-    init_inf, H_a, MU, TAU = params
+    init_inf, H_a, MU, ibound = params
 
     # ==========================================
     # Compute partition function for GM
     # ==========================================
     try:
         t1 = time.time()
-        Z = BucketRenormalization(model, ibound=10).run(max_iter=1)
+        Z = BucketRenormalization(model, ibound=ibound).run(max_iter=1)
         t2 = time.time()
         print('partition function = {}'.format(Z))
         print('time taken for GBR = {}'.format(t2-t1))
@@ -234,7 +260,7 @@ def compute_marginals(case, model, params):
 
     results=[]
     results.append(
-        Parallel(n_jobs=mp.cpu_count())(delayed(compute_PF_of_modified_GM)(model, index) for index in range(N))
+        Parallel(n_jobs=mp.cpu_count())(delayed(compute_PF_of_modified_GM)(model, index, ibound) for index in range(N))
     )
 
     # collect partition functions of sub-GMs
@@ -248,18 +274,18 @@ def compute_marginals(case, model, params):
     # ==========================================
 
     # write data to file
-    filename = case+"_marg_prob_init_inf={}_H_a={}_MU={}_TAU={}.csv".format(init_inf, H_a, MU, TAU)
+    filename = "{}_ibound={}_{}_marg_prob_init_inf={}_H_a={}_MU={}.csv".format('GBR',ibound, case, init_inf, H_a, MU)
     utils.append_to_csv(filename, ['Tract', 'Z_i', 'time', 'P_i'])
     for index in range(N):
         marg_prob = P(index)
-        print('P( x_{} = {} ) = {}'.format(index, 1, marg_prob))
+        # print('P( x_{} = {} ) = {}'.format(index, 1, marg_prob))
         utils.append_to_csv(filename, [results[0][index][0],results[0][index][1],results[0][index][2], marg_prob])
     utils.append_to_csv(filename, ['whole GM',Z,t2-t1, 'N/A'])
 
 
 def degree_distribution(model, G, params):
     '''degree distribution'''
-    H_a, MU, TAU = params
+    H_a, MU = params
     degree = [model.degree(var) for var in model.variables]
     weights = [G[i][j]['weight'] for i,j in G.edges]
     # counts, bins = np.histogram(weights)
@@ -269,8 +295,8 @@ def degree_distribution(model, G, params):
     minJ = np.round(np.min(weights),3)
     N = len(G.nodes)
     plt.plot(range(N), degree)
-    plt.title(R"$\beta$ = {}, $\mu$ = {}, $\tau$ = {}," "\n" "max J = {}, min J = {}".format(H_a, MU, TAU, maxJ, minJ))
-    plt.savefig('./results/H_a={}_MU={}_TAU={}_maxJ={}_minJ={}.png'.format(H_a, MU, TAU, maxJ, minJ))
+    plt.title(R"$\beta$ = {}, $\mu$ = {}," "\n" "max J = {}, min J = {}".format(H_a, MU, maxJ, minJ))
+    plt.savefig('./results/H_a={}_MU={}_maxJ={}_minJ={}.png'.format(H_a, MU, maxJ, minJ))
     plt.show()
     # quit()
 
