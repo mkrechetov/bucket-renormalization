@@ -1,12 +1,9 @@
 import numpy as np
-import cvxpy as cp
-import networkx as nx
-import matplotlib.pyplot as plt
-import itertools
-import copy
-import os
 import json
 import tools
+import multiprocessing as mp
+
+CPUs = mp.cpu_count()
 
 N = np.genfromtxt('seattle_top20_travel_numbers.csv', delimiter=',')
 h_as = [0.02, 0.05, 0.1, 0.2, 0.5]
@@ -20,26 +17,35 @@ with open("Seattle20newfull2.json") as infile:
     datadict = json.load(infile)
 
 for node in range(len(N)):
-    infected = [node]
     for h_a in h_as:
-
-        casedict = dict()
-        for mu in mus:
-            h = h_a * np.ones(len(N))
-            cali = tools.get_cali(N, mu, h, infected, ibound=18, algorithm='gbr')
-            cali.insert(node, 1)
-            casedict["{0:0.7f}".format(mu)] = cali
-        datadict[str((h_a, node))]['gbr18'] = casedict
+        h = h_a * np.ones(len(N))
 
         #casedict = dict()
-        #for mu in mus:
-        #    h = h_a * np.ones(len(N))
-        #    cali = tools.get_cali(N, mu, h, infected, ibound=20, algorithm='gbr')
-        #    cali.insert(node, 1)
-        #    casedict["{0:0.7f}".format(mu)] = cali
-        #datadict[str((h_a, node))]['gbr20'] = casedict
+        #params = [{'N': N, 'mu': mus[i], 'h': h, 'infected': [node], 'ibound': 18, 'algorithm': 'gbr'} for i in range(len(mus))]
+        #with mp.Pool(CPUs) as p:
+        #    calis = p.map(tools.get_cali, params)
+        #for i in range(len(mus)):
+        #    casedict["{0:0.7f}".format(mus[i])] = calis[i]
+        #datadict[str((h_a, node))]['gbr18'] = casedict
 
-with open("Seattle20newfull3.json", "w") as outfile:
+        casedict = dict()
+        params = [(N, mus[i], h,  [node],  15, 'gbr') for i in range(len(mus))]
+        processes = []
+
+        for i in range(len(mus)):
+            p = mp.Process(target=tools.get_cali, args=params[i])
+            processes.append(p)
+            p.start()
+
+        calis = []
+        for p in processes:
+            calis.append(p.join())
+
+        for i in range(len(mus)):
+            casedict["{0:0.7f}".format(mus[i])] = calis[i]
+        datadict[str((h_a, node))]['gbr15'] = casedict
+
+with open("Seattle20newfull5.json", "w") as outfile:
     json.dump(datadict, outfile)
 
 
